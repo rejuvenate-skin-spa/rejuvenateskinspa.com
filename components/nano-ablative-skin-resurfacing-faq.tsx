@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown } from 'lucide-react'
 
 interface FAQItem {
   question: string
@@ -185,7 +185,7 @@ export default function NanoAblativeSkinResurfacingFAQ() {
           __html: JSON.stringify(generateFAQSchema()),
         }}
       />
-      <section className="py-16 bg-gray-50">
+      <section id="faq-section" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">

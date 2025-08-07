@@ -1,28 +1,16 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Star } from "lucide-react"
+import { CheckCircle, Clock, Star } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import SpaServicesFAQ from "@/components/spa-services-faq"
+import { SpaServicesHero } from "@/components/spa-services-hero"
 
 export default function SpaServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px] bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight mb-6">
-              Luxury
-              <span className="text-sage-600 block">Spa Services</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Indulge in our comprehensive range of spa services designed to rejuvenate, refresh, and restore your
-              skin's natural beauty and radiance.
-            </p>
-          </div>
-        </div>
-      </section>
+      <SpaServicesHero />
 
       {/* Services Grid */}
       <section className="py-16 bg-white">
