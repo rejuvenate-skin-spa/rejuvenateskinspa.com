@@ -1,47 +1,16 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
-import { CheckCircle, Clock, Shield } from "lucide-react"
+import { CheckCircle, Clock, Shield } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
+import ChemicalPeelsHero from "@/components/chemical-peels-hero"
 
 export default function ChemicalPeelsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px] bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight">
-                Professional
-                <span className="text-sage-600 block">Chemical Peels</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-lg">
-                Reveal smoother, more radiant skin with our professional-grade chemical peels. Customized treatments for
-                all skin types and concerns.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white">
-                  Schedule Consultation
-                </Button>
-                <Button size="lg" variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
-                  View Results
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=500"
-                alt="Chemical peel treatment"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ChemicalPeelsHero />
 
       {/* Before/After Gallery */}
       <section className="py-16 bg-white">
@@ -212,7 +181,7 @@ export default function ChemicalPeelsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-sage-600 text-white">
+      <section id="faq-section" className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready for Radiant Skin?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
