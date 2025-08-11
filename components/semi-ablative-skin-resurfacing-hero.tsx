@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
-export default function PlasmaMicroneedlingTreatmentHero() {
+export default function SemiAblativeSkinResurfacingHero() {
   const router = useRouter()
   const [isMobile, setIsMobile] = useState(false)
 
@@ -16,7 +16,6 @@ export default function PlasmaMicroneedlingTreatmentHero() {
 
     checkMobile()
     window.addEventListener("resize", checkMobile)
-
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
@@ -26,13 +25,13 @@ export default function PlasmaMicroneedlingTreatmentHero() {
     const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
 
-    // Monday (1) to Saturday (6), 8 AM to 6 PM
+    // Monday-Saturday (1-6), 8am-6pm
     return day >= 1 && day <= 6 && hour >= 8 && hour < 18
   }
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802259549"
+      window.location.href = "tel:480-225-9549"
     } else {
       router.push("/about-us/contact-us")
     }
@@ -46,31 +45,31 @@ export default function PlasmaMicroneedlingTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] bg-sage-50 flex items-center">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/plasma-microneedling-services-rejuventate-skin-spa-queen-creek-az.avif"
-          alt="Plasma Microneedling Treatment Background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+    <section className="relative h-[500px] flex items-center overflow-hidden bg-sage-50">
+      {/* Background Image */}
+      <Image
+        src="/images/plasma-microneedling-services-rejuventate-skin-spa-queen-creek-az.avif"
+        alt="Semi-ablative skin resurfacing treatment background"
+        fill
+        className="object-cover"
+        priority
+      />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-1 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
-              <span className="text-sage-600">Plasma Microneedling</span>
-              <span className="text-sage-800 block">Treatment</span>
+              <span className="text-sage-600">Semi-Ablative</span>
+              <span className="text-sage-800 block">Skin Resurfacing</span>
             </h1>
-            <p className="text-xl text-sage-700 max-w-lg">
-              Revolutionary treatment combining microneedling with plasma energy for maximum collagen stimulation and
-              dramatic skin rejuvenation results.
+            <p className="text-xl text-gray-700 max-w-lg">
+              Advanced plasma technology that penetrates deeper for significant skin transformation. Moderate downtime
+              for dramatic results in skin texture and tone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-sage-600 hover:bg-sage-700 text-white rounded-md shadow-lg backdrop-blur-sm"
+                className="bg-sage-600 hover:bg-sage-700 text-white rounded-lg shadow-lg backdrop-blur-sm"
                 onClick={handlePrimaryClick}
               >
                 Get in Touch
@@ -78,14 +77,14 @@ export default function PlasmaMicroneedlingTreatmentHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white rounded-md bg-transparent shadow-lg backdrop-blur-sm"
+                className="border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white rounded-lg bg-transparent backdrop-blur-sm"
                 onClick={handleLearnMoreClick}
               >
                 Learn More
               </Button>
             </div>
           </div>
-          <div className="relative">{/* This div creates the right side space for the layout balance */}</div>
+          <div className="hidden lg:block" />
         </div>
       </div>
     </section>

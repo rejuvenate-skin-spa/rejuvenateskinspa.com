@@ -3,48 +3,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, AlertTriangle } from "lucide-react"
 import Image from "next/image"
 import SemiAblativeSkinResurfacingFAQ from "@/components/semi-ablative-skin-resurfacing-faq"
+import SemiAblativeSkinResurfacingHero from "@/components/semi-ablative-skin-resurfacing-hero"
 
 export default function SemiAblativeSkinResurfacingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px] bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight">
-                Semi-Ablative
-                <span className="text-sage-600 block">Skin Resurfacing</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-lg">
-                Advanced plasma technology that penetrates deeper for significant skin transformation. Moderate downtime
-                for dramatic results in skin texture and tone.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white rounded-md">
-                  Book Treatment
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"
-                >
-                  Free Consultation
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=500&text=Semi-Ablative+Plasma+Treatment"
-                alt="Semi-ablative plasma skin resurfacing treatment"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <SemiAblativeSkinResurfacingHero />
 
       {/* Treatment Overview */}
       <section className="py-16 bg-white">
@@ -378,7 +343,9 @@ export default function SemiAblativeSkinResurfacingPage() {
       </section>
 
       {/* FAQ Section */}
-      <SemiAblativeSkinResurfacingFAQ />
+      <div id="faq-section">
+        <SemiAblativeSkinResurfacingFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
