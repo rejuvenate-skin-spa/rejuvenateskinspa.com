@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import RedLightTherapyTreatmentFAQ from "@/components/red-light-therapy-treatment-faq"
+import RedLightTherapyTreatmentHero from "@/components/red-light-therapy-treatment-hero"
 import {
   Clock,
   DollarSign,
@@ -30,32 +31,7 @@ export default function RedLightTherapyPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-sage-600 to-sage-700 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">FDA-Approved Light Therapy</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-playfair">Red Light Therapy</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              Harness the healing power of red and near-infrared light for natural skin rejuvenation, pain relief, and
-              cellular regeneration
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-sage-700 hover:bg-gray-100 text-lg px-8 py-3">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Session
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-sage-700 text-lg px-8 py-3 bg-transparent"
-              >
-                Learn More
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <RedLightTherapyTreatmentHero />
 
       {/* Quick Stats */}
       <section className="py-12 bg-white">
@@ -361,7 +337,9 @@ export default function RedLightTherapyPage() {
       </section>
 
       {/* FAQ Section */}
-      <RedLightTherapyTreatmentFAQ />
+      <div id="faq-section">
+        <RedLightTherapyTreatmentFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-sage-600 to-sage-700 text-white">
