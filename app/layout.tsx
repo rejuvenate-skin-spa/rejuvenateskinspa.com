@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Professional skincare treatments including plasma skin tightening, chemical peels, and advanced facial services in a luxury spa environment.",
   keywords: "skin spa, plasma treatment, chemical peels, facial treatments, skincare",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
