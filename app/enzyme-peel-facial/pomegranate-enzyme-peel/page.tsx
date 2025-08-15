@@ -205,7 +205,9 @@ export default function PomegranateEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <PomegranateEnzymePeelFAQ />
+      <div id="faq-section">
+        <PomegranateEnzymePeelFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

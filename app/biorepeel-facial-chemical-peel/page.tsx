@@ -378,7 +378,9 @@ export default function BioRePeelTreatmentPage() {
       </section>
 
       {/* FAQ Section */}
-      <BioRePeelFacialChemicalPeelFAQ />
+      <div id="faq">
+        <BioRePeelFacialChemicalPeelFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

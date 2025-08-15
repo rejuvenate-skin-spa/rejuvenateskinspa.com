@@ -3,48 +3,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, Sun } from "lucide-react"
 import Image from "next/image"
 import SunSpotRemovalTreatmentFAQ from "@/components/sun-spot-removal-treatment-faq"
+import SunSpotRemovalTreatmentHero from "@/components/sun-spot-removal-treatment-hero"
 
 export default function SunSpotRemovalTreatmentPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[500px] bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight">
-                Sun Spot Removal
-                <span className="text-sage-600 block">Treatment</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-lg">
-                Advanced plasma technology for precise removal of sun spots, age spots, and pigmented lesions. Restore
-                even skin tone with permanent results.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white rounded-md">
-                  Book Treatment
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"
-                >
-                  Free Consultation
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=500&text=Sun+Spot+Removal"
-                alt="Sun spot removal plasma treatment"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <SunSpotRemovalTreatmentHero />
 
       {/* Treatment Overview */}
       <section className="py-16 bg-white">
@@ -385,7 +349,9 @@ export default function SunSpotRemovalTreatmentPage() {
       </section>
 
       {/* FAQ Section */}
-      <SunSpotRemovalTreatmentFAQ />
+      <div id="faq-section">
+        <SunSpotRemovalTreatmentFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

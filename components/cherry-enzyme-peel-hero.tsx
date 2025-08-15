@@ -2,10 +2,38 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export function CherryEnzymePeelHero() {
-  const scrollToTreatment = () => {
-    const element = document.getElementById("treatment-overview")
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
+
+  const handlePrimaryClick = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:480-225-9549"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
+  const scrollToFAQ = () => {
+    const element = document.getElementById("faq-section")
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
@@ -34,15 +62,18 @@ export function CherryEnzymePeelHero() {
           Brighten and revitalize your skin with our antioxidant-rich cherry enzyme peel treatment
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3" onClick={scrollToTreatment}>
-            Learn More
+          <Button
+            className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-2 shadow-lg backdrop-blur-sm"
+            onClick={handlePrimaryClick}
+          >
+            Get in Touch
           </Button>
           <Button
-            size="lg"
             variant="outline"
-            className="border-white text-white hover:bg-white hover:text-sage-600 px-8 py-3 bg-transparent"
+            className="border-white text-white hover:bg-white hover:text-sage-600 px-6 py-2 bg-transparent backdrop-blur-sm"
+            onClick={scrollToFAQ}
           >
-            Book Consultation
+            Learn More
           </Button>
         </div>
       </div>

@@ -207,7 +207,9 @@ export default function CoconutPapayaEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <CoconutPapayaEnzymePeelFAQ />
+      <div id="faq-section">
+        <CoconutPapayaEnzymePeelFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

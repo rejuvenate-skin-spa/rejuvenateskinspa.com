@@ -205,7 +205,9 @@ export default function PassionFruitEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <PassionFruitEnzymePeelFAQ />
+      <div id="faq-section">
+        <PassionFruitEnzymePeelFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

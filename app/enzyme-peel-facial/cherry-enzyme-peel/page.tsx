@@ -172,7 +172,9 @@ export default function CherryEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <CherryEnzymePeelFAQ />
+      <div id="faq-section">
+        <CherryEnzymePeelFAQ />
+      </div>
 
       {/* Related Treatments */}
       <section className="py-16 bg-sage-50">

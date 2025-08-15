@@ -205,7 +205,9 @@ export default function EnzymeFacialPeelsPage() {
       </section>
 
       {/* FAQ Section */}
-      <EnzymePeelFacialFAQ />
+      <div id="faq-section">
+        <EnzymePeelFacialFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

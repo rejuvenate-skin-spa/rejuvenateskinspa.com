@@ -207,7 +207,9 @@ export default function LemonEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <LemonEnzymePeelFAQ />
+      <div id="faq-section">
+        <LemonEnzymePeelFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

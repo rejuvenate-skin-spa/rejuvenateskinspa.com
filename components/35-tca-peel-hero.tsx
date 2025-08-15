@@ -3,9 +3,9 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 
-export default function BioRePeelFacialChemicalPeelHero() {
+export default function TCApeelHero() {
   const router = useRouter()
   const [isMobile, setIsMobile] = useState(false)
 
@@ -13,20 +13,18 @@ export default function BioRePeelFacialChemicalPeelHero() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
-
     checkMobile()
     window.addEventListener("resize", checkMobile)
-
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
   const isBusinessHours = () => {
     const now = new Date()
     const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay() // 0 = Sunday, 1 = Monday, etc.
+    const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
 
-    // Monday (1) through Saturday (6), 8am to 6pm
+    // Monday-Saturday (1-6), 8am-6pm
     return day >= 1 && day <= 6 && hour >= 8 && hour < 18
   }
 
@@ -39,7 +37,7 @@ export default function BioRePeelFacialChemicalPeelHero() {
   }
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq")
+    const faqSection = document.getElementById("faq-section")
     if (faqSection) {
       faqSection.scrollIntoView({ behavior: "smooth" })
     }
@@ -51,7 +49,7 @@ export default function BioRePeelFacialChemicalPeelHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/biorepeel-hero.avif"
-          alt="BioRePeel facial chemical peel treatment"
+          alt="BioRePeel 35 TCA facial treatment"
           fill
           className="object-cover"
           priority
@@ -65,12 +63,12 @@ export default function BioRePeelFacialChemicalPeelHero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-white leading-tight mb-6">
-              Revolutionary
-              <span className="block">BioRePeel Treatment</span>
+              BioRePeel 35
+              <span className="block">TCA Facial Peel</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl">
-              Advanced TCA peel technology that rejuvenates skin from within with minimal peeling and maximum results.
-              Safe for all skin types year-round.
+              Advanced facial rejuvenation with 35% TCA concentration. Perfect for improving skin texture, reducing fine
+              lines, and achieving a radiant complexion with minimal downtime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white" onClick={handlePrimaryClick}>

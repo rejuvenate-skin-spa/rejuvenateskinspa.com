@@ -3,74 +3,36 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Shield, Star, Zap, Heart, Users, AlertTriangle, Award } from "lucide-react"
 import Image from "next/image"
 import { AblativeSkinResurfacingFAQ } from "@/components/ablative-skin-resurfacing-faq"
+import { AblativeSkinResurfacingHero } from "@/components/ablative-skin-resurfacing-hero"
 
 export default function AblativeSkinResurfacingPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[500px] bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight">
-                Ablative
-                <span className="text-sage-600 block">Skin Resurfacing</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-lg">
-                The most advanced plasma technology for maximum skin transformation. Dramatic results for severe skin
-                concerns with comprehensive rejuvenation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Consultation
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-sage-300 text-sage-700 hover:bg-sage-50 bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=500&text=Ablative+Plasma+Treatment"
-                alt="Ablative plasma skin resurfacing treatment"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <AblativeSkinResurfacingHero />
 
       {/* Treatment Overview */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
+            <div className="space-y-6">
+              <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
                 Maximum Skin Transformation
               </h2>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Ablative plasma skin resurfacing represents the pinnacle of plasma technology, delivering the most
-                  dramatic and comprehensive skin transformation available. This advanced treatment completely removes
-                  the outer layers of damaged skin while stimulating deep collagen remodeling.
-                </p>
-                <p>
-                  Ideal for severe skin concerns including deep wrinkles, significant sun damage, extensive scarring,
-                  and major textural irregularities. While requiring 7-10 days of downtime, the results are truly
-                  transformative, often equivalent to years of aging reversal.
-                </p>
-              </div>
+              <p className="text-lg text-gray-600 mb-6">
+                Ablative plasma skin resurfacing represents the pinnacle of plasma technology, delivering the most
+                dramatic and comprehensive skin transformation available. This advanced treatment completely removes the
+                outer layers of damaged skin while stimulating deep collagen remodeling.
+              </p>
+              <p className="text-lg text-gray-600">
+                Ideal for severe skin concerns including deep wrinkles, significant sun damage, extensive scarring, and
+                major textural irregularities. While requiring 7-10 days of downtime, the results are truly
+                transformative, often equivalent to years of aging reversal.
+              </p>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Maximum+Transformation"
-                alt="Maximum skin transformation process"
+                src="/placeholder.svg?height=400&width=500&text=Ablative+Plasma+Treatment"
+                alt="Ablative plasma skin resurfacing treatment"
                 width={500}
                 height={400}
                 className="rounded-lg shadow-xl"
@@ -381,8 +343,9 @@ export default function AblativeSkinResurfacingPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <AblativeSkinResurfacingFAQ />
+      <div id="faq-section">
+        <AblativeSkinResurfacingFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

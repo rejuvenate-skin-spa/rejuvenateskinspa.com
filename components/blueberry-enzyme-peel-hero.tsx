@@ -2,12 +2,42 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function BlueberryEnzymePeelHero() {
-  const scrollToTreatment = () => {
-    const treatmentSection = document.getElementById("treatment-overview")
-    if (treatmentSection) {
-      treatmentSection.scrollIntoView({ behavior: "smooth" })
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
+
+    // Monday-Saturday (1-6), 8am-6pm
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
+
+  const handlePrimaryClick = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:480-225-9549"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
+  const scrollToFAQ = () => {
+    const faqSection = document.getElementById("faq-section")
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 
@@ -31,14 +61,16 @@ export default function BlueberryEnzymePeelHero() {
           natural renewal.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3 text-lg">
-            Book Treatment - $89
+          <Button
+            className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-2 shadow-lg backdrop-blur-sm"
+            onClick={handlePrimaryClick}
+          >
+            Get in Touch
           </Button>
           <Button
-            size="lg"
             variant="outline"
-            className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg bg-transparent"
-            onClick={scrollToTreatment}
+            className="border-white text-white hover:bg-white hover:text-gray-900 px-6 py-2 bg-transparent shadow-lg backdrop-blur-sm"
+            onClick={scrollToFAQ}
           >
             Learn More
           </Button>

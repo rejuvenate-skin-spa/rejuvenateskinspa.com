@@ -2,15 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 interface HomeHeroProps {
   title?: string
   subtitle?: string
   description?: string
-  primaryButtonText?: string
-  secondaryButtonText?: string
-  onPrimaryClick?: () => void
-  onSecondaryClick?: () => void
   className?: string
 }
 
@@ -18,12 +16,38 @@ export function HomeHero({
   title = "Rejuvenate Your Skin,",
   subtitle = "Restore Your Confidence",
   description = "Experience advanced skincare treatments in our luxury spa environment. From plasma skin tightening to chemical peels, we help you achieve radiant, youthful skin.",
-  primaryButtonText = "Book Consultation",
-  secondaryButtonText = "View Services",
-  onPrimaryClick,
-  onSecondaryClick,
   className = "",
 }: HomeHeroProps) {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
+
+    // Monday-Saturday (1-6), 8am-6pm
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
+
+  const handlePrimaryClick = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:480-225-9549"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <section className={`relative h-[500px] overflow-hidden flex items-center ${className}`}>
       {/* Background Image */}
@@ -49,19 +73,10 @@ export function HomeHero({
             <p className="text-xl text-gray-700 max-w-lg">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                size="lg"
-                className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg rounded-md"
-                onClick={onPrimaryClick}
+                className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg rounded-md px-6 py-2"
+                onClick={handlePrimaryClick}
               >
-                {primaryButtonText}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-sage-600 text-sage-700 hover:bg-sage-50 backdrop-blur-sm bg-white/80 rounded-md"
-                onClick={onSecondaryClick}
-              >
-                {secondaryButtonText}
+                Get in Touch
               </Button>
             </div>
           </div>

@@ -205,7 +205,9 @@ export default function PumpkinOrangeEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <PumpkinOrangeEnzymePeelFAQ />
+      <div id="faq-section">
+        <PumpkinOrangeEnzymePeelFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">

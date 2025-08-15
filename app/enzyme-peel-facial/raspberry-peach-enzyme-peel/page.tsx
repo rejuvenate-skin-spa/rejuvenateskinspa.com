@@ -240,7 +240,9 @@ export default function RaspberryPeachEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <RaspberryPeachEnzymePeelFAQ />
+      <div id="faq-section">
+        <RaspberryPeachEnzymePeelFAQ />
+      </div>
 
       {/* Related Treatments */}
       <section className="py-16 bg-gray-50">

@@ -1,50 +1,17 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Zap, Heart } from "lucide-react"
 import Image from "next/image"
 import DermaplaningTreatmentFAQ from "@/components/dermaplaning-treatment-faq"
+import DermaplaningTreatmentHero from "@/components/dermaplaning-treatment-hero"
 
 export default function DermaplaningPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px] bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight">
-                Dermaplaning
-                <span className="text-sage-600 block">Facial Treatment</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-lg">
-                Professional exfoliation treatment that removes dead skin cells and fine facial hair, revealing
-                smoother, brighter skin with immediate results.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Treatment
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-sage-300 text-sage-700 hover:bg-sage-50 bg-transparent"
-                >
-                  Free Consultation
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=500&text=Dermaplaning+Treatment"
-                alt="Dermaplaning facial treatment"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <DermaplaningTreatmentHero />
 
       {/* Treatment Overview */}
       <section className="py-16 bg-white">
@@ -254,7 +221,9 @@ export default function DermaplaningPage() {
       </section>
 
       {/* FAQ Section */}
-      <DermaplaningTreatmentFAQ />
+      <div id="faq-section">
+        <DermaplaningTreatmentFAQ />
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
@@ -263,18 +232,25 @@ export default function DermaplaningPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Experience the immediate benefits of dermaplaning and reveal your smoothest skin yet.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
-              Book Your Treatment
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent"
-            >
-              Call (555) 123-4567
-            </Button>
-          </div>
+          <Button
+            onClick={() => {
+              const isMobile = window.innerWidth <= 768
+              const now = new Date()
+              const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+              const day = arizonaTime.getDay()
+              const hour = arizonaTime.getHours()
+              const isBusinessHours = day >= 1 && day <= 6 && hour >= 8 && hour < 18
+
+              if (isMobile && isBusinessHours) {
+                window.location.href = "tel:480-225-9549"
+              } else {
+                window.location.href = "/about-us/contact-us"
+              }
+            }}
+            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm"
+          >
+            Get in Touch
+          </Button>
         </div>
       </section>
     </div>

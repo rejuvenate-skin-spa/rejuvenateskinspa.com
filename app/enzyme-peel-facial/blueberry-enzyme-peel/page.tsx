@@ -231,7 +231,9 @@ export default function BlueberryEnzymePeelPage() {
       </section>
 
       {/* FAQ Section */}
-      <BlueberryEnzymePeelFAQ />
+      <div id="faq-section">
+        <BlueberryEnzymePeelFAQ />
+      </div>
 
       {/* Related Treatments */}
       <section className="py-16 bg-gray-50">
