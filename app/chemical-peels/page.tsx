@@ -1,12 +1,52 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
-import { CheckCircle, Clock, Shield } from 'lucide-react'
+import { CheckCircle, Clock, Shield } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import ChemicalPeelsHero from "@/components/chemical-peels-hero"
+import { useState, useEffect } from "react"
 
 export default function ChemicalPeelsPage() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const day = now.getDay() // 0 = Sunday, 1 = Monday, etc.
+    const hour = now.getHours()
+
+    // Business hours: Monday-Friday 9AM-6PM, Saturday 9AM-3PM
+    if (day >= 1 && day <= 5) {
+      // Monday to Friday
+      return hour >= 9 && hour < 18
+    } else if (day === 6) {
+      // Saturday
+      return hour >= 9 && hour < 15
+    }
+    return false // Sunday or outside business hours
+  }
+
+  const handleGetInTouch = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:+14802818888"
+    } else {
+      window.location.href = "/about-us/contact-us"
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -188,12 +228,12 @@ export default function ChemicalPeelsPage() {
             Schedule your chemical peel consultation today and take the first step towards healthier, more beautiful
             skin.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
-              Book Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-sage-600">
-              Call Now
+          <div className="flex justify-center">
+            <Button
+              onClick={handleGetInTouch}
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl"
+            >
+              Get in Touch
             </Button>
           </div>
         </div>

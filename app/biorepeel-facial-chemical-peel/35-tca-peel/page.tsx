@@ -1,11 +1,50 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users } from "lucide-react"
 import Image from "next/image"
 import TCAFacialPeelFAQ from "@/components/35-tca-peel-faq"
 import TCApeelHero from "@/components/35-tca-peel-hero"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function BioRePeel35TCAFacialPage() {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const day = now.getDay()
+    const hour = now.getHours()
+
+    // Monday-Friday 9 AM - 6 PM, Saturday 9 AM - 4 PM
+    if (day >= 1 && day <= 5) {
+      return hour >= 9 && hour < 18
+    } else if (day === 6) {
+      return hour >= 9 && hour < 16
+    }
+    return false
+  }
+
+  const handleGetInTouch = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:+14802818888"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <div className="min-h-screen">
       <TCApeelHero />
@@ -324,16 +363,13 @@ export default function BioRePeel35TCAFacialPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Experience the gentle power of BioRePeel 35 TCA and reveal your most beautiful complexion.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
-              Book Your Treatment
-            </Button>
+          <div className="flex justify-center">
             <Button
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent"
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm"
+              onClick={handleGetInTouch}
             >
-              Call (555) 123-4567
+              Get in Touch
             </Button>
           </div>
         </div>
