@@ -1,11 +1,41 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, AlertTriangle } from "lucide-react"
 import Image from "next/image"
 import SemiAblativeSkinResurfacingFAQ from "@/components/semi-ablative-skin-resurfacing-faq"
 import SemiAblativeSkinResurfacingHero from "@/components/semi-ablative-skin-resurfacing-hero"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function SemiAblativeSkinResurfacingPage() {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
+
+  const handleGetInTouch = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:480-225-9549"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -354,16 +384,13 @@ export default function SemiAblativeSkinResurfacingPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Experience significant skin improvements with our advanced semi-ablative plasma technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100 rounded-md">
-              Book Your Treatment
-            </Button>
+          <div className="flex justify-center">
             <Button
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 rounded-md bg-transparent"
+              className="bg-white text-sage-600 hover:bg-gray-100 rounded-md px-6 py-2"
+              onClick={handleGetInTouch}
             >
-              Call (555) 123-4567
+              Get in Touch
             </Button>
           </div>
         </div>

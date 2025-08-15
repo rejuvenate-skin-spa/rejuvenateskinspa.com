@@ -1,11 +1,41 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, Sun } from "lucide-react"
 import Image from "next/image"
 import SunSpotRemovalTreatmentFAQ from "@/components/sun-spot-removal-treatment-faq"
 import SunSpotRemovalTreatmentHero from "@/components/sun-spot-removal-treatment-hero"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function SunSpotRemovalTreatmentPage() {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
+
+  const handleGetInTouch = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:480-225-9549"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <div className="min-h-screen">
       <SunSpotRemovalTreatmentHero />
@@ -221,6 +251,7 @@ export default function SunSpotRemovalTreatmentPage() {
                     <div className="text-sm text-gray-500">{pricing.quantity}</div>
                   </div>
                   <Button
+                    onClick={handleGetInTouch}
                     variant="outline"
                     className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"
                   >
@@ -360,16 +391,12 @@ export default function SunSpotRemovalTreatmentPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Remove unwanted sun spots permanently with our advanced plasma technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100 rounded-md">
-              Book Your Treatment
-            </Button>
+          <div className="flex justify-center">
             <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 rounded-md bg-transparent"
+              onClick={handleGetInTouch}
+              className="bg-white text-sage-600 hover:bg-gray-100 rounded-md px-6 py-2 shadow-lg backdrop-blur-sm"
             >
-              Call (555) 123-4567
+              Get in Touch
             </Button>
           </div>
         </div>

@@ -1,17 +1,17 @@
 "use client"
 
+import NanoAblativeSkinResurfacingHero from "@/components/nano-ablative-skin-resurfacing-hero"
+import NanoAblativeSkinResurfacingFAQ from "@/components/nano-ablative-skin-resurfacing-faq"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users } from "lucide-react"
 import Image from "next/image"
-import MicroneedlingTreatmentFAQ from "@/components/microneedling-treatment-faq"
-import MicroneedlingTreatmentHero from "@/components/microneedling-treatment-hero"
-import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
-export default function MicroneedlingTreatmentPage() {
-  const [isMobile, setIsMobile] = useState(false)
+export default function NanoAblativeClientPage() {
   const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -22,22 +22,18 @@ export default function MicroneedlingTreatmentPage() {
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
-  const handleGetInTouch = () => {
-    if (isMobile) {
-      const now = new Date()
-      const hour = now.getHours()
-      const day = now.getDay()
+  const isBusinessHours = () => {
+    const now = new Date()
+    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
 
-      // Business hours: Mon-Fri 9AM-6PM, Sat 9AM-4PM, closed Sunday
-      const isBusinessHours =
-        (day >= 1 && day <= 5 && hour >= 9 && hour < 18) || // Mon-Fri 9AM-6PM
-        (day === 6 && hour >= 9 && hour < 16) // Sat 9AM-4PM
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
 
-      if (isBusinessHours) {
-        window.location.href = "tel:+14804474505"
-      } else {
-        router.push("/about-us/contact-us")
-      }
+  const handlePrimaryClick = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:480-225-9549"
     } else {
       router.push("/about-us/contact-us")
     }
@@ -45,8 +41,7 @@ export default function MicroneedlingTreatmentPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <MicroneedlingTreatmentHero />
+      <NanoAblativeSkinResurfacingHero />
 
       {/* Treatment Overview */}
       <section className="py-16 bg-white">
@@ -54,25 +49,26 @@ export default function MicroneedlingTreatmentPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Stimulate Natural Collagen Production
+                Microscopic Skin Renewal with Zero Downtime
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Microneedling, also known as collagen induction therapy, uses fine needles to create controlled
-                  micro-injuries in the skin. This process triggers your body's natural healing response, stimulating
-                  the production of collagen and elastin.
+                  Nano-ablative plasma skin resurfacing represents the most gentle form of plasma technology, working at
+                  the microscopic level to stimulate collagen production and cellular renewal without damaging the
+                  skin's protective barrier.
                 </p>
                 <p>
-                  The result is firmer, smoother, more youthful-looking skin with improved texture and tone.
-                  Microneedling is effective for treating fine lines, acne scars, large pores, and overall skin
-                  rejuvenation with minimal downtime.
+                  This innovative treatment uses controlled nano-level plasma energy to heat the skin's surface with
+                  unprecedented precision, triggering the body's natural healing response and promoting the production
+                  of new, healthy skin cells. The result is improved skin texture, reduced fine lines, and a more
+                  radiant complexion.
                 </p>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Collagen+Stimulation"
-                alt="Collagen stimulation process"
+                src="/placeholder.svg?height=400&width=500&text=Nano+Plasma+Technology"
+                alt="Nano plasma technology process"
                 width={500}
                 height={400}
                 className="rounded-lg shadow-xl"
@@ -88,41 +84,44 @@ export default function MicroneedlingTreatmentPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Treatment Benefits</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how microneedling can transform your skin naturally.
+              Experience the advantages of advanced nano-ablative plasma technology with minimal discomfort and no
+              recovery time.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Zap,
-                title: "Collagen Boost",
-                description: "Stimulates natural collagen and elastin production for firmer, younger-looking skin.",
-              },
-              {
-                icon: Star,
-                title: "Reduces Fine Lines",
-                description: "Smooths fine lines and wrinkles by improving skin structure and elasticity.",
+                icon: Clock,
+                title: "Zero Downtime",
+                description:
+                  "Return to your daily activities immediately after treatment with no recovery period needed.",
               },
               {
                 icon: Shield,
-                title: "Minimizes Pores",
-                description: "Tightens and reduces the appearance of enlarged pores for smoother skin texture.",
+                title: "Ultra-Gentle & Safe",
+                description:
+                  "Nano-level treatment that works microscopically, suitable for all skin types including sensitive skin.",
+              },
+              {
+                icon: Star,
+                title: "Collagen Boost",
+                description: "Stimulates natural collagen production for firmer, more youthful-looking skin.",
+              },
+              {
+                icon: Zap,
+                title: "Immediate Results",
+                description: "See visible improvements in skin texture and radiance right after treatment.",
               },
               {
                 icon: Heart,
-                title: "Improves Scars",
-                description: "Effectively reduces the appearance of acne scars and other skin imperfections.",
+                title: "Comfortable Treatment",
+                description: "Minimal discomfort during the procedure with most clients finding it very tolerable.",
               },
               {
-                icon: Clock,
-                title: "Minimal Downtime",
-                description: "Quick recovery with only mild redness for 24-48 hours after treatment.",
-              },
-              {
-                icon: CheckCircle,
+                icon: Users,
                 title: "All Skin Types",
-                description: "Safe and effective for all skin types and colors with customizable depth.",
+                description: "Safe and effective for all skin types, including sensitive and darker skin tones.",
               },
             ].map((benefit, index) => (
               <div key={index} className="text-center bg-white p-6 rounded-lg shadow-sm">
@@ -143,7 +142,7 @@ export default function MicroneedlingTreatmentPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Treatment Areas</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Microneedling can be performed on various areas of the body for comprehensive skin improvement.
+              Nano-ablative plasma can be used on various areas of the face and body for comprehensive skin improvement.
             </p>
           </div>
 
@@ -151,35 +150,42 @@ export default function MicroneedlingTreatmentPage() {
             {[
               {
                 area: "Face",
-                description: "Full facial treatment for overall skin rejuvenation and anti-aging.",
-                price: "$200",
-              },
-              {
-                area: "Neck & Décolletage",
-                description: "Target delicate areas prone to aging and sun damage.",
-                price: "$150",
-              },
-              {
-                area: "Acne Scars",
-                description: "Focused treatment to improve the appearance of acne scarring.",
+                description: "Full facial rejuvenation for improved texture and tone.",
                 price: "$250",
+                duration: "45 minutes",
               },
               {
-                area: "Stretch Marks",
-                description: "Body treatment to reduce the appearance of stretch marks.",
+                area: "Eyes & Eyelids",
+                description: "Gentle tightening of delicate eye area and eyelids.",
+                price: "$200",
+                duration: "30 minutes",
+              },
+              {
+                area: "Neck",
+                description: "Tighten and smooth neck skin for a more youthful appearance.",
+                price: "$200",
+                duration: "30 minutes",
+              },
+              {
+                area: "Décolletage",
+                description: "Improve chest area skin texture and reduce sun damage.",
                 price: "$300",
+                duration: "45 minutes",
               },
             ].map((area, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 rounded-lg">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{area.area}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{area.description}</p>
-                  <div className="text-2xl font-bold text-sage-600 mb-4">{area.price}</div>
+                  <div className="space-y-2 mb-4">
+                    <div className="text-2xl font-bold text-sage-600">{area.price}</div>
+                    <div className="text-sm text-gray-500">{area.duration}</div>
+                  </div>
                   <Button
                     variant="outline"
-                    className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 bg-transparent"
+                    className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"
                   >
-                    Learn More
+                    Book Area
                   </Button>
                 </CardContent>
               </Card>
@@ -192,9 +198,9 @@ export default function MicroneedlingTreatmentPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">What to Expect</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Treatment Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your microneedling treatment from consultation to recovery.
+              Your nano-ablative plasma treatment experience from consultation to results.
             </p>
           </div>
 
@@ -203,22 +209,22 @@ export default function MicroneedlingTreatmentPage() {
               {
                 step: "01",
                 title: "Consultation",
-                description: "Skin assessment and treatment plan customization based on your concerns.",
+                description: "Comprehensive skin analysis and treatment planning.",
               },
               {
                 step: "02",
                 title: "Preparation",
-                description: "Cleansing and application of topical numbing cream for comfort.",
+                description: "Gentle cleansing and numbing cream application if needed.",
               },
               {
                 step: "03",
-                title: "Microneedling",
-                description: "Precise treatment using professional-grade microneedling device.",
+                title: "Treatment",
+                description: "Precise nano-ablative plasma application to targeted areas.",
               },
               {
                 step: "04",
-                title: "Recovery Care",
-                description: "Soothing serum application and detailed aftercare instructions.",
+                title: "Aftercare",
+                description: "Soothing application and post-treatment instructions.",
               },
             ].map((item, index) => (
               <div key={index} className="text-center">
@@ -244,21 +250,21 @@ export default function MicroneedlingTreatmentPage() {
             {[
               {
                 title: "Single Treatment",
-                price: "$200",
-                duration: "60-90 minutes",
+                price: "$250",
+                duration: "45 minutes",
                 features: [
-                  "Full facial microneedling",
-                  "Numbing cream included",
-                  "Post-treatment serum",
+                  "Nano-ablative plasma treatment",
+                  "Skin consultation",
+                  "Post-treatment care",
                   "Aftercare instructions",
                 ],
               },
               {
                 title: "Series of 3",
-                price: "$540",
+                price: "$675",
                 duration: "3 treatments",
                 features: [
-                  "3 microneedling sessions",
+                  "3 nano-ablative sessions",
                   "10% package savings",
                   "Customized treatment plan",
                   "Complimentary skincare consultation",
@@ -267,17 +273,17 @@ export default function MicroneedlingTreatmentPage() {
               },
               {
                 title: "Series of 6",
-                price: "$960",
+                price: "$1,200",
                 duration: "6 treatments",
                 features: [
-                  "6 microneedling sessions",
+                  "6 nano-ablative sessions",
                   "20% package savings",
                   "Priority booking",
                   "Free maintenance treatment",
                 ],
               },
             ].map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? "ring-2 ring-sage-600" : ""}`}>
+              <Card key={index} className={`relative rounded-lg ${pkg.popular ? "ring-2 ring-sage-600" : ""}`}>
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -298,7 +304,7 @@ export default function MicroneedlingTreatmentPage() {
                     ))}
                   </ul>
                   <Button
-                    className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
+                    className={`w-full rounded-md ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
                   >
                     Book Now
                   </Button>
@@ -309,21 +315,22 @@ export default function MicroneedlingTreatmentPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <MicroneedlingTreatmentFAQ />
+      <NanoAblativeSkinResurfacingFAQ />
 
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready to Boost Your Natural Collagen?</h2>
+          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready for Ultra-Gentle Skin Renewal?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Experience the transformative power of microneedling and reveal your skin's natural radiance.
+            Experience the benefits of nano-ablative plasma technology with zero downtime and immediate results.
           </p>
-          <div className="flex justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2" onClick={handleGetInTouch}>
-              Get in Touch
-            </Button>
-          </div>
+          <Button
+            onClick={handlePrimaryClick}
+            size="lg"
+            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 rounded-md"
+          >
+            Get in Touch
+          </Button>
         </div>
       </section>
     </div>
