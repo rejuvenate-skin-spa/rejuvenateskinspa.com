@@ -1,12 +1,49 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { TcaPeelFAQ } from "@/components/tca-peel-faq"
 import TcaPeelHero from "@/components/tca-peel-hero"
-import { CheckCircle, Clock, Shield, Star } from 'lucide-react'
+import { CheckCircle, Clock, Shield, Star } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function TcaPeelPage() {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const day = now.getDay() // 0 = Sunday, 1 = Monday, etc.
+    const hour = now.getHours()
+
+    // Business hours: Monday-Friday 9AM-6PM, Saturday 9AM-4PM
+    if (day === 0) return false // Closed Sunday
+    if (day >= 1 && day <= 5) return hour >= 9 && hour < 18 // Mon-Fri 9AM-6PM
+    if (day === 6) return hour >= 9 && hour < 16 // Sat 9AM-4PM
+    return false
+  }
+
+  const handleGetInTouch = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:+14802818888"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -284,16 +321,9 @@ export default function TcaPeelPage() {
             Schedule your TCA chemical peel consultation today and discover how this powerful treatment can rejuvenate
             your skin.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
-              Book Consultation
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent"
-            >
-              Call (555) 123-4567
+          <div className="flex justify-center">
+            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2" onClick={handleGetInTouch}>
+              Get in Touch
             </Button>
           </div>
         </div>

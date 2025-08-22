@@ -1,11 +1,42 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Zap, Target, Award } from "lucide-react"
 import Image from "next/image"
 import BioRePeel50TCABodyPeelFAQ from "@/components/50-tca-peel-faq"
 import FiftyTCAPeelHero from "@/components/50-tca-peel-hero"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function BioRePeel50TCABodyPage() {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const hour = now.getHours()
+    const day = now.getDay()
+    return day >= 1 && day <= 5 && hour >= 9 && hour < 17
+  }
+
+  const handleGetInTouch = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:+14802818888"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <div className="min-h-screen">
       <FiftyTCAPeelHero />
@@ -382,16 +413,9 @@ export default function BioRePeel50TCABodyPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Experience the powerful results of BioRePeel 50 TCA and achieve the smooth, clear body skin you deserve.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
-              Book Your Treatment
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent"
-            >
-              Call (555) 123-4567
+          <div className="flex justify-center">
+            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2" onClick={handleGetInTouch}>
+              Get in Touch
             </Button>
           </div>
         </div>

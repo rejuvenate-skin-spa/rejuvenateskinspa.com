@@ -71,8 +71,8 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
-                    <p className="text-sm text-gray-500">Mon-Fri: 9AM-7PM, Sat: 9AM-5PM</p>
+                    <p className="text-gray-600">(480) 225-9549</p>
+                    <p className="text-sm text-gray-500">Mon-Fri: 8AM-6PM, Sat: 9AM-5PM, Sun: Closed</p>
                   </div>
                 </div>
 
@@ -94,9 +94,9 @@ export default function ContactUsPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
                     <p className="text-gray-600">
-                      123 Wellness Boulevard
+                      20162 E. Sonoqui Blvd.
                       <br />
-                      Beauty City, BC 12345
+                      Queen Creek AZ 85142
                     </p>
                     <p className="text-sm text-gray-500">Free parking available</p>
                   </div>
@@ -109,9 +109,9 @@ export default function ContactUsPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Hours</h3>
                     <div className="text-gray-600 space-y-1">
-                      <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+                      <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
                       <p>Saturday: 9:00 AM - 5:00 PM</p>
-                      <p>Sunday: 10:00 AM - 4:00 PM</p>
+                      <p>Sunday: Closed</p>
                     </div>
                   </div>
                 </div>
@@ -238,7 +238,7 @@ export default function ContactUsPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Rejuvenate Skin Spa</h3>
-                  <p className="text-gray-600">123 Wellness Boulevard, Beauty City, BC 12345</p>
+                  <p className="text-gray-600">20162 E. Sonoqui Blvd., Queen Creek AZ 85142</p>
                 </div>
                 <div className="flex space-x-2">
                   <a

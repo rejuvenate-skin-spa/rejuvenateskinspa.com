@@ -1,12 +1,43 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { GlycolicAcidPeelFAQ } from "@/components/glycolic-acid-peel-faq"
 import { GlycolicAcidPeelHero } from "@/components/glycolic-acid-peel-hero"
-import { CheckCircle, Clock, Shield, Star, Sparkles } from 'lucide-react'
+import { CheckCircle, Clock, Shield, Star, Sparkles } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function GlycolicAcidPeelPage() {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const isBusinessHours = () => {
+    const now = new Date()
+    const day = now.getDay()
+    const hour = now.getHours()
+    return day >= 1 && day <= 5 && hour >= 9 && hour <= 17
+  }
+
+  const handleGetInTouch = () => {
+    if (isMobile && isBusinessHours()) {
+      window.location.href = "tel:+14802818888"
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -348,16 +379,12 @@ export default function GlycolicAcidPeelPage() {
             Schedule your glycolic acid peel consultation today and discover the gentle path to beautiful, rejuvenated
             skin.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
-              Book Consultation
-            </Button>
+          <div className="flex justify-center">
             <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent"
+              onClick={handleGetInTouch}
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 text-base font-medium shadow-md backdrop-blur-sm"
             >
-              Call (555) 123-4567
+              Get in Touch
             </Button>
           </div>
         </div>

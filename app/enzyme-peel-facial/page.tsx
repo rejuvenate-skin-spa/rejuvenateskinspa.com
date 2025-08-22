@@ -1,11 +1,48 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Shield, Star, Leaf, Sparkles } from "lucide-react"
 import Image from "next/image"
 import EnzymePeelFacialHero from "@/components/enzyme-peel-facial-hero"
 import EnzymePeelFacialFAQ from "@/components/enzyme-peel-facial-faq"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function EnzymeFacialPeelsPage() {
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const handleGetInTouch = () => {
+    if (isMobile) {
+      const now = new Date()
+      const hour = now.getHours()
+      const day = now.getDay()
+
+      // Business hours: Mon-Fri 9AM-6PM, Sat 9AM-4PM, closed Sunday
+      const isBusinessHours =
+        (day >= 1 && day <= 5 && hour >= 9 && hour < 18) || // Mon-Fri 9AM-6PM
+        (day === 6 && hour >= 9 && hour < 16) // Sat 9AM-4PM
+
+      if (isBusinessHours) {
+        window.location.href = "tel:+14802818888"
+      } else {
+        router.push("/about-us/contact-us")
+      }
+    } else {
+      router.push("/about-us/contact-us")
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -212,22 +249,13 @@ export default function EnzymeFacialPeelsPage() {
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready for Naturally Radiant Skin?</h2>
+          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready for Radiant, Glowing Skin?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Experience the gentle power of enzyme peels and reveal your skin's natural glow.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
-              Book Your Treatment
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent"
-            >
-              Call (555) 123-4567
-            </Button>
-          </div>
+          <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2" onClick={handleGetInTouch}>
+            Get in Touch
+          </Button>
         </div>
       </section>
     </div>

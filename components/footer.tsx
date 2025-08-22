@@ -1,8 +1,52 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { useState, useEffect } from "react"
 
 export function Footer() {
+  const [isMobile, setIsMobile] = useState(false)
+  const [isBusinessHours, setIsBusinessHours] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    const checkBusinessHours = () => {
+      const now = new Date()
+      const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+      const day = arizonaTime.getDay() // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+      const hour = arizonaTime.getHours()
+
+      // Monday (1) through Saturday (6), 8 AM to 6 PM
+      const isWeekday = day >= 1 && day <= 6
+      const isDuringHours = hour >= 8 && hour < 18
+
+      setIsBusinessHours(isWeekday && isDuringHours)
+    }
+
+    checkMobile()
+    checkBusinessHours()
+
+    window.addEventListener("resize", checkMobile)
+    const interval = setInterval(checkBusinessHours, 60000) // Check every minute
+
+    return () => {
+      window.removeEventListener("resize", checkMobile)
+      clearInterval(interval)
+    }
+  }, [])
+
+  const handlePhoneClick = () => {
+    if (isMobile && isBusinessHours) {
+      window.location.href = "tel:480-225-9549"
+    } else {
+      window.location.href = "/about-us/contact-us"
+    }
+  }
+
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -23,7 +67,19 @@ export function Footer() {
             <div className="flex space-x-4">
               <div className="flex items-center text-sm text-gray-600">
                 <Phone className="h-4 w-4 mr-2" />
-                (555) 123-4567
+                {isBusinessHours ? (
+                  isMobile ? (
+                    <button onClick={handlePhoneClick} className="hover:text-sage-600 transition-colors">
+                      480-225-9549
+                    </button>
+                  ) : (
+                    <span>480-225-9549</span>
+                  )
+                ) : (
+                  <Link href="/about-us/contact-us" className="hover:text-sage-600 transition-colors">
+                    Get in Touch
+                  </Link>
+                )}
               </div>
               <div className="flex items-center text-sm text-gray-600">
                 <Mail className="h-4 w-4 mr-2" />
@@ -71,19 +127,19 @@ export function Footer() {
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 text-sage-600" />
                 <div className="text-sm text-gray-600">
-                  123 Wellness Boulevard
+                  20162 E. Sonoqui Blvd.
                   <br />
-                  Beauty City, BC 12345
+                  Queen Creek AZ 85142
                 </div>
               </div>
               <div className="flex items-start">
                 <Clock className="h-4 w-4 mr-2 mt-1 text-sage-600" />
                 <div className="text-sm text-gray-600">
-                  Mon-Fri: 9AM-7PM
+                  Mon-Fri: 8AM-6PM
                   <br />
                   Sat: 9AM-5PM
                   <br />
-                  Sun: 10AM-4PM
+                  Sun: Closed
                 </div>
               </div>
             </div>
