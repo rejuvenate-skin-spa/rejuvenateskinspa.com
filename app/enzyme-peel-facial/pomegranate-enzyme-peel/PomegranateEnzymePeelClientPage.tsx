@@ -1,41 +1,41 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Star, Users } from "lucide-react"
-import Image from "next/image"
-import PomegranateEnzymePeelFAQ from "@/components/pomegranate-enzyme-peel-faq"
-import PomegranateEnzymePeelHero from "@/components/pomegranate-enzyme-peel-hero"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, Star, Users } from "lucide-react";
+import Image from "next/image";
+import PomegranateEnzymePeelFAQ from "@/components/pomegranate-enzyme-peel-faq";
+import PomegranateEnzymePeelHero from "@/components/pomegranate-enzyme-peel-hero";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function PomegranateEnzymePeelClientPage() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const hour = now.getHours()
-    const day = now.getDay()
-    return day >= 1 && day <= 6 && hour >= 9 && hour < 18
-  }
+    const now = new Date();
+    const hour = now.getHours();
+    const day = now.getDay();
+    return day >= 1 && day <= 6 && hour >= 9 && hour < 18;
+  };
 
   const handleGetInTouch = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14805551234"
+      window.location.href = "tel:+14805551234";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -48,35 +48,61 @@ export default function PomegranateEnzymePeelClientPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Premium Antioxidant Treatment
+                Premium Antioxidant Renewal Treatment (level 4-5)
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Our Pomegranate Enzyme Peel represents the pinnacle of natural skincare luxury. Packed with the highest
-                concentration of antioxidants found in nature, pomegranate extract provides unparalleled protection
-                against environmental damage while promoting cellular regeneration and skin renewal.
+                Our Pomegranate Enzyme Peel represents the pinnacle of natural
+                skincare luxury. Packed with the highest concentration of
+                antioxidants found in natural skincare and powered by
+                pomegranate extracts, nature's richest sources of antioxidant,
+                this brightening facial treatment provides unparalleled
+                protection against environmental damage, while promoting
+                cellular regeneration, collagen production, skin renewal for a
+                visibly smoother, firmer, radiant glow.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                In addition, the Pomegranate Enzyme Facial Peel is also
+                formulated for aging, oily, and acne- prone skin. Powered by
+                pomegranate's potent antioxidants, it works to target irregular
+                pigmentation, acne scars, and sun damage while exfoliating dead
+                skin cells to brighten, deeply hydrate, clarify and refine your
+                skin's overall tone and texture.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-sage-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Highest Antioxidant Content</h3>
+                    <h3 className="font-semibold text-gray-900">
+                      Highest Antioxidant Content
+                    </h3>
                     <p className="text-gray-700">
-                      Pomegranate contains more antioxidants than any other fruit for maximum protection
+                      Pomegranate contains more antioxidants than any other
+                      fruit for maximum protection
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-sage-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Cellular Regeneration</h3>
-                    <p className="text-gray-700">Promotes rapid cell turnover and skin renewal for youthful radiance</p>
+                    <h3 className="font-semibold text-gray-900">
+                      Cellular Regeneration
+                    </h3>
+                    <p className="text-gray-700">
+                      Promotes rapid cell turnover and skin renewal for youthful
+                      radiance
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-sage-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Premium Luxury</h3>
-                    <p className="text-gray-700">Our most exclusive treatment using the finest pomegranate extracts</p>
+                    <h3 className="font-semibold text-gray-900">
+                      Premium Luxury
+                    </h3>
+                    <p className="text-gray-700">
+                      Our most exclusive treatment using the finest pomegranate
+                      extracts
+                    </p>
                   </div>
                 </div>
               </div>
@@ -98,9 +124,12 @@ export default function PomegranateEnzymePeelClientPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Treatment Benefits</h2>
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Treatment Benefits
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the ultimate in antioxidant protection with our premium Pomegranate Enzyme Peel
+              Experience the ultimate in antioxidant protection with our premium
+              Pomegranate Enzyme Peel
             </p>
           </div>
 
@@ -110,9 +139,12 @@ export default function PomegranateEnzymePeelClientPage() {
                 <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="h-8 w-8 text-sage-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Maximum Protection</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Maximum Protection
+                </h3>
                 <p className="text-gray-700">
-                  Unparalleled antioxidant protection shields skin from environmental damage and premature aging.
+                  Unparalleled antioxidant protection shields skin from
+                  environmental damage and premature aging.
                 </p>
               </CardContent>
             </Card>
@@ -122,9 +154,12 @@ export default function PomegranateEnzymePeelClientPage() {
                 <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-8 w-8 text-sage-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Age Reversal</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Age Reversal
+                </h3>
                 <p className="text-gray-700">
-                  Powerful enzymes help reverse signs of aging and restore youthful skin vitality.
+                  Powerful enzymes help reverse signs of aging and restore
+                  youthful skin vitality.
                 </p>
               </CardContent>
             </Card>
@@ -134,9 +169,12 @@ export default function PomegranateEnzymePeelClientPage() {
                 <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-sage-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Luxury Experience</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Luxury Experience
+                </h3>
                 <p className="text-gray-700">
-                  Our most premium treatment offering the ultimate in luxury skincare indulgence.
+                  Our most premium treatment offering the ultimate in luxury
+                  skincare indulgence.
                 </p>
               </CardContent>
             </Card>
@@ -148,15 +186,20 @@ export default function PomegranateEnzymePeelClientPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Treatment Pricing</h2>
-            <p className="text-xl text-gray-600">Choose the perfect package for your skincare journey</p>
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Treatment Pricing
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Single Treatment</h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$105</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Single Treatment
+                </h3>
+                <div className="text-4xl font-bold text-sage-600 mb-4">
+                  $120
+                </div>
                 <ul className="space-y-2 text-gray-700 mb-6">
                   <li className="flex items-center justify-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
@@ -164,14 +207,12 @@ export default function PomegranateEnzymePeelClientPage() {
                   </li>
                   <li className="flex items-center justify-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Skin consultation
-                  </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Premium aftercare products
+                    Premium aftercare products Available
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Now</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                  Book Now
+                </Button>
               </CardContent>
             </Card>
 
@@ -180,9 +221,13 @@ export default function PomegranateEnzymePeelClientPage() {
                 <div className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
                   Most Popular
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">3-Treatment Series</h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">$285</div>
-                <div className="text-sm text-gray-600 mb-4">Save $30</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  3-Treatment Series
+                </h3>
+                <div className="text-4xl font-bold text-sage-600 mb-2">
+                  $320
+                </div>
+                <div className="text-sm text-gray-600 mb-4">Save $40</div>
                 <ul className="space-y-2 text-gray-700 mb-6">
                   <li className="flex items-center justify-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
@@ -190,21 +235,23 @@ export default function PomegranateEnzymePeelClientPage() {
                   </li>
                   <li className="flex items-center justify-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Personalized treatment plan
-                  </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Luxury home care kit
+                    Premium aftercare products Available
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Series</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                  Book Series
+                </Button>
               </CardContent>
             </Card>
 
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">6-Treatment Package</h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">$540</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  6-Treatment Package
+                </h3>
+                <div className="text-4xl font-bold text-sage-600 mb-2">
+                  $600
+                </div>
                 <div className="text-sm text-gray-600 mb-4">Save $90</div>
                 <ul className="space-y-2 text-gray-700 mb-6">
                   <li className="flex items-center justify-center">
@@ -213,14 +260,12 @@ export default function PomegranateEnzymePeelClientPage() {
                   </li>
                   <li className="flex items-center justify-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Comprehensive skin analysis
-                  </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Premium luxury aftercare
+                    Premium aftercare products Available
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Package</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                  Book Package
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -239,8 +284,8 @@ export default function PomegranateEnzymePeelClientPage() {
             Ready for the Ultimate Antioxidant Experience?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your premium Pomegranate Enzyme Peel treatment today and experience the pinnacle of natural skincare
-            luxury.
+            Book your premium Pomegranate Enzyme Peel treatment today and
+            experience the pinnacle of natural skincare luxury.
           </p>
           <div className="flex justify-center">
             <Button
@@ -253,5 +298,5 @@ export default function PomegranateEnzymePeelClientPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

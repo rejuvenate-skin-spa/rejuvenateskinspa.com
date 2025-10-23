@@ -1,46 +1,48 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function PomegranateEnzymePeelHero() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
+    const now = new Date();
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    );
+    const day = arizonaTime.getDay();
+    const hour = arizonaTime.getHours();
 
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
+  };
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:480-225-9549";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
-  }
+  };
 
   const handleLearnMore = () => {
-    const faqSection = document.getElementById("faq-section")
+    const faqSection = document.getElementById("faq-section");
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" })
+      faqSection.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
@@ -56,10 +58,12 @@ export default function PomegranateEnzymePeelHero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">Pomegranate Enzyme Peel</h1>
+        <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Pomegranate Enzyme Peel
+        </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-          Experience our premium antioxidant treatment with pomegranate's powerful protective and rejuvenating
-          properties.
+          Premium antioxidant renewal treatment for aging, oily, and acne-prone
+          skin with nature's richest antioxidants
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
@@ -78,5 +82,5 @@ export default function PomegranateEnzymePeelHero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,44 +1,46 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Star, Award, Users, Clock } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { HomeHero } from "@/components/home-hero"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Star, Award, Users, Clock } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { HomeHero } from "@/components/home-hero";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
+    const now = new Date();
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    );
+    const day = arizonaTime.getDay();
+    const hour = arizonaTime.getHours();
 
     // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
+  };
 
   const handleGetInTouch = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:480-225-9549";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
-  }
+  };
 
   return (
     <div className="min-h-screen">
@@ -53,8 +55,9 @@ export default function HomePage() {
               Our Signature Treatments
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our most popular advanced skincare treatments, each designed to address specific skin concerns
-              with proven results.
+              Discover our most advanced and sought-after skincare treatments,
+              each crafted to target your specific concerns and deliver visible,
+              lasting results.
             </p>
           </div>
 
@@ -62,24 +65,41 @@ export default function HomePage() {
             {[
               {
                 title: "Plasma Skin Tightening",
-                description: "Non-invasive treatment that tightens and lifts skin using advanced plasma technology.",
+                description:
+                  "Cutting-edge technology that offers dramatic skin tightening results",
                 image: "/placeholder.svg?height=300&width=400",
                 href: "/plasma-skin-tightening",
-                features: ["Non-invasive", "Immediate results", "No downtime"],
+                features: [
+                  "3 levels of intensity",
+                  "Tightens & lifts sagging skin",
+                  "Smooths fine lines & wrinkles",
+                  "Minimal downtime, long-lasting results",
+                ],
               },
               {
-                title: "BioRePeel Treatment",
-                description: "Revolutionary peel that rejuvenates skin from within using TCA technology.",
+                title: "Microneedling",
+                description:
+                  "The collagen induction therapy that offers visible results",
                 image: "/placeholder.svg?height=300&width=400",
-                href: "/biorepeel-treatment",
-                features: ["Deep rejuvenation", "Minimal peeling", "All skin types"],
+                href: "/microneedling-treatment",
+                features: [
+                  "Traditional Microneedling",
+                  "SQT Bio Microneedling",
+                  "PLEXR Plasma Microneedling",
+                ],
               },
               {
-                title: "Chemical Peels",
-                description: "Professional-grade peels to reveal smoother, more radiant skin.",
+                title: "Peels",
+                description:
+                  "Ground breaking peels that revolutionize ultra fine results",
                 image: "/placeholder.svg?height=300&width=400",
                 href: "/chemical-peels",
-                features: ["Customizable depth", "Proven results", "Professional grade"],
+                features: [
+                  "BioREPeel",
+                  "25% TCA Chemical Peel",
+                  "20% & 40% Glycolic Peel",
+                  "EXOTIC and Powerful Fruit Enzyme Peels",
+                ],
               },
             ].map((service, index) => (
               <Card
@@ -96,11 +116,16 @@ export default function HomePage() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {service.title}
+                  </h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-1 mb-4">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-sage-600 flex items-center">
+                      <li
+                        key={idx}
+                        className="text-sm text-sage-600 flex items-center"
+                      >
                         <div className="w-1.5 h-1.5 bg-sage-600 rounded-full mr-2"></div>
                         {feature}
                       </li>
@@ -129,42 +154,15 @@ export default function HomePage() {
               Why Choose Rejuvenate Skin Spa
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine cutting-edge technology with personalized care to deliver exceptional results in a luxury
-              environment.
+              Our philosophy goes beyond skincare, it's about transformation.
+              From cutting-edge plasma skin tightening, next-generation chemical
+              peels, and power house enzymes peels, to precision services like
+              microneedling, dermaplaning, brow artistry, and redlight therapy,
+              every treatment is tailored to your unique needs. We combine
+              state-of-the-art technology, medical-grade actives, and elite
+              techniques in a serene, boutique environment to reveal the best
+              version of you: radiant, youthful, and empowered.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Award,
-                title: "Expert Practitioners",
-                description: "Certified professionals with years of experience in advanced skincare treatments.",
-              },
-              {
-                icon: Star,
-                title: "Premium Technology",
-                description: "State-of-the-art equipment and the latest techniques for optimal results.",
-              },
-              {
-                icon: Users,
-                title: "Personalized Care",
-                description: "Customized treatment plans tailored to your unique skin needs and goals.",
-              },
-              {
-                icon: Clock,
-                title: "Proven Results",
-                description: "Thousands of satisfied clients with visible, long-lasting improvements.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-sage-600 text-white rounded-full mb-4">
-                  <item.icon className="h-8 w-8" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -173,7 +171,9 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -204,13 +204,22 @@ export default function HomePage() {
                 <CardContent className="p-0">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star
+                        key={i}
+                        className="h-5 w-5 text-yellow-400 fill-current"
+                      />
                     ))}
                   </div>
-                  <blockquote className="text-gray-600 mb-4 italic">"{testimonial.quote}"</blockquote>
+                  <blockquote className="text-gray-600 mb-4 italic">
+                    "{testimonial.quote}"
+                  </blockquote>
                   <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-sage-600">{testimonial.treatment}</div>
+                    <div className="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-sage-600">
+                      {testimonial.treatment}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -222,10 +231,13 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready to Transform Your Skin?</h2>
+          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">
+            Ready to Transform Your Skin?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Schedule your consultation today and discover how our advanced treatments can help you achieve the radiant,
-            youthful skin you deserve.
+            Schedule your consultation today and discover how our advanced
+            treatments can help you achieve the radiant, youthful skin you
+            deserve.
           </p>
           <div className="flex justify-center">
             <Button
@@ -238,5 +250,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

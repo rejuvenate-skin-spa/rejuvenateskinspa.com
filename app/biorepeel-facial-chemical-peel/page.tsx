@@ -1,10 +1,18 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart, Award } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import BioRePeelFacialChemicalPeelHero from "@/components/biorepeel-facial-chemical-peel-hero"
-import BioRePeelFacialChemicalPeelFAQ from "@/components/biorepeel-facial-chemical-peel-faq"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  CheckCircle,
+  Clock,
+  Shield,
+  Star,
+  Zap,
+  Heart,
+  Award,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import BioRePeelFacialChemicalPeelHero from "@/components/biorepeel-facial-chemical-peel-hero";
+import BioRePeelFacialChemicalPeelFAQ from "@/components/biorepeel-facial-chemical-peel-faq";
 
 export default function BioRePeelTreatmentPage() {
   return (
@@ -18,18 +26,23 @@ export default function BioRePeelTreatmentPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Next-Generation Peel Technology
+                Next Generation Chemical Peel
               </h2>
               <div className="space-y-4 text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  BioRePeelCl3® Biphasic, Patented Antioxidant Peel
+                </h3>
                 <p>
-                  BioRePeel is an innovative biphasic medical device that combines TCA (Trichloroacetic Acid) with amino
-                  acids, vitamins, and GABA to deliver exceptional skin rejuvenation results. Unlike traditional peels,
-                  BioRePeel works from within the skin layers.
-                </p>
-                <p>
-                  This revolutionary treatment stimulates cellular renewal, improves skin texture, and provides
-                  anti-aging benefits with minimal downtime. The unique formulation allows for year-round treatment,
-                  even on darker skin tones, making it suitable for everyone.
+                  BioRePeelCl3® is an innovative biphasic, patented chemical
+                  peel with powerful antioxidant, revitalizing, and peeling
+                  action. It exfoliates dead skin cells to accelerate cellular
+                  renewal, while amino acids, vitamins, and GABA boost radiance
+                  and support skin rejuvenation. The lipophilic phase provides a
+                  protective filming and moisturizing effect, enhancing
+                  absorption and comfort. Made in Italy to international quality
+                  standards, BioRePeelCl3® can also be used in synergy with
+                  other treatments to amplify results and reveal smoother, more
+                  youthful-looking skin.
                 </p>
               </div>
             </div>
@@ -50,9 +63,12 @@ export default function BioRePeelTreatmentPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Why Choose BioRePeel?</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              Why Choose BioRePeel?
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the future of chemical peels with advanced technology and superior results.
+              Experience the future of chemical peels with advanced technology
+              and superior results.
             </p>
           </div>
 
@@ -61,39 +77,50 @@ export default function BioRePeelTreatmentPage() {
               {
                 icon: Zap,
                 title: "Immediate Results",
-                description: "See visible improvement in skin texture and radiance after just one treatment.",
+                description:
+                  "See visible improvement in skin texture and radiance after just one treatment.",
               },
               {
                 icon: Shield,
                 title: "Minimal Peeling",
-                description: "Advanced formula provides deep rejuvenation with little to no visible peeling.",
+                description:
+                  "Advanced formula provides deep rejuvenation with little to no visible peeling.",
               },
               {
                 icon: Star,
                 title: "All Skin Types",
-                description: "Safe and effective for all skin types and ethnicities, including sensitive skin.",
+                description:
+                  "Safe and effective for all skin types and ethnicities, including sensitive skin.",
               },
               {
                 icon: Clock,
                 title: "Year-Round Treatment",
-                description: "Can be performed any time of year, even during summer months.",
+                description:
+                  "Can be performed any time of year, even during summer months.",
               },
               {
                 icon: Heart,
                 title: "Multi-Action Formula",
-                description: "Combines exfoliation, hydration, and anti-aging benefits in one treatment.",
+                description:
+                  "Combines exfoliation, hydration, and anti-aging benefits in one treatment.",
               },
               {
                 icon: Award,
                 title: "Clinically Proven",
-                description: "Backed by clinical studies and used by professionals worldwide.",
+                description:
+                  "Backed by clinical studies and used by professionals worldwide.",
               },
             ].map((benefit, index) => (
-              <div key={index} className="text-center bg-white p-6 rounded-lg shadow-sm">
+              <div
+                key={index}
+                className="text-center bg-white p-6 rounded-lg shadow-sm"
+              >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-sage-600 text-white rounded-full mb-4">
                   <benefit.icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </div>
             ))}
@@ -109,7 +136,8 @@ export default function BioRePeelTreatmentPage() {
               BioRePeel Treatment Options
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect BioRePeel treatment for your specific skin needs and concerns.
+              Choose the perfect BioRePeel treatment for your specific skin
+              needs and concerns.
             </p>
           </div>
 
@@ -117,7 +145,8 @@ export default function BioRePeelTreatmentPage() {
             {[
               {
                 title: "BioRePeel 35 TCA Facial",
-                description: "Perfect for facial rejuvenation with gentle yet effective TCA concentration.",
+                description:
+                  "Perfect for facial rejuvenation with gentle yet effective TCA concentration.",
                 benefits: [
                   "Improves skin texture and tone",
                   "Reduces fine lines and wrinkles",
@@ -126,14 +155,16 @@ export default function BioRePeelTreatmentPage() {
                   "Stimulates collagen production",
                 ],
                 duration: "45-60 minutes",
-                price: "From $180",
+                price: "From $200",
                 href: "/biorepeel-facial-chemical-peel/35-tca-peel",
-                image: "/placeholder.svg?height=300&width=400&text=BioRePeel+35+Facial",
+                image:
+                  "/placeholder.svg?height=300&width=400&text=BioRePeel+35+Facial",
                 popular: true,
               },
               {
                 title: "BioRePeel 50 TCA Body",
-                description: "Higher concentration formula designed for body treatments and stubborn skin concerns.",
+                description:
+                  "Higher concentration formula designed for body treatments and stubborn skin concerns.",
                 benefits: [
                   "Treats body acne and scarring",
                   "Improves skin texture on body",
@@ -144,12 +175,15 @@ export default function BioRePeelTreatmentPage() {
                 duration: "60-90 minutes",
                 price: "From $250",
                 href: "/biorepeel-facial-chemical-peel/50-tca-peel",
-                image: "/placeholder.svg?height=300&width=400&text=BioRePeel+50+Body",
+                image:
+                  "/placeholder.svg?height=300&width=400&text=BioRePeel+50+Body",
               },
             ].map((treatment, index) => (
               <Card
                 key={index}
-                className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 ${treatment.popular ? "ring-2 ring-sage-600" : ""}`}
+                className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 ${
+                  treatment.popular ? "ring-2 ring-sage-600" : ""
+                }`}
               >
                 {treatment.popular && (
                   <div className="absolute top-4 right-4 z-10">
@@ -167,15 +201,22 @@ export default function BioRePeelTreatmentPage() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">{treatment.title}</h3>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                    {treatment.title}
+                  </h3>
                   <p className="text-gray-600 mb-4">{treatment.description}</p>
 
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Benefits:
+                      </h4>
                       <ul className="space-y-1">
                         {treatment.benefits.map((benefit, idx) => (
-                          <li key={idx} className="text-sm text-gray-600 flex items-center">
+                          <li
+                            key={idx}
+                            className="text-sm text-gray-600 flex items-center"
+                          >
                             <CheckCircle className="h-4 w-4 text-sage-600 mr-2 flex-shrink-0" />
                             {benefit}
                           </li>
@@ -196,7 +237,9 @@ export default function BioRePeelTreatmentPage() {
                   </div>
 
                   <Link href={treatment.href}>
-                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Learn More & Book</Button>
+                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
+                      Learn More & Book
+                    </Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -209,7 +252,9 @@ export default function BioRePeelTreatmentPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">How BioRePeel Works</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              How BioRePeel Works
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Understanding the science behind this revolutionary treatment.
             </p>
@@ -220,29 +265,35 @@ export default function BioRePeelTreatmentPage() {
               {
                 step: "01",
                 title: "Biphasic Action",
-                description: "Two-phase formula works on surface and deep skin layers simultaneously.",
+                description:
+                  "Two-phase formula works on surface and deep skin layers simultaneously.",
               },
               {
                 step: "02",
                 title: "Cellular Renewal",
-                description: "TCA and amino acids stimulate natural cell turnover and regeneration.",
+                description:
+                  "TCA and amino acids stimulate natural cell turnover and regeneration.",
               },
               {
                 step: "03",
                 title: "Collagen Boost",
-                description: "Vitamins and GABA promote collagen synthesis for firmer skin.",
+                description:
+                  "Vitamins and GABA promote collagen synthesis for firmer skin.",
               },
               {
                 step: "04",
                 title: "Skin Transformation",
-                description: "Reveals smoother, brighter, more youthful-looking skin.",
+                description:
+                  "Reveals smoother, brighter, more youthful-looking skin.",
               },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-sage-600 text-white rounded-full text-xl font-bold mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
@@ -254,7 +305,9 @@ export default function BioRePeelTreatmentPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Real Results</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              Real Results
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               See the transformative power of BioRePeel treatments.
             </p>
@@ -289,10 +342,13 @@ export default function BioRePeelTreatmentPage() {
 
           <div className="text-center mt-8">
             <p className="text-sm text-gray-500 mb-4">
-              *Results may vary. Individual results are not guaranteed and may vary from person to person.
+              *Results may vary. Individual results are not guaranteed and may
+              vary from person to person.
             </p>
             <Link href="/about-us/portfolio">
-              <Button className="bg-sage-600 hover:bg-sage-700 text-white">View More Results</Button>
+              <Button className="bg-sage-600 hover:bg-sage-700 text-white">
+                View More Results
+              </Button>
             </Link>
           </div>
         </div>
@@ -302,7 +358,9 @@ export default function BioRePeelTreatmentPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Treatment Packages</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              Treatment Packages
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the package that best fits your skin goals and budget.
             </p>
@@ -312,7 +370,7 @@ export default function BioRePeelTreatmentPage() {
             {[
               {
                 title: "Single Treatment",
-                price: "$180",
+                price: "$200",
                 duration: "One session",
                 features: [
                   "BioRePeel 35 TCA facial",
@@ -323,7 +381,7 @@ export default function BioRePeelTreatmentPage() {
               },
               {
                 title: "Rejuvenation Series",
-                price: "$480",
+                price: "$500",
                 duration: "3 treatments",
                 features: [
                   "3 BioRePeel sessions",
@@ -345,7 +403,12 @@ export default function BioRePeelTreatmentPage() {
                 ],
               },
             ].map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? "ring-2 ring-sage-600" : ""}`}>
+              <Card
+                key={index}
+                className={`relative ${
+                  pkg.popular ? "ring-2 ring-sage-600" : ""
+                }`}
+              >
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -354,19 +417,30 @@ export default function BioRePeelTreatmentPage() {
                   </div>
                 )}
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{pkg.title}</h3>
-                  <div className="text-3xl font-bold text-sage-600 mb-1">{pkg.price}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <div className="text-3xl font-bold text-sage-600 mb-1">
+                    {pkg.price}
+                  </div>
                   <p className="text-gray-500 mb-6">{pkg.duration}</p>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-center justify-center">
+                      <li
+                        key={idx}
+                        className="text-sm text-gray-600 flex items-center justify-center"
+                      >
                         <CheckCircle className="h-4 w-4 text-sage-600 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Button
-                    className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
+                    className={`w-full ${
+                      pkg.popular
+                        ? "bg-sage-600 hover:bg-sage-700 text-white"
+                        : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
+                    }`}
                   >
                     Book Now
                   </Button>
@@ -385,13 +459,18 @@ export default function BioRePeelTreatmentPage() {
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready to Experience BioRePeel?</h2>
+          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">
+            Ready to Experience BioRePeel?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Discover the revolutionary treatment that's transforming skin rejuvenation with minimal downtime and maximum
-            results.
+            Discover the revolutionary treatment that's transforming skin
+            rejuvenation with minimal downtime and maximum results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-sage-600 hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-white text-sage-600 hover:bg-gray-100"
+            >
               Book Your Treatment
             </Button>
             <Button
@@ -405,5 +484,5 @@ export default function BioRePeelTreatmentPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -1,13 +1,15 @@
-import type { Metadata } from "next"
-import PassionFruitEnzymePeelClientPage from "./PassionFruitEnzymePeelClientPage"
+import type { Metadata } from "next";
+import PassionFruitEnzymePeelClientPage from "./PassionFruitEnzymePeelClientPage";
 
 export const metadata: Metadata = {
-  title: "Passion Fruit Enzyme Peel | Exotic Anti-Aging Facial | Rejuvenate Skin Spa",
+  title:
+    "Passion Fruit Enzyme Peel | 30% Glycolic Acid Treatment | Rejuvenate Skin Spa",
   description:
-    "Experience our exotic Passion Fruit Enzyme Peel for anti-aging benefits and skin renewal. Premium treatment in Queen Creek, AZ.",
-  keywords: "passion fruit enzyme peel, anti-aging facial, exotic treatment, natural enzyme peel, Queen Creek spa",
-}
+    "Tropical radiance renewal with 30% glycolic acid and collagen peptides. Deep exfoliation, cellular renewal, and anti-aging benefits in Queen Creek, AZ.",
+  keywords:
+    "passion fruit enzyme peel, glycolic acid peel, collagen peptides, anti-aging facial, deep exfoliation, Queen Creek spa",
+};
 
 export default function PassionFruitEnzymePeelPage() {
-  return <PassionFruitEnzymePeelClientPage />
+  return <PassionFruitEnzymePeelClientPage />;
 }

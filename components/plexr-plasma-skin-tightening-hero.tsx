@@ -1,79 +1,83 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface PlexrPlasmaSkinTighteningHeroProps {
-  title?: string
-  subtitle?: string
-  description?: string
-  primaryButtonText?: string
-  secondaryButtonText?: string
-  onPrimaryClick?: () => void
-  onSecondaryClick?: () => void
-  className?: string
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryButtonText?: string;
+  secondaryButtonText?: string;
+  onPrimaryClick?: () => void;
+  onSecondaryClick?: () => void;
+  className?: string;
 }
 
 export function PlexrPlasmaSkinTighteningHero({
   title = "Advanced Plasma",
   subtitle = "Skin Tightening",
-  description = "Revolutionary non-invasive treatment that tightens and lifts skin using cutting-edge plasma technology. Achieve remarkable results without surgery or downtime.",
+  description = "Welcome to the future in advanced revolutionary skin rejuvenation, your journey to radiant skin starts here.",
   primaryButtonText = "Get in Touch",
   secondaryButtonText = "Learn More",
   onPrimaryClick,
   onSecondaryClick,
   className = "",
 }: PlexrPlasmaSkinTighteningHeroProps) {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
+      setIsMobile(window.innerWidth < 768);
+    };
 
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay() // 0 = Sunday, 1 = Monday, etc.
-    const hour = arizonaTime.getHours()
+    const now = new Date();
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    );
+    const day = arizonaTime.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const hour = arizonaTime.getHours();
 
     // Monday (1) through Saturday (6), 8am to 6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
+  };
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:480-225-9549";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
 
     if (onPrimaryClick) {
-      onPrimaryClick()
+      onPrimaryClick();
     }
-  }
+  };
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq")
+    const faqSection = document.getElementById("faq");
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" })
+      faqSection.scrollIntoView({ behavior: "smooth" });
     }
     if (onSecondaryClick) {
-      onSecondaryClick()
+      onSecondaryClick();
     }
-  }
+  };
 
   return (
-    <section className={`relative h-[500px] overflow-hidden flex items-center ${className}`}>
+    <section
+      className={`relative h-[500px] overflow-hidden flex items-center ${className}`}
+    >
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -116,5 +120,5 @@ export function PlexrPlasmaSkinTighteningHero({
         </div>
       </div>
     </section>
-  )
+  );
 }

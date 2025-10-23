@@ -1,49 +1,51 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function BioRePeelFacialChemicalPeelHero() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
+      setIsMobile(window.innerWidth < 768);
+    };
 
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay() // 0 = Sunday, 1 = Monday, etc.
-    const hour = arizonaTime.getHours()
+    const now = new Date();
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    );
+    const day = arizonaTime.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const hour = arizonaTime.getHours();
 
     // Monday (1) through Saturday (6), 8am to 6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
+  };
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:480-225-9549";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
-  }
+  };
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq")
+    const faqSection = document.getElementById("faq");
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" })
+      faqSection.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section className="relative h-[500px] overflow-hidden">
@@ -66,14 +68,19 @@ export default function BioRePeelFacialChemicalPeelHero() {
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-white leading-tight mb-6">
               Revolutionary
-              <span className="block">BioRePeel Treatment</span>
+              <span className="block">BioRePeel Treatment 5</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl">
-              Advanced TCA peel technology that rejuvenates skin from within with minimal peeling and maximum results.
-              Safe for all skin types year-round.
+              Advanced TCA peel technology that rejuvenates skin from within
+              with minimal peeling and maximum results. Safe for all skin types
+              year-round.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white" onClick={handlePrimaryClick}>
+              <Button
+                size="lg"
+                className="bg-sage-600 hover:bg-sage-700 text-white"
+                onClick={handlePrimaryClick}
+              >
                 Get in Touch
               </Button>
               <Button
@@ -89,5 +96,5 @@ export default function BioRePeelFacialChemicalPeelHero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

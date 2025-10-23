@@ -1,14 +1,15 @@
-import type { Metadata } from "next"
-import CherryEnzymePeelClientPage from "./CherryEnzymePeelClientPage"
+import type { Metadata } from "next";
+import CherryEnzymePeelClientPage from "./CherryEnzymePeelClientPage";
 
 export const metadata: Metadata = {
-  title: "Cherry Enzyme Peel | Natural Facial Treatment | Rejuvenate Skin Spa",
+  title:
+    "Brightening Cherry Enzyme Peel | Level 3 Treatment | Rejuvenate Skin Spa",
   description:
-    "Brighten and revitalize your skin with our antioxidant-rich Cherry Enzyme Peel. Professional facial treatment in Queen Creek, AZ. Book your appointment today.",
+    "Luminous cherry enzyme peel with 5% lactic acid, arbutin, and kojic acid. Restorative exfoliation with antioxidant protection in Queen Creek, AZ. Book today!",
   keywords:
-    "cherry enzyme peel, facial treatment, antioxidant facial, skin brightening, Queen Creek spa, natural skincare",
-}
+    "cherry enzyme peel, brightening facial, lactic acid peel, arbutin treatment, kojic acid, skin brightening, Queen Creek spa, level 3 peel",
+};
 
 export default function CherryEnzymePeelPage() {
-  return <CherryEnzymePeelClientPage />
+  return <CherryEnzymePeelClientPage />;
 }

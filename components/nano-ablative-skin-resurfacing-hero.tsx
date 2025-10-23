@@ -1,79 +1,83 @@
-'use client'
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface NanoAblativeSkinResurfacingHeroProps {
-  title?: string
-  subtitle?: string
-  description?: string
-  primaryButtonText?: string
-  secondaryButtonText?: string
-  onPrimaryClick?: () => void
-  onSecondaryClick?: () => void
-  className?: string
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryButtonText?: string;
+  secondaryButtonText?: string;
+  onPrimaryClick?: () => void;
+  onSecondaryClick?: () => void;
+  className?: string;
 }
 
 export default function NanoAblativeSkinResurfacingHero({
-  title = "Nano-Ablative",
-  subtitle = "Skin Resurfacing",
-  description = "Ultra-gentle plasma technology that improves skin texture and tone with microscopic precision. Perfect for those seeking skin rejuvenation with zero downtime.",
+  title = "Nano-Ablative Plasma",
+  subtitle = "Skin Tightening, The Plexr Shower",
+  description = "Ultra-gentle skin tightening, with refined plasma precision. perfect for that delivers that improves skin. Perfect for those seeking improved texture and skin with zero downtime.",
   primaryButtonText = "Get in Touch",
   secondaryButtonText = "Learn More",
   onPrimaryClick,
   onSecondaryClick,
   className = "",
 }: NanoAblativeSkinResurfacingHeroProps) {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
+      setIsMobile(window.innerWidth < 768);
+    };
 
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay() // 0 = Sunday, 1 = Monday, etc.
-    const hour = arizonaTime.getHours()
+    const now = new Date();
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    );
+    const day = arizonaTime.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const hour = arizonaTime.getHours();
 
     // Monday (1) through Saturday (6), 8am to 6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
+  };
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:480-225-9549";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
 
     if (onPrimaryClick) {
-      onPrimaryClick()
+      onPrimaryClick();
     }
-  }
+  };
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq-section")
+    const faqSection = document.getElementById("faq-section");
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" })
+      faqSection.scrollIntoView({ behavior: "smooth" });
     }
     if (onSecondaryClick) {
-      onSecondaryClick()
+      onSecondaryClick();
     }
-  }
+  };
 
   return (
-    <section className={`relative h-[500px] overflow-hidden flex items-center ${className}`}>
+    <section
+      className={`relative h-[500px] overflow-hidden flex items-center ${className}`}
+    >
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -116,5 +120,5 @@ export default function NanoAblativeSkinResurfacingHero({
         </div>
       </div>
     </section>
-  )
+  );
 }

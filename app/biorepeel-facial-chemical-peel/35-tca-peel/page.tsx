@@ -1,49 +1,57 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users } from "lucide-react"
-import Image from "next/image"
-import TCAFacialPeelFAQ from "@/components/35-tca-peel-faq"
-import TCApeelHero from "@/components/35-tca-peel-hero"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  CheckCircle,
+  Clock,
+  Shield,
+  Star,
+  Zap,
+  Heart,
+  Users,
+} from "lucide-react";
+import Image from "next/image";
+import TCAFacialPeelFAQ from "@/components/35-tca-peel-faq";
+import TCApeelHero from "@/components/35-tca-peel-hero";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function BioRePeel35TCAFacialPage() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const day = now.getDay()
-    const hour = now.getHours()
+    const now = new Date();
+    const day = now.getDay();
+    const hour = now.getHours();
 
     // Monday-Friday 9 AM - 6 PM, Saturday 9 AM - 4 PM
     if (day >= 1 && day <= 5) {
-      return hour >= 9 && hour < 18
+      return hour >= 9 && hour < 18;
     } else if (day === 6) {
-      return hour >= 9 && hour < 16
+      return hour >= 9 && hour < 16;
     }
-    return false
-  }
+    return false;
+  };
 
   const handleGetInTouch = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802818888"
+      window.location.href = "tel:+14802818888";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
-  }
+  };
 
   return (
     <div className="min-h-screen">
@@ -59,14 +67,17 @@ export default function BioRePeel35TCAFacialPage() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  BioRePeel 35 TCA is specifically formulated for facial treatments, combining 35% Trichloroacetic Acid
-                  with amino acids, vitamins, and GABA. This unique biphasic formula provides deep skin renewal while
-                  being gentle enough for regular treatments.
+                  BioRePeel 35 TCA is specifically formulated for facial
+                  treatments, combining 35% Trichloroacetic Acid with amino
+                  acids, vitamins, and GABA. This unique biphasic formula
+                  provides deep skin renewal while being gentle enough for
+                  regular treatments.
                 </p>
                 <p>
-                  Unlike traditional TCA peels that cause significant peeling and downtime, BioRePeel 35 works from
-                  within the skin layers to stimulate cellular renewal, improve texture, and boost collagen production
-                  with minimal visible peeling.
+                  Unlike traditional TCA peels that cause significant peeling
+                  and downtime, BioRePeel 35 works from within the skin layers
+                  to stimulate cellular renewal, improve texture, and boost
+                  collagen production with minimal visible peeling.
                 </p>
               </div>
             </div>
@@ -91,7 +102,8 @@ export default function BioRePeel35TCAFacialPage() {
               Advanced Formula Ingredients
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Each ingredient is carefully selected for maximum efficacy and skin compatibility.
+              Each ingredient is carefully selected for maximum efficacy and
+              skin compatibility.
             </p>
           </div>
 
@@ -99,30 +111,40 @@ export default function BioRePeel35TCAFacialPage() {
             {[
               {
                 ingredient: "35% TCA",
-                description: "Trichloroacetic Acid for deep exfoliation and cellular renewal.",
+                description:
+                  "Trichloroacetic Acid for deep exfoliation and cellular renewal.",
                 benefit: "Skin resurfacing",
               },
               {
                 ingredient: "Amino Acids",
-                description: "Building blocks of proteins that support skin structure.",
+                description:
+                  "Building blocks of proteins that support skin structure.",
                 benefit: "Skin repair",
               },
               {
                 ingredient: "Vitamin C",
-                description: "Powerful antioxidant that brightens and protects skin.",
+                description:
+                  "Powerful antioxidant that brightens and protects skin.",
                 benefit: "Brightening",
               },
               {
                 ingredient: "GABA",
-                description: "Gamma-aminobutyric acid that soothes and calms skin.",
+                description:
+                  "Gamma-aminobutyric acid that soothes and calms skin.",
                 benefit: "Anti-inflammatory",
               },
             ].map((item, index) => (
               <Card key={index} className="text-center p-4">
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold text-sage-600 mb-2">{item.ingredient}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{item.description}</p>
-                  <div className="text-xs text-sage-700 font-medium bg-sage-100 px-2 py-1 rounded">{item.benefit}</div>
+                  <h3 className="text-lg font-semibold text-sage-600 mb-2">
+                    {item.ingredient}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-2">
+                    {item.description}
+                  </p>
+                  <div className="text-xs text-sage-700 font-medium bg-sage-100 px-2 py-1 rounded">
+                    {item.benefit}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -134,7 +156,9 @@ export default function BioRePeel35TCAFacialPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Treatment Benefits</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              Treatment Benefits
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience comprehensive facial rejuvenation with visible results.
             </p>
@@ -145,39 +169,47 @@ export default function BioRePeel35TCAFacialPage() {
               {
                 icon: Star,
                 title: "Improved Skin Texture",
-                description: "Smooths rough skin and reduces the appearance of fine lines and wrinkles.",
+                description:
+                  "Smooths rough skin and reduces the appearance of fine lines and wrinkles.",
               },
               {
                 icon: Zap,
                 title: "Brighter Complexion",
-                description: "Reveals radiant, glowing skin by removing dull surface layers.",
+                description:
+                  "Reveals radiant, glowing skin by removing dull surface layers.",
               },
               {
                 icon: Shield,
                 title: "Minimized Pores",
-                description: "Reduces pore size and improves overall skin clarity and smoothness.",
+                description:
+                  "Reduces pore size and improves overall skin clarity and smoothness.",
               },
               {
                 icon: Heart,
                 title: "Collagen Boost",
-                description: "Stimulates natural collagen production for firmer, more youthful skin.",
+                description:
+                  "Stimulates natural collagen production for firmer, more youthful skin.",
               },
               {
                 icon: Users,
                 title: "All Skin Types",
-                description: "Safe and effective for all skin types, including sensitive and darker skin.",
+                description:
+                  "Safe and effective for all skin types, including sensitive and darker skin.",
               },
               {
                 icon: Clock,
                 title: "Minimal Downtime",
-                description: "Return to normal activities immediately with little to no visible peeling.",
+                description:
+                  "Return to normal activities immediately with little to no visible peeling.",
               },
             ].map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-sage-600 text-white rounded-full mb-4">
                   <benefit.icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </div>
             ))}
@@ -189,7 +221,9 @@ export default function BioRePeel35TCAFacialPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Treatment Process</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              Treatment Process
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Your BioRePeel 35 TCA facial experience from start to finish.
             </p>
@@ -227,7 +261,9 @@ export default function BioRePeel35TCAFacialPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-sage-600 text-white rounded-full text-xl font-bold mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
             ))}
@@ -244,7 +280,9 @@ export default function BioRePeel35TCAFacialPage() {
                 Is BioRePeel 35 Right for You?
               </h2>
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">Perfect for treating:</h3>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Perfect for treating:
+                </h3>
                 <ul className="space-y-2">
                   {[
                     "Fine lines and early signs of aging",
@@ -279,14 +317,16 @@ export default function BioRePeel35TCAFacialPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Treatment Investment</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              Treatment Investment
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Single Treatment",
-                price: "$180",
+                price: "$200",
                 duration: "45-60 minutes",
                 features: [
                   "BioRePeel 35 TCA facial",
@@ -319,7 +359,12 @@ export default function BioRePeel35TCAFacialPage() {
                 ],
               },
             ].map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? "ring-2 ring-sage-600" : ""}`}>
+              <Card
+                key={index}
+                className={`relative ${
+                  pkg.popular ? "ring-2 ring-sage-600" : ""
+                }`}
+              >
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -328,19 +373,30 @@ export default function BioRePeel35TCAFacialPage() {
                   </div>
                 )}
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{pkg.title}</h3>
-                  <div className="text-3xl font-bold text-sage-600 mb-1">{pkg.price}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <div className="text-3xl font-bold text-sage-600 mb-1">
+                    {pkg.price}
+                  </div>
                   <p className="text-gray-500 mb-6">{pkg.duration}</p>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-center justify-center">
+                      <li
+                        key={idx}
+                        className="text-sm text-gray-600 flex items-center justify-center"
+                      >
                         <CheckCircle className="h-4 w-4 text-sage-600 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Button
-                    className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
+                    className={`w-full ${
+                      pkg.popular
+                        ? "bg-sage-600 hover:bg-sage-700 text-white"
+                        : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
+                    }`}
                   >
                     Book Now
                   </Button>
@@ -359,9 +415,12 @@ export default function BioRePeel35TCAFacialPage() {
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready for Radiant, Renewed Skin?</h2>
+          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">
+            Ready for Radiant, Renewed Skin?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Experience the gentle power of BioRePeel 35 TCA and reveal your most beautiful complexion.
+            Experience the gentle power of BioRePeel 35 TCA and reveal your most
+            beautiful complexion.
           </p>
           <div className="flex justify-center">
             <Button
@@ -375,5 +434,5 @@ export default function BioRePeel35TCAFacialPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

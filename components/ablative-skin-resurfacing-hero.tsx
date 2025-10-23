@@ -1,43 +1,45 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export function AblativeSkinResurfacingHero() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
+    const now = new Date();
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    );
+    const day = arizonaTime.getDay();
+    const hour = arizonaTime.getHours();
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
+  };
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:480-225-9549";
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/about-us/contact-us");
     }
-  }
+  };
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq-section")
+    const faqSection = document.getElementById("faq-section");
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" })
+      faqSection.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section className="relative h-[500px] bg-sage-50 flex items-center">
@@ -57,10 +59,12 @@ export function AblativeSkinResurfacingHero() {
             <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
               <span className="text-gray-900">Ablative</span>
               <span className="text-sage-600 block">Skin Resurfacing</span>
+              <span className="text-gray-900 block">The Fibroblast</span>
             </h1>
             <p className="text-xl text-sage-700 max-w-lg">
-              The most advanced plasma technology for maximum skin transformation. Dramatic results for severe skin
-              concerns with comprehensive rejuvenation.
+              The most advanced plasma technology for maximum skin
+              transformation. Dramatic results for severe skin concerns with
+              comprehensive rejuvenation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -80,9 +84,11 @@ export function AblativeSkinResurfacingHero() {
               </Button>
             </div>
           </div>
-          <div className="hidden lg:block">{/* Space for image alignment */}</div>
+          <div className="hidden lg:block">
+            {/* Space for image alignment */}
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

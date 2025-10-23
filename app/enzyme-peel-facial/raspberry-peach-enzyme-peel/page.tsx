@@ -1,13 +1,15 @@
-import type { Metadata } from "next"
-import RaspberryPeachEnzymePeelClientPage from "./RaspberryPeachEnzymePeelClientPage"
+import type { Metadata } from "next";
+import RaspberryPeachEnzymePeelClientPage from "./RaspberryPeachEnzymePeelClientPage";
 
 export const metadata: Metadata = {
-  title: "Raspberry-Peach Enzyme Peel | Gentle Hydrating Facial | Rejuvenate Skin Spa",
+  title:
+    "Raspberry-Peach Enzyme Peel | Gentle Silky Hydrating Treatment | Rejuvenate Skin Spa",
   description:
-    "Experience our gentle Raspberry-Peach Enzyme Peel for hydration and soft skin renewal. Perfect for all skin types in Queen Creek, AZ.",
-  keywords: "raspberry peach enzyme peel, gentle facial, hydrating treatment, natural enzyme peel, Queen Creek spa",
-}
+    "Perfect balance of gentle exfoliation and deep hydration with antioxidant-rich raspberry and soothing peach extract. Ideal for sensitive, dry, or mature skin in Queen Creek, AZ.",
+  keywords:
+    "raspberry peach enzyme peel, gentle facial, hydrating treatment, anti-inflammatory, sensitive skin, dry skin, Queen Creek spa",
+};
 
 export default function RaspberryPeachEnzymePeelPage() {
-  return <RaspberryPeachEnzymePeelClientPage />
+  return <RaspberryPeachEnzymePeelClientPage />;
 }

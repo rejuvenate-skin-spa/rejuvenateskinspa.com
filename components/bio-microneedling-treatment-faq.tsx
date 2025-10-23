@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const faqSections = [
   {
@@ -13,7 +13,8 @@ const faqSections = [
           "Bio microneedling is a natural, non-invasive skin treatment that uses microscopic siliceous spicules derived from freshwater sponges to create microchannels in the skin. Unlike traditional microneedling, it involves no needles or mechanical devices.",
       },
       {
-        question: "How does bio microneedling differ from traditional microneedling?",
+        question:
+          "How does bio microneedling differ from traditional microneedling?",
         answer:
           "Instead of needles, bio microneedling uses naturally derived spicules to stimulate the skin and enhance product absorption. It causes no bleeding and typically has a shorter recovery time.",
       },
@@ -54,7 +55,8 @@ const faqSections = [
       },
       {
         question: "Can biomicroneedling be performed on all skin types?",
-        answer: "Yes. It is safe for all skin tones and types, including sensitive and acne-prone skin.",
+        answer:
+          "Yes. It is safe for all skin tones and types, including sensitive and acne-prone skin.",
       },
       {
         question: "What areas of the body can be treated?",
@@ -87,20 +89,25 @@ const faqSections = [
           "With proper skincare, results can last several months. Ongoing treatments can maintain and enhance improvements.",
       },
       {
-        question: "How much does bio microneedling cost at Rejuvenate Skin Spa?",
+        question:
+          "How much does bio microneedling cost at Rejuvenate Skin Spa?",
         answer:
           "Bio microneedling typically starts at $225 per session. Packages are available for multiple sessions at a discounted rate.",
       },
     ],
   },
-]
+];
 
 export default function BioMicroneedlingTreatmentFAQ() {
-  const [openItems, setOpenItems] = useState<string[]>([])
+  const [openItems, setOpenItems] = useState<string[]>([]);
 
   const toggleItem = (itemId: string) => {
-    setOpenItems((prev) => (prev.includes(itemId) ? prev.filter((id) => id !== itemId) : [...prev, itemId]))
-  }
+    setOpenItems((prev) =>
+      prev.includes(itemId)
+        ? prev.filter((id) => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
 
   // Generate FAQ schema markup
   const faqSchema = {
@@ -114,40 +121,52 @@ export default function BioMicroneedlingTreatmentFAQ() {
           "@type": "Answer",
           text: faq.answer,
         },
-      })),
+      }))
     ),
-  }
+  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section id="faq" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Bio Microneedling Services FAQ's
+              SQT Bio Microneedling Services FAQ's
             </h2>
-            <p className="text-xl text-gray-600">Everything you need to know about our bio microneedling treatments</p>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about our bio microneedling treatments
+            </p>
           </div>
 
           <div className="space-y-8">
             {faqSections.map((section, sectionIndex) => (
               <div key={sectionIndex}>
-                <h3 className="text-xl font-semibold text-sage-600 mb-4">{section.title}</h3>
+                <h3 className="text-xl font-semibold text-sage-600 mb-4">
+                  {section.title}
+                </h3>
                 <div className="space-y-2">
                   {section.faqs.map((faq, faqIndex) => {
-                    const itemId = `${sectionIndex}-${faqIndex}`
-                    const isOpen = openItems.includes(itemId)
+                    const itemId = `${sectionIndex}-${faqIndex}`;
+                    const isOpen = openItems.includes(itemId);
 
                     return (
-                      <div key={faqIndex} className="bg-white border border-gray-300 rounded">
+                      <div
+                        key={faqIndex}
+                        className="bg-white border border-gray-300 rounded"
+                      >
                         <button
                           className="w-full text-left p-4 flex justify-between items-center hover:bg-gray-50 transition-colors"
                           onClick={() => toggleItem(itemId)}
                           aria-expanded={isOpen}
                           aria-controls={`faq-answer-${itemId}`}
                         >
-                          <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
+                          <span className="font-medium text-gray-900 pr-4">
+                            {faq.question}
+                          </span>
                           <ChevronDown
                             className={`h-4 w-4 text-gray-600 transition-transform flex-shrink-0 ${
                               isOpen ? "transform rotate-180" : ""
@@ -155,19 +174,23 @@ export default function BioMicroneedlingTreatmentFAQ() {
                           />
                         </button>
                         {isOpen && (
-                          <div id={`faq-answer-${itemId}`} className="px-4 pb-4 border-t border-gray-200">
+                          <div
+                            id={`faq-answer-${itemId}`}
+                            className="px-4 pb-4 border-t border-gray-200"
+                          >
                             <div className="text-gray-700 leading-relaxed pt-3">
                               {faq.answer.split("\n").map((line, lineIndex) => (
                                 <div key={lineIndex}>
                                   {line}
-                                  {lineIndex < faq.answer.split("\n").length - 1 && <br />}
+                                  {lineIndex <
+                                    faq.answer.split("\n").length - 1 && <br />}
                                 </div>
                               ))}
                             </div>
                           </div>
                         )}
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -176,5 +199,5 @@ export default function BioMicroneedlingTreatmentFAQ() {
         </div>
       </section>
     </>
-  )
+  );
 }
