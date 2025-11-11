@@ -8,6 +8,7 @@ import { useState, useEffect } from "react"
 export function Footer() {
   const [isMobile, setIsMobile] = useState(false)
   const [isBusinessHours, setIsBusinessHours] = useState(false)
+  const [year, setYear] = useState(2024)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -29,6 +30,7 @@ export function Footer() {
 
     checkMobile()
     checkBusinessHours()
+    setYear(new Date().getFullYear())
 
     window.addEventListener("resize", checkMobile)
     const interval = setInterval(checkBusinessHours, 60000) // Check every minute
@@ -147,7 +149,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Rejuvenate Skin Spa. All rights reserved.</p>
+          <p>&copy; {year} Rejuvenate Skin Spa. All rights reserved.</p>
         </div>
       </div>
     </footer>
