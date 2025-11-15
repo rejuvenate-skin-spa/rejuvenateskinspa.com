@@ -68,11 +68,11 @@ export default function AboutUsPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/our-story-rejuvenate-skin-spa.jpg"
                 alt="Dr. Sarah Mitchell, Founder"
                 width={600}
                 height={500}
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl object-cover"
               />
             </div>
           </div>
@@ -123,57 +123,6 @@ export default function AboutUsPage() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">Meet Our Expert Team</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our certified professionals bring years of experience and a passion for helping you achieve your best
-              skin.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Dr. Sarah Mitchell",
-                title: "Founder & Medical Director",
-                credentials: "MD, Board Certified Dermatologist",
-                image: "/placeholder.svg?height=400&width=300",
-                bio: "With over 15 years of experience in dermatology and aesthetic medicine, Dr. Mitchell is passionate about helping clients achieve healthy, beautiful skin.",
-              },
-              {
-                name: "Jessica Chen",
-                title: "Senior Aesthetician",
-                credentials: "Licensed Aesthetician, Certified Plasma Specialist",
-                image: "/placeholder.svg?height=400&width=300",
-                bio: "Jessica specializes in advanced facial treatments and has performed over 2,000 successful plasma skin tightening procedures.",
-              },
-              {
-                name: "Maria Rodriguez",
-                title: "Chemical Peel Specialist",
-                credentials: "Licensed Aesthetician, Chemical Peel Certified",
-                image: "/placeholder.svg?height=400&width=300",
-                bio: "Maria is our chemical peel expert with specialized training in TCA and glycolic acid treatments for all skin types.",
-              },
-            ].map((member, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="relative h-64">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-sage-600 font-medium mb-1">{member.title}</p>
-                  <p className="text-sm text-gray-500 mb-3">{member.credentials}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
-                </CardContent>
-              </Card>
             ))}
           </div>
         </div>

@@ -81,11 +81,11 @@ export default function GlycolicAcidPeelPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Glycolic+Acid+Benefits"
+                src="/images/glycolic-acid-peel-benefits.jpg"
                 alt="Glycolic acid peel benefits"
                 width={500}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg object-cover"
               />
             </div>
           </div>
@@ -163,14 +163,18 @@ export default function GlycolicAcidPeelPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <BeforeAfterSlider
-              beforeImage="/placeholder.svg?height=400&width=600&text=Before+Glycolic+Peel"
-              afterImage="/placeholder.svg?height=400&width=600&text=After+Glycolic+Peel"
+              beforeImage="/images/glycolic-acid-peel-slider-image.jpg"
+              afterImage="/images/glycolic-acid-peel-slider-image.jpg"
               alt="Glycolic Acid Peel Results - Skin Texture"
+              imageClassName="object-contain object-center"
+              containerClassName="relative w-full h-[450px] overflow-hidden rounded-lg cursor-col-resize select-none bg-gray-50 border border-gray-200"
             />
             <BeforeAfterSlider
-              beforeImage="/placeholder.svg?height=400&width=600&text=Before+Treatment"
-              afterImage="/placeholder.svg?height=400&width=600&text=After+Treatment"
+              beforeImage="/images/glycolic-acid-peel-results-2.jpg"
+              afterImage="/images/glycolic-acid-peel-results-2.jpg"
               alt="Glycolic Acid Peel Results - Skin Brightness"
+              imageClassName="object-contain object-center"
+              containerClassName="relative w-full h-[450px] overflow-hidden rounded-lg cursor-col-resize select-none bg-gray-50 border border-gray-200"
             />
           </div>
 
