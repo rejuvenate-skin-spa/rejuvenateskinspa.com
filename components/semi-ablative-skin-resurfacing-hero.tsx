@@ -1,53 +1,53 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
+import Image from "next/image"
 
 export default function SemiAblativeSkinResurfacingHero() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+      setIsMobile(window.innerWidth < 768)
+    }
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const isBusinessHours = () => {
-    const now = new Date();
+    const now = new Date()
     const arizonaTime = new Date(
       now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    );
-    const day = arizonaTime.getDay();
-    const hour = arizonaTime.getHours();
+    )
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
 
     // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
-  };
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549";
+      window.location.href = "tel:480-225-9549"
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/about-us/contact-us")
     }
-  };
+  }
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq-section");
+    const faqSection = document.getElementById("faq-section")
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" });
+      faqSection.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
 
   return (
-    <section className="relative h-[500px] flex items-center overflow-hidden bg-sage-50">
+    <section className="relative h-[550px] flex items-center overflow-hidden bg-sage-50">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -71,10 +71,11 @@ export default function SemiAblativeSkinResurfacingHero() {
               <span className="text-sage-300 block">The CAT Resurface</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-lg">
-              Positioned between the gentle Plexr Plasma Pen Shower (nano-ablative)
-              and the intensive Plexr Plasma Pen Fibroblast Lift (fully ablative),
-              Plexr CAT Resurfacing  (semi-ablavtive) delivers the perfect balance of precision,
-              renewal and dramatic results with moderate downtime.
+              Positioned between the gentle Plexr Plasma Pen Shower
+              (nano-ablative) and the intensive Plexr Plasma Pen Fibroblast Lift
+              (fully ablative), Plexr CAT Resurfacing (semi-ablavtive) delivers
+              the perfect balance of precision, renewal and dramatic results
+              with moderate downtime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -98,5 +99,5 @@ export default function SemiAblativeSkinResurfacingHero() {
         </div>
       </div>
     </section>
-  );
+  )
 }
