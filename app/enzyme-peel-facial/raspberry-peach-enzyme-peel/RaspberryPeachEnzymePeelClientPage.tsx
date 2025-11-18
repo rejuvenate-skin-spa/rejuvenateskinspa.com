@@ -105,7 +105,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=Raspberry-Peach+Treatment+Benefits"
+                src="/images/raspberry-peach-enzyme-peel-benefits.jpg"
                 alt="Raspberry-Peach Enzyme Peel Benefits"
                 width={600}
                 height={500}

@@ -56,29 +56,30 @@ export default function NanoAblativeClientPage() {
       {/* Treatment Overview */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Next-Generation Microscopic Skin Renewal with Zero Downtime
-              </h2>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Considered the gentlest form of Plasma skin resurfacing at a microscopic level. The Plexr Shower is an advanced treatment that creates invisible micro-channels on the skin's surface while using controlled plasma energy. These micro-channels open pathways to stimulate collagen production, enhance elasticity, and boost infused professional serums deep within the dermal layers for maximum hydration, cellar renewal and intense moisture renewal.
-                </p>
-              </div>
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
+              Next-Generation Microscopic Skin Renewal with Zero Downtime
+            </h2>
+            <div className="space-y-4 text-gray-600 mb-8">
+              <p>
+                Considered the gentlest form of Plasma skin resurfacing at a microscopic level. The Plexr Shower is an advanced treatment that creates invisible micro-channels on the skin's surface while using controlled plasma energy. These micro-channels open pathways to stimulate collagen production, enhance elasticity, and boost infused professional serums deep within the dermal layers for maximum hydration, cellar renewal and intense moisture renewal.
+              </p>
             </div>
-            <div className="space-y-6">
-              {/* Image */}
-              <div className="relative">
-                <Image
-                  src="/placeholder.svg?height=400&width=500&text=Nano+Plasma+Technology"
-                  alt="Nano plasma technology process"
-                  width={500}
-                  height={400}
-                  className="rounded-lg shadow-xl"
-                />
-              </div>
-
+            
+            {/* Image */}
+            <div className="relative mb-8 max-w-2xl mx-auto">
+              <Image
+                src="/images/nano-ablative-shower-results-rejuvenate-skin-spa-queen-creek-az.jpg"
+                alt="Nano plasma technology process"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-xl w-full"
+              />
+            </div>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start mt-8">
+            <div>
               {/* How It Works Box */}
               <div className="bg-sage-50 p-6 rounded-lg border border-sage-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -147,7 +148,9 @@ export default function NanoAblativeClientPage() {
                   </div>
                 </div>
               </div>
-
+            </div>
+            
+            <div>
               {/* Benefits Box */}
               <div className="bg-white p-6 rounded-lg border border-sage-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">

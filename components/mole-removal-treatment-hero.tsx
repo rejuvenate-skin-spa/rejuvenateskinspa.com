@@ -1,70 +1,74 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 export function MoleRemovalTreatmentHero() {
-  const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+      setIsMobile(window.innerWidth < 768)
+    }
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const isBusinessHours = () => {
-    const now = new Date();
+    const now = new Date()
     const arizonaTime = new Date(
       now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    );
-    const day = arizonaTime.getDay();
-    const hour = arizonaTime.getHours();
+    )
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
 
     // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
-  };
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549";
+      window.location.href = "tel:480-225-9549"
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/about-us/contact-us")
     }
-  };
+  }
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq-section");
+    const faqSection = document.getElementById("faq-section")
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" });
+      faqSection.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
 
   return (
     <section className="relative h-[500px] bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.webp"
-          alt="Rejuvenate Med Spa Queen Creek AZ"
+          src="/images/plexr-mole-removal-treatment-rejuvenate-skin-spa-queen-creek-az.jpg"
+          alt="Plexr Plasma Mole Removal Treatment"
           fill
-          className="object-cover object-right"
+          className="object-cover object-left"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
-              <span className="text-gray-900">Plexr Plasma</span>
-              <span className="text-sage-600 block">Mole Removal</span>
+              <span className="text-white">Plexr Plasma</span>
+              <span className="text-sage-300 block">Mole Removal</span>
             </h1>
-            <p className="text-xl text-sage-700 max-w-lg">
+            <p className="text-xl text-gray-100 max-w-lg">
               Clear, confident skin starts here. Our plasma mole removal
               treatment gently targets and removes moles without surgery or
               scarring.
@@ -80,7 +84,7 @@ export function MoleRemovalTreatmentHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-700 hover:bg-sage-50 rounded-lg backdrop-blur-sm bg-white/80"
+                className="border-white text-white hover:bg-white hover:text-gray-900 rounded-lg backdrop-blur-sm bg-transparent"
                 onClick={handleLearnMoreClick}
               >
                 Learn More
@@ -93,5 +97,5 @@ export function MoleRemovalTreatmentHero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

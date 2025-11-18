@@ -21,7 +21,9 @@ export function EyebrowLaminationTreatmentHero() {
 
   const isBusinessHours = () => {
     const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    )
     const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
 
@@ -44,15 +46,19 @@ export function EyebrowLaminationTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] bg-sage-50">
+    <section className="relative h-[500px] bg-sage-50 overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.webp"
+          src="/images/eyebrow-lamination-hero.jpg"
           alt="Rejuvenate Med Spa Queen Creek AZ"
           fill
-          className="object-cover object-right"
+          className="object-cover object-left"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       <div className="relative z-10 h-full">
@@ -60,12 +66,12 @@ export function EyebrowLaminationTreatmentHero() {
           <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
-                <span className="text-gray-900">Eyebrow </span>
-                <span className="text-sage-600">Lamination</span>
+                <span className="text-white">Eyebrow </span>
+                <span className="text-sage-300">Lamination</span>
               </h1>
-              <p className="text-xl text-sage-700 leading-relaxed max-w-lg">
-                Transform your brows with our professional lamination treatment for fuller, perfectly shaped eyebrows
-                that last 6-8 weeks
+              <p className="text-xl text-gray-100 leading-relaxed max-w-lg">
+                Transform your brows with our professional lamination treatment
+                for fuller, perfectly shaped eyebrows that last 6-8 weeks
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -77,7 +83,7 @@ export function EyebrowLaminationTreatmentHero() {
                 <Button
                   onClick={handleLearnMore}
                   variant="outline"
-                  className="border-sage-600 text-sage-700 hover:bg-sage-50 backdrop-blur-sm bg-white/80 px-6 py-2"
+                  className="border-white text-white hover:bg-white hover:text-gray-900 backdrop-blur-sm bg-transparent px-6 py-2"
                 >
                   Learn More
                 </Button>

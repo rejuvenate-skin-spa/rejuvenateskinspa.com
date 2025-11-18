@@ -87,7 +87,7 @@ export default function BioMicroneedlingClientPage() {
             </div>
             <div className="relative">
               <img
-                src="/images/bio-microneedling-treatment-rejuvenate-skin-spa-queen-creek-az.jpg"
+                src="/images/sqt-bio-microneedling.jpg"
                 alt="SQT Bio Microneedling Treatment"
                 className="rounded-lg shadow-lg"
               />

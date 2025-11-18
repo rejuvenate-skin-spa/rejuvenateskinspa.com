@@ -49,10 +49,13 @@ export function CherryEnzymePeelHero() {
           src="/images/cherry-enzyme-peel-facial-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Cherry Enzyme Peel Facial Treatment at Rejuvenate Skin Spa"
           fill
-          className="object-cover"
+          className="object-cover object-right"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
       {/* Content */}

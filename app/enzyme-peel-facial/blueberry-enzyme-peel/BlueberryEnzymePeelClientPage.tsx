@@ -51,7 +51,7 @@ export default function BlueberryEnzymePeelClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=Blueberry+Treatment+Benefits"
+                src="/images/blueberry-enzyme-peel-treatment.png"
                 alt="Blueberry Enzyme Peel Benefits"
                 width={600}
                 height={500}

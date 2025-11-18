@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -13,6 +14,14 @@ import Link from "next/link";
 import Image from "next/image";
 import BioRePeelFacialChemicalPeelHero from "@/components/biorepeel-facial-chemical-peel-hero";
 import BioRePeelFacialChemicalPeelFAQ from "@/components/biorepeel-facial-chemical-peel-faq";
+
+export const metadata: Metadata = {
+  title: "BioRePeel Chemical Peel | Next Generation TCA Peel | Rejuvenate Skin Spa | Queen Creek, AZ",
+  description:
+    "BioRePeelCl3® biphasic chemical peel treatment in Queen Creek, Arizona. Advanced TCA peel with amino acids, vitamins, and GABA. Minimal peeling, maximum results. Facial and body treatments available.",
+  keywords:
+    "BioRePeel, BioRePeelCl3, biphasic chemical peel, TCA peel, next generation peel, minimal downtime peel, Queen Creek Arizona, antioxidant peel, skin rejuvenation",
+};
 
 export default function BioRePeelTreatmentPage() {
   return (
@@ -48,8 +57,8 @@ export default function BioRePeelTreatmentPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Advanced+TCA+Technology"
-                alt="Advanced TCA technology"
+                src="/images/biorepeel-next-gen.jpg"
+                alt="BioRePeelCl3 Next Generation Chemical Peel"
                 width={500}
                 height={400}
                 className="rounded-lg shadow-xl"
@@ -158,7 +167,7 @@ export default function BioRePeelTreatmentPage() {
                 price: "From $200",
                 href: "/biorepeel-facial-chemical-peel/35-tca-peel",
                 image:
-                  "/placeholder.svg?height=300&width=400&text=BioRePeel+35+Facial",
+                  "/images/biorepeel-35-tca-facial-treatment.jpg",
                 popular: true,
               },
               {
@@ -176,7 +185,7 @@ export default function BioRePeelTreatmentPage() {
                 price: "From $250",
                 href: "/biorepeel-facial-chemical-peel/50-tca-peel",
                 image:
-                  "/placeholder.svg?height=300&width=400&text=BioRePeel+50+Body",
+                  "/images/biorepeel-50-tca-body-treatment.png",
               },
             ].map((treatment, index) => (
               <Card
@@ -316,7 +325,7 @@ export default function BioRePeelTreatmentPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Before+After+Results+1"
+                src="/images/biorepeel-real-results-1.png"
                 alt="BioRePeel before and after results"
                 width={500}
                 height={400}
@@ -328,7 +337,7 @@ export default function BioRePeelTreatmentPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Before+After+Results+2"
+                src="/images/biorepeel-real-results-2.png"
                 alt="BioRePeel skin transformation"
                 width={500}
                 height={400}

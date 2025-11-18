@@ -57,24 +57,26 @@ export function HomeHero({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.webp"
+          src="/images/spa-services-rejuventate-skin-spa-queen-creek-az.avif"
           alt="Natural spa elements with cucumber slices and skincare products"
           fill
-          className="object-cover object-center lg:object-right"
+          className="object-cover object-right"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
         {/* Gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sage-50/80 via-sage-50/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="max-w-2xl">
           <div className="space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight">
               {title}
-              <span className="text-sage-600 block">{subtitle}</span>
+              <span className="text-sage-300 block">{subtitle}</span>
             </h1>
-            <p className="text-xl text-gray-700 max-w-lg">{description}</p>
+            <p className="text-xl text-gray-100 max-w-lg">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg rounded-md px-6 py-2"

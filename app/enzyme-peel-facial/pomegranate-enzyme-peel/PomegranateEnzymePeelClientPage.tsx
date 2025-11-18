@@ -109,7 +109,7 @@ export default function PomegranateEnzymePeelClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/pomegranate-enzyme-peel-benefits.png"
                 alt="Pomegranate Enzyme Peel Benefits"
                 width={600}
                 height={500}

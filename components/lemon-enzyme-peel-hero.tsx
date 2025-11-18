@@ -1,45 +1,45 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function LemonEnzymePeelHero() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const isBusinessHours = () => {
-    const now = new Date();
+    const now = new Date()
     const arizonaTime = new Date(
       now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    );
-    const day = arizonaTime.getDay();
-    const hour = arizonaTime.getHours();
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
-  };
+    )
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549";
+      window.location.href = "tel:480-225-9549"
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/about-us/contact-us")
     }
-  };
+  }
 
   const handleLearnMoreClick = () => {
-    const faqSection = document.getElementById("faq-section");
+    const faqSection = document.getElementById("faq-section")
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" });
+      faqSection.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
 
   return (
     <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
@@ -48,10 +48,13 @@ export default function LemonEnzymePeelHero() {
           src="/images/lemon-zest-enzyme-peel-facial-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Lemon Zest Enzyme Peel Treatment"
           fill
-          className="object-cover"
+          className="object-cover object-left"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-900/70 to-green-900/70" />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -79,5 +82,5 @@ export default function LemonEnzymePeelHero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -45,23 +45,27 @@ export function AblativeSkinResurfacingHero() {
     <section className="relative h-[500px] bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.webp"
+          src="/images/heroablative.png"
           alt="Rejuvenate Med Spa Queen Creek AZ"
           fill
           className="object-cover object-right"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
           <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
-              <span className="text-gray-900">Ablative</span>
-              <span className="text-sage-600 block">Skin Resurfacing</span>
-              <span className="text-gray-900 block">The Plasma Pen Fibroblast Lift</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-playfair font-bold leading-tight">
+              <span className="text-white">Ablative</span>
+              <span className="text-sage-300 block">Skin Resurfacing</span>
+              <span className="text-white block">The Plasma Pen Fibroblast Lift</span>
             </h1>
-            <p className="text-xl text-sage-700 max-w-lg">
+            <p className="text-xl text-gray-100 max-w-lg">
               The most advanced plasma pen technology for maximum skin
               transformation. Dramatic results for severe skin concerns with
               comprehensive rejuvenation.
@@ -78,7 +82,7 @@ export function AblativeSkinResurfacingHero() {
                 size="lg"
                 variant="outline"
                 onClick={handleLearnMoreClick}
-                className="border-sage-600 text-sage-700 hover:bg-sage-50 backdrop-blur-sm bg-white/80"
+                className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent backdrop-blur-sm"
               >
                 Learn More
               </Button>

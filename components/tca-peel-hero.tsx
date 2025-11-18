@@ -46,14 +46,19 @@ export default function TcaPeelHero() {
 
   return (
     <section className="relative h-[500px] flex items-center overflow-hidden">
-      <Image
-        src="/images/peel-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
-        alt="TCA Chemical Peel Treatment"
-        fill
-        className="object-cover"
-        priority
-      />
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0">
+        <Image
+          src="/images/peel-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
+          alt="TCA Chemical Peel Treatment"
+          fill
+          className="object-cover object-right"
+          priority
+        />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+      </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -84,21 +84,23 @@ export default function NanoAblativeSkinResurfacingHero({
           src="/images/non-ablative-skin-resurfacing-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Nano-ablative skin resurfacing treatment at Rejuvenate Skin Spa"
           fill
-          className="object-cover object-center lg:object-right"
+          className="object-cover object-right"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
         {/* Gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sage-50/80 via-sage-50/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="max-w-2xl">
           <div className="space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight">
               {title}
-              <span className="text-sage-600 block">{subtitle}</span>
+              <span className="text-sage-300 block">{subtitle}</span>
             </h1>
-            <p className="text-xl text-gray-700 max-w-lg">{description}</p>
+            <p className="text-xl text-gray-100 max-w-lg">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
@@ -110,7 +112,7 @@ export default function NanoAblativeSkinResurfacingHero({
               <Button
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-700 hover:bg-sage-50 backdrop-blur-sm bg-white/80"
+                className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent backdrop-blur-sm"
                 onClick={handleLearnMoreClick}
               >
                 {secondaryButtonText}

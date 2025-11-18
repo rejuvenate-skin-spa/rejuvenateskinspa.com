@@ -51,18 +51,22 @@ export default function RedLightTherapyTreatmentHero() {
           src="/images/red-light-therapy-treatment-services-rejuventate-skin-spa-queen-creek-az.avif"
           alt="Red Light Therapy Treatment Services"
           fill
-          className="object-cover"
+          className="object-cover object-right"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
           <div className="text-left">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 font-playfair">
-              <span className="text-sage-600">Red Light</span> <span className="text-sage-800">Therapy</span>
+              <span className="text-white">Red Light</span> <span className="text-sage-300">Therapy</span>
             </h1>
-            <p className="text-xl text-sage-700 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-xl text-gray-100 mb-8 max-w-2xl leading-relaxed">
               Harness the healing power of red and near-infrared light for natural skin rejuvenation, pain relief, and
               cellular regeneration
             </p>
@@ -78,7 +82,7 @@ export default function RedLightTherapyTreatmentHero() {
                 size="lg"
                 variant="outline"
                 onClick={handleLearnMoreClick}
-                className="border-sage-600 text-sage-700 hover:bg-sage-50 backdrop-blur-sm bg-white/80"
+                className="border-white text-white hover:bg-white hover:text-gray-900 backdrop-blur-sm bg-transparent"
               >
                 Learn More
               </Button>

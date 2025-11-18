@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
@@ -13,48 +13,55 @@ export default function MicrobladingTreatmentHero() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768)
     }
-    
+
     checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
   const isBusinessHours = () => {
     const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", {timeZone: "America/Phoenix"}))
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    )
     const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
-    
+
     // Monday (1) to Saturday (6), 8 AM to 6 PM
     return day >= 1 && day <= 6 && hour >= 8 && hour < 18
   }
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = 'tel:480-225-9549'
+      window.location.href = "tel:480-225-9549"
     } else {
-      router.push('/about-us/contact-us')
+      router.push("/about-us/contact-us")
     }
   }
 
   const handleLearnMore = () => {
-    const faqSection = document.getElementById('faq-section')
+    const faqSection = document.getElementById("faq-section")
     if (faqSection) {
-      faqSection.scrollIntoView({ behavior: 'smooth' })
+      faqSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 
   return (
     <section className="relative h-[500px] flex items-center overflow-hidden">
-      <Image
-        src="/images/microblading-services-rejuventate-skin-spa-queen-creek-az.avif"
-        alt="Microblading services background"
-        fill
-        className="object-cover"
-        priority
-      />
-      <div className="absolute inset-0 bg-black/40" />
-      
+      <div className="absolute inset-0">
+        <Image
+          src="/images/microblading-procedure-rejuvenate-skin-spa-queen-creek-az.jpg"
+          alt="Microblading services background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -63,12 +70,13 @@ export default function MicrobladingTreatmentHero() {
               <span className="text-sage-200 block">Microblading</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-lg">
-              Semi-permanent eyebrow enhancement using precise hair-stroke technique. Wake up every day with perfectly
-              shaped, natural-looking brows.
+              Semi-permanent eyebrow enhancement using precise hair-stroke
+              technique. Wake up every day with perfectly shaped,
+              natural-looking brows.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 onClick={handlePrimaryClick}
                 className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg backdrop-blur-sm"
               >

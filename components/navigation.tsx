@@ -303,7 +303,7 @@ export function Navigation() {
                             <Link
                               key={subItem.title}
                               href={subItem.href}
-                              className="block text-gray-600 hover:text-sage-600 py-2 text-sm transition-colors duration-200"
+                              className="block text-gray-600 hover:text-sage-600 py-2 text-sm transition-colors duration-200 visited:text-gray-600 active:text-gray-600"
                               onClick={closeMobileMenu}
                             >
                               {subItem.title}

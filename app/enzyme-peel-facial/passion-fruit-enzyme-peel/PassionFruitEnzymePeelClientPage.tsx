@@ -134,7 +134,7 @@ export default function PassionFruitEnzymePeelClientPage() {
                   </div>
                 </div>
               </div>
-              <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded">
+              <div className="mt-6 p-4 bg-white border-l-4 border-gray-300 rounded">
                 <p className="text-sm text-gray-700">
                   <strong>Note:</strong> Not recommended for clients with
                   rosacea, melasma, Fitzpatrick 4-6, or recently sun-exposed
@@ -144,7 +144,7 @@ export default function PassionFruitEnzymePeelClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/passion-fruit-enzyme-peel.jpg"
                 alt="Passion Fruit Enzyme Peel Benefits"
                 width={600}
                 height={500}

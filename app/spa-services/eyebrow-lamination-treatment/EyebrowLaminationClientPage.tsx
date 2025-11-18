@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Clock, DollarSign, Star, CheckCircle, Users, Eye, Sparkles, Heart, Shield } from "lucide-react"
+import { Clock, DollarSign, Star, CheckCircle, Eye, Sparkles, Heart, Shield } from "lucide-react"
 import { EyebrowLaminationFAQ } from "@/components/eyebrow-lamination-treatment-faq"
 import { EyebrowLaminationTreatmentHero } from "@/components/eyebrow-lamination-treatment-hero"
 
@@ -16,7 +16,7 @@ export default function EyebrowLaminationClientPage() {
       {/* Quick Stats */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="text-center">
               <Clock className="h-8 w-8 text-sage-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-gray-900">45 min</div>
@@ -31,11 +31,6 @@ export default function EyebrowLaminationClientPage() {
               <Star className="h-8 w-8 text-sage-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-gray-900">6-8 weeks</div>
               <div className="text-sm text-gray-600">Results Last</div>
-            </div>
-            <div className="text-center">
-              <Users className="h-8 w-8 text-sage-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">500+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
           </div>
         </div>
@@ -80,7 +75,7 @@ export default function EyebrowLaminationClientPage() {
             </div>
             <div className="relative">
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/eyebrow-lamination-results.jpg"
                 alt="Eyebrow Lamination Results"
                 className="rounded-lg shadow-lg"
               />

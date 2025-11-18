@@ -65,7 +65,7 @@ export default function MicrobladingClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/microblading-procedure-rejuvenate-skin-spa-queen-creek-az.jpg"
+                src="/images/microblading-procedure.jpg"
                 alt="Natural eyebrow enhancement"
                 width={500}
                 height={400}
@@ -299,7 +299,7 @@ export default function MicrobladingClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Healing+Process"
+                src="/images/microblading-healing-process.jpg"
                 alt="Microblading healing process"
                 width={500}
                 height={400}

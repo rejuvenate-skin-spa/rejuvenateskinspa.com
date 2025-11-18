@@ -67,10 +67,13 @@ export default function MicroneedlingTreatmentHero({
         src="/images/microneedling-services-rejuventate-skin-spa-queen-creek-az.avif"
         alt="Advancements in Microneedling Technology at Rejuvenate Skin Spa"
         fill
-        className="object-cover md:object-right object-center"
+        className="object-cover object-right"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+      {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+      <div className="absolute inset-0 bg-black/50"></div>
+      {/* Gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
 
       <div className="relative h-full flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlexrPlasmaSkinTighteningHero } from "@/components/plexr-plasma-skin-tightening-hero";
@@ -127,18 +128,41 @@ export default function PlexrPlasmaPageClient() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-sage-600 mb-6">
               Revolutionary Plexr Plasma Pen Technology
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
               Experience the future of skin rejuvenation powered by Plexr Plasma Pen technology, the golden standard in advacned plasma skin tightening. These revolutionary treatments deliver remarkable results by tightening, firming, and lifting the skin, all without surgery, needles, general anesthesia, or long recovery times.
             </p>
-            <ul className="text-lg text-gray-700 max-w-3xl mx-auto space-y-2">
-              <li>• Level 1 - The Shower - nano-ablative</li>
-              <li>• Level 2 - The Glass Lift - nano-ablative</li>
-              <li>• Level 3 - The Cat Resurface - semi ablative</li>
-              <li>• Level 4 - The Fibroblast Lift - ablative</li>
-            </ul>
+            <div className="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+              <div className="relative flex justify-center md:justify-start" style={{ width: '3in', height: '2in', minWidth: '288px', minHeight: '192px' }}>
+                <Image
+                  src="/images/plasma-eye-lift.jpg"
+                  alt="Plexr Plasma Pen Technology"
+                  width={288}
+                  height={192}
+                  className="rounded-lg shadow-lg object-cover"
+                />
+              </div>
+              <ul className="text-xs font-bold text-gray-700 space-y-2 text-left" style={{ fontSize: '12pt' }}>
+                <li>• Level 1 - The Shower - nano-ablative</li>
+                <li>• Level 2 - The Glass Lift - nano-ablative</li>
+                <li>• Level 3 - Cat Resurface - semi ablative</li>
+                <li>• Level 4 - The Fibroblast Lift - ablative</li>
+              </ul>
+              <div className="relative flex justify-center md:justify-end" style={{ width: '3in', height: '2in', minWidth: '288px', minHeight: '192px' }}>
+                <div className="relative rounded-lg shadow-lg overflow-hidden" style={{ width: '100%', height: '100%' }}>
+                  <Image
+                    src="/images/neck-plasma.png"
+                    alt="Plexr Plasma Pen Technology"
+                    width={288}
+                    height={192}
+                    className="rounded-lg object-cover"
+                  />
+                  <div className="absolute inset-0 bg-white/30"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -389,11 +413,15 @@ export default function PlexrPlasmaPageClient() {
               treatments.
             </p>
           </div>
-          <BeforeAfterSlider
-            beforeImage="/placeholder.svg?height=400&width=600&text=Before+Plexr+Plasma"
-            afterImage="/images/plexr-plasma-after-rejuvenate-skin-spa-queen-creek-az.png"
-            alt="Plexr Plasma Pen Results"
-          />
+          <div className="relative max-w-4xl mx-auto">
+            <Image
+              src="/plexr-plasma-results.jpg"
+              alt="Plexr Plasma Pen Results"
+              width={1200}
+              height={800}
+              className="rounded-lg shadow-xl w-full"
+            />
+          </div>
         </div>
       </section>
 

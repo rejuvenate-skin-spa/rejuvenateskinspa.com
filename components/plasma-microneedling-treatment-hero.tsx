@@ -22,7 +22,9 @@ export default function PlasmaMicroneedlingTreatmentHero() {
 
   const isBusinessHours = () => {
     const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    )
     const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
 
@@ -49,21 +51,27 @@ export default function PlasmaMicroneedlingTreatmentHero() {
     <section className="relative h-[500px] bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/plasma-microneedling-services-rejuventate-skin-spa-queen-creek-az.avif"
+          src="/images/plasma-pen-microneedling-background.jpg"
           alt="Plasma Pen Microneedling Background"
           fill
-          className="object-cover"
+          className="object-cover object-left"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid lg:grid-cols-1 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
-              <span className="text-sage-600">Plasma Pen Microneedling</span>
+              <span className="text-white">Plasma Pen Microneedling</span>
             </h1>
-            <p className="text-xl text-sage-700 max-w-lg">
-              Experience the fusion of plasma energy and precision microneedle-free needling, a breakthrough treatment that lifts, tightens, and transforms your skin from within.
+            <p className="text-xl text-gray-100 max-w-lg">
+              Experience the fusion of plasma energy and precision
+              microneedle-free needling, a breakthrough treatment that lifts,
+              tightens, and transforms your skin from within.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -76,14 +84,16 @@ export default function PlasmaMicroneedlingTreatmentHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white rounded-md bg-transparent shadow-lg backdrop-blur-sm"
+                className="border-white text-white hover:bg-white hover:text-gray-900 rounded-md bg-transparent shadow-lg backdrop-blur-sm"
                 onClick={handleLearnMoreClick}
               >
                 Learn More
               </Button>
             </div>
           </div>
-          <div className="relative">{/* This div creates the right side space for the layout balance */}</div>
+          <div className="relative">
+            {/* This div creates the right side space for the layout balance */}
+          </div>
         </div>
       </div>
     </section>

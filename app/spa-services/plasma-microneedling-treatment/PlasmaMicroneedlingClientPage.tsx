@@ -86,9 +86,9 @@ export default function PlasmaMicroneedlingClientPage() {
             </div>
             <div className="relative">
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/f10a28e0-b307-4440-9abd-b180cb406d10-1.png"
                 alt="Plasma Pen Microneedling"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full max-w-md mx-auto"
               />
             </div>
           </div>

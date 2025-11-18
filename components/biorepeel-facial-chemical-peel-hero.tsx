@@ -55,11 +55,13 @@ export default function BioRePeelFacialChemicalPeelHero() {
           src="/images/biorepeel-hero.avif"
           alt="BioRePeel facial chemical peel treatment"
           fill
-          className="object-cover"
+          className="object-cover object-right"
           priority
         />
-        {/* Dark overlay for better text readability */}
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
         <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
       {/* Content */}

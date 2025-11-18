@@ -21,7 +21,9 @@ export default function SkinTagRemovalTreatmentHero() {
 
   const isBusinessHours = () => {
     const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    )
     const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
 
@@ -45,27 +47,32 @@ export default function SkinTagRemovalTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] bg-sage-50 flex items-center">
+    <section className="relative h-[500px] bg-sage-50 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.webp"
+          src="/images/skin-tag-removal-hero.jpg"
           alt="Rejuvenate Med Spa Queen Creek AZ"
           fill
-          className="object-cover object-right"
+          className="object-cover object-center"
           priority
         />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
-              <span className="text-gray-900">Skin Tag Removal</span>
-              <span className="text-sage-600 block">Treatment</span>
+              <span className="text-white">Skin Tag Removal</span>
+              <span className="text-sage-300 block">Treatment</span>
             </h1>
-            <p className="text-xl text-sage-700 max-w-lg">
-              Safe, precise removal of unwanted skin tags using advanced plasma technology. Quick procedure with minimal
-              downtime and excellent results.
+            <p className="text-xl text-gray-100 max-w-lg">
+              Safe, precise removal of unwanted skin tags using advanced plasma
+              technology. Quick procedure with minimal downtime and excellent
+              results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -85,7 +92,9 @@ export default function SkinTagRemovalTreatmentHero() {
               </Button>
             </div>
           </div>
-          <div className="hidden lg:block">{/* Space for image alignment */}</div>
+          <div className="hidden lg:block">
+            {/* Space for image alignment */}
+          </div>
         </div>
       </div>
     </section>

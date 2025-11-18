@@ -49,22 +49,28 @@ export default function SemiAblativeSkinResurfacingHero() {
   return (
     <section className="relative h-[500px] flex items-center overflow-hidden bg-sage-50">
       {/* Background Image */}
-      <Image
-        src="/images/plasma-microneedling-services-rejuventate-skin-spa-queen-creek-az.avif"
-        alt="Semi-ablative skin resurfacing treatment background"
-        fill
-        className="object-cover"
-        priority
-      />
+      <div className="absolute inset-0">
+        <Image
+          src="/images/semi-ablative-resurfacing-hero.png"
+          alt="Semi-ablative skin resurfacing treatment background"
+          fill
+          className="object-cover object-right"
+          priority
+        />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
-              <span className="text-sage-600">Semi-Ablative Plexr Plasma Pen</span>
-              <span className="text-sage-800 block">The CAT Resurface</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-playfair font-bold leading-tight">
+              <span className="text-white">Semi-Ablative Plexr Plasma Pen</span>
+              <span className="text-sage-300 block">The CAT Resurface</span>
             </h1>
-            <p className="text-xl text-gray-700 max-w-lg">
+            <p className="text-xl text-gray-100 max-w-lg">
               Positioned between the gentle Plexr Plasma Pen Shower (nano-ablative)
               and the intensive Plexr Plasma Pen Fibroblast Lift (fully ablative),
               Plexr CAT Resurfacing  (semi-ablavtive) delivers the perfect balance of precision,
@@ -81,7 +87,7 @@ export default function SemiAblativeSkinResurfacingHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white rounded-lg bg-transparent backdrop-blur-sm"
+                className="border-white text-white hover:bg-white hover:text-gray-900 rounded-lg bg-transparent backdrop-blur-sm"
                 onClick={handleLearnMoreClick}
               >
                 Learn More

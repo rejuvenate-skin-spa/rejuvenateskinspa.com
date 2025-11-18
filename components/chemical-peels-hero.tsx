@@ -53,10 +53,13 @@ export default function ChemicalPeelsHero() {
           src="/images/chemical-peel-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Chemical peel treatment services background"
           fill
-          className="object-cover"
+          className="object-cover object-right"
           priority
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -81,7 +84,7 @@ export default function ChemicalPeelsHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-700 hover:bg-sage-50 backdrop-blur-sm bg-white/80"
+                className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent backdrop-blur-sm"
                 onClick={scrollToFAQ}
               >
                 Learn More

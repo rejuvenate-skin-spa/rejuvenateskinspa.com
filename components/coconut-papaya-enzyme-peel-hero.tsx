@@ -18,7 +18,9 @@ export default function CoconutPapayaEnzymePeelHero() {
 
   const isBusinessHours = () => {
     const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    )
     const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
 
@@ -47,17 +49,22 @@ export default function CoconutPapayaEnzymePeelHero() {
           src="/images/coconut-papaya-enzyme-peel-facial-treatment-services-rejuvenate-skin-spa-queen-creek-az.jpg"
           alt="Coconut-Papaya Enzyme Peel Treatment"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/70 to-yellow-900/70" />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">Coconut-Papaya Enzyme Peel</h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-          Indulge in our tropical hydrating treatment that combines coconut's nourishing properties with papaya's gentle
-          exfoliation.
+        <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Coconut-Papaya Enzyme Peel
+        </h1>
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-100">
+          Indulge in our tropical hydrating treatment that combines coconut's
+          nourishing properties with papaya's gentle exfoliation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button

@@ -103,7 +103,7 @@ export default function LemonEnzymePeelClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/lemon-zest-enzyme-peel.jpg"
                 alt="Lemon Zest Enzyme Peel Benefits"
                 width={600}
                 height={500}

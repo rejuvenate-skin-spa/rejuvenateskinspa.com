@@ -47,15 +47,18 @@ export default function PumpkinOrangeEnzymePeelHero() {
           src="/images/pumpkin-orange-enzyme-peel-facial-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Pumpkin-Orange Enzyme Peel Treatment"
           fill
-          className="object-cover md:object-right object-center"
+          className="object-cover object-right"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/70 to-red-900/70" />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">Pumpkin-Orange Enzyme Peel</h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-100">
           Embrace the season with our warming Pumpkin-Orange Enzyme Peel for complete skin renewal and rejuvenation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

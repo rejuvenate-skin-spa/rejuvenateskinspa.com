@@ -21,7 +21,9 @@ export default function SunSpotRemovalTreatmentHero() {
 
   const isBusinessHours = () => {
     const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+    const arizonaTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+    )
     const day = arizonaTime.getDay()
     const hour = arizonaTime.getHours()
 
@@ -45,24 +47,31 @@ export default function SunSpotRemovalTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] bg-sage-50 flex items-center">
-      <Image
-        src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.webp"
-        alt="Sun spot removal treatment background"
-        fill
-        className="object-cover object-right"
-        priority
-      />
+    <section className="relative h-[500px] bg-sage-50 flex items-center overflow-hidden">
+      <div className="absolute inset-0 h-[140%]">
+        <Image
+          src="/images/shutterstock-2171144943-sun-spot-edited.jpg"
+          alt="Sun spot removal treatment background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-5xl font-playfair font-bold leading-tight">
-              <span className="text-gray-900">Sun Spot Removal</span>
-              <span className="text-sage-600 block">Treatment</span>
+              <span className="text-white">Sun Spot Removal</span>
+              <span className="text-sage-300 block">Treatment</span>
             </h1>
-            <p className="text-xl text-sage-700 max-w-lg">
-              Advanced plasma technology for precise removal of sun spots, age spots, and pigmented lesions. Restore
-              even skin tone with permanent results.
+            <p className="text-xl text-gray-100 max-w-lg">
+              Advanced plasma technology for precise removal of sun spots, age
+              spots, and pigmented lesions. Restore even skin tone with
+              permanent results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -75,7 +84,7 @@ export default function SunSpotRemovalTreatmentHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-700 hover:bg-sage-50 rounded-lg backdrop-blur-sm bg-white/80"
+                className="border-white text-white hover:bg-white hover:text-gray-900 rounded-lg backdrop-blur-sm bg-transparent"
                 onClick={handleLearnMoreClick}
               >
                 Learn More

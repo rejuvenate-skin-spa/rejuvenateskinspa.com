@@ -52,62 +52,60 @@ export default function CherryEnzymePeelClientPage() {
       {/* Treatment Overview */}
       <section id="treatment-overview" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="bg-sage-100 text-sage-800 mb-4">Level 3</Badge>
-              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Brightening Cherry Enzyme Peel Treatment
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Infused with natural cherry enzymes, this luminous fruit enzyme
-                peel combines restorative exfoliation with antioxidant
-                protection to restore clarity, radiance, and glow.
-              </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                This gentle yet effective cherry enzyme peel harnesses the power
-                of 5% lactic acid, blended with 1% arbutin and 1% kojic acid, to
-                visibly brighten dull skin, even out skin tone, smooth skin
-                texture, hydrate and rejuvenate your skin complexion. Safely
-                suitable for most skin types.
-              </p>
-            </div>
-            <div className="bg-sage-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-                Treatment Benefits
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-sage-600 mr-3">✓</span>
-                  <span className="text-gray-700">
-                    Brightens dull, tired-looking skin
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-sage-600 mr-3">✓</span>
-                  <span className="text-gray-700">
-                    Improves skin texture and smoothness
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-sage-600 mr-3">✓</span>
-                  <span className="text-gray-700">
-                    Reduces appearance of age spots
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-sage-600 mr-3">✓</span>
-                  <span className="text-gray-700">
-                    Stimulates collagen production
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-sage-600 mr-3">✓</span>
-                  <span className="text-gray-700">
-                    Provides natural antioxidant protection
-                  </span>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <Badge className="bg-sage-100 text-sage-800 mb-4">Level 3</Badge>
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-6">
+              Brightening Cherry Enzyme Peel Treatment
+            </h2>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              Infused with natural cherry enzymes, this luminous fruit enzyme
+              peel combines restorative exfoliation with antioxidant
+              protection to restore clarity, radiance, and glow.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              This gentle yet effective cherry enzyme peel harnesses the power
+              of 5% lactic acid, blended with 1% arbutin and 1% kojic acid, to
+              visibly brighten dull skin, even out skin tone, smooth skin
+              texture, hydrate and rejuvenate your skin complexion. Safely
+              suitable for most skin types.
+            </p>
+          </div>
+          <div className="bg-sage-50 p-8 rounded-2xl mt-8">
+            <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
+              Treatment Benefits
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="text-sage-600 mr-3">✓</span>
+                <span className="text-gray-700">
+                  Brightens dull, tired-looking skin
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-sage-600 mr-3">✓</span>
+                <span className="text-gray-700">
+                  Improves skin texture and smoothness
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-sage-600 mr-3">✓</span>
+                <span className="text-gray-700">
+                  Reduces appearance of age spots
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-sage-600 mr-3">✓</span>
+                <span className="text-gray-700">
+                  Stimulates collagen production
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-sage-600 mr-3">✓</span>
+                <span className="text-gray-700">
+                  Provides natural antioxidant protection
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

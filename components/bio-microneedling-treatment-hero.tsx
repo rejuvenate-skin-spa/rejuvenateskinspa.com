@@ -55,10 +55,13 @@ export default function BioMicroneedlingTreatmentHero() {
           src="/images/bio-microneedling-services-rejuventate-skin-spa-queen-creek-az.avif"
           alt="SQT Bio Microneedling Treatment at Rejuvenate Skin Spa"
           fill
-          className="object-cover"
+          className="object-cover object-right"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Lighter overlay for better image visibility */}
+        <div className="absolute inset-0 bg-black/30" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/20" />
       </div>
 
       {/* Content */}

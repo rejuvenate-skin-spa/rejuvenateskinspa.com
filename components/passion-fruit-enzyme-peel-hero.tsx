@@ -45,21 +45,23 @@ export default function PassionFruitEnzymePeelHero() {
     <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/passion-fruit-enzyme-peel-facial-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
+          src="/images/passion-fruit-enzyme-peel-hero.jpg"
           alt="Passion Fruit Enzyme Peel Treatment"
           fill
-          className="object-cover md:object-right object-center"
-          style={{ objectPosition: "center center" }}
+          className="object-cover object-right"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-pink-900/70" />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Passion Fruit Enzyme Peel
         </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-100">
           Tropical radiance renewal with 30% glycolic acid and collagen peptides
           for deep exfoliation and cellular renewal
         </p>
