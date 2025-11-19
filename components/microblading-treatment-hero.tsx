@@ -47,7 +47,7 @@ export default function MicrobladingTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] flex items-center overflow-hidden">
+    <section className="relative min-h-[500px] py-12 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/microblading-procedure-rejuvenate-skin-spa-queen-creek-az.jpg"
@@ -65,7 +65,7 @@ export default function MicrobladingTreatmentHero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-white leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight">
               Professional
               <span className="text-sage-200 block">Microblading</span>
             </h1>

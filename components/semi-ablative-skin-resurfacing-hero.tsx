@@ -47,7 +47,7 @@ export default function SemiAblativeSkinResurfacingHero() {
   }
 
   return (
-    <section className="relative h-[550px] flex items-center overflow-hidden bg-sage-50">
+    <section className="relative min-h-[550px] py-12 flex items-center overflow-hidden bg-sage-50">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -66,7 +66,7 @@ export default function SemiAblativeSkinResurfacingHero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-playfair font-bold leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-playfair font-bold leading-tight">
               <span className="text-white">Semi-Ablative Plexr Plasma Pen</span>
               <span className="text-sage-300 block">The CAT Resurface</span>
             </h1>

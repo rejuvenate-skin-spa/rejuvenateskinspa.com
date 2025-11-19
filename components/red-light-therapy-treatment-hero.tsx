@@ -45,7 +45,7 @@ export default function RedLightTherapyTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] bg-sage-50 overflow-hidden">
+    <section className="relative min-h-[500px] py-12 bg-sage-50 overflow-hidden flex items-center">
       <div className="absolute inset-0">
         <Image
           src="/images/red-light-therapy-treatment-services-rejuventate-skin-spa-queen-creek-az.avif"
@@ -63,7 +63,7 @@ export default function RedLightTherapyTreatmentHero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
           <div className="text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 font-playfair">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 font-playfair">
               <span className="text-white">Red Light</span> <span className="text-sage-300">Therapy</span>
             </h1>
             <p className="text-xl text-gray-100 mb-8 max-w-2xl leading-relaxed">

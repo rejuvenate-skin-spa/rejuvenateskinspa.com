@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 interface HomeHeroProps {
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  className?: string;
+  title?: string
+  subtitle?: string
+  description?: string
+  className?: string
 }
 
 export function HomeHero({
@@ -18,41 +18,41 @@ export function HomeHero({
   description = "Discover the future of skin rejuvenation at Rejuvenate Skin Spa, where advanced aesthetics meet timeless beauty and luxury meets innovation. Indulge in our results-driven, next generation, and non-surgical treatments that redefine luminous skincare.",
   className = "",
 }: HomeHeroProps) {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const isBusinessHours = () => {
-    const now = new Date();
+    const now = new Date()
     const arizonaTime = new Date(
       now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    );
-    const day = arizonaTime.getDay();
-    const hour = arizonaTime.getHours();
+    )
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
 
     // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
-  };
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549";
+      window.location.href = "tel:480-225-9549"
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/about-us/contact-us")
     }
-  };
+  }
 
   return (
     <section
-      className={`relative h-[500px] overflow-hidden flex items-center ${className}`}
+      className={`relative min-h-[500px] py-12 overflow-hidden flex items-center ${className}`}
     >
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -89,5 +89,5 @@ export function HomeHero({
         </div>
       </div>
     </section>
-  );
+  )
 }

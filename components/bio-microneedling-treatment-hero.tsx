@@ -48,7 +48,7 @@ export default function BioMicroneedlingTreatmentHero() {
   };
 
   return (
-    <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[500px] py-12 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -58,15 +58,15 @@ export default function BioMicroneedlingTreatmentHero() {
           className="object-cover object-right"
           priority
         />
-        {/* Lighter overlay for better image visibility */}
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
+        <div className="absolute inset-0 bg-black/50" />
         {/* Gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-playfair font-bold mb-6 leading-tight">
           SQT Bio Microneedling
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">

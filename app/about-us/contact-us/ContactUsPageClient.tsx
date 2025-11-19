@@ -25,7 +25,11 @@ export default function ContactUsPageClient() {
     console.log("Form submitted:", formData)
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -43,8 +47,9 @@ export default function ContactUsPageClient() {
               <span className="text-sage-600 block">Rejuvenate Skin Spa</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to begin your skin transformation journey? Get in touch with our expert team to schedule your
-              consultation or ask any questions about our treatments.
+              Ready to begin your skin transformation journey? Get in touch with
+              our expert team to schedule your consultation or ask any questions
+              about our treatments.
             </p>
           </div>
         </div>
@@ -57,10 +62,13 @@ export default function ContactUsPageClient() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-6">Get in Touch</h2>
+                <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-6">
+                  Get in Touch
+                </h2>
                 <p className="text-gray-600 mb-8">
-                  We're here to answer your questions and help you discover the best treatments for your skin. Contact
-                  us today to schedule your personalized consultation.
+                  We're here to answer your questions and help you discover the
+                  best treatments for your skin. Contact us today to schedule
+                  your personalized consultation.
                 </p>
               </div>
 
@@ -71,8 +79,15 @@ export default function ContactUsPageClient() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">(480) 225-9549</p>
-                    <p className="text-sm text-gray-500">Mon-Fri: 8AM-6PM, Sat: 9AM-5PM, Sun: Closed</p>
+                    <a
+                      href="tel:480-225-9549"
+                      className="text-gray-600 hover:text-sage-600 transition-colors"
+                    >
+                      (480) 225-9549
+                    </a>
+                    <p className="text-sm text-gray-500">
+                      Mon-Fri: 8AM-6PM, Sat: 9AM-5PM, Sun: Closed
+                    </p>
                   </div>
                 </div>
 
@@ -82,8 +97,15 @@ export default function ContactUsPageClient() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@rejuvenatespa.com</p>
-                    <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
+                    <a
+                      href="mailto:info@rejuvenateskinspa.com"
+                      className="text-gray-600 hover:text-sage-600 transition-colors"
+                    >
+                      info@rejuvenateskinspa.com
+                    </a>
+                    <p className="text-sm text-gray-500">
+                      We'll respond within 24 hours
+                    </p>
                   </div>
                 </div>
 
@@ -92,13 +114,17 @@ export default function ContactUsPageClient() {
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Location
+                    </h3>
                     <p className="text-gray-600">
                       20162 E. Sonoqui Blvd.
                       <br />
                       Queen Creek AZ 85142
                     </p>
-                    <p className="text-sm text-gray-500">Free parking available</p>
+                    <p className="text-sm text-gray-500">
+                      Free parking available
+                    </p>
                   </div>
                 </div>
 
@@ -121,7 +147,9 @@ export default function ContactUsPageClient() {
             {/* Contact Form */}
             <Card className="shadow-lg">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">Schedule Your Consultation</h3>
+                <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
+                  Schedule Your Consultation
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -196,14 +224,17 @@ export default function ContactUsPageClient() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-sage-600 hover:bg-sage-700 text-white">
+                  <Button
+                    type="submit"
+                    className="w-full bg-sage-600 hover:bg-sage-700 text-white"
+                  >
                     <Send className="h-4 w-4 mr-2" />
                     Send Message
                   </Button>
 
                   <p className="text-sm text-gray-500 text-center">
-                    By submitting this form, you agree to our privacy policy and consent to be contacted about our
-                    services.
+                    By submitting this form, you agree to our privacy policy and
+                    consent to be contacted about our services.
                   </p>
                 </form>
               </CardContent>
@@ -216,9 +247,12 @@ export default function ContactUsPageClient() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-4">Visit Our Spa</h2>
+            <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-4">
+              Visit Our Spa
+            </h2>
             <p className="text-xl text-gray-600">
-              Located in the heart of Beauty City, our spa offers a tranquil escape with convenient parking.
+              Located in the heart of Queen Creek, Arizona, our spa offers a
+              tranquil escape with convenient parking.
             </p>
           </div>
 
@@ -237,8 +271,12 @@ export default function ContactUsPageClient() {
             <div className="p-6 bg-white">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Rejuvenate Skin Spa</h3>
-                  <p className="text-gray-600">20162 E. Sonoqui Blvd., Queen Creek AZ 85142</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Rejuvenate Skin Spa
+                  </h3>
+                  <p className="text-gray-600">
+                    20162 E. Sonoqui Blvd., Queen Creek AZ 85142
+                  </p>
                 </div>
                 <div className="flex space-x-2">
                   <a
@@ -259,4 +297,3 @@ export default function ContactUsPageClient() {
     </div>
   )
 }
-

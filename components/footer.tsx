@@ -16,7 +16,9 @@ export function Footer() {
 
     const checkBusinessHours = () => {
       const now = new Date()
-      const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
+      const arizonaTime = new Date(
+        now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
+      )
       const day = arizonaTime.getDay() // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
       const hour = arizonaTime.getHours()
 
@@ -61,29 +63,27 @@ export function Footer() {
               className="h-12 w-auto mb-4"
             />
             <p className="text-gray-600 mb-4 max-w-md">
-              Experience the ultimate in skincare luxury with our advanced treatments and personalized approach to skin
-              rejuvenation.
+              Experience the ultimate in skincare luxury with our advanced
+              treatments and personalized approach to skin rejuvenation.
             </p>
             <div className="flex space-x-4">
               <div className="flex items-center text-sm text-gray-600">
                 <Phone className="h-4 w-4 mr-2" />
-                {isBusinessHours ? (
-                  isMobile ? (
-                    <button onClick={handlePhoneClick} className="hover:text-sage-600 transition-colors">
-                      480-225-9549
-                    </button>
-                  ) : (
-                    <span>480-225-9549</span>
-                  )
-                ) : (
-                  <Link href="/about-us/contact-us" className="hover:text-sage-600 transition-colors">
-                    Get in Touch
-                  </Link>
-                )}
+                <a
+                  href="tel:480-225-9549"
+                  className="hover:text-sage-600 transition-colors"
+                >
+                  480-225-9549
+                </a>
               </div>
               <div className="flex items-center text-sm text-gray-600">
                 <Mail className="h-4 w-4 mr-2" />
-                info@rejuvenatespa.com
+                <a
+                  href="mailto:info@rejuvenateskinspa.com"
+                  className="hover:text-sage-600 transition-colors"
+                >
+                  info@rejuvenateskinspa.com
+                </a>
               </div>
             </div>
           </div>
@@ -93,27 +93,42 @@ export function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/plasma-skin-tightening" className="text-gray-600 hover:text-sage-600">
+                <Link
+                  href="/plasma-skin-tightening"
+                  className="text-gray-600 hover:text-sage-600"
+                >
                   Plasma Treatments
                 </Link>
               </li>
               <li>
-                <Link href="/biorepeel-treatment" className="text-gray-600 hover:text-sage-600">
+                <Link
+                  href="/biorepeel-treatment"
+                  className="text-gray-600 hover:text-sage-600"
+                >
                   BioRePeel
                 </Link>
               </li>
               <li>
-                <Link href="/chemical-peels" className="text-gray-600 hover:text-sage-600">
+                <Link
+                  href="/chemical-peels"
+                  className="text-gray-600 hover:text-sage-600"
+                >
                   Chemical Peels
                 </Link>
               </li>
               <li>
-                <Link href="/spa-services" className="text-gray-600 hover:text-sage-600">
+                <Link
+                  href="/spa-services"
+                  className="text-gray-600 hover:text-sage-600"
+                >
                   Spa Services
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="text-gray-600 hover:text-sage-600">
+                <Link
+                  href="/about-us"
+                  className="text-gray-600 hover:text-sage-600"
+                >
                   About Us
                 </Link>
               </li>
@@ -147,7 +162,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Rejuvenate Skin Spa. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Rejuvenate Skin Spa. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

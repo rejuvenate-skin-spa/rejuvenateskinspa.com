@@ -47,7 +47,7 @@ export function MoleRemovalTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] bg-sage-50 flex items-center">
+    <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
           src="/images/plexr-mole-removal-treatment-rejuvenate-skin-spa-queen-creek-az.jpg"
@@ -64,7 +64,7 @@ export function MoleRemovalTreatmentHero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
           <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-playfair font-bold leading-tight">
               <span className="text-white">Plexr Plasma</span>
               <span className="text-sage-300 block">Mole Removal</span>
             </h1>

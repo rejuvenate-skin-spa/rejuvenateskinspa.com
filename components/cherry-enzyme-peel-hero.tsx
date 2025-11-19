@@ -42,7 +42,7 @@ export function CherryEnzymePeelHero() {
   };
 
   return (
-    <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[500px] py-12 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -60,7 +60,7 @@ export function CherryEnzymePeelHero() {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 leading-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-6xl font-playfair font-bold mb-4 leading-tight">
           Brightening Cherry Enzyme Peel
         </h1>
         <p className="text-lg md:text-xl mb-6 opacity-90 max-w-3xl mx-auto">

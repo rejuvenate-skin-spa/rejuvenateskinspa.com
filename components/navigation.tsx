@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -169,6 +169,18 @@ export function Navigation() {
     setActiveMobileDropdown(null);
   };
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,9 +260,9 @@ export function Navigation() {
         {/* Mobile Navigation Overlay */}
         {isOpen && (
           <>
-            {/* Backdrop */}
+            {/* Backdrop - starts below the header */}
             <div
-              className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+              className="fixed top-20 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40 lg:hidden"
               onClick={closeMobileMenu}
             />
 

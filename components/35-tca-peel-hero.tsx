@@ -44,7 +44,7 @@ export default function TCApeelHero() {
   }
 
   return (
-    <section className="relative h-[500px] overflow-hidden">
+    <section className="relative min-h-[500px] py-12 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -64,7 +64,7 @@ export default function TCApeelHero() {
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight mb-6">
               BioRePeel 35
               <span className="block">TCA Facial Peel</span>
             </h1>

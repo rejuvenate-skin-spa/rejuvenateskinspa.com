@@ -76,7 +76,7 @@ export function PlexrPlasmaSkinTighteningHero({
 
   return (
     <section
-      className={`relative h-[500px] overflow-hidden flex items-center ${className}`}
+      className={`relative min-h-[500px] py-12 overflow-hidden flex items-center ${className}`}
     >
       {/* Background Image */}
       <div className="absolute inset-0">

@@ -48,7 +48,7 @@ export default function PlasmaMicroneedlingTreatmentHero() {
   }
 
   return (
-    <section className="relative h-[500px] bg-sage-50 flex items-center">
+    <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
           src="/images/plasma-pen-microneedling-background.jpg"
@@ -65,7 +65,7 @@ export default function PlasmaMicroneedlingTreatmentHero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid lg:grid-cols-1 gap-12 items-center">
           <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-playfair font-bold leading-tight">
               <span className="text-white">Plasma Pen Microneedling</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-lg">
