@@ -5,7 +5,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import PlasmaMicroneedlingTreatmentFAQ from "@/components/plasma-microneedling-treatment-faq"
 import PlasmaMicroneedlingTreatmentHero from "@/components/plasma-microneedling-treatment-hero"
-import { Clock, DollarSign, Star, CheckCircle, Users, Zap, Sparkles, Shield, Target, Award } from "lucide-react"
+import {
+  Clock,
+  DollarSign,
+  Star,
+  CheckCircle,
+  Users,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Award,
+} from "lucide-react"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
@@ -55,15 +66,26 @@ export default function PlasmaMicroneedlingClientPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-sage-100 text-sage-800">Revolutionary Technology</Badge>
+              <Badge className="mb-4 bg-sage-100 text-sage-800">
+                Revolutionary Technology
+              </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-playfair">
                 What is Plasma Microneedling?
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Plasma needling is revolutionary needle-free microneedling treatment that delivers all the collagen-stimulating benefits of microneedling without the use of traditional sharp needles or downtime. Combining our advanced plasma energy technology with our  triangle tip pen, we are able to creates microscopic channels deep into the skin's surface through ionized gas rather than physical punctures.
+                Plasma needling is revolutionary needle-free microneedling
+                treatment that delivers all the collagen-stimulating benefits of
+                microneedling without the use of traditional sharp needles or
+                downtime. Combining our advanced plasma energy technology with
+                our triangle tip pen, we are able to creates microscopic
+                channels deep into the skin's surface through ionized gas rather
+                than physical punctures.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                The result is a completely needle-free, non-invasive facial rejuvenation that tightens, brightens, and refines your skin while preparing it to deeply absorb powerful rejuvenating serums.
+                The result is a completely needle-free, non-invasive facial
+                rejuvenation that tightens, brightens, and refines your skin
+                while preparing it to deeply absorb powerful rejuvenating
+                serums.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center">
@@ -86,7 +108,7 @@ export default function PlasmaMicroneedlingClientPage() {
             </div>
             <div className="relative">
               <img
-                src="/images/f10a28e0-b307-4440-9abd-b180cb406d10-1.png"
+                src="/images/f10a28e0-b307-4440-9abd-b180cb406d10.png"
                 alt="Plasma Pen Microneedling"
                 className="rounded-lg shadow-lg w-full max-w-md mx-auto"
               />
@@ -99,12 +121,15 @@ export default function PlasmaMicroneedlingClientPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-sage-100 text-sage-800">Treatment Benefits</Badge>
+            <Badge className="mb-4 bg-sage-100 text-sage-800">
+              Treatment Benefits
+            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-playfair">
               Why Choose Plasma Microneedling?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Experience the most advanced microneedling technology for superior skin transformation
+              Experience the most advanced microneedling technology for superior
+              skin transformation
             </p>
           </div>
 
@@ -112,10 +137,12 @@ export default function PlasmaMicroneedlingClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <Zap className="h-12 w-12 text-sage-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Plasma Energy</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Plasma Energy
+                </h3>
                 <p className="text-gray-600">
-                  Plasma energy penetrates deeper into skin's layers for enhanced collagen stimulation and skin
-                  tightening.
+                  Plasma energy penetrates deeper into skin's layers for
+                  enhanced collagen stimulation and skin tightening.
                 </p>
               </CardContent>
             </Card>
@@ -123,10 +150,12 @@ export default function PlasmaMicroneedlingClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <Target className="h-12 w-12 text-sage-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Precision Treatment</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Precision Treatment
+                </h3>
                 <p className="text-gray-600">
-                  Controlled energy delivery targets specific skin layers for optimal results with minimal surface
-                  damage.
+                  Controlled energy delivery targets specific skin layers for
+                  optimal results with minimal surface damage.
                 </p>
               </CardContent>
             </Card>
@@ -134,10 +163,12 @@ export default function PlasmaMicroneedlingClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <Sparkles className="h-12 w-12 text-sage-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Immediate Tightening</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Immediate Tightening
+                </h3>
                 <p className="text-gray-600">
-                  See instant skin tightening effects immediately after treatment, with continued improvement over
-                  months.
+                  See instant skin tightening effects immediately after
+                  treatment, with continued improvement over months.
                 </p>
               </CardContent>
             </Card>
@@ -145,9 +176,13 @@ export default function PlasmaMicroneedlingClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <Award className="h-12 w-12 text-sage-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Superior Infused Serums</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Superior Infused Serums
+                </h3>
                 <p className="text-gray-600">
-                  Highly customizable and deeply infused professional serums like hyaluronic acid, peptides, vitamins, amino acids, and  "Micro-Botox", etc.
+                  Highly customizable and deeply infused professional serums
+                  like hyaluronic acid, peptides, vitamins, amino acids, and
+                  "Micro-Botox", etc.
                 </p>
               </CardContent>
             </Card>
@@ -155,9 +190,12 @@ export default function PlasmaMicroneedlingClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <Shield className="h-12 w-12 text-sage-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Safe & Effective</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Safe & Effective
+                </h3>
                 <p className="text-gray-600">
-                  FDA-approved technology with proven safety profile and predictable, long-lasting results.
+                  FDA-approved technology with proven safety profile and
+                  predictable, long-lasting results.
                 </p>
               </CardContent>
             </Card>
@@ -165,9 +203,12 @@ export default function PlasmaMicroneedlingClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <Star className="h-12 w-12 text-sage-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Long-Lasting Results</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Long-Lasting Results
+                </h3>
                 <p className="text-gray-600">
-                  Results continue to improve for 6-12 months as new collagen forms and skin naturally regenerates.
+                  Results continue to improve for 6-12 months as new collagen
+                  forms and skin naturally regenerates.
                 </p>
               </CardContent>
             </Card>
@@ -179,39 +220,60 @@ export default function PlasmaMicroneedlingClientPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-sage-100 text-sage-800">Treatment Areas</Badge>
+            <Badge className="mb-4 bg-sage-100 text-sage-800">
+              Treatment Areas
+            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-playfair">
               What Can Plasma Microneedling Treat?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Advanced plasma technology addresses multiple skin concerns with superior results
+              Advanced plasma technology addresses multiple skin concerns with
+              superior results
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm border border-sage-200">
-              <h3 className="font-semibold text-gray-900 mb-2">Deep Wrinkles</h3>
-              <p className="text-gray-600 text-sm">Significantly reduce moderate to deep facial wrinkles</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Deep Wrinkles
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Significantly reduce moderate to deep facial wrinkles
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-sage-200">
               <h3 className="font-semibold text-gray-900 mb-2">Skin Laxity</h3>
-              <p className="text-gray-600 text-sm">Tighten loose skin on face, neck, and body</p>
+              <p className="text-gray-600 text-sm">
+                Tighten loose skin on face, neck, and body
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-sage-200">
               <h3 className="font-semibold text-gray-900 mb-2">Acne Scars</h3>
-              <p className="text-gray-600 text-sm">Dramatically improve severe acne scarring</p>
+              <p className="text-gray-600 text-sm">
+                Dramatically improve severe acne scarring
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-sage-200">
-              <h3 className="font-semibold text-gray-900 mb-2">Stretch Marks</h3>
-              <p className="text-gray-600 text-sm">Reduce appearance of stubborn stretch marks</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Stretch Marks
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Reduce appearance of stubborn stretch marks
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-sage-200">
               <h3 className="font-semibold text-gray-900 mb-2">Large Pores</h3>
-              <p className="text-gray-600 text-sm">Minimize enlarged pores for smoother texture</p>
+              <p className="text-gray-600 text-sm">
+                Minimize enlarged pores for smoother texture
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-sage-200">
-              <h3 className="font-semibold text-gray-900 mb-2">Uneven Texture</h3>
-              <p className="text-gray-600 text-sm">Smooth rough, uneven skin texture</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Uneven Texture
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Smooth rough, uneven skin texture
+              </p>
             </div>
           </div>
         </div>
@@ -225,16 +287,23 @@ export default function PlasmaMicroneedlingClientPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-playfair">
               Premium Treatment Investment
             </h2>
-            <p className="text-lg text-gray-600">Advanced plasma microneedling technology for superior results</p>
+            <p className="text-lg text-gray-600">
+              Advanced plasma microneedling technology for superior results
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-sage-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Single Treatment</h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$295</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Single Treatment
+                </h3>
+                <div className="text-4xl font-bold text-sage-600 mb-4">
+                  $295
+                </div>
                 <p className="text-gray-600 mb-6">
-                  Complete plasma microneedling treatment with advanced plasma technology.
+                  Complete plasma microneedling treatment with advanced plasma
+                  technology.
                 </p>
                 <ul className="text-left space-y-2 mb-8">
                   <li className="flex items-center">
@@ -254,18 +323,29 @@ export default function PlasmaMicroneedlingClientPage() {
                     <span>Recovery care instructions</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Single Session</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                  Book Single Session
+                </Button>
               </CardContent>
             </Card>
 
             <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50">
               <CardContent className="p-8 text-center">
-                <Badge className="mb-4 bg-sage-600 text-white">Optimal Results</Badge>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">3-Treatment Series</h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$795</div>
-                <div className="text-sm text-gray-500 mb-4">Save $90 • $265 per session</div>
+                <Badge className="mb-4 bg-sage-600 text-white">
+                  Optimal Results
+                </Badge>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  3-Treatment Series
+                </h3>
+                <div className="text-4xl font-bold text-sage-600 mb-4">
+                  $795
+                </div>
+                <div className="text-sm text-gray-500 mb-4">
+                  Save $90 • $265 per session
+                </div>
                 <p className="text-gray-600 mb-6">
-                  Complete transformation series with three treatments spaced 6-8 weeks apart for maximum results.
+                  Complete transformation series with three treatments spaced
+                  6-8 weeks apart for maximum results.
                 </p>
                 <ul className="text-left space-y-2 mb-8">
                   <li className="flex items-center">
@@ -285,7 +365,9 @@ export default function PlasmaMicroneedlingClientPage() {
                     <span>Customized treatment plan</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Treatment Series</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                  Book Treatment Series
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -300,9 +382,12 @@ export default function PlasmaMicroneedlingClientPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-sage-600 to-sage-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair">Experience Advanced Skin Rejuvenation</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair">
+            Experience Advanced Skin Rejuvenation
+          </h2>
           <p className="text-xl mb-8 opacity-90">
-            Transform your skin with the most advanced plasma microneedling technology available
+            Transform your skin with the most advanced plasma microneedling
+            technology available
           </p>
           <div className="flex justify-center">
             <Button

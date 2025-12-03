@@ -1,14 +1,14 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { PlexrPlasmaSkinTighteningHero } from "@/components/plexr-plasma-skin-tightening-hero";
-import { PlexrPlasmaFAQ } from "@/components/plexr-plasma-skin-tightening-faq";
-import { BeforeAfterSlider } from "@/components/before-after-slider";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { PlexrPlasmaSkinTighteningHero } from "@/components/plexr-plasma-skin-tightening-hero"
+import { PlexrPlasmaFAQ } from "@/components/plexr-plasma-skin-tightening-faq"
+import { BeforeAfterSlider } from "@/components/before-after-slider"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 const treatmentOptions = [
   {
@@ -56,7 +56,7 @@ const treatmentOptions = [
       "Long-lasting results",
     ],
   },
-];
+]
 
 const removalServices = [
   {
@@ -86,39 +86,39 @@ const removalServices = [
     price: "Starting at $200",
     href: "/plexr-plasma-skin-tightening/wart-removal-treatment",
   },
-];
+]
 
 export default function PlexrPlasmaPageClient() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const isBusinessHours = () => {
-    const now = new Date();
+    const now = new Date()
     const arizonaTime = new Date(
       now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    );
-    const day = arizonaTime.getDay();
-    const hour = arizonaTime.getHours();
+    )
+    const day = arizonaTime.getDay()
+    const hour = arizonaTime.getHours()
 
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
-  };
+    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
+  }
 
   const handleGetInTouch = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802259549";
+      window.location.href = "tel:+14802259549"
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/about-us/contact-us")
     }
-  };
+  }
 
   return (
     <div className="min-h-screen">
@@ -132,34 +132,77 @@ export default function PlexrPlasmaPageClient() {
               Revolutionary Plexr Plasma Pen Technology
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
-              Experience the future of skin rejuvenation powered by Plexr Plasma Pen technology, the golden standard in advacned plasma skin tightening. These revolutionary treatments deliver remarkable results by tightening, firming, and lifting the skin, all without surgery, needles, general anesthesia, or long recovery times.
+              Experience the future of skin rejuvenation powered by Plexr Plasma
+              Pen technology, the golden standard in advacned plasma skin
+              tightening. These revolutionary treatments deliver remarkable
+              results by tightening, firming, and lifting the skin, all without
+              surgery, needles, general anesthesia, or long recovery times.
             </p>
-            <div className="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
-              <div className="relative flex justify-center md:justify-start" style={{ width: '3in', height: '2in', minWidth: '288px', minHeight: '192px' }}>
-                <Image
-                  src="/images/plasma-eye-lift.jpg"
-                  alt="Plexr Plasma Pen Technology"
-                  width={288}
-                  height={192}
-                  className="rounded-lg shadow-lg object-cover"
-                />
-              </div>
-              <ul className="text-xs font-bold text-gray-700 space-y-2 text-left" style={{ fontSize: '12pt' }}>
-                <li>• Level 1 - The Shower - nano-ablative</li>
-                <li>• Level 2 - The Glass Lift - nano-ablative</li>
-                <li>• Level 3 - Cat Resurface - semi ablative</li>
-                <li>• Level 4 - The Fibroblast Lift - ablative</li>
-              </ul>
-              <div className="relative flex justify-center md:justify-end" style={{ width: '3in', height: '2in', minWidth: '288px', minHeight: '192px' }}>
-                <div className="relative rounded-lg shadow-lg overflow-hidden" style={{ width: '100%', height: '100%' }}>
+            {/* Treatment Levels - Responsive Layout */}
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-8">
+                {/* Left Image */}
+                <div className="relative w-full aspect-[3/2] rounded-lg shadow-xl overflow-hidden">
+                  <Image
+                    src="/images/plasma-eye-lift.jpg"
+                    alt="Plexr Plasma Pen Eye Lift Treatment"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {/* Right Image */}
+                <div className="relative w-full aspect-[3/2] rounded-lg shadow-xl overflow-hidden">
                   <Image
                     src="/images/neck-plasma.png"
-                    alt="Plexr Plasma Pen Technology"
-                    width={288}
-                    height={192}
-                    className="rounded-lg object-cover"
+                    alt="Plexr Plasma Pen Neck Treatment"
+                    fill
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-white/30"></div>
+                </div>
+              </div>
+
+              {/* Treatment Levels List */}
+              <div className="bg-sage-50 rounded-lg p-6 md:p-8 lg:p-10">
+                <h3 className="text-2xl md:text-3xl font-playfair font-bold text-gray-900 mb-6 text-center">
+                  Plexr Plasma Pen Treatment Levels
+                </h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                    <div className="text-sage-600 font-bold text-lg mb-2">
+                      Level 1
+                    </div>
+                    <div className="text-gray-900 font-semibold mb-1">
+                      The Shower
+                    </div>
+                    <div className="text-sm text-gray-600">Nano-ablative</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                    <div className="text-sage-600 font-bold text-lg mb-2">
+                      Level 2
+                    </div>
+                    <div className="text-gray-900 font-semibold mb-1">
+                      The Glass Lift
+                    </div>
+                    <div className="text-sm text-gray-600">Nano-ablative</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                    <div className="text-sage-600 font-bold text-lg mb-2">
+                      Level 3
+                    </div>
+                    <div className="text-gray-900 font-semibold mb-1">
+                      Cat Resurface
+                    </div>
+                    <div className="text-sm text-gray-600">Semi-ablative</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                    <div className="text-sage-600 font-bold text-lg mb-2">
+                      Level 4
+                    </div>
+                    <div className="text-gray-900 font-semibold mb-1">
+                      The Fibroblast Lift
+                    </div>
+                    <div className="text-sm text-gray-600">Ablative</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -347,7 +390,7 @@ export default function PlexrPlasmaPageClient() {
                   <div className="mt-auto">
                     <Button
                       asChild
-                      className="w-full bg-sage-600 hover:bg-sage-700"
+                      className="w-full bg-sage-600 hover:bg-sage-700 text-white"
                     >
                       <Link href="/about-us/contact-us">
                         Contact us for pricing
@@ -415,7 +458,7 @@ export default function PlexrPlasmaPageClient() {
           </div>
           <div className="relative max-w-4xl mx-auto">
             <Image
-              src="/plexr-plasma-results.jpg"
+              src="/images/plexr-plasma-results.jpg"
               alt="Plexr Plasma Pen Results"
               width={1200}
               height={800}
@@ -452,5 +495,5 @@ export default function PlexrPlasmaPageClient() {
         </div>
       </section>
     </div>
-  );
+  )
 }
