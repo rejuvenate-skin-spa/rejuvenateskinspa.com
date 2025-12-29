@@ -323,7 +323,7 @@ export default function PlasmaMicroneedlingClientPage() {
                     <span>Recovery care instructions</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Single Session
                 </Button>
               </CardContent>
@@ -365,7 +365,7 @@ export default function PlasmaMicroneedlingClientPage() {
                     <span>Customized treatment plan</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Treatment Series
                 </Button>
               </CardContent>

@@ -242,7 +242,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                 <p className="text-gray-700 mb-6">
                   Perfect for trying our gentle raspberry-peach treatment
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -265,7 +265,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                 <p className="text-gray-700 mb-6">
                   Optimal results with our recommended treatment series
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Series
                 </Button>
               </CardContent>
@@ -283,7 +283,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                 <p className="text-gray-700 mb-6">
                   Maximum value for long-term skin health
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Series
                 </Button>
               </CardContent>

@@ -186,7 +186,7 @@ export default function BlueberryEnzymePeelClientPage() {
                 <p className="text-gray-700 mb-6">
                   Perfect for experiencing our gentle blueberry treatment
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -209,7 +209,7 @@ export default function BlueberryEnzymePeelClientPage() {
                 <p className="text-gray-700 mb-6">
                   Recommended series for optimal skin health
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Series
                 </Button>
               </CardContent>
@@ -227,7 +227,7 @@ export default function BlueberryEnzymePeelClientPage() {
                 <p className="text-gray-700 mb-6">
                   Maximum benefits for long-term skin care
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Series
                 </Button>
               </CardContent>

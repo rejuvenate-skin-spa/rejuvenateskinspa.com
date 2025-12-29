@@ -254,7 +254,7 @@ export default function PassionFruitEnzymePeelClientPage() {
                     Post-treatment skincare
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -286,7 +286,7 @@ export default function PassionFruitEnzymePeelClientPage() {
                     Customized treatment plan
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -319,7 +319,7 @@ export default function PassionFruitEnzymePeelClientPage() {
                     Complimentary add-ons
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>

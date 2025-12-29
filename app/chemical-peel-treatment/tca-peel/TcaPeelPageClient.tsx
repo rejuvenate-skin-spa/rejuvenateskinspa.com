@@ -9,6 +9,7 @@ import { CheckCircle, Clock, Shield, Star } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function TcaPeelPageClient() {
   const router = useRouter();
@@ -220,8 +221,8 @@ export default function TcaPeelPageClient() {
               *Results may vary. Individual results are not guaranteed and may
               vary from person to person.
             </p>
-            <Button className="bg-sage-600 hover:bg-sage-700 text-white">
-              View More Results
+            <Button asChild className="bg-sage-600 hover:bg-sage-700 text-white">
+              <Link href="/about-us/portfolio">View More Results</Link>
             </Button>
           </div>
         </div>

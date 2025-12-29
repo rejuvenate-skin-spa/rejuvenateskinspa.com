@@ -210,7 +210,7 @@ export default function PomegranateEnzymePeelClientPage() {
                     Premium aftercare products Available
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -238,7 +238,7 @@ export default function PomegranateEnzymePeelClientPage() {
                     Premium aftercare products Available
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Series
                 </Button>
               </CardContent>
@@ -263,7 +263,7 @@ export default function PomegranateEnzymePeelClientPage() {
                     Premium aftercare products Available
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Package
                 </Button>
               </CardContent>

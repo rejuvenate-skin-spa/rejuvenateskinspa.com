@@ -433,7 +433,7 @@ export default function PlexrPlasmaPageClient() {
                   <Button
                     asChild
                     size="sm"
-                    className="bg-sage-600 hover:bg-sage-700"
+                    className="bg-sage-600 hover:bg-sage-700 text-white"
                   >
                     <Link href={service.href}>Learn More</Link>
                   </Button>

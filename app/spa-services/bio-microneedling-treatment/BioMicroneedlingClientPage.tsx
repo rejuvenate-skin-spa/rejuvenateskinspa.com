@@ -343,7 +343,7 @@ export default function BioMicroneedlingClientPage() {
                     <span>Customized serum selection</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Package
                 </Button>
               </CardContent>

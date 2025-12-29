@@ -243,7 +243,7 @@ export default function EyebrowLaminationClientPage() {
                     <span>Aftercare instructions</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Now</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Now</Button>
               </CardContent>
             </Card>
 
@@ -273,7 +273,7 @@ export default function EyebrowLaminationClientPage() {
                     <span>Enhanced definition</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Now</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Now</Button>
               </CardContent>
             </Card>
           </div>

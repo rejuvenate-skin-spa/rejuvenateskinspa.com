@@ -191,7 +191,7 @@ export default function CherryEnzymePeelClientPage() {
                 <p className="text-gray-600 mb-6">
                   Perfect for trying our cherry enzyme peel
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Single Session
                 </Button>
               </CardContent>
@@ -212,7 +212,7 @@ export default function CherryEnzymePeelClientPage() {
                 <p className="text-sm text-sage-600 mb-6">
                   Best value for optimal results
                 </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Treatment Series
                 </Button>
               </CardContent>
@@ -327,7 +327,7 @@ export default function CherryEnzymePeelClientPage() {
 
           <div className="text-center mt-12">
             <Link href="/enzyme-peel-facial">
-              <Button size="lg" className="bg-sage-600 hover:bg-sage-700">
+              <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white">
                 View All Enzyme Treatments
               </Button>
             </Link>

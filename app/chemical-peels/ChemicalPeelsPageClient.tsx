@@ -88,7 +88,9 @@ export default function ChemicalPeelsPageClient() {
             <p className="text-sm text-gray-500 mb-4">
               *Results may vary. Individual results are not guaranteed and may vary from person to person.
             </p>
-            <Button className="bg-sage-600 hover:bg-sage-700 text-white">View More Results</Button>
+            <Button asChild className="bg-sage-600 hover:bg-sage-700 text-white">
+              <Link href="/about-us/portfolio">View More Results</Link>
+            </Button>
           </div>
         </div>
       </section>

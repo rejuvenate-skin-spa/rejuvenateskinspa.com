@@ -171,7 +171,7 @@ function PumpkinOrangeEnzymePeelClientPage() {
                     Aftercare products
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Now</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Now</Button>
               </CardContent>
             </Card>
 
@@ -197,7 +197,7 @@ function PumpkinOrangeEnzymePeelClientPage() {
                     Home care kit included
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Series</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Series</Button>
               </CardContent>
             </Card>
 
@@ -220,7 +220,7 @@ function PumpkinOrangeEnzymePeelClientPage() {
                     Premium aftercare products
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">Book Package</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Package</Button>
               </CardContent>
             </Card>
           </div>

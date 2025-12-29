@@ -213,7 +213,7 @@ export default function LemonEnzymePeelClientPage() {
                     Post-treatment skincare
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -245,7 +245,7 @@ export default function LemonEnzymePeelClientPage() {
                     Customized treatment plan
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -278,7 +278,7 @@ export default function LemonEnzymePeelClientPage() {
                     Complimentary add-ons
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
                   Book Now
                 </Button>
               </CardContent>
