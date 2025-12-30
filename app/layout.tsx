@@ -90,7 +90,11 @@ export default function RootLayout({
       "addressRegion": "AZ",
       "postalCode": "85142",
       "addressCountry": "US"
-    }
+    },
+    "sameAs": [
+      "https://www.instagram.com/rejuvenateskinspa/",
+      "https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
+    ]
   }
 
   const webSiteJsonLd = {
