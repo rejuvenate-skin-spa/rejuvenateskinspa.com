@@ -51,7 +51,7 @@ export function Footer() {
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10 sm:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
@@ -66,36 +66,32 @@ export function Footer() {
               Experience the ultimate in skincare luxury with our advanced
               treatments and personalized approach to skin rejuvenation.
             </p>
-            <div className="flex space-x-4">
-              <div className="flex items-center text-sm text-gray-600">
-                <Phone className="h-4 w-4 mr-2" />
-                <a
-                  href="tel:4802049366"
-                  className="hover:text-sage-600 transition-colors"
-                >
-                  (480) 204-9366
-                </a>
-              </div>
-              <div className="flex items-center text-sm text-gray-600">
-                <Mail className="h-4 w-4 mr-2" />
-                <a
-                  href="mailto:info@rejuvenateskinspa.com"
-                  className="hover:text-sage-600 transition-colors"
-                >
-                  info@rejuvenateskinspa.com
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a
+                href="tel:4802049366"
+                className="flex items-center text-sm text-gray-600 hover:text-sage-600 transition-colors py-2 sm:py-0 min-h-[44px] sm:min-h-0"
+              >
+                <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
+                (480) 204-9366
+              </a>
+              <a
+                href="mailto:info@rejuvenateskinspa.com"
+                className="flex items-center text-sm text-gray-600 hover:text-sage-600 transition-colors py-2 sm:py-0 min-h-[44px] sm:min-h-0"
+              >
+                <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
+                info@rejuvenateskinspa.com
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1 sm:space-y-2">
               <li>
                 <Link
                   href="/about-us"
-                  className="text-gray-600 hover:text-sage-600"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   About Us
                 </Link>
@@ -103,7 +99,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/plexr-plasma-skin-tightening"
-                  className="text-gray-600 hover:text-sage-600"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   Plasma Treatments
                 </Link>
@@ -111,7 +107,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/biorepeel-facial-chemical-peel"
-                  className="text-gray-600 hover:text-sage-600"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   BioRePeel
                 </Link>
@@ -119,7 +115,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/chemical-peels"
-                  className="text-gray-600 hover:text-sage-600"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   Chemical Peels
                 </Link>
@@ -127,7 +123,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/spa-services"
-                  className="text-gray-600 hover:text-sage-600"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   Spa Services
                 </Link>
@@ -140,11 +136,11 @@ export function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">
               Technology & Certifications
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1 sm:space-y-2">
               <li>
                 <Link
                   href="/about-us/plexr-sales"
-                  className="text-gray-600 hover:text-sage-600"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   Plexr Plasma Technology
                 </Link>

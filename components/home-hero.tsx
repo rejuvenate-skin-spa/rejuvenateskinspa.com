@@ -52,7 +52,7 @@ export function HomeHero({
 
   return (
     <section
-      className={`relative min-h-[500px] py-12 overflow-hidden flex items-center ${className}`}
+      className={`relative min-h-[420px] sm:min-h-[500px] py-8 sm:py-12 overflow-hidden flex items-center ${className}`}
     >
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -72,17 +72,17 @@ export function HomeHero({
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/5"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full z-10">
         <div className="max-w-2xl">
-          <div className="space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight">
+          <div className="space-y-4 sm:space-y-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight">
               {title}
               <span className="text-sage-400 block">{subtitle}</span>
             </h1>
-            <p className="text-xl text-gray-100 max-w-lg">{description}</p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <p className="text-lg sm:text-xl text-gray-100 max-w-lg">{description}</p>
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button
-                className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg rounded-md px-6 py-2"
+                className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg rounded-md px-6 py-3 w-full sm:w-auto min-h-[48px] text-base"
                 onClick={handlePrimaryClick}
               >
                 Get in Touch

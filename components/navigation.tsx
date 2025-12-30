@@ -237,12 +237,13 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - min 44px tap target */}
           <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
+              className="min-w-[44px] min-h-[44px] p-2"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -264,17 +265,17 @@ export function Navigation() {
 
             {/* Mobile Menu */}
             <div className="fixed top-20 left-0 right-0 bottom-0 bg-white z-50 lg:hidden overflow-y-auto">
-              <div className="px-4 py-6 space-y-4">
+              <div className="px-5 py-6 space-y-1">
                 {navigationItems.map((item) => (
                   <div
                     key={item.title}
-                    className="border-b border-gray-100 pb-4"
+                    className="border-b border-gray-100 pb-3"
                   >
-                    {/* Main Menu Item */}
+                    {/* Main Menu Item - min 44px tap target */}
                     <div className="flex items-center justify-between">
                       <Link
                         href={item.href}
-                        className="text-gray-700 font-medium text-lg py-2 flex-1"
+                        className="text-gray-700 font-medium text-lg py-3 flex-1 min-h-[44px] flex items-center"
                         onClick={closeMobileMenu}
                       >
                         {item.title}
@@ -284,10 +285,10 @@ export function Navigation() {
                           variant="ghost"
                           size="sm"
                           onClick={() => toggleMobileDropdown(item.title)}
-                          className="p-2"
+                          className="min-w-[44px] min-h-[44px] p-2"
                         >
                           <ChevronDown
-                            className={`h-4 w-4 transition-transform duration-200 ${
+                            className={`h-5 w-5 transition-transform duration-200 ${
                               activeMobileDropdown === item.title
                                 ? "rotate-180"
                                 : ""
@@ -302,16 +303,16 @@ export function Navigation() {
                       <div
                         className={`overflow-hidden transition-all duration-300 ease-in-out ${
                           activeMobileDropdown === item.title
-                            ? "max-h-96 opacity-100 mt-2"
+                            ? "max-h-[500px] opacity-100 mt-1"
                             : "max-h-0 opacity-0"
                         }`}
                       >
-                        <div className="pl-4 space-y-2">
+                        <div className="pl-4 space-y-0">
                           {item.submenu.map((subItem) => (
                             <Link
                               key={subItem.title}
                               href={subItem.href}
-                              className="block text-gray-600 hover:text-sage-600 py-2 text-sm transition-colors duration-200 visited:text-gray-600 active:text-gray-600"
+                              className="block text-gray-600 hover:text-sage-600 py-3 text-base transition-colors duration-200 visited:text-gray-600 active:text-gray-600 min-h-[44px] flex items-center"
                               onClick={closeMobileMenu}
                             >
                               {subItem.title}
@@ -323,11 +324,11 @@ export function Navigation() {
                   </div>
                 ))}
 
-                {/* Get in Touch Button */}
-                <div className="pt-4">
+                {/* Get in Touch Button - prominent CTA */}
+                <div className="pt-6">
                   <a
                     href="tel:4802049366"
-                    className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+                    className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-4 px-4 rounded-md transition-colors duration-200 flex items-center justify-center text-lg min-h-[52px]"
                   >
                     Get in Touch
                   </a>
