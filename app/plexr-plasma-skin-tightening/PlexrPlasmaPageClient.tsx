@@ -129,14 +129,10 @@ export default function PlexrPlasmaPageClient() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-sage-600 mb-6">
-              Revolutionary Plexr Plasma Pen Technology
+              Plexr Plasma Pen Technology
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
-              Experience the future of skin rejuvenation powered by Plexr Plasma
-              Pen technology, the golden standard in advacned plasma skin
-              tightening. These revolutionary treatments deliver remarkable
-              results by tightening, firming, and lifting the skin, all without
-              surgery, needles, general anesthesia, or long recovery times.
+              Plexr is the gold standard in plasma skin tightening. This non-surgical treatment tightens, firms, and lifts the skin without needles, general anesthesia, or extended recovery. Rejuvenate Skin Spa in Queen Creek, AZ offers multiple Plexr treatment levels to match your goals and downtime preferences.
             </p>
             {/* Treatment Levels - Responsive Layout */}
             <div className="max-w-6xl mx-auto">
@@ -435,7 +431,7 @@ export default function PlexrPlasmaPageClient() {
                     size="sm"
                     className="bg-sage-600 hover:bg-sage-700 text-white"
                   >
-                    <Link href={service.href}>Learn More</Link>
+                    <Link href={service.href}>View {service.title}</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -475,16 +471,10 @@ export default function PlexrPlasmaPageClient() {
       <section className="py-16 bg-sage-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
-            Ready to Transform Your Skin?
+            Schedule a Plexr Consultation
           </h2>
           <p className="text-xl text-sage-100 mb-8 max-w-2xl mx-auto">
-            Enjoy a free over-the-phone consultation. Because every client's
-            skin and goals are unique, pricing is fully customized based on your
-            specific needs and the treatment area(s) involved. During your
-            consultation, we'll discuss your concerns, treatment options, and
-            create a tailored plan designed just for you. TREATMENT PACKAGES ARE
-            ALSO AVAILABLE. Together, you and your provider will design a plan
-            that's right for you and fits into your budget, call today.
+            Plexr pricing is customized based on your treatment area and goals. Contact Rejuvenate Skin Spa for a complimentary phone consultation. Treatment packages are available.
           </p>
           <Button
             onClick={handleGetInTouch}

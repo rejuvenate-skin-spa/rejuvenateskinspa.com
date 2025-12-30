@@ -17,9 +17,9 @@ interface SpaServicesHeroProps {
 }
 
 export function SpaServicesHero({
-  title = "Luxury",
-  subtitle = "Spa Services",
-  description = "Indulge in our comprehensive range of spa services designed to rejuvenate, refresh, and restore your skin's natural beauty and radiance.",
+  title = "Spa Services",
+  subtitle = "in Queen Creek, AZ",
+  description = "Dermaplaning, microblading, eyebrow lamination, red light therapy, and more. Rejuvenate Skin Spa offers a full range of spa treatments.",
   primaryButtonText = "Get in Touch",
   secondaryButtonText = "Learn More",
   onPrimaryClick,

@@ -14,9 +14,9 @@ interface MicroneedlingTreatmentHeroProps {
 }
 
 export default function MicroneedlingTreatmentHero({
-  title = "Advancements in ",
-  subtitle = "Microneedling Technology",
-  description = "3 Advanced Options: Traditional Microneedling, SQT Bio-Microneedling (Needle-Free), & Plexr Plasma Pen Microneedling",
+  title = "Microneedling Treatment",
+  subtitle = "in Queen Creek, AZ",
+  description = "Three advanced options: Traditional Microneedling, SQT Bio-Microneedling (needle-free), and Plexr Plasma Microneedling at Rejuvenate Skin Spa.",
   primaryButtonText = "Get in Touch",
   secondaryButtonText = "Learn More",
 }: MicroneedlingTreatmentHeroProps) {

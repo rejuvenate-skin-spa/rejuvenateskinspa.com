@@ -52,53 +52,54 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-sage-600 mb-4">
-              Our Signature Treatments
+              Signature Treatments at Rejuvenate Skin Spa
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Come explore our most advanced and sought-after skincare treatments,
-              each crafted to target your specific concerns and deliver visible,
-              lasting results.
+              Advanced skincare treatments designed to deliver visible, lasting results. Each service is customized to your skin type and goals.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Plasma Skin Tightening",
+                title: "Plexr Plasma Skin Tightening",
                 description:
-                  "Cutting-edge technology that offers dramatic skin tightening results",
+                  "Non-surgical skin tightening using Plexr plasma pen technology",
                 image: "/images/plasma-skin-tightening-treatment-rejuvenate-skin-spa-queen-creek-az.png",
                 href: "/plexr-plasma-skin-tightening",
+                linkText: "Explore Plasma Treatments",
                 features: [
-                  "3 levels of intensity",
-                  "Tightens & lifts sagging skin",
-                  "Smooths fine lines & wrinkles",
-                  "Minimal downtime, long-lasting results",
+                  "Three intensity levels",
+                  "Tightens and lifts sagging skin",
+                  "Smooths fine lines and wrinkles",
+                  "Minimal downtime",
                 ],
               },
               {
                 title: "Microneedling",
                 description:
-                  "The collagen induction therapy that offers visible results",
+                  "Collagen induction therapy for improved texture, tone, and firmness",
                 image: "/images/microneedling-feature.png",
                 href: "/spa-services/microneedling-treatment",
+                linkText: "View Microneedling Options",
                 features: [
                   "Traditional Microneedling",
                   "SQT Bio Microneedling",
-                  "PLEXR Plasma Microneedling",
+                  "Plexr Plasma Microneedling",
                 ],
               },
               {
-                title: "Peels",
+                title: "Chemical and Enzyme Peels",
                 description:
-                  "Ground breaking peels that revolutionize ultra fine results",
+                  "Professional-grade peels for smoother, brighter skin",
                 image: "/images/2537645807-skin-peel.jpg",
                 href: "/chemical-peels",
+                linkText: "Browse Peel Options",
                 features: [
-                  "BioREPeel",
-                  "25% TCA Chemical Peel",
-                  "20% & 40% Glycolic Peel",
-                  "EXOTIC and Powerful Fruit Enzyme Peels",
+                  "BioRePeel",
+                  "TCA Chemical Peel",
+                  "Glycolic Acid Peel",
+                  "Natural Fruit Enzyme Peels",
                 ],
               },
             ].map((service, index) => (
@@ -136,7 +137,7 @@ export default function HomePageClient() {
                       variant="outline"
                       className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"
                     >
-                      Learn More
+                      {service.linkText || "Learn More"}
                     </Button>
                   </Link>
                 </CardContent>
@@ -154,14 +155,7 @@ export default function HomePageClient() {
               Why Choose Rejuvenate Skin Spa
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our philosophy goes beyond skincare, it's about transformation.
-              From cutting-edge plasma pen skin tightening, next-generation chemical
-              peels, and power house enzymes peels, to precision services like
-              microneedling, dermaplaning, brow artistry, and redlight therapy,
-              every treatment is meticulously tailored to your unique skin needs. We combine
-              state-of-the-art technology, medical-grade actives, and elite
-              techniques in a serene, boutique environment to reveal the best
-              version of you...radiant, youthful, and empowered.
+              Rejuvenate Skin Spa in Queen Creek, AZ combines professional-grade technology with personalized care. Plexr plasma skin tightening, medical-grade chemical peels, collagen-boosting microneedling, and curated spa services are all tailored to your unique skin goals.
             </p>
           </div>
         </div>
@@ -232,12 +226,10 @@ export default function HomePageClient() {
       <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">
-            Ready to Transform Your Skin?
+            Schedule a Consultation in Queen Creek
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Schedule your consultation today and discover how our advanced
-            treatments can help you achieve the radiant, youthful skin you
-            deserve.
+            Contact Rejuvenate Skin Spa to discuss your skincare goals. We offer personalized treatment plans designed to deliver real, visible results.
           </p>
           <div className="flex justify-center">
             <Button

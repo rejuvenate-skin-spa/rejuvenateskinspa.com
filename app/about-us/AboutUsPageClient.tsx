@@ -54,18 +54,19 @@ export default function AboutUsPageClient() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Beautiful skin begins with understanding your unique needs. We focus on 
-                  results-driven, non-surgical treatments designed to enhance your natural 
-                  beauty without invasive procedures or extended downtime.
+                  We specialize in results-driven, non-surgical treatments that enhance 
+                  your natural beauty. No invasive procedures. Minimal downtime. 
+                  Real, visible improvement.
                 </p>
                 <p>
-                  Every treatment plan is personalized. We listen, assess your skin, and 
-                  recommend solutions that fit your goals and lifestyle. Thoughtful care, 
-                  tailored to you.
+                  Every treatment plan starts with listening. We assess your skin, 
+                  understand your goals, and recommend a path forward that fits your 
+                  lifestyle.
                 </p>
                 <p>
-                  Located in Queen Creek, Arizona, we are proud to serve our local 
-                  community with advanced skincare in a warm, welcoming space.
+                  Based in Queen Creek, Arizona, we bring advanced skincare to our 
+                  local community in a space that feels welcoming from the moment 
+                  you walk in.
                 </p>
               </div>
             </div>
@@ -90,7 +91,7 @@ export default function AboutUsPageClient() {
               What We Specialize In
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Targeted treatments for real results, from lifting and resurfacing to gentle exfoliation.
+              From skin tightening and resurfacing to gentle exfoliation, we offer targeted treatments backed by professional-grade technology.
             </p>
           </div>
 
@@ -99,27 +100,27 @@ export default function AboutUsPageClient() {
               {
                 icon: Zap,
                 title: "Plasma Skin Tightening",
-                description: "Non-surgical lifting and resurfacing with Plexr technology.",
+                description: "Non-surgical lifting and resurfacing using Plexr plasma technology.",
               },
               {
                 icon: Sparkles,
                 title: "Microneedling",
-                description: "Collagen induction therapy for texture, tone, and firmness.",
+                description: "Collagen induction for improved texture, tone, and skin firmness.",
               },
               {
                 icon: Leaf,
                 title: "Chemical Peels",
-                description: "Medical-grade peels including BioRePeel and TCA treatments.",
+                description: "Professional-grade peels including BioRePeel and TCA options.",
               },
               {
                 icon: Heart,
                 title: "Enzyme Peels",
-                description: "Gentle, natural fruit enzyme facials for sensitive skin.",
+                description: "Gentle fruit enzyme facials ideal for sensitive or reactive skin.",
               },
               {
                 icon: Sparkles,
                 title: "Spa Services",
-                description: "Dermaplaning, microblading, lamination, and red light therapy.",
+                description: "Dermaplaning, microblading, brow lamination, and red light therapy.",
               },
             ].map((specialty, index) => (
               <div key={index} className="text-center bg-white p-6 rounded-lg shadow-sm">
@@ -145,14 +146,14 @@ export default function AboutUsPageClient() {
             </h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Your safety and comfort come first. All treatments are performed by 
-                trained, licensed professionals committed to continuing education and 
-                industry best practices.
+                Your safety comes first. All treatments are performed by trained, 
+                licensed professionals who stay current with industry best practices 
+                and continuing education.
               </p>
               <p>
-                We use professional-grade equipment and trusted products. Every service 
-                begins with a consultation to confirm the treatment is right for your 
-                skin type and health history.
+                We use professional-grade equipment and trusted products. Every 
+                service begins with a consultation to ensure the treatment is 
+                appropriate for your skin type, goals, and health history.
               </p>
             </div>
             <div className="mt-8 inline-flex items-center justify-center px-6 py-3 bg-sage-50 rounded-full">
@@ -171,7 +172,7 @@ export default function AboutUsPageClient() {
               The Rejuvenate Experience
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              What to expect when you visit us.
+              A clear, comfortable process from your first visit to ongoing care.
             </p>
           </div>
 
@@ -181,25 +182,25 @@ export default function AboutUsPageClient() {
                 icon: MessageCircle,
                 step: "01",
                 title: "Consultation",
-                description: "We discuss your skin concerns, goals, and answer your questions.",
+                description: "We discuss your concerns, assess your skin, and answer questions.",
               },
               {
                 icon: ClipboardList,
                 step: "02",
                 title: "Personalized Plan",
-                description: "We recommend a treatment plan tailored to your unique needs.",
+                description: "We recommend a treatment approach tailored to your goals.",
               },
               {
                 icon: Heart,
                 step: "03",
                 title: "Treatment",
-                description: "Relax while our team delivers your personalized service.",
+                description: "Relax while we deliver your service with care and precision.",
               },
               {
                 icon: Calendar,
                 step: "04",
                 title: "Aftercare & Follow-Up",
-                description: "Clear aftercare guidance and recommended follow-up visits.",
+                description: "Clear guidance on aftercare plus recommended next steps.",
               },
             ].map((step, index) => (
               <div key={index} className="text-center">
@@ -226,19 +227,19 @@ export default function AboutUsPageClient() {
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-center justify-center">
               <span className="w-2 h-2 bg-sage-600 rounded-full mr-3"></span>
-              Personalized treatment plans for every client
+              Personalized plans based on your skin and goals
             </li>
             <li className="flex items-center justify-center">
               <span className="w-2 h-2 bg-sage-600 rounded-full mr-3"></span>
-              Education-first consultations with no pressure
+              Honest, education-first consultations
             </li>
             <li className="flex items-center justify-center">
               <span className="w-2 h-2 bg-sage-600 rounded-full mr-3"></span>
-              Professional-grade technology and products
+              Professional-grade equipment and trusted products
             </li>
             <li className="flex items-center justify-center">
               <span className="w-2 h-2 bg-sage-600 rounded-full mr-3"></span>
-              Aftercare guidance and ongoing support
+              Clear aftercare and follow-up support
             </li>
           </ul>
         </div>
@@ -251,7 +252,7 @@ export default function AboutUsPageClient() {
             Ready to Start Your Skin Journey?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Reach out to schedule a consultation and discover what's possible for your skin.
+            Contact us to schedule a consultation and find out what we can do for your skin.
           </p>
           <div className="flex justify-center">
             <Button

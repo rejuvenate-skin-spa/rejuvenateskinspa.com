@@ -177,7 +177,7 @@ export default function ChemicalPeelsPageClient() {
                   </div>
 
                   <Link href={treatment.href}>
-                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Learn More</Button>
+                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">View {treatment.title} Details</Button>
                   </Link>
                 </CardContent>
               </Card>

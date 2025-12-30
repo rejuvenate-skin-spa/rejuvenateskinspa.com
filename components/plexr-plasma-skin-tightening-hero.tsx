@@ -17,9 +17,9 @@ interface PlexrPlasmaSkinTighteningHeroProps {
 }
 
 export function PlexrPlasmaSkinTighteningHero({
-  title = "Advanced Plasma Pen",
-  subtitle = "Skin Tightening",
-  description = "Welcome to the future in advanced revolutionary skin rejuvenation, your journey to radiant skin starts here.",
+  title = "Plexr Plasma Skin Tightening",
+  subtitle = "in Queen Creek, AZ",
+  description = "Non-surgical skin tightening and resurfacing with Plexr plasma pen technology. Lift, firm, and rejuvenate your skin at Rejuvenate Skin Spa.",
   primaryButtonText = "Get in Touch",
   secondaryButtonText = "Learn More",
   onPrimaryClick,

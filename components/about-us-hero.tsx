@@ -64,10 +64,10 @@ export default function AboutUsHero() {
               <span className="text-sage-400 block">Rejuvenate Skin Spa</span>
             </h1>
             <p className="text-lg lg:text-xl text-gray-100 max-w-lg">
-              Founder-led, non-surgical skincare in Queen Creek, Arizona.
+              Advanced, non-surgical skincare focused on real results. Serving Queen Creek, Arizona.
             </p>
             <p className="text-base text-gray-200">
-              Founded in 2025 by Bridgette Ball.
+              Founder-led since 2025 by Bridgette Ball.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button

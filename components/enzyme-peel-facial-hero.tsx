@@ -61,10 +61,9 @@ export default function EnzymePeelFacialHero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 className="text-4xl lg:text-6xl font-playfair font-bold mb-6 leading-tight">Natural Enzyme Peel Facials</h1>
+        <h1 className="text-4xl lg:text-6xl font-playfair font-bold mb-6 leading-tight">Enzyme Peel Facials in Queen Creek, AZ</h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-          Experience the gentle power of natural fruit enzymes to reveal brighter, smoother, and more radiant skin with
-          our signature enzyme peel treatments.
+          Gentle fruit enzyme facials that reveal brighter, smoother skin. Eight natural enzyme options available at Rejuvenate Skin Spa.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button

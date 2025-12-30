@@ -35,23 +35,17 @@ export default function BioRePeelTreatmentPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Next Generation Chemical Peel
+                What is BioRePeel?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  BioRePeelCl3® Biphasic, Patented Antioxidant Peel
+                  BioRePeelCl3® Biphasic Chemical Peel
                 </h3>
                 <p>
-                  BioRePeelCl3® is an innovative biphasic, patented chemical
-                  peel with powerful antioxidant, revitalizing, and peeling
-                  action. It exfoliates dead skin cells to accelerate cellular
-                  renewal, while amino acids, vitamins, and GABA boost radiance
-                  and support skin rejuvenation. The lipophilic phase provides a
-                  protective filming and moisturizing effect, enhancing
-                  absorption and comfort. Made in Italy to international quality
-                  standards, BioRePeelCl3® can also be used in synergy with
-                  other treatments to amplify results and reveal smoother, more
-                  youthful-looking skin.
+                  BioRePeelCl3® is a patented biphasic chemical peel that combines TCA with amino acids, vitamins, and GABA. The treatment exfoliates dead skin cells, accelerates cellular renewal, and boosts radiance with minimal visible peeling.
+                </p>
+                <p>
+                  Made in Italy to international quality standards, BioRePeel works for all skin types year-round. Rejuvenate Skin Spa in Queen Creek offers BioRePeel as a standalone treatment or combined with other services for enhanced results.
                 </p>
               </div>
             </div>
@@ -73,11 +67,10 @@ export default function BioRePeelTreatmentPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Why Choose BioRePeel?
+              BioRePeel Benefits
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the future of chemical peels with advanced technology
-              and superior results.
+              BioRePeel delivers deep rejuvenation with minimal downtime. Ideal for clients seeking visible improvement without extended recovery.
             </p>
           </div>
 

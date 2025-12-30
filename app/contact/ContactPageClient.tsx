@@ -45,7 +45,7 @@ export default function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
-              Get in Touch
+              Contact Rejuvenate Skin Spa
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
               Questions about a treatment? Ready to schedule a consultation? Reach out and let us help you take the next step.

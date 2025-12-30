@@ -132,7 +132,7 @@ export default function SpaServicesPageClient() {
                   </div>
 
                   <Link href={service.href}>
-                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Learn More</Button>
+                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">View {service.title}</Button>
                   </Link>
                 </CardContent>
               </Card>

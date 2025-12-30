@@ -13,9 +13,9 @@ interface HomeHeroProps {
 }
 
 export function HomeHero({
-  title = "Rejuvenate Your Skin,",
-  subtitle = "Renew Your Confidence",
-  description = "Discover the future of skin rejuvenation at Rejuvenate Skin Spa, where advanced aesthetics meet timeless beauty and luxury meets innovation. Indulge in our results-driven, next generation, and non-surgical treatments that redefine luminous skincare.",
+  title = "Advanced Skincare",
+  subtitle = "in Queen Creek, AZ",
+  description = "Rejuvenate Skin Spa offers non-surgical treatments designed to deliver real results. Plasma skin tightening, microneedling, chemical peels, and more in a boutique Queen Creek studio.",
   className = "",
 }: HomeHeroProps) {
   const router = useRouter()

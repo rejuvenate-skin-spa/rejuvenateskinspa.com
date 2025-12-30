@@ -70,8 +70,8 @@ export default function BioRePeelFacialChemicalPeelHero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight mb-6">
-              Revolutionary
-              <span className="block">BioRePeel Treatment 5</span>
+              BioRePeel Treatment
+              <span className="block text-sage-200">in Queen Creek, AZ</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl">
               Advanced TCA peel technology that rejuvenates skin from within

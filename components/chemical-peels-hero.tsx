@@ -67,12 +67,11 @@ export default function ChemicalPeelsHero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight">
-              Professional
-              <span className="text-sage-200 block">Chemical Peels</span>
+              Chemical Peels
+              <span className="text-sage-200 block">in Queen Creek, AZ</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-lg">
-              Reveal smoother, more radiant skin with our professional-grade chemical peels. Customized treatments for
-              all skin types and concerns.
+              Professional-grade chemical peels customized for your skin type and concerns. BioRePeel, TCA, and glycolic acid options available at Rejuvenate Skin Spa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
