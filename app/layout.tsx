@@ -52,7 +52,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const jsonLd = {
+  const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
     "@id": "https://www.rejuvenateskinspa.com/#localbusiness",
@@ -75,12 +75,49 @@ export default function RootLayout({
     ]
   }
 
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.rejuvenateskinspa.com/#organization",
+    "name": "Rejuvenate Skin Spa",
+    "url": "https://www.rejuvenateskinspa.com/",
+    "telephone": "+14802049366",
+    "email": "info@rejuvenateskinspa.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "20162 E. Sonoqui Blvd.",
+      "addressLocality": "Queen Creek",
+      "addressRegion": "AZ",
+      "postalCode": "85142",
+      "addressCountry": "US"
+    }
+  }
+
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.rejuvenateskinspa.com/#website",
+    "url": "https://www.rejuvenateskinspa.com/",
+    "name": "Rejuvenate Skin Spa",
+    "publisher": {
+      "@id": "https://www.rejuvenateskinspa.com/#organization"
+    }
+  }
+
   return (
     <html lang="en">
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
       </head>
       <body
