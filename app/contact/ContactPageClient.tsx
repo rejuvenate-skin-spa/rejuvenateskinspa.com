@@ -43,13 +43,10 @@ export default function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight mb-6">
-              Contact
-              <span className="text-sage-600 block">Rejuvenate Skin Spa</span>
+              Get in Touch
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to begin your skin transformation journey? Get in touch with
-              our expert team to schedule your consultation or ask any questions
-              about our treatments.
+              Questions about a treatment? Ready to schedule a consultation? Reach out and let us help you take the next step.
             </p>
           </div>
         </div>
@@ -63,12 +60,10 @@ export default function ContactPageClient() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-6">
-                  Get in Touch
+                  Contact Us Directly
                 </h2>
                 <p className="text-gray-600 mb-8">
-                  We're here to answer your questions and help you discover the
-                  best treatments for your skin. Contact us today to schedule
-                  your personalized consultation.
+                  Call, email, or stop by our Queen Creek studio. We look forward to hearing from you.
                 </p>
               </div>
 
@@ -104,7 +99,7 @@ export default function ContactPageClient() {
                       info@rejuvenateskinspa.com
                     </a>
                     <p className="text-sm text-gray-500">
-                      We'll respond within 24 hours
+                      We will get back to you promptly
                     </p>
                   </div>
                 </div>
@@ -148,7 +143,7 @@ export default function ContactPageClient() {
             <Card className="shadow-lg">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-                  Schedule Your Consultation
+                  Request a Consultation
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -219,7 +214,7 @@ export default function ContactPageClient() {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us about your skin concerns or questions..."
+                      placeholder="Tell us about your goals, questions, or preferred timing."
                       className="mt-1"
                     />
                   </div>
@@ -233,8 +228,10 @@ export default function ContactPageClient() {
                   </Button>
 
                   <p className="text-sm text-gray-500 text-center">
-                    By submitting this form, you agree to our privacy policy and
-                    consent to be contacted about our services.
+                    By submitting this form, you agree to our privacy policy and consent to be contacted about our services.
+                  </p>
+                  <p className="text-sm text-gray-600 text-center mt-4">
+                    We are here to help you feel confident in your skin.
                   </p>
                 </form>
               </CardContent>
@@ -248,11 +245,10 @@ export default function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-4">
-              Visit Our Spa
+              Visit Us in Queen Creek
             </h2>
             <p className="text-xl text-gray-600">
-              Located in the heart of Queen Creek, Arizona, our spa offers a
-              tranquil escape with convenient parking.
+              Easy to find with free parking. We look forward to seeing you.
             </p>
           </div>
 
