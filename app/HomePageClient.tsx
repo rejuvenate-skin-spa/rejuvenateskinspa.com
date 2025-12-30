@@ -68,7 +68,7 @@ export default function HomePageClient() {
                 description:
                   "Cutting-edge technology that offers dramatic skin tightening results",
                 image: "/images/plasma-skin-tightening-treatment-rejuvenate-skin-spa-queen-creek-az.png",
-                href: "/plasma-skin-tightening",
+                href: "/plexr-plasma-skin-tightening",
                 features: [
                   "3 levels of intensity",
                   "Tightens & lifts sagging skin",
@@ -81,7 +81,7 @@ export default function HomePageClient() {
                 description:
                   "The collagen induction therapy that offers visible results",
                 image: "/images/microneedling-feature.png",
-                href: "/microneedling-treatment",
+                href: "/spa-services/microneedling-treatment",
                 features: [
                   "Traditional Microneedling",
                   "SQT Bio Microneedling",
