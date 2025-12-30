@@ -44,7 +44,7 @@ export function HomeHero({
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:4802049366"
     } else {
       router.push("/about-us/contact-us")
     }
@@ -63,10 +63,13 @@ export function HomeHero({
           className="object-cover object-right"
           priority
         />
-        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        {/* Gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        {/* 
+          Hero overlay: Left-to-right gradient keeps text readable while letting 
+          the hero image shine through on the right for a brighter, premium feel.
+          Left side (text area): darker for WCAG contrast compliance
+          Right side (image area): lighter to showcase imagery
+        */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/5"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
@@ -74,7 +77,7 @@ export function HomeHero({
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white leading-tight">
               {title}
-              <span className="text-sage-300 block">{subtitle}</span>
+              <span className="text-sage-400 block">{subtitle}</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-lg">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4">

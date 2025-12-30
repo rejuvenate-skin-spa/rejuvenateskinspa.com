@@ -23,7 +23,7 @@ export default function PlexrSalesClientPage() {
     const isBusinessHours = currentHour >= 9 && currentHour < 17
 
     if (isMobile && isBusinessHours) {
-      window.location.href = "tel:1-480-225-9549"
+      window.location.href = "tel:4802049366"
     } else {
       router.push("/about-us/contact-us")
     }

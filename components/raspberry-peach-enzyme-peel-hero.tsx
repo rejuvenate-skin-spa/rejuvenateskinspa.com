@@ -30,7 +30,7 @@ export default function RaspberryPeachEnzymePeelHero() {
 
   const handlePrimaryClick = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549";
+      window.location.href = "tel:4802049366";
     } else {
       router.push("/about-us/contact-us");
     }
@@ -53,10 +53,11 @@ export default function RaspberryPeachEnzymePeelHero() {
           className="object-cover object-right"
           priority
         />
-        {/* Dark overlay for accessibility - ensures WCAG contrast compliance */}
-        <div className="absolute inset-0 bg-black/50" />
-        {/* Gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        {/* 
+          Hero overlay: Left-to-right gradient keeps text readable while letting 
+          the hero image shine through on the right for a brighter, premium feel.
+        */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/5" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">

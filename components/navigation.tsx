@@ -138,7 +138,6 @@ const navigationItems = [
     submenu: [
       { title: "Portfolio", href: "/about-us/portfolio" },
       { title: "Contact Us", href: "/about-us/contact-us" },
-      { title: "Plexr Sales", href: "/about-us/plexr-sales" },
     ],
   },
 ];
@@ -330,7 +329,7 @@ export function Navigation() {
                 {/* Book Consultation Button */}
                 <div className="pt-4">
                   <a
-                    href="tel:1-480-225-9549"
+                    href="tel:4802049366"
                     className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
                   >
                     Book Consultation

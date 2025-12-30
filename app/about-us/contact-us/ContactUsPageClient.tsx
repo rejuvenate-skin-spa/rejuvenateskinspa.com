@@ -80,10 +80,10 @@ export default function ContactUsPageClient() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                     <a
-                      href="tel:480-225-9549"
+                      href="tel:4802049366"
                       className="text-gray-600 hover:text-sage-600 transition-colors"
                     >
-                      (480) 225-9549
+                      (480) 204-9366
                     </a>
                     <p className="text-sm text-gray-500">
                       Mon-Fri: 8AM-6PM, Sat: 9AM-5PM, Sun: Closed

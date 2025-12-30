@@ -114,7 +114,7 @@ export default function PlexrPlasmaPageClient() {
 
   const handleGetInTouch = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802259549"
+      window.location.href = "tel:4802049366"
     } else {
       router.push("/about-us/contact-us")
     }

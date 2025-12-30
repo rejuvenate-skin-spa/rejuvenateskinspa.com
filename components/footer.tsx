@@ -43,7 +43,7 @@ export function Footer() {
 
   const handlePhoneClick = () => {
     if (isMobile && isBusinessHours) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:4802049366"
     } else {
       window.location.href = "/about-us/contact-us"
     }
@@ -52,7 +52,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <Image
@@ -70,10 +70,10 @@ export function Footer() {
               <div className="flex items-center text-sm text-gray-600">
                 <Phone className="h-4 w-4 mr-2" />
                 <a
-                  href="tel:480-225-9549"
+                  href="tel:4802049366"
                   className="hover:text-sage-600 transition-colors"
                 >
-                  480-225-9549
+                  (480) 204-9366
                 </a>
               </div>
               <div className="flex items-center text-sm text-gray-600">
@@ -130,6 +130,23 @@ export function Footer() {
                   className="text-gray-600 hover:text-sage-600"
                 >
                   About Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Technology & Certifications */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">
+              Technology & Certifications
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/about-us/plexr-sales"
+                  className="text-gray-600 hover:text-sage-600"
+                >
+                  Plexr Plasma Technology
                 </Link>
               </li>
             </ul>

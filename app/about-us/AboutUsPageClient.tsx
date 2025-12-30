@@ -34,7 +34,7 @@ export default function AboutUsPageClient() {
 
   const handleGetInTouch = () => {
     if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:480-225-9549"
+      window.location.href = "tel:4802049366"
     } else {
       router.push("/about-us/contact-us")
     }

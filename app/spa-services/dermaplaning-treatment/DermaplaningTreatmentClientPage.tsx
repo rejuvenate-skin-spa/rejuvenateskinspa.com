@@ -245,7 +245,7 @@ export default function DermaplaningTreatmentClientPage() {
               const isBusinessHours = day >= 1 && day <= 6 && hour >= 8 && hour < 18
 
               if (isMobile && isBusinessHours) {
-                window.location.href = "tel:480-225-9549"
+                window.location.href = "tel:4802049366"
               } else {
                 window.location.href = "/about-us/contact-us"
               }
