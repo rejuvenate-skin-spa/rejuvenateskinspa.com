@@ -45,7 +45,7 @@ export function Footer() {
     if (isMobile && isBusinessHours) {
       window.location.href = "tel:4802049366"
     } else {
-      window.location.href = "/about-us/contact-us"
+      window.location.href = "/contact"
     }
   }
 
@@ -94,6 +94,14 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
+                  href="/about-us"
+                  className="text-gray-600 hover:text-sage-600"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/plasma-skin-tightening"
                   className="text-gray-600 hover:text-sage-600"
                 >
@@ -122,14 +130,6 @@ export function Footer() {
                   className="text-gray-600 hover:text-sage-600"
                 >
                   Spa Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about-us"
-                  className="text-gray-600 hover:text-sage-600"
-                >
-                  About Us
                 </Link>
               </li>
             </ul>

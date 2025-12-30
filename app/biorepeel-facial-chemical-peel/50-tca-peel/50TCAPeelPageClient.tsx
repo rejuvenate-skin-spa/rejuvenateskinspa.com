@@ -41,7 +41,7 @@ export default function BioRePeel50TCAPeelPageClient() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14802818888";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -476,7 +476,7 @@ export default function BioRePeel50TCAPeelPageClient() {
                         : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
                     }`}
                   >
-                    Book Consultation
+                    Get in Touch
                   </Button>
                 </CardContent>
               </Card>

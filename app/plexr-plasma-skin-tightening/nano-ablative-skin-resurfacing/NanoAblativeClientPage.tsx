@@ -45,7 +45,7 @@ export default function NanoAblativeClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:4802049366";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -444,7 +444,7 @@ export default function NanoAblativeClientPage() {
                         : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
                     }`}
                   >
-                    Book Now
+                    Get in Touch
                   </Button>
                 </CardContent>
               </Card>

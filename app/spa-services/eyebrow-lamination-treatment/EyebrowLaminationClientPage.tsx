@@ -243,7 +243,7 @@ export default function EyebrowLaminationClientPage() {
                     <span>Aftercare instructions</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Now</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Get in Touch</Button>
               </CardContent>
             </Card>
 
@@ -273,7 +273,7 @@ export default function EyebrowLaminationClientPage() {
                     <span>Enhanced definition</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Now</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Get in Touch</Button>
               </CardContent>
             </Card>
           </div>
@@ -290,7 +290,7 @@ export default function EyebrowLaminationClientPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair">Ready for Perfect Brows?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your eyebrow lamination appointment today and wake up to beautiful brows every day
+            Treat yourself to an eyebrow lamination appointment today and wake up to beautiful brows every day
           </p>
           <div className="flex justify-center">
             <Button
@@ -306,7 +306,7 @@ export default function EyebrowLaminationClientPage() {
                 if (isMobile && isBusinessHours) {
                   window.location.href = "tel:+14805551234"
                 } else {
-                  window.location.href = "/about-us/contact-us"
+                  window.location.href = "/contact"
                 }
               }}
             >

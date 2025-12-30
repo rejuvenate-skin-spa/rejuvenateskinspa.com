@@ -40,7 +40,7 @@ export default function CoconutPapayaEnzymePeelClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14805551234";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -215,7 +215,7 @@ export default function CoconutPapayaEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -247,7 +247,7 @@ export default function CoconutPapayaEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -280,7 +280,7 @@ export default function CoconutPapayaEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -300,7 +300,7 @@ export default function CoconutPapayaEnzymePeelClientPage() {
             Ready for a Tropical Skin Escape?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your Coconut-Papaya Enzyme Peel treatment today and experience
+            Treat yourself to a Coconut-Papaya Enzyme Peel today and experience
             deep hydration with tropical luxury.
           </p>
           <div className="flex justify-center">

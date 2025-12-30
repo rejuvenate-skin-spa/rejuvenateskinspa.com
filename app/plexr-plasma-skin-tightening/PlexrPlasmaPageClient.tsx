@@ -116,7 +116,7 @@ export default function PlexrPlasmaPageClient() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:4802049366"
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/contact")
     }
   }
 
@@ -392,7 +392,7 @@ export default function PlexrPlasmaPageClient() {
                       asChild
                       className="w-full bg-sage-600 hover:bg-sage-700 text-white"
                     >
-                      <Link href="/about-us/contact-us">
+                      <Link href="/contact">
                         Contact us for pricing
                       </Link>
                     </Button>

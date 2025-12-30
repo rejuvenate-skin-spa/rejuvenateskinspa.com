@@ -214,7 +214,7 @@ export default function DermaplaningTreatmentClientPage() {
                   <Button
                     className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
                   >
-                    Book Now
+                    Get in Touch
                   </Button>
                 </CardContent>
               </Card>
@@ -247,7 +247,7 @@ export default function DermaplaningTreatmentClientPage() {
               if (isMobile && isBusinessHours) {
                 window.location.href = "tel:4802049366"
               } else {
-                window.location.href = "/about-us/contact-us"
+                window.location.href = "/contact"
               }
             }}
             className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm"

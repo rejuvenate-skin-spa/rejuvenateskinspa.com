@@ -35,7 +35,7 @@ export default function SpaServicesPageClient() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:4802049366"
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/contact")
     }
   }
 
@@ -132,7 +132,7 @@ export default function SpaServicesPageClient() {
                   </div>
 
                   <Link href={service.href}>
-                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Learn More & Book</Button>
+                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Learn More</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -189,7 +189,7 @@ export default function SpaServicesPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready to Pamper Yourself?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Book your spa service today and experience the ultimate in relaxation and skin rejuvenation.
+            Treat yourself to a spa service today and experience the ultimate in relaxation and skin rejuvenation.
           </p>
           <Button
             onClick={handlePrimaryClick}

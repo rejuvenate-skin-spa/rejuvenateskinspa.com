@@ -214,7 +214,7 @@ export default function LemonEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -246,7 +246,7 @@ export default function LemonEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -279,7 +279,7 @@ export default function LemonEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -299,7 +299,7 @@ export default function LemonEnzymePeelClientPage() {
             Ready to Energize Your Skin?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your Lemon Zest Enzyme Peel treatment today and experience the
+            Treat yourself to a Lemon Zest Enzyme Peel today and experience the
             refreshing power of natural citrus.
           </p>
           <div className="flex justify-center">
@@ -316,7 +316,7 @@ export default function LemonEnzymePeelClientPage() {
                 if (isMobile && isBusinessHours) {
                   window.location.href = "tel:+14805551234";
                 } else {
-                  window.location.href = "/about-us/contact-us";
+                  window.location.href = "/contact";
                 }
               }}
             >

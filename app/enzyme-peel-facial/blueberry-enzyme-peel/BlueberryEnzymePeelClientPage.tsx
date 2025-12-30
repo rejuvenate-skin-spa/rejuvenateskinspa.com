@@ -187,7 +187,7 @@ export default function BlueberryEnzymePeelClientPage() {
                   Perfect for experiencing our gentle blueberry treatment
                 </p>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -397,7 +397,7 @@ export default function BlueberryEnzymePeelClientPage() {
                 if (isMobile && isBusinessHours) {
                   window.location.href = "tel:+14805551234";
                 } else {
-                  window.location.href = "/about-us/contact-us";
+                  window.location.href = "/contact";
                 }
               }}
             >

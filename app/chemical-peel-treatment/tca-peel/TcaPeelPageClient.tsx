@@ -41,7 +41,7 @@ export default function TcaPeelPageClient() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14802818888";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 

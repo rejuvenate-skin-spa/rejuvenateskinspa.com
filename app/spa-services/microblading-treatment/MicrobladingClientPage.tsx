@@ -33,7 +33,7 @@ export default function MicrobladingClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14802818888"
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/contact")
     }
   }
 
@@ -245,7 +245,7 @@ export default function MicrobladingClientPage() {
                   <Button
                     className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
                   >
-                    Book Consultation
+                    Get in Touch
                   </Button>
                 </CardContent>
               </Card>

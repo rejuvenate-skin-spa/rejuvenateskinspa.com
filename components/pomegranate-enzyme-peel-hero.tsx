@@ -33,7 +33,7 @@ export default function PomegranateEnzymePeelHero() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:4802049366"
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/contact")
     }
   }
 

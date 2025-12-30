@@ -133,12 +133,9 @@ const navigationItems = [
     ],
   },
   {
-    title: "About Us",
-    href: "/about-us",
-    submenu: [
-      { title: "Portfolio", href: "/about-us/portfolio" },
-      { title: "Contact Us", href: "/about-us/contact-us" },
-    ],
+    title: "Contact",
+    href: "/contact",
+    submenu: [],
   },
 ];
 
@@ -326,13 +323,13 @@ export function Navigation() {
                   </div>
                 ))}
 
-                {/* Book Consultation Button */}
+                {/* Get in Touch Button */}
                 <div className="pt-4">
                   <a
                     href="tel:4802049366"
                     className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
                   >
-                    Book Consultation
+                    Get in Touch
                   </a>
                 </div>
               </div>

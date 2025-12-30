@@ -41,7 +41,7 @@ export default function CherryEnzymePeelClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14802818084";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -234,7 +234,7 @@ export default function CherryEnzymePeelClientPage() {
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Experience the natural brightening power of our Cherry Enzyme Peel.
-            Book your consultation today and discover your most radiant
+            Get in touch today and discover your most radiant
             complexion.
           </p>
           <Button

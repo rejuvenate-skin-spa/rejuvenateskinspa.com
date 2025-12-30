@@ -49,10 +49,10 @@ export default function PlasmaMicroneedlingClientPage() {
       if (isBusinessHours) {
         window.location.href = "tel:+14805551234"
       } else {
-        router.push("/about-us/contact-us")
+        router.push("/contact")
       }
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/contact")
     }
   }
 

@@ -247,7 +247,7 @@ export default function BioRePeelTreatmentPage() {
 
                   <Link href={treatment.href}>
                     <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                      Learn More & Book
+                      Learn More
                     </Button>
                   </Link>
                 </CardContent>
@@ -451,7 +451,7 @@ export default function BioRePeelTreatmentPage() {
                         : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
                     }`}
                   >
-                    Book Now
+                    Get in Touch
                   </Button>
                 </CardContent>
               </Card>

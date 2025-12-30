@@ -40,7 +40,7 @@ export default function PassionFruitEnzymePeelClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14805551234";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -255,7 +255,7 @@ export default function PassionFruitEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -287,7 +287,7 @@ export default function PassionFruitEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -320,7 +320,7 @@ export default function PassionFruitEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -340,7 +340,7 @@ export default function PassionFruitEnzymePeelClientPage() {
             Ready for an Exotic Anti-Aging Experience?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your Passion Fruit Enzyme Peel treatment today and discover the
+            Treat yourself to a Passion Fruit Enzyme Peel today and discover the
             luxury of exotic skincare.
           </p>
           <Button

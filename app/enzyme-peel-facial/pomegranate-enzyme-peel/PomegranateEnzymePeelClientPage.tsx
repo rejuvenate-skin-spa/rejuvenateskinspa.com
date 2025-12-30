@@ -33,7 +33,7 @@ export default function PomegranateEnzymePeelClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14805551234";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -211,7 +211,7 @@ export default function PomegranateEnzymePeelClientPage() {
                   </li>
                 </ul>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -284,7 +284,7 @@ export default function PomegranateEnzymePeelClientPage() {
             Ready for the Ultimate Antioxidant Experience?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your premium Pomegranate Enzyme Peel treatment today and
+            Treat yourself to a premium Pomegranate Enzyme Peel today and
             experience the pinnacle of natural skincare luxury.
           </p>
           <div className="flex justify-center">

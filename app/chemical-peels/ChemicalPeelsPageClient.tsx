@@ -42,7 +42,7 @@ export default function ChemicalPeelsPageClient() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14802818888"
     } else {
-      window.location.href = "/about-us/contact-us"
+      window.location.href = "/contact"
     }
   }
 

@@ -33,7 +33,7 @@ function PumpkinOrangeEnzymePeelClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14805551234"
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/contact")
     }
   }
 
@@ -171,7 +171,7 @@ function PumpkinOrangeEnzymePeelClientPage() {
                     Aftercare products
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Book Now</Button>
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Get in Touch</Button>
               </CardContent>
             </Card>
 
@@ -237,7 +237,7 @@ function PumpkinOrangeEnzymePeelClientPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-6">Ready for Seasonal Skin Renewal?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your Pumpkin-Orange Enzyme Peel treatment today and embrace the comfort of seasonal skincare.
+            Treat yourself to a Pumpkin-Orange Enzyme Peel today and embrace the comfort of seasonal skincare.
           </p>
           {/* <CHANGE> Updated CTA section with single Get in Touch button */}
           <div className="flex justify-center">

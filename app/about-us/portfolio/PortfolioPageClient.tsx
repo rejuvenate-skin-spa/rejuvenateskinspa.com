@@ -137,7 +137,7 @@ export default function PortfolioPageClient() {
               asChild
               className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg"
             >
-              <Link href="/about-us/contact-us">Get in Touch</Link>
+              <Link href="/contact">Get in Touch</Link>
             </Button>
             <Button
               asChild

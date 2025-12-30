@@ -32,7 +32,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14801234567";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -243,7 +243,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                   Perfect for trying our gentle raspberry-peach treatment
                 </p>
                 <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Now
+                  Get in Touch
                 </Button>
               </CardContent>
             </Card>
@@ -437,7 +437,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
           </h2>
           <p className="text-xl text-sage-100 mb-8 max-w-2xl mx-auto">
             Experience the nurturing benefits of our Raspberry-Peach Enzyme
-            Peel. Book your appointment today.
+            Peel. Schedule your appointment today.
           </p>
           <div className="flex justify-center">
             <Button

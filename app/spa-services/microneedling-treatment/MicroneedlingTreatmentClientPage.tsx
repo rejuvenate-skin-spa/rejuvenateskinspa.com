@@ -36,10 +36,10 @@ export default function MicroneedlingTreatmentClientPage() {
       if (isBusinessHours) {
         window.location.href = "tel:+14804474505";
       } else {
-        router.push("/about-us/contact-us");
+        router.push("/contact");
       }
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 
@@ -456,7 +456,7 @@ export default function MicroneedlingTreatmentClientPage() {
                         : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
                     }`}
                   >
-                    Book Now
+                    Get in Touch
                   </Button>
                 </CardContent>
               </Card>

@@ -50,7 +50,7 @@ export default function BioMicroneedlingClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:+14805551234";
     } else {
-      router.push("/about-us/contact-us");
+      router.push("/contact");
     }
   };
 

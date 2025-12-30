@@ -32,7 +32,7 @@ export default function WartRemovalTreatmentClientPage() {
     if (isMobile && isBusinessHours()) {
       window.location.href = "tel:4802049366"
     } else {
-      router.push("/about-us/contact-us")
+      router.push("/contact")
     }
   }
 
@@ -229,7 +229,7 @@ export default function WartRemovalTreatmentClientPage() {
                     variant="outline"
                     className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"
                   >
-                    Book Consultation
+                    Get in Touch
                   </Button>
                 </CardContent>
               </Card>
