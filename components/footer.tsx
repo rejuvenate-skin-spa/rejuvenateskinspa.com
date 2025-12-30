@@ -102,7 +102,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/plasma-skin-tightening"
+                  href="/plexr-plasma-skin-tightening"
                   className="text-gray-600 hover:text-sage-600"
                 >
                   Plasma Treatments
@@ -110,7 +110,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/biorepeel-treatment"
+                  href="/biorepeel-facial-chemical-peel"
                   className="text-gray-600 hover:text-sage-600"
                 >
                   BioRePeel
