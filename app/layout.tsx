@@ -52,8 +52,37 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+    "@id": "https://www.rejuvenateskinspa.com/#localbusiness",
+    "name": "Rejuvenate Skin Spa",
+    "url": "https://www.rejuvenateskinspa.com/",
+    "telephone": "+14802049366",
+    "email": "info@rejuvenateskinspa.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "20162 E. Sonoqui Blvd.",
+      "addressLocality": "Queen Creek",
+      "addressRegion": "AZ",
+      "postalCode": "85142",
+      "addressCountry": "US"
+    },
+    "areaServed": [{ "@type": "City", "name": "Queen Creek" }],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+    ]
+  }
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
