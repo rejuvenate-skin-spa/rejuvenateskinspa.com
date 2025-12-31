@@ -82,7 +82,7 @@ export default function SpaServicesPageClient() {
               {
                 title: "Microblading",
                 description: "Semi-permanent eyebrow enhancement using precise hair-stroke technique.",
-                benefits: ["Perfectly Defined, Natural-Looking Brows", "Long-Lasting Results", "Saves Time & Enhances Confidence", "Customizable Shape & Color", "Waterproof & Smudge-Proof", "Restores Thinning or Over-Plucked Brows"],
+                benefits: ["Perfectly Defined, Natural-Looking Brows", "Long-Lasting Results", "Saves Time & Enhances Confidence", "Customizable Shape & Color", "Waterproof & Smudge-Proof", "Restores Thinning or Over-Plucked Brows", "Customized shape and color for natural-looking results"],
                 duration: "2-3 hours",
                 price: "From $450",
                 href: "/spa-services/microblading",
