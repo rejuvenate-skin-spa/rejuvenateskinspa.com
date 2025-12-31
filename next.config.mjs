@@ -31,6 +31,11 @@ const nextConfig = {
         destination: '/spa-services/microneedling-treatment',
         permanent: true,
       },
+      {
+        source: '/about-us/portfolio',
+        destination: '/portfolio',
+        permanent: true,
+      },
     ]
   },
 }

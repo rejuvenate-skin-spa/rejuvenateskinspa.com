@@ -66,6 +66,9 @@ export function Footer() {
               Experience the ultimate in skincare luxury with our advanced
               treatments and personalized approach to skin rejuvenation.
             </p>
+            <p className="text-sm text-gray-500 mt-3 mb-4">
+              Licensed Plexr® Technology Provider in Arizona
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
                 href="tel:4802049366"
@@ -82,6 +85,40 @@ export function Footer() {
                 info@rejuvenateskinspa.com
               </a>
             </div>
+            {/* Social Follow */}
+            <div className="flex items-center gap-3 mt-5">
+              <span className="text-sm font-medium text-gray-800">Follow Us:</span>
+              <a
+                href="https://www.instagram.com/rejuvenateskinspa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Rejuvenate Skin Spa on Instagram"
+                className="hover:scale-105 transition-transform duration-150"
+              >
+                <Image
+                  src="/brands/instagram.svg"
+                  alt="Instagram"
+                  width={22}
+                  height={22}
+                  className="w-[22px] h-[22px]"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Rejuvenate Skin Spa on Facebook"
+                className="hover:scale-105 transition-transform duration-150"
+              >
+                <Image
+                  src="/brands/facebook.svg"
+                  alt="Facebook"
+                  width={22}
+                  height={22}
+                  className="w-[22px] h-[22px]"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -94,6 +131,14 @@ export function Footer() {
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/portfolio"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
+                >
+                  Results Gallery
                 </Link>
               </li>
               <li>
@@ -178,6 +223,21 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} Rejuvenate Skin Spa. All rights
             reserved.
+          </p>
+          <p className="mt-2">
+            <Link
+              href="/privacy-policy"
+              className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="mx-2 text-gray-400">·</span>
+            <Link
+              href="/terms-and-conditions"
+              className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              Terms &amp; Conditions
+            </Link>
           </p>
         </div>
       </div>
