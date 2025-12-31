@@ -1,51 +1,10 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import { Phone } from "lucide-react"
 import Image from "next/image"
 
 export default function MicrobladingTreatmentHero() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(
-      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    )
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
-
-    // Monday (1) to Saturday (6), 8 AM to 6 PM
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
-
-  const handlePrimaryClick = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:4802049366"
-    } else {
-      router.push("/contact")
-    }
-  }
-
-  const handleLearnMore = () => {
-    const faqSection = document.getElementById("faq-section")
-    if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <section className="relative min-h-[500px] py-12 flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -77,19 +36,14 @@ export default function MicrobladingTreatmentHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
+                asChild
                 size="lg"
-                onClick={handlePrimaryClick}
                 className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg backdrop-blur-sm"
               >
-                Get in Touch
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={handleLearnMore}
-                className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent shadow-lg backdrop-blur-sm"
-              >
-                Learn More
+                <a href="tel:+14802049366" className="flex items-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  (480) 204-9366
+                </a>
               </Button>
             </div>
           </div>

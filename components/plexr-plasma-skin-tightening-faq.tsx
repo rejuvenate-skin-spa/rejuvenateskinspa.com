@@ -30,7 +30,7 @@ const faqSections = [
       {
         question: "Is there downtime after Plexr treatment?",
         answer:
-          "Downtime depends on the type of Plexr treatment. Non-ablative has little to no downtime, semi-ablative typically involves 2–5 days of recovery, while ablative treatments may require 7–10 days of healing.",
+          "Downtime depends on the type of Plexr treatment. Nano-ablative has minimal downtime, semi-ablative typically involves a short recovery period, while ablative treatments require extended recovery time.",
       },
     ],
   },
@@ -40,7 +40,17 @@ const faqSections = [
       {
         question: "What Plexr plasma services are available at Rejuvenate Skin Spa?",
         answer:
-          "We specialize in all three tiers of Plexr plasma treatments:\n- Non-Ablative: Surface-level skin rejuvenation with no downtime\n- Semi-Ablative (CAT Resurfacing): Fractional resurfacing for moderate textural improvement\n- Ablative: Deep resurfacing for significant skin tightening and wrinkle reduction\n\nWe also offer targeted removal services using Plexr for moles, skin tags, sun spots, and warts.",
+          "We specialize in all three tiers of Plexr plasma treatments:\n- Nano-Ablative: Surface-level skin rejuvenation with minimal downtime\n- Semi-Ablative (CAT Resurfacing): Fractional resurfacing for moderate textural improvement\n- Ablative: Deep resurfacing for significant skin tightening and wrinkle reduction\n\nWe also offer targeted removal services using Plexr for moles, skin tags, sun spots, and warts.",
+      },
+      {
+        question: "Is an in-person consultation required for Plasma treatments?",
+        answer:
+          "Yes. An in-person consultation is required for all Plasma treatments. During this visit, we evaluate your skin, discuss your goals, and determine the most appropriate treatment approach based on safety, candidacy, and expected outcomes.\n\nA $100 consultation fee applies and is credited toward your treatment if you proceed. Because this time is reserved for individualized assessment and planning, the consultation fee is non-refundable if you choose not to move forward.",
+      },
+      {
+        question: "Why is an in-person consultation required for all Plasma treatment services?",
+        answer:
+          "Plasma treatments are highly customizable and vary based on skin type, treatment area, desired outcome, and healing capacity. An in-person consultation allows our provider to assess your skin in person, determine the appropriate treatment level, and confirm candidacy before any Plasma service is performed.\n\nThis process helps ensure treatments are planned safely, expectations are aligned, and results are appropriate for your individual needs.",
       },
     ],
   },
@@ -50,7 +60,7 @@ const faqSections = [
       {
         question: "How do I know which Plexr treatment is right for me?",
         answer:
-          "Your provider will evaluate your skin type, treatment goals, and desired downtime to recommend the most appropriate protocol—non-ablative, semi-ablative, or ablative.",
+          "Your provider will evaluate your skin type, treatment goals, and desired downtime to recommend the most appropriate protocol: nano-ablative, semi-ablative, or ablative.",
       },
       {
         question: "Can Plexr be used on different parts of the body?",
@@ -60,7 +70,7 @@ const faqSections = [
       {
         question: "Are multiple sessions needed?",
         answer:
-          "Depending on the concern being treated, some clients see results after one session, while others benefit from a series spaced several weeks apart.",
+          "Depending on the concern being treated, some clients see improvement after a single session, while others benefit from a series of treatments.\n\nIn many cases, a series of three sessions spaced at least six weeks apart is recommended for optimal results. The exact number of sessions and spacing are determined during your consultation based on individual goals and skin response.",
       },
       {
         question: "How does Plexr plasma compare to traditional skin tightening?",

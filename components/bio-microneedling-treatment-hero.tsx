@@ -1,52 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 import Image from "next/image";
 
 export default function BioMicroneedlingTreatmentHero() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const isBusinessHours = () => {
-    const now = new Date();
-    const arizonaTime = new Date(
-      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    );
-    const day = arizonaTime.getDay();
-    const hour = arizonaTime.getHours();
-
-    // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
-  };
-
-  const handlePrimaryClick = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:4802049366";
-    } else {
-      router.push("/contact");
-    }
-  };
-
-  const scrollToFAQ = () => {
-    const faqSection = document.getElementById("faq-section");
-    if (faqSection) {
-      faqSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative min-h-[500px] py-12 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -77,19 +35,14 @@ export default function BioMicroneedlingTreatmentHero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
+            asChild
             size="lg"
             className="bg-sage-600 hover:bg-sage-700 text-white"
-            onClick={handlePrimaryClick}
           >
-            Get in Touch
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent"
-            onClick={scrollToFAQ}
-          >
-            Learn More
+            <a href="tel:+14802049366" className="flex items-center gap-2">
+              <Phone className="h-5 w-5" />
+              (480) 204-9366
+            </a>
           </Button>
         </div>
       </div>
