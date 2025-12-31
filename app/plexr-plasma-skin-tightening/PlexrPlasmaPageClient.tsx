@@ -9,52 +9,29 @@ import { PlexrPlasmaFAQ } from "@/components/plexr-plasma-skin-tightening-faq"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
+import { Phone, Info } from "lucide-react"
 
 const treatmentOptions = [
   {
-    title: "Nano-Ablative Skin Resurfacing",
+    title: "Nano-Ablative",
     description:
-      "Gentle surface treatment with no downtime for subtle skin improvement and glow.",
-    price: "Starting at $300",
-    duration: "30-45 minutes",
-    downtime: "None",
+      "Gentle surface treatment for subtle skin improvement and glow.",
+    recovery: "Minimal downtime",
     href: "/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing",
-    benefits: [
-      "Improved skin texture",
-      "Enhanced skin glow",
-      "Minimal discomfort",
-      "No recovery time needed",
-    ],
   },
   {
-    title: "Semi-Ablative Skin Resurfacing",
+    title: "Semi-Ablative",
     description:
       "Moderate depth treatment for noticeable improvement in skin texture and tone.",
-    price: "Starting at $800",
-    duration: "90-120 minutes",
-    downtime: "2-5 days",
+    recovery: "Short recovery period",
     href: "/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing",
-    benefits: [
-      "Significant texture improvement",
-      "Reduced fine lines",
-      "Even skin tone",
-      "Collagen stimulation",
-    ],
   },
   {
-    title: "Ablative Skin Resurfacing",
+    title: "Ablative",
     description:
       "Deep treatment for dramatic skin tightening and wrinkle reduction results.",
-    price: "Starting at $1,500",
-    duration: "90-120 minutes",
-    downtime: "7-10 days",
+    recovery: "Extended recovery required",
     href: "/plexr-plasma-skin-tightening/ablative-skin-resurfacing",
-    benefits: [
-      "Dramatic skin tightening",
-      "Deep wrinkle reduction",
-      "Significant rejuvenation",
-      "Long-lasting results",
-    ],
   },
 ]
 
@@ -63,27 +40,23 @@ const removalServices = [
     title: "Mole Removal Treatment",
     description:
       "Safe, precise removal of unwanted moles using advanced plasma technology.",
-    price: "Starting at $200",
     href: "/plexr-plasma-skin-tightening/mole-removal-treatment",
   },
   {
     title: "Skin Tag Removal Treatment",
     description:
       "Quick, effective removal of skin tags with minimal discomfort.",
-    price: "Starting at $150",
     href: "/plexr-plasma-skin-tightening/skin-tag-removal-treatment",
   },
   {
     title: "Sun Spot Removal Treatment",
     description:
       "Target and eliminate sun spots for clearer, more even skin tone.",
-    price: "Starting at $250",
     href: "/plexr-plasma-skin-tightening/sun-spot-removal-treatment",
   },
   {
     title: "Wart Removal Treatment",
     description: "Effective wart removal using precise plasma technology.",
-    price: "Starting at $200",
     href: "/plexr-plasma-skin-tightening/wart-removal-treatment",
   },
 ]
@@ -163,7 +136,11 @@ export default function PlexrPlasmaPageClient() {
                   Plexr Plasma Pen Treatment Levels
                 </h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                  <Link
+                    href="/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing"
+                    aria-label="Learn about nano-ablative plasma resurfacing (Level 1 - The Shower)"
+                    className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-sage-200 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-500 focus-visible:ring-offset-2"
+                  >
                     <div className="text-sage-600 font-bold text-lg mb-2">
                       Level 1
                     </div>
@@ -171,8 +148,12 @@ export default function PlexrPlasmaPageClient() {
                       The Shower
                     </div>
                     <div className="text-sm text-gray-600">Nano-ablative</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                  </Link>
+                  <Link
+                    href="/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing"
+                    aria-label="Learn about nano-ablative plasma resurfacing (Level 2 - The Glass Lift)"
+                    className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-sage-200 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-500 focus-visible:ring-offset-2"
+                  >
                     <div className="text-sage-600 font-bold text-lg mb-2">
                       Level 2
                     </div>
@@ -180,8 +161,12 @@ export default function PlexrPlasmaPageClient() {
                       The Glass Lift
                     </div>
                     <div className="text-sm text-gray-600">Nano-ablative</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                  </Link>
+                  <Link
+                    href="/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing"
+                    aria-label="Learn about semi-ablative plasma resurfacing (Level 3 - Cat Resurface)"
+                    className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-sage-200 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-500 focus-visible:ring-offset-2"
+                  >
                     <div className="text-sage-600 font-bold text-lg mb-2">
                       Level 3
                     </div>
@@ -189,8 +174,12 @@ export default function PlexrPlasmaPageClient() {
                       Cat Resurface
                     </div>
                     <div className="text-sm text-gray-600">Semi-ablative</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100">
+                  </Link>
+                  <Link
+                    href="/plexr-plasma-skin-tightening/ablative-skin-resurfacing"
+                    aria-label="Learn about ablative plasma resurfacing (Level 4 - The Fibroblast Lift)"
+                    className="bg-white rounded-lg p-4 md:p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-sage-200 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-500 focus-visible:ring-offset-2"
+                  >
                     <div className="text-sage-600 font-bold text-lg mb-2">
                       Level 4
                     </div>
@@ -198,78 +187,44 @@ export default function PlexrPlasmaPageClient() {
                       The Fibroblast Lift
                     </div>
                     <div className="text-sm text-gray-600">Ablative</div>
-                  </div>
+                  </Link>
                 </div>
+                <p className="text-sm text-gray-500 text-center mt-4">
+                  Tap a treatment level to learn more about downtime and candidacy.
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
                 What Makes Plexr Plasma Pen Different?
               </h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-sage-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-700">
-                    <strong>True Plasma Technology</strong>
-                    <ul className="mt-2 ml-4 space-y-1 text-sm">
-                      <li>
-                        • Many "plasma pens" are really just low-grade
-                        electrical arc tools.
-                      </li>
-                      <li>
-                        • Plexr uses real plasma energy, ionizing the air
-                        between the device and your skin for safe, controlled
-                        results.
-                      </li>
-                    </ul>
-                  </div>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">True Plasma Technology</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Many "plasma pens" are really just low-grade electrical arc tools. Plexr uses real plasma energy, ionizing the air between the device and your skin for safe, controlled results.
+                  </p>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-sage-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-700">
-                    <strong>Medical-Grade & Globally Recognized</strong>
-                    <ul className="mt-2 ml-4 space-y-1 text-sm">
-                      <li>
-                        • CE-certified and used by dermatologists, doctors, and
-                        advanced aestheticians.
-                      </li>
-                      <li>
-                        • Backed by years of research and clinical studies.
-                      </li>
-                    </ul>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Medical-Grade & Globally Recognized</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    CE-certified and used by dermatologists, doctors, and advanced aestheticians. Backed by years of research and clinical studies.
+                  </p>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-sage-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-700">
-                    <strong>Precision & Safety</strong>
-                    <ul className="mt-2 ml-4 space-y-1 text-sm">
-                      <li>• Targets even the most delicate areas.</li>
-                      <li>
-                        • Advanced energy control means fewer side effects, more
-                        predictable healing.
-                      </li>
-                    </ul>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Precision & Safety</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Targets even the most delicate areas. Advanced energy control means fewer side effects and more predictable healing.
+                  </p>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-sage-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-700">
-                    <strong>Proven Results</strong>
-                    <ul className="mt-2 ml-4 space-y-1 text-sm">
-                      <li>
-                        • Produces natural collagen remodeling for long-lasting
-                        tightening, lifting, and rejuvenation.
-                      </li>
-                      <li>
-                        • Known as the "gold standard" in plasma skin
-                        tightening.
-                      </li>
-                    </ul>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Proven Results</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Produces natural collagen remodeling for long-lasting tightening, lifting, and rejuvenation. Known as the "gold standard" in plasma skin tightening.
+                  </p>
                 </div>
               </div>
             </div>
@@ -277,43 +232,33 @@ export default function PlexrPlasmaPageClient() {
               <h4 className="text-xl font-bold text-gray-900 mb-4">
                 Treatment Areas
               </h4>
-              <div className="grid grid-cols-2 gap-3 text-sm mb-6">
-                <div className="space-y-2">
-                  <p className="text-gray-700">• face</p>
-                  <p className="text-gray-700">• neck</p>
-                  <p className="text-gray-700">• arms</p>
-                  <p className="text-gray-700">• breasts</p>
-                  <p className="text-gray-700">• stomach</p>
-                  <p className="text-gray-700">• buttocks</p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-gray-700">• Chest</p>
-                  <p className="text-gray-700">• thighs</p>
-                  <p className="text-gray-700">• knee</p>
-                  <p className="text-gray-700">• hands</p>
-                </div>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm mb-8">
+                <p className="text-gray-700">Face</p>
+                <p className="text-gray-700">Chest</p>
+                <p className="text-gray-700">Neck</p>
+                <p className="text-gray-700">Thighs</p>
+                <p className="text-gray-700">Arms</p>
+                <p className="text-gray-700">Knees</p>
+                <p className="text-gray-700">Breasts</p>
+                <p className="text-gray-700">Hands</p>
+                <p className="text-gray-700">Stomach</p>
+                <p className="text-gray-700">Buttocks</p>
               </div>
 
               <h4 className="text-xl font-bold text-gray-900 mb-4">
                 Plasma Removal Services
               </h4>
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <div className="space-y-2">
-                  <p className="text-gray-700">• Moles</p>
-                  <p className="text-gray-700">• warts</p>
-                  <p className="text-gray-700">• skin tags</p>
-                  <p className="text-gray-700">• stretch marks</p>
-                  <p className="text-gray-700">• tattoos</p>
-                  <p className="text-gray-700">• pigmentation/sunspots</p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-gray-700">• melasma</p>
-                  <p className="text-gray-700">• Keloids</p>
-                  <p className="text-gray-700">• acne scars</p>
-                  <p className="text-gray-700">• moles/ fibroids/cysts</p>
-                  <p className="text-gray-700">• skin tags</p>
-                  <p className="text-gray-700">• sunspot</p>
-                </div>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                <p className="text-gray-700">Moles</p>
+                <p className="text-gray-700">Melasma</p>
+                <p className="text-gray-700">Warts</p>
+                <p className="text-gray-700">Keloids</p>
+                <p className="text-gray-700">Skin tags</p>
+                <p className="text-gray-700">Acne scars</p>
+                <p className="text-gray-700">Stretch marks</p>
+                <p className="text-gray-700">Fibroids/cysts</p>
+                <p className="text-gray-700">Tattoos</p>
+                <p className="text-gray-700">Pigmentation/sunspots</p>
               </div>
             </div>
           </div>
@@ -328,74 +273,88 @@ export default function PlexrPlasmaPageClient() {
               Plexr Plasma Pen Skin Treatment Options
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from three intensity levels to achieve your desired results
-              with the appropriate recovery time.
+              Choose from three intensity levels based on your goals and available recovery time.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {treatmentOptions.map((treatment, index) => (
-              <Card
+              <Link
                 key={index}
-                className="h-full hover:shadow-lg transition-shadow bg-white"
+                href={treatment.href}
+                className="group"
               >
-                <CardContent className="p-6 h-full flex flex-col bg-white">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {treatment.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 flex-grow">
-                    {treatment.description}
-                  </p>
-
-                  <div className="space-y-3 mb-6">
-                    <div className="flex justify-between">
-                      <span className="text-sm font-medium text-gray-700">
-                        Duration:
-                      </span>
-                      <span className="text-sm text-gray-600">
-                        {treatment.duration}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm font-medium text-gray-700">
-                        Downtime:
-                      </span>
-                      <span className="text-sm text-gray-600">
-                        {treatment.downtime}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                      Key Benefits:
-                    </h4>
-                    <ul className="space-y-1">
-                      {treatment.benefits.map((benefit, benefitIndex) => (
-                        <li
-                          key={benefitIndex}
-                          className="text-sm text-gray-600 flex items-center"
-                        >
-                          <div className="w-1.5 h-1.5 bg-sage-500 rounded-full mr-2 flex-shrink-0"></div>
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mt-auto">
-                    <Button
-                      asChild
-                      className="w-full bg-sage-600 hover:bg-sage-700 text-white"
-                    >
-                      <Link href="/contact">
-                        Contact us for pricing
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card className="h-full hover:shadow-lg transition-all duration-200 bg-white border border-gray-100 group-hover:border-sage-200">
+                  <CardContent className="p-6 h-full flex flex-col bg-white">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {treatment.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-3">
+                      {treatment.description}
+                    </p>
+                    <p className="text-sm text-gray-500 mb-4">
+                      {treatment.recovery}
+                    </p>
+                    <span className="text-sage-600 text-sm font-medium group-hover:text-sage-700 transition-colors mt-auto">
+                      View details →
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-sage-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
+            Schedule Your Plexr Consultation
+          </h2>
+          <p className="text-xl text-sage-100 mb-8 max-w-2xl mx-auto">
+            Plexr treatment plans are customized based on your goals and treatment area. Call us or request a consultation to learn more about what Plexr can do for you.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
+            <Button
+              asChild
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base font-medium rounded-lg shadow-lg min-h-[48px]"
+            >
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
+            >
+              <Link href="/contact">
+                Request a Consultation
+              </Link>
+            </Button>
+          </div>
+
+          {/* Pricing guidance helper text */}
+          <p className="text-sm text-sage-200 mb-10 max-w-xl mx-auto">
+            General pricing guidance is available by phone. Final treatment recommendations and exact pricing are determined during your in-person consultation.
+          </p>
+
+          {/* Consultation Required Info */}
+          <div className="bg-white/15 backdrop-blur-sm rounded-lg p-8 max-w-xl mx-auto text-left border border-white/20">
+            <div className="flex items-start gap-4 mb-4">
+              <Info className="h-6 w-6 text-white flex-shrink-0 mt-0.5" />
+              <h3 className="text-xl font-semibold text-white">Consultation Required</h3>
+            </div>
+            <ul className="space-y-3 text-sage-100 text-sm ml-10">
+              <li>• In-person consultation required for Plasma services</li>
+              <li>• $100 consultation fee</li>
+              <li>• Fee is applied toward treatment if you proceed</li>
+              <li>• Non-refundable if you choose not to proceed</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -415,26 +374,25 @@ export default function PlexrPlasmaPageClient() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {removalServices.map((service, index) => (
-              <Card
+              <Link
                 key={index}
-                className="hover:shadow-lg transition-shadow bg-white"
+                href={service.href}
+                className="group"
               >
-                <CardContent className="p-6 text-center bg-white">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {service.description}
-                  </p>
-                  <Button
-                    asChild
-                    size="sm"
-                    className="bg-sage-600 hover:bg-sage-700 text-white"
-                  >
-                    <Link href={service.href}>View {service.title}</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                <Card className="h-full hover:shadow-lg transition-all duration-200 bg-white border border-gray-100 group-hover:border-sage-200">
+                  <CardContent className="p-6 text-center bg-white h-full flex flex-col">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 flex-grow">
+                      {service.description}
+                    </p>
+                    <span className="text-sage-600 text-sm font-medium group-hover:text-sage-700 transition-colors">
+                      Learn more →
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
@@ -467,21 +425,32 @@ export default function PlexrPlasmaPageClient() {
       {/* FAQ Section */}
       <PlexrPlasmaFAQ />
 
-      {/* CTA Section */}
-      <section className="py-16 bg-sage-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
-            Schedule a Plexr Consultation
-          </h2>
-          <p className="text-xl text-sage-100 mb-8 max-w-2xl mx-auto">
-            Plexr pricing is customized based on your treatment area and goals. Contact Rejuvenate Skin Spa for a complimentary phone consultation. Treatment packages are available.
+      {/* Compact Bottom CTA */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
+            <Button
+              asChild
+              className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
+            >
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-2 border-sage-600 text-sage-600 hover:bg-sage-50 px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
+            >
+              <Link href="/contact">
+                Request a Consultation
+              </Link>
+            </Button>
+          </div>
+          <p className="text-sm text-gray-500 max-w-xl mx-auto">
+            General pricing guidance is available by phone. Final treatment recommendations and exact pricing are determined during your in-person consultation.
           </p>
-          <Button
-            onClick={handleGetInTouch}
-            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 text-base font-medium rounded-lg shadow-lg"
-          >
-            Call for Pricing
-          </Button>
         </div>
       </section>
     </div>
