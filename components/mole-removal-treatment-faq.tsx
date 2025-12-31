@@ -20,7 +20,7 @@ const faqSections = [
       {
         question: "Is Plexr mole removal a laser treatment?",
         answer:
-          "No. Plexr is not a laser—it uses plasma, not light or heat, to treat skin. Unlike lasers, Plexr does not rely on pigment, which allows for more precision and makes it safer for a broader range of skin types and tones.",
+          "No. Plexr is not a laser. It uses plasma, not light or heat, to treat skin. Unlike lasers, Plexr does not rely on pigment, which allows for more precision and makes it safer for a broader range of skin types and tones.",
       },
       {
         question: "What types of moles or lesions can Plexr treat?",
@@ -40,7 +40,7 @@ const faqSections = [
       {
         question: "Is Plexr mole removal safe?",
         answer:
-          "Yes, when performed by a trained professional. The treatment is non-invasive and typically has minimal risk of infection or scarring. However, not all lesions are suitable for plasma treatment—malignant or suspicious moles must be examined by a dermatologist first.",
+          "Yes, when performed by a trained professional. The treatment is non-invasive and typically has minimal risk of infection or scarring. However, not all lesions are suitable for plasma treatment. Malignant or suspicious moles must be examined by a dermatologist first.",
       },
       {
         question: "Who is a good candidate for Plexr mole removal?",
@@ -56,6 +56,16 @@ const faqSections = [
         question: "Does the mole need to be biopsied first?",
         answer:
           "If there's any concern about the nature of the lesion (e.g., irregular borders, color variation, growth), a biopsy or dermatologist referral is recommended before removal. Plexr should only be used on clearly benign lesions.",
+      },
+    ],
+  },
+  {
+    title: "Cost & Treatment Planning",
+    faqs: [
+      {
+        question: "How much does Plexr removal treatment cost?",
+        answer:
+          "Because Plexr removal treatments are highly individualized, a specific price cannot be provided without an in-person consultation. During your consultation, we evaluate the type, size, number, and location of the areas being treated so we can determine the appropriate approach and provide accurate pricing. General pricing guidance is available by phone, and final pricing is confirmed during your consultation.",
       },
       {
         question: "Is an in-person consultation required for Plasma treatments?",

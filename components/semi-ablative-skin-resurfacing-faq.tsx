@@ -30,7 +30,7 @@ const faqData = [
       {
         question: "Is Semi-Ablative PLEXR considered a laser treatment?",
         answer:
-          "No. It uses plasma—not laser light—to create micro-injuries in the skin. This method is non-thermal and non-chromophore-dependent, making it safer for a broader range of skin types and sensitive areas.",
+          "No. It uses plasma (not laser light) to create micro-injuries in the skin. This method is non-thermal and non-chromophore-dependent, making it safer for a broader range of skin types and sensitive areas.",
       },
     ],
   },

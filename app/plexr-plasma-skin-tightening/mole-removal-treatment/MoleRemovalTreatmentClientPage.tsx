@@ -12,8 +12,11 @@ import {
   Users,
   AlertTriangle,
   FileText,
+  Phone,
+  Info,
 } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { MoleRemovalTreatmentFAQ } from "@/components/mole-removal-treatment-faq"
 import { MoleRemovalTreatmentHero } from "@/components/mole-removal-treatment-hero"
 import { useRouter } from "next/navigation"
@@ -97,9 +100,9 @@ export default function MoleRemovalTreatmentClientPage() {
                   conventional excision method
                 </p>
                 <p>
-                  and clients seeking a non-invasive, cosmetic alternative for
+                  Plexr Plasma is ideal for clients seeking a non-invasive, cosmetic alternative for
                   the removal of benign moles, skin tags, or similar
-                  imperfections with limited chances of scaring
+                  imperfections with limited chances of scarring.
                 </p>
               </div>
             </div>
@@ -124,9 +127,9 @@ export default function MoleRemovalTreatmentClientPage() {
               Treatment Benefits
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the rewards of advanced abaltive plasma technology for
+              Experience the rewards of advanced ablative plasma technology for
               safe mole removals and similar skin imperfections with limited
-              chances of scaring.
+              chances of scarring.
             </p>
           </div>
 
@@ -261,8 +264,8 @@ export default function MoleRemovalTreatmentClientPage() {
               Medical Requirements
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              If moles, lessions or any other skin imperfections look
-              suspicious, mandatory medical clearance will required for a safety
+              If moles, lesions, or any other skin imperfections look
+              suspicious, mandatory medical clearance will be required for safe
               mole removal treatment.
             </p>
           </div>
@@ -376,29 +379,105 @@ export default function MoleRemovalTreatmentClientPage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-16 bg-sage-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
+            Schedule Your Plexr Consultation
+          </h2>
+          <p className="text-xl text-sage-100 mb-8 max-w-2xl mx-auto">
+            Plexr treatment plans are customized based on your goals and treatment area. Call us or request a consultation to learn more about what Plexr can do for you.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
+            <Button
+              asChild
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base font-medium rounded-lg shadow-lg min-h-[48px]"
+            >
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
+            >
+              <Link href="/contact">
+                Request a Consultation
+              </Link>
+            </Button>
+          </div>
+
+          {/* Pricing guidance helper text */}
+          <p className="text-sm text-sage-200 mb-10 max-w-xl mx-auto">
+            General pricing guidance is available by phone. Final treatment recommendations and exact pricing are determined during your in-person consultation.
+          </p>
+
+          {/* Consultation Required Info */}
+          <div className="bg-white/15 backdrop-blur-sm rounded-lg p-8 max-w-xl mx-auto text-left border border-white/20">
+            <div className="flex items-start gap-4 mb-4">
+              <Info className="h-6 w-6 text-white flex-shrink-0 mt-0.5" />
+              <h3 className="text-xl font-semibold text-white">Consultation Required</h3>
+            </div>
+            <ul className="space-y-3 text-sage-100 text-sm ml-10">
+              <li>• In-person consultation required for Plasma services</li>
+              <li>• $100 consultation fee</li>
+              <li>• Fee is applied toward treatment if you proceed</li>
+              <li>• Non-refundable if you choose not to proceed</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Consultation Is Required */}
+      <section className="pt-10 pb-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-800 mb-6">
+            Why Is a Consultation Required?
+          </h2>
+          <p className="text-lg text-gray-600 mb-4">
+            Plasma treatments are advanced procedures that require a professional assessment to ensure safety and effectiveness. During your consultation, we evaluate your skin type, discuss your goals, review your health history, and determine the most appropriate treatment approach for you.
+          </p>
+          <p className="text-gray-600">
+            This personalized approach helps us create a treatment plan tailored to your unique needs and ensures you achieve the best possible results.
+          </p>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <div id="faq-section">
         <MoleRemovalTreatmentFAQ />
       </div>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-sage-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">
-            Ready to Remove Your Mole Safely?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Schedule your consultation today. Remember to obtain medical
-            clearance before your appointment.
-          </p>
-          <div className="flex justify-center">
+      {/* Compact Bottom CTA */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
             <Button
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-600 hover:bg-gray-100 rounded-md px-6 py-2 shadow-lg backdrop-blur-sm"
+              asChild
+              className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-2 border-sage-600 text-sage-600 hover:bg-sage-50 px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
+            >
+              <Link href="/contact">
+                Request a Consultation
+              </Link>
             </Button>
           </div>
+          <p className="text-sm text-gray-500 max-w-xl mx-auto">
+            General pricing guidance is available by phone. Final treatment recommendations and exact pricing are determined during your in-person consultation.
+          </p>
         </div>
       </section>
     </div>

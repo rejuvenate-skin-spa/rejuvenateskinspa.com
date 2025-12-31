@@ -267,7 +267,7 @@ export default function AblativeSkinResurfacingClientPage() {
                 <div className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></div>
                   <span>
-                    Carbon crusts naturally flake off—do not pick or scratch
+                    Carbon crusts naturally flake off. Do not pick or scratch
                     them.
                   </span>
                 </div>

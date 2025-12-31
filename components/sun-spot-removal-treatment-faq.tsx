@@ -67,6 +67,21 @@ const faqSections: FAQSection[] = [
         answer:
           "Yes. A pre-treatment consultation is required to confirm that your pigmentation is benign and that you are a good candidate for plasma resurfacing.",
       },
+    ],
+  },
+  {
+    title: "Cost & Treatment Planning",
+    faqs: [
+      {
+        question: "How much does Plexr removal treatment cost?",
+        answer:
+          "Because Plexr removal treatments are highly individualized, a specific price cannot be provided without an in-person consultation. During your consultation, we evaluate the type, size, number, and location of the areas being treated so we can determine the appropriate approach and provide accurate pricing. General pricing guidance is available by phone, and final pricing is confirmed during your consultation.",
+      },
+      {
+        question: "Why can't you provide an exact quote before my consultation?",
+        answer:
+          "Treatment pricing depends on several factors that can only be assessed in person, including the size, number, and location of the pigmented lesions, as well as the complexity of the treatment area. We need to evaluate the scope of your treatment to provide an accurate and safe recommendation. General pricing guidance is available by phone, but final pricing is confirmed during your in-person consultation after we complete a thorough assessment.",
+      },
       {
         question: "Is an in-person consultation required for Plasma treatments?",
         answer:
