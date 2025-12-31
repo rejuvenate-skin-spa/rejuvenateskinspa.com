@@ -35,27 +35,27 @@ const faqSections = [
     ],
   },
   {
-    title: "Safety & Suitability",
+    title: "Safety & Candidacy",
     faqs: [
       {
         question: "Is Plexr mole removal safe?",
         answer:
-          "Yes, when performed by a trained professional. The treatment is non-invasive and typically has minimal risk of infection or scarring. However, not all lesions are suitable for plasma treatment. Malignant or suspicious moles must be examined by a dermatologist first.",
+          "Yes, when performed by a trained professional. The treatment is non-invasive with minimal risk of infection or scarring. We do not treat suspicious lesions. If you have concerns, we recommend evaluation by a qualified medical provider.",
       },
       {
         question: "Who is a good candidate for Plexr mole removal?",
         answer:
-          "Most healthy adults with benign, cosmetically undesirable moles or skin tags are good candidates. Individuals with active skin infections, certain medical conditions, or a history of keloid scarring may not be eligible for this treatment.",
+          "Most healthy adults with benign, cosmetically undesirable moles are good candidates. Those with active skin infections, certain medical conditions, or a history of keloid scarring may not be eligible.",
       },
       {
         question: "Is Plexr safe for all skin types?",
         answer:
-          "Yes. Because it doesn't rely on heat diffusion or chromophores like lasers, Plexr is generally considered safe for Fitzpatrick skin types I through VI. However, post-inflammatory pigmentation changes can still occur and will be discussed during your consultation.",
+          "Yes. Plexr is generally safe for all Fitzpatrick skin types (I through VI). Post-inflammatory pigmentation changes can occasionally occur and will be discussed during your consultation.",
       },
       {
         question: "Does the mole need to be biopsied first?",
         answer:
-          "If there's any concern about the nature of the lesion (e.g., irregular borders, color variation, growth), a biopsy or dermatologist referral is recommended before removal. Plexr should only be used on clearly benign lesions.",
+          "If there is any concern about the lesion (irregular borders, color variation, or recent growth), evaluation by a dermatologist is recommended first. Plexr should only be used on clearly benign lesions.",
       },
     ],
   },
@@ -65,17 +65,17 @@ const faqSections = [
       {
         question: "How much does Plexr removal treatment cost?",
         answer:
-          "Because Plexr removal treatments are highly individualized, a specific price cannot be provided without an in-person consultation. During your consultation, we evaluate the type, size, number, and location of the areas being treated so we can determine the appropriate approach and provide accurate pricing. General pricing guidance is available by phone, and final pricing is confirmed during your consultation.",
+          "Pricing is individualized based on the size, number, and location of the areas being treated. General guidance is available by phone, and final pricing is confirmed during your in-person consultation.",
+      },
+      {
+        question: "Why can't you provide an exact quote before my consultation?",
+        answer:
+          "Pricing depends on factors we can only assess in person, including size, number, location, and complexity of the treatment area. General guidance is available by phone, and final pricing is confirmed at your consultation.",
       },
       {
         question: "Is an in-person consultation required for Plasma treatments?",
         answer:
-          "Yes. An in-person consultation is required for all Plasma treatments. During this visit, we evaluate your skin, discuss your goals, and determine the most appropriate treatment approach based on safety, candidacy, and expected outcomes.\n\nA $100 consultation fee applies and is credited toward your treatment if you proceed. Because this time is reserved for individualized assessment and planning, the consultation fee is non-refundable if you choose not to move forward.",
-      },
-      {
-        question: "Why is an in-person consultation required for all Plasma treatment services?",
-        answer:
-          "Plasma treatments are highly customizable and vary based on skin type, treatment area, desired outcome, and healing capacity. An in-person consultation allows our provider to assess your skin in person, determine the appropriate treatment level, and confirm candidacy before any Plasma service is performed.\n\nThis process helps ensure treatments are planned safely, expectations are aligned, and results are appropriate for your individual needs.",
+          "Yes. We evaluate your skin, discuss your goals, and confirm candidacy before any treatment. A $100 consultation fee applies and is credited toward your treatment if you proceed.",
       },
     ],
   },

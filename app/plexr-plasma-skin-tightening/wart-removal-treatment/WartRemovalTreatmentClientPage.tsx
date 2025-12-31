@@ -72,6 +72,19 @@ export default function WartRemovalTreatmentClientPage() {
               />
             </div>
           </div>
+
+          {/* Consultation Required Inline Callout */}
+          <div className="mt-10 bg-sage-50 border border-sage-200 rounded-lg p-5 max-w-2xl mx-auto text-left">
+            <div className="flex items-start gap-3 mb-3">
+              <Info className="h-5 w-5 text-sage-600 flex-shrink-0 mt-0.5" />
+              <h3 className="text-base font-semibold text-gray-900">Consultation Required for Plexr Plasma Removal Services</h3>
+            </div>
+            <ul className="text-sm text-gray-600 space-y-1 ml-8">
+              <li>• $100 consultation fee (applied toward treatment if you proceed)</li>
+              <li>• General pricing guidance is available by phone</li>
+              <li>• Final recommendations and exact pricing are confirmed in person</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -251,6 +264,7 @@ export default function WartRemovalTreatmentClientPage() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -377,35 +391,6 @@ export default function WartRemovalTreatmentClientPage() {
       <div id="faq-section">
         <WartRemovalTreatmentFAQ />
       </div>
-
-      {/* Compact Bottom CTA */}
-      <section className="py-12 bg-white border-t border-gray-100">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
-            <Button
-              asChild
-              className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
-            >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                (480) 204-9366
-              </a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="border-2 border-sage-600 text-sage-600 hover:bg-sage-50 px-6 py-3 text-base font-medium rounded-lg min-h-[48px]"
-            >
-              <Link href="/contact">
-                Request a Consultation
-              </Link>
-            </Button>
-          </div>
-          <p className="text-sm text-gray-500 max-w-xl mx-auto">
-            General pricing guidance is available by phone. Final treatment recommendations and exact pricing are determined during your in-person consultation.
-          </p>
-        </div>
-      </section>
     </div>
   )
 }

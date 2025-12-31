@@ -40,22 +40,22 @@ const faqData = [
       {
         question: "Is Plexr safe for wart removal?",
         answer:
-          "Yes. When performed by a trained provider, Plexr is safe and effective for removing benign warts. It minimizes the risk of bleeding and infection and offers precise control over the treatment area.",
+          "Yes. When performed by a trained provider, Plexr is safe and effective for removing benign warts with minimal risk of bleeding or infection.",
       },
       {
         question: "Who is a good candidate for Plexr wart removal?",
         answer:
-          "Most healthy adults and teens with stubborn or cosmetically undesirable warts are good candidates. Individuals with immune system disorders, active skin infections, or uncontrolled diabetes should discuss options with a provider.",
+          "Most healthy adults and teens with stubborn or cosmetically undesirable warts are good candidates. Those with immune disorders, active skin infections, or uncontrolled diabetes should be evaluated individually.",
       },
       {
         question: "Can Plexr be used on all skin types?",
         answer:
-          "Yes. Plexr is generally safe for all Fitzpatrick skin types. It does not rely on pigment, making it safer for individuals with darker skin compared to many laser treatments.",
+          "Yes. Plexr is generally safe for all Fitzpatrick skin types and does not rely on pigment, making it safer for darker skin compared to many laser treatments.",
       },
       {
         question: "Should a wart be diagnosed before it is removed?",
         answer:
-          "Yes. A healthcare professional must evaluate any lesion before removal. Warts that are suspicious, changing in appearance, or located in sensitive areas should be examined to rule out malignancy.",
+          "Yes. We do not treat suspicious lesions. If a wart is changing in appearance or you have concerns, we recommend evaluation by a qualified medical provider first.",
       },
     ],
   },
@@ -65,22 +65,17 @@ const faqData = [
       {
         question: "How much does Plexr removal treatment cost?",
         answer:
-          "Because Plexr removal treatments are highly individualized, a specific price cannot be provided without an in-person consultation. During your consultation, we evaluate the type, size, number, and location of the areas being treated so we can determine the appropriate approach and provide accurate pricing. General pricing guidance is available by phone, and final pricing is confirmed during your consultation.",
+          "Pricing is individualized based on the size, number, and location of the areas being treated. General guidance is available by phone, and final pricing is confirmed during your in-person consultation.",
       },
       {
         question: "Why can't you provide an exact quote before my consultation?",
         answer:
-          "Treatment pricing depends on several factors that can only be assessed in person, including the size, number, and location of the warts, as well as the complexity of the treatment area. We need to evaluate the scope of your treatment to provide an accurate and safe recommendation. General pricing guidance is available by phone, but final pricing is confirmed during your in-person consultation after we complete a thorough assessment.",
+          "Pricing depends on factors we can only assess in person, including size, number, location, and complexity of the treatment area. General guidance is available by phone, and final pricing is confirmed at your consultation.",
       },
       {
         question: "Is an in-person consultation required for Plasma treatments?",
         answer:
-          "Yes. An in-person consultation is required for all Plasma treatments. During this visit, we evaluate your skin, discuss your goals, and determine the most appropriate treatment approach based on safety, candidacy, and expected outcomes.\n\nA $100 consultation fee applies and is credited toward your treatment if you proceed. Because this time is reserved for individualized assessment and planning, the consultation fee is non-refundable if you choose not to move forward.",
-      },
-      {
-        question: "Why is an in-person consultation required for all Plasma treatment services?",
-        answer:
-          "Plasma treatments are highly customizable and vary based on skin type, treatment area, desired outcome, and healing capacity. An in-person consultation allows our provider to assess your skin in person, determine the appropriate treatment level, and confirm candidacy before any Plasma service is performed.\n\nThis process helps ensure treatments are planned safely, expectations are aligned, and results are appropriate for your individual needs.",
+          "Yes. We evaluate your skin, discuss your goals, and confirm candidacy before any treatment. A $100 consultation fee applies and is credited toward your treatment if you proceed.",
       },
     ],
   },
