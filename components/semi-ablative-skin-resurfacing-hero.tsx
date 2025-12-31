@@ -33,7 +33,7 @@ export default function SemiAblativeSkinResurfacingHero() {
             <p className="text-xl text-gray-100 max-w-lg">
               Positioned between the gentle Plexr Plasma Pen Shower
               (nano-ablative) and the intensive Plexr Plasma Pen Fibroblast Lift
-              (fully ablative), Plexr CAT Resurfacing (semi-ablavtive) delivers
+              (fully ablative), Plexr CAT Resurfacing (semi-ablative) delivers
               the perfect balance of precision, renewal and dramatic results
               with moderate downtime.
             </p>

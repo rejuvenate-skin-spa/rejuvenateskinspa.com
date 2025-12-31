@@ -65,10 +65,10 @@ export default function SemiAblativeSkinResurfacingClientPage() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  The CAT Resurface offers the perfect balance between effectiveness and recovery time. This advanced treatment penetrates deeper into the skin dermal layers creating precise controlled micro-injuries that trigger powerful collagen remodeling, target specific skin concerns, address deep wrinkles, acne scars, sun damage, and uneven textures, which then prompts cellar renewal for smoother, firmer, more radiant skin.
+                  The CAT Resurface offers the perfect balance between effectiveness and recovery time. This advanced treatment penetrates deeper into the skin dermal layers creating precise controlled micro-injuries that trigger powerful collagen remodeling, target specific skin concerns, address deep wrinkles, acne scars, sun damage, and uneven textures, which then prompts cellular renewal for smoother, firmer, more radiant skin.
                 </p>
                 <p>
-                  While the treatment involves a brief 2–5-day downtime, it delivers remarkable, long-lasting improvements in skin quality, tone, and overall appearance, all achieved without the use of needles or scapples.
+                  While the treatment involves a brief 2–5-day downtime, it delivers remarkable, long-lasting improvements in skin quality, tone, and overall appearance, all achieved without the use of needles or scalpels.
                 </p>
               </div>
             </div>
@@ -173,25 +173,25 @@ export default function SemiAblativeSkinResurfacingClientPage() {
                 area: "Full Face",
                 description:
                   "Comprehensive facial resurfacing for overall skin transformation.",
-                duration: "90-120 minutes",
+                duration: "90–120 minutes",
               },
               {
                 area: "Upper Face",
                 description:
                   "Target forehead, crow's feet, and upper eyelid concerns.",
-                duration: "60-90 minutes",
+                duration: "60–90 minutes",
               },
               {
                 area: "Lower Face",
                 description:
                   "Address smile lines, jowls, and lower facial concerns.",
-                duration: "60-90 minutes",
+                duration: "60–90 minutes",
               },
               {
                 area: "Neck & Décolletage",
                 description:
                   "Improve neck and chest area texture and tightening.",
-                duration: "120-180 minutes",
+                duration: "120–180 minutes",
               },
             ].map((area, index) => (
               <Card
@@ -243,20 +243,20 @@ export default function SemiAblativeSkinResurfacingClientPage() {
                 status: "active",
               },
               {
-                day: "Day 2-3",
+                day: "Day 2–3",
                 title: "Initial Healing",
                 description: "Micro-crusting begins, skin feels tight and dry.",
                 status: "healing",
               },
               {
-                day: "Day 4-5",
+                day: "Day 4–5",
                 title: "Peeling Phase",
                 description:
                   "Natural peeling reveals fresh, new skin underneath.",
                 status: "peeling",
               },
               {
-                day: "Day 6-7",
+                day: "Day 6–7",
                 title: "New Skin",
                 description:
                   "Fresh, rejuvenated skin with improved texture visible.",
@@ -312,7 +312,7 @@ export default function SemiAblativeSkinResurfacingClientPage() {
                   "Sun damage and age spots",
                   "Uneven skin tone and texture",
                   "Mild to moderate skin laxity",
-                  "Those who can accommodate 2-5 days downtime",
+                  "Those who can accommodate 2–5 days downtime",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-3 mt-0.5 flex-shrink-0" />
@@ -342,21 +342,6 @@ export default function SemiAblativeSkinResurfacingClientPage() {
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Why Consultation Is Required */}
-      <section className="py-16 bg-sage-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
-            Why Is a Consultation Required?
-          </h2>
-          <p className="text-lg text-gray-600 mb-4">
-            Semi-ablative plasma treatments penetrate deeper into the skin and require careful assessment to ensure optimal results and safety. During your consultation, we evaluate your skin condition, discuss your goals, review your medical history, and determine if this treatment level is right for you.
-          </p>
-          <p className="text-gray-600">
-            This personalized approach ensures we create a treatment plan that addresses your specific concerns while setting realistic expectations for recovery and results.
-          </p>
         </div>
       </section>
 
@@ -410,6 +395,21 @@ export default function SemiAblativeSkinResurfacingClientPage() {
               <li>• Non-refundable if you choose not to proceed</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Why Consultation Is Required */}
+      <section className="pt-10 pb-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-800 mb-6">
+            Why Is a Consultation Required?
+          </h2>
+          <p className="text-lg text-gray-600 mb-4">
+            Semi-ablative plasma treatments penetrate deeper into the skin and require careful assessment to ensure optimal results and safety. During your consultation, we evaluate your skin condition, discuss your goals, review your medical history, and determine if this treatment level is right for you.
+          </p>
+          <p className="text-gray-600">
+            This personalized approach ensures we create a treatment plan that addresses your specific concerns while setting realistic expectations for recovery and results.
+          </p>
         </div>
       </section>
 

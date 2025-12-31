@@ -303,7 +303,7 @@ export default function AblativeSkinResurfacingClientPage() {
                   <div className="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></div>
                   <span>
                     Makeup and gentle skincare can usually be resumed after dots
-                    completely fall off. 3-5 days
+                    completely fall off (3–5 days).
                   </span>
                 </div>
               </div>
@@ -332,7 +332,7 @@ export default function AblativeSkinResurfacingClientPage() {
                 <div className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></div>
                   <span>
-                    Results can last 2-5 years depending on lifestyle and skin
+                    Results can last 2–5 years depending on lifestyle and skin
                     condition.
                   </span>
                 </div>
@@ -367,7 +367,7 @@ export default function AblativeSkinResurfacingClientPage() {
                   "Significant skin laxity",
                   "Multiple skin concerns requiring comprehensive treatment",
                   "Those seeking maximum possible improvement",
-                  "Ability to take 7-10 days off work/social activities",
+                  "Ability to take 7–10 days off work/social activities",
                   "Commitment to strict aftercare protocol",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
@@ -399,21 +399,6 @@ export default function AblativeSkinResurfacingClientPage() {
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Why Consultation Is Required */}
-      <section className="py-16 bg-sage-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
-            Why Is a Consultation Required?
-          </h2>
-          <p className="text-lg text-gray-600 mb-4">
-            Ablative plasma treatments are our most intensive option and require thorough assessment to ensure safety and optimal outcomes. During your consultation, we carefully evaluate your skin, discuss your goals and expectations, review your complete health history, and determine if this level of treatment is appropriate for you.
-          </p>
-          <p className="text-gray-600">
-            This comprehensive approach ensures we can deliver dramatic results while prioritizing your safety and setting realistic expectations for the recovery process.
-          </p>
         </div>
       </section>
 
@@ -467,6 +452,21 @@ export default function AblativeSkinResurfacingClientPage() {
               <li>• Non-refundable if you choose not to proceed</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Why Consultation Is Required */}
+      <section className="pt-10 pb-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-800 mb-6">
+            Why Is a Consultation Required?
+          </h2>
+          <p className="text-lg text-gray-600 mb-4">
+            Ablative plasma treatments are our most intensive option and require thorough assessment to ensure safety and optimal outcomes. During your consultation, we carefully evaluate your skin, discuss your goals and expectations, review your complete health history, and determine if this level of treatment is appropriate for you.
+          </p>
+          <p className="text-gray-600">
+            This comprehensive approach ensures we can deliver dramatic results while prioritizing your safety and setting realistic expectations for the recovery process.
+          </p>
         </div>
       </section>
 

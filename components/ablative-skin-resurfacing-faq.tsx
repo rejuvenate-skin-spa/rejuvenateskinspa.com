@@ -47,16 +47,6 @@ const faqSections = [
         answer:
           "It's most suitable for fair to medium skin tones (Fitzpatrick I–IV). Individuals with darker skin types may be at a higher risk of pigmentation changes and should be evaluated carefully by a qualified healthcare provider.",
       },
-      {
-        question: "Is an in-person consultation required for Plasma treatments?",
-        answer:
-          "Yes. An in-person consultation is required for all Plasma treatments. During this visit, we evaluate your skin, discuss your goals, and determine the most appropriate treatment approach based on safety, candidacy, and expected outcomes.\n\nA $100 consultation fee applies and is credited toward your treatment if you proceed. Because this time is reserved for individualized assessment and planning, the consultation fee is non-refundable if you choose not to move forward.",
-      },
-      {
-        question: "Why is an in-person consultation required for all Plasma treatment services?",
-        answer:
-          "Plasma treatments are highly customizable and vary based on skin type, treatment area, desired outcome, and healing capacity. An in-person consultation allows our provider to assess your skin in person, determine the appropriate treatment level, and confirm candidacy before any Plasma service is performed.\n\nThis process helps ensure treatments are planned safely, expectations are aligned, and results are appropriate for your individual needs.",
-      },
     ],
   },
   {
@@ -71,6 +61,16 @@ const faqSections = [
         question: "How many sessions of ablative Plexr will I need?",
         answer:
           "Many clients see dramatic improvement with a single session. However, depending on the severity of the condition or aesthetic goals, additional sessions may be required and performed after 8 to 12 weeks.",
+      },
+      {
+        question: "Is an in-person consultation required for Plasma treatments?",
+        answer:
+          "Yes. An in-person consultation is required for all Plasma treatments. During this visit, we evaluate your skin, discuss your goals, and determine the most appropriate treatment approach based on safety, candidacy, and expected outcomes.\n\nA $100 consultation fee applies and is credited toward your treatment if you proceed. Because this time is reserved for individualized assessment and planning, the consultation fee is non-refundable if you choose not to move forward.",
+      },
+      {
+        question: "Why is an in-person consultation required for all Plasma treatment services?",
+        answer:
+          "Plasma treatments are highly customizable and vary based on skin type, treatment area, desired outcome, and healing capacity. An in-person consultation allows our provider to assess your skin in person, determine the appropriate treatment level, and confirm candidacy before any Plasma service is performed.\n\nThis process helps ensure treatments are planned safely, expectations are aligned, and results are appropriate for your individual needs.",
       },
     ],
   },

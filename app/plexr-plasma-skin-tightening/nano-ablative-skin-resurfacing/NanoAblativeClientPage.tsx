@@ -65,7 +65,7 @@ export default function NanoAblativeClientPage() {
             </h2>
             <div className="space-y-4 text-gray-600 mb-8">
               <p>
-                Considered the gentlest form of Plasma skin resurfacing at a microscopic level. The Plexr Shower is an advanced treatment that creates invisible micro-channels on the skin's surface while using controlled plasma energy. These micro-channels open pathways to stimulate collagen production, enhance elasticity, and boost infused professional serums deep within the dermal layers for maximum hydration, cellar renewal and intense moisture renewal.
+                Considered the gentlest form of Plasma skin resurfacing at a microscopic level. The Plexr Shower is an advanced treatment that creates invisible micro-channels on the skin's surface while using controlled plasma energy. These micro-channels open pathways to stimulate collagen production, enhance elasticity, and boost infused professional serums deep within the dermal layers for maximum hydration, cellular renewal and intense moisture renewal.
               </p>
             </div>
             
@@ -81,17 +81,17 @@ export default function NanoAblativeClientPage() {
             </div>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-start mt-8">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch mt-8">
+            <div className="h-full">
               {/* How It Works Box */}
-              <div className="bg-sage-50 p-6 rounded-lg border border-sage-200">
+              <div className="bg-sage-50 p-6 rounded-lg border border-sage-200 h-full">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   The Plexr Plasma Pen Shower – Here's How It Works
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-sage-600 text-white rounded-full text-sm font-semibold">
-                      1
+                    <span className="text-xs font-semibold tracking-wide text-sage-600 uppercase whitespace-nowrap pt-0.5">
+                      Step 1
                     </span>
                     <div>
                       <span className="font-medium text-gray-900">
@@ -106,8 +106,8 @@ export default function NanoAblativeClientPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-sage-600 text-white rounded-full text-sm font-semibold">
-                      2
+                    <span className="text-xs font-semibold tracking-wide text-sage-600 uppercase whitespace-nowrap pt-0.5">
+                      Step 2
                     </span>
                     <div>
                       <span className="font-medium text-gray-900">
@@ -122,8 +122,8 @@ export default function NanoAblativeClientPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-sage-600 text-white rounded-full text-sm font-semibold">
-                      3
+                    <span className="text-xs font-semibold tracking-wide text-sage-600 uppercase whitespace-nowrap pt-0.5">
+                      Step 3
                     </span>
                     <div>
                       <span className="font-medium text-gray-900">
@@ -138,14 +138,14 @@ export default function NanoAblativeClientPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-sage-600 text-white rounded-full text-sm font-semibold">
-                      4
+                    <span className="text-xs font-semibold tracking-wide text-sage-600 uppercase whitespace-nowrap pt-0.5">
+                      Step 4
                     </span>
                     <div>
                       <span className="font-medium text-gray-900">Redness</span>
                       <span className="text-gray-600">
                         {" "}
-                        – possible redness, but it fades quickly
+                        – Temporary redness may occur, but it typically fades quickly.
                       </span>
                     </div>
                   </div>
@@ -153,9 +153,9 @@ export default function NanoAblativeClientPage() {
               </div>
             </div>
             
-            <div>
+            <div className="h-full">
               {/* Benefits Box */}
-              <div className="bg-white p-6 rounded-lg border border-sage-200 shadow-sm">
+              <div className="bg-white p-6 rounded-lg border border-sage-200 shadow-sm h-full">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Benefits of the Plexr Plasma Pen Shower
                 </h3>
@@ -235,61 +235,47 @@ export default function NanoAblativeClientPage() {
               Treatment Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Nano-ablative plasma can be used on various areas of the face and
-              body for comprehensive skin improvements.
+              Nano-ablative plasma can be used on various areas for comprehensive skin improvements.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
-                area: "Full Face or Neck",
+                area: "Face",
                 description:
-                  "Rejuvenation for improved subtle lift, texture, and tone.",
-                duration: "30-45 minutes",
+                  "Refines pores, smooths texture, and restores a youthful radiance.",
               },
               {
-                area: "Face AND Neck",
+                area: "Neck",
                 description:
-                  "Tightened, plumped, and smoothed for a more youthful and radiant glow.",
-                duration: "45-60 minutes",
+                  "Tightens and firms delicate skin to reduce visible signs of aging.",
               },
               {
-                area: "Décolletage AND Neck",
+                area: "Décolletage",
                 description:
-                  "Improve chest area skin texture and reduce signs of sun damage.",
-                duration: "45-60 minutes",
-              },
-              {
-                area: "Face, Neck, Décolletage",
-                description:
-                  "Comprehensive treatment for a tighter, brighter, firmer, and more youthful appearance.",
-                duration: "60-90 minutes",
+                  "Improves chest area texture and reduces sun damage for smoother skin.",
               },
             ].map((area, index) => (
               <Card
                 key={index}
-                className="text-center hover:shadow-lg transition-shadow duration-300 rounded-lg"
+                className="text-center hover:shadow-md transition-shadow duration-300 rounded-lg border-sage-100"
               >
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {area.area}
                   </h3>
-                  <p className="text-gray-600 mb-4 text-sm">
+                  <p className="text-gray-600 text-sm">
                     {area.description}
                   </p>
-                  <div className="text-sm text-gray-500 mb-4">{area.duration}</div>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"
-                  >
-                    <Link href="/contact">Request Info</Link>
-                  </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          <p className="text-center text-sm text-gray-500 mt-8 max-w-2xl mx-auto">
+            Treatment areas may be combined during a single session. Exact treatment plans and timing are determined during your consultation.
+          </p>
         </div>
       </section>
 
@@ -393,21 +379,6 @@ export default function NanoAblativeClientPage() {
         </div>
       </section>
 
-      {/* Why Consultation Is Required */}
-      <section className="py-16 bg-sage-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
-            Why Is a Consultation Required?
-          </h2>
-          <p className="text-lg text-gray-600 mb-4">
-            Plasma treatments are advanced procedures that require a professional assessment to ensure safety and effectiveness. During your consultation, we evaluate your skin type, discuss your goals, review your health history, and determine whether nano-ablative plasma is the right fit for you.
-          </p>
-          <p className="text-gray-600">
-            This personalized approach helps us create a treatment plan tailored to your unique needs and ensures you achieve the best possible results.
-          </p>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-sage-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -458,6 +429,21 @@ export default function NanoAblativeClientPage() {
               <li>• Non-refundable if you choose not to proceed</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Why Consultation Is Required */}
+      <section className="pt-10 pb-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-800 mb-6">
+            Why Is a Consultation Required?
+          </h2>
+          <p className="text-lg text-gray-600 mb-4">
+            Plasma treatments are advanced procedures that require a professional assessment to ensure safety and effectiveness. During your consultation, we evaluate your skin type, discuss your goals, review your health history, and determine whether nano-ablative plasma is the right fit for you.
+          </p>
+          <p className="text-gray-600">
+            This personalized approach helps us create a treatment plan tailored to your unique needs and ensures you achieve the best possible results.
+          </p>
         </div>
       </section>
 

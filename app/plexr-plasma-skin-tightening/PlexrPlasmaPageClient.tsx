@@ -359,6 +359,21 @@ export default function PlexrPlasmaPageClient() {
         </div>
       </section>
 
+      {/* Why Consultation Is Required */}
+      <section className="pt-10 pb-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-800 mb-6">
+            Why Is a Consultation Required?
+          </h2>
+          <p className="text-lg text-gray-600 mb-4">
+            Plasma treatments are advanced procedures that require a professional assessment to ensure safety and effectiveness. During your consultation, we evaluate your skin type, discuss your goals, review your health history, and determine the most appropriate treatment level for you.
+          </p>
+          <p className="text-gray-600">
+            This personalized approach helps us create a treatment plan tailored to your unique needs and ensures you achieve the best possible results.
+          </p>
+        </div>
+      </section>
+
       {/* Removal Services */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
