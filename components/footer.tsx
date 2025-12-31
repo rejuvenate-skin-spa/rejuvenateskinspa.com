@@ -131,10 +131,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Technology & Certifications */}
+          {/* Plexr® Technology */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">
-              Technology & Certifications
+              Plexr® Technology
             </h3>
             <ul className="space-y-1 sm:space-y-2">
               <li>
@@ -142,7 +142,7 @@ export function Footer() {
                   href="/about-us/plexr-sales"
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
-                  Plexr Plasma Technology
+                  Plexr® Plasma
                 </Link>
               </li>
             </ul>
