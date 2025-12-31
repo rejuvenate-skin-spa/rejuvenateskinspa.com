@@ -69,7 +69,7 @@ export function HomeHero({
           Left side (text area): darker for WCAG contrast compliance
           Right side (image area): lighter to showcase imagery
         */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full z-10">
