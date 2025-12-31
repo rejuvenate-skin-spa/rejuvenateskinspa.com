@@ -61,7 +61,7 @@ export default function PlasmaMicroneedlingTreatmentHero() {
           Hero overlay: Left-to-right gradient keeps text readable while letting 
           the hero image shine through on the right for a brighter, premium feel.
         */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10"></div>
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid lg:grid-cols-1 gap-12 items-center">

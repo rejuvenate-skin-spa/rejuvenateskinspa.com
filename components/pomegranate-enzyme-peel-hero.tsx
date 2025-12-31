@@ -58,7 +58,7 @@ export default function PomegranateEnzymePeelHero() {
           Hero overlay: Left-to-right gradient keeps text readable while letting 
           the hero image shine through on the right for a brighter, premium feel.
         */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
