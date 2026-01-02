@@ -52,11 +52,11 @@ const navigationItems = [
       },
       {
         title: "SQT Bio Microneedling",
-        href: "/microneedling/bio-microneedling-treatment",
+        href: "/microneedling/sqt-bio-microneedling",
       },
       {
         title: "Plasma Microneedling",
-        href: "/microneedling/plasma-microneedling-treatment",
+        href: "/microneedling/plasma-microneedling",
       },
     ],
   },
