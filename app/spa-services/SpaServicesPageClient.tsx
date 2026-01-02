@@ -94,7 +94,7 @@ export default function SpaServicesPageClient() {
                 benefits: ["Stimulates Collagen & Elastin Production", "Reduces Fine Lines & Wrinkles", "Improves Tone & Texture", "Minimizes Inflammation & Redness", "Accelerates Healing & Recovery", "Enhances Cellular Energy"],
                 duration: "15-30 minutes",
                 price: "From $25",
-                href: "/spa-services/microneedling",
+                href: "/microneedling",
                 image: "/images/red-lamp-only.png",
               },
             ].map((service, index) => (

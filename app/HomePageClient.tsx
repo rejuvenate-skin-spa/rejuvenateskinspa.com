@@ -80,7 +80,7 @@ export default function HomePageClient() {
                 description:
                   "Collagen induction therapy for improved texture, tone, and firmness",
                 image: "/images/microneedling-feature.png",
-                href: "/spa-services/microneedling-treatment",
+                href: "/microneedling",
                 linkText: "View Microneedling Options",
                 features: [
                   "Improves skin texture and tone",

@@ -25,12 +25,7 @@ const nextConfig = {
         source: '/biorepeel-treatment',
         destination: '/biorepeel-facial-chemical-peel',
         permanent: true,
-      },
-      {
-        source: '/microneedling-treatment',
-        destination: '/spa-services/microneedling-treatment',
-        permanent: true,
-      },
+      },      
       {
         source: '/about-us/portfolio',
         destination: '/portfolio',
