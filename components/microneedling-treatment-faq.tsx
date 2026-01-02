@@ -32,6 +32,11 @@ const faqSections = [
         answer:
           "Yes. When performed by a trained professional, microneedling is a safe and effective treatment with minimal downtime.",
       },
+      {
+        question: "How does pricing work if I choose a treatment series?",
+        answer:
+          "When you choose a series of three treatments, you may either pay for the full package upfront or pay per session at the single-treatment rate. If you pay per session, the package discount is applied to your final treatment once the full series is completed.",
+      },
     ],
   },
   {
@@ -86,11 +91,6 @@ const faqSections = [
         question: "How long do the results last?",
         answer:
           "Results from a series of treatments can last 6 months to a year or longer, provided good skincare and sun protection are maintained.",
-      },
-      {
-        question: "What is the cost of microneedling at Rejuvenate Skin Spa?",
-        answer:
-          "Microneedling treatments typically start at $275 per session. Package pricing may be available for multiple sessions.",
       },
     ],
   },
