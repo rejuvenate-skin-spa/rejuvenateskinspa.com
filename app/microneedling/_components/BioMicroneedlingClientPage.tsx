@@ -14,6 +14,7 @@ import {
   Heart,
   Shield,
   Leaf,
+  Phone,
 } from "lucide-react";
 import BioMicroneedlingTreatmentFAQ from "@/components/bio-microneedling-treatment-faq";
 import BioMicroneedlingTreatmentHero from "@/components/bio-microneedling-treatment-hero";
@@ -257,6 +258,7 @@ export default function BioMicroneedlingClientPage() {
         </div>
       </section>
 
+      {/* PRICING SECTION START */}
       {/* Pricing */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,87 +272,111 @@ export default function BioMicroneedlingClientPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
+            {/* Single Treatment Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                {/* Header area with fixed height for alignment */}
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
                   Single Treatment
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
                   $250
                 </div>
-                <p className="text-gray-600 mb-6">
-                  Complete bio microneedling treatment with organic serums and
-                  aftercare guidance.
+                <div className="min-h-[20px] mb-3" />
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Complete bio microneedling treatment with organic serums and aftercare guidance.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Skin consultation & analysis</span>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Skin consultation & analysis</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Bio microneedling treatment</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Bio microneedling treatment</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Organic bio-serum application</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Organic bio-serum application</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Post-treatment care kit</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Post-treatment care kit</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700">
-                  Book Single Session
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
+                    <Phone className="h-4 w-4" />
+                    Call to Schedule
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50">
-              <CardContent className="p-8 text-center">
-                <Badge className="mb-4 bg-sage-600 text-white">
-                  Best Value
-                </Badge>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  3-Treatment Package
+            {/* 3-Treatment Series Card (Featured) */}
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-sage-50/50 h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                {/* Header area with badge */}
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Recommended
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  3-Treatment Series
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
                   $650
                 </div>
-                <div className="text-sm text-gray-500 mb-4">
-                  Save $100 • $216 per session
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $100 ($217 per session)
                 </div>
-                <p className="text-gray-600 mb-6">
-                  Optimal results package with three treatments spaced 4-6 weeks
-                  apart for maximum collagen stimulation.
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Optimal results with three treatments spaced 4–6 weeks apart for maximum collagen stimulation.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Everything in single treatment</span>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Everything in single treatment</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>3 bio microneedling sessions</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">3 bio microneedling sessions</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Progress tracking & photos</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Progress tracking & photos</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Customized serum selection</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Customized serum selection</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Package
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
+                    <Phone className="h-4 w-4" />
+                    Call to Schedule
+                  </a>
                 </Button>
               </CardContent>
             </Card>
           </div>
+
+          {/* Package Pricing Callout */}
+          <div className="mt-10 bg-sage-50 border border-sage-200 rounded-lg p-6 max-w-2xl mx-auto">
+            <h4 className="text-base font-semibold text-gray-900 mb-3">How package pricing works</h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Clients who choose a treatment series may pay per session at the single-treatment rate. When the full series is completed, the package discount is applied to the final treatment.
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
+            </p>
+          </div>
         </div>
       </section>
+      {/* PRICING SECTION END */}
 
       {/* FAQ Section */}
       <div id="faq-section">

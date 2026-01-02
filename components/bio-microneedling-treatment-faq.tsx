@@ -89,10 +89,9 @@ const faqSections = [
           "With proper skincare, results can last several months. Ongoing treatments can maintain and enhance improvements.",
       },
       {
-        question:
-          "How much does bio microneedling cost at Rejuvenate Skin Spa?",
+        question: "How does pricing work if I choose a treatment series?",
         answer:
-          "Bio microneedling typically starts at $225 per session. Packages are available for multiple sessions at a discounted rate.",
+          "When you choose a series of three treatments, you may either pay for the full package upfront or pay per session at the single-treatment rate. If you pay per session, the package discount is applied to your final treatment once the full series is completed.",
       },
     ],
   },
