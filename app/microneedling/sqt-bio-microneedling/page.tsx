@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import BioMicroneedlingClientPage from "../../spa-services/bio-microneedling-treatment/BioMicroneedlingClientPage";
-
+import BioMicroneedlingClientPage from "../_components/BioMicroneedlingClientPage";
 export const metadata: Metadata = {
   title:
     "SQT Bio-Microneedling | Needle-Free Microneedling | Rejuvenate Skin Spa | Queen Creek, AZ",

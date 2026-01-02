@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PlasmaMicroneedlingClientPage from "../../spa-services/plasma-microneedling-treatment/PlasmaMicroneedlingClientPage";
+import PlasmaMicroneedlingClientPage from "../_components/PlasmaMicroneedlingClientPage";
 
 export const metadata: Metadata = {
   title:
