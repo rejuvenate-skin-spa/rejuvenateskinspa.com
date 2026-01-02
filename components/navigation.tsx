@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -43,15 +44,19 @@ const navigationItems = [
   },
   {
     title: "Microneedling",
-    href: "/spa-services/microneedling-treatment",
+    href: "/microneedling",
     submenu: [
       {
+        title: "Traditional Microneedling",
+        href: "/microneedling/traditional-microneedling",
+      },
+      {
         title: "SQT Bio Microneedling",
-        href: "/spa-services/bio-microneedling-treatment",
+        href: "/microneedling/bio-microneedling-treatment",
       },
       {
         title: "Plasma Microneedling",
-        href: "/spa-services/plasma-microneedling-treatment",
+        href: "/microneedling/plasma-microneedling-treatment",
       },
     ],
   },
