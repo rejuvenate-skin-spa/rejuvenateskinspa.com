@@ -32,6 +32,11 @@ const faqSections = [
         answer:
           "Yes. It is a safe treatment when performed by a trained provider. Plasma also has antimicrobial properties, which can support healing.",
       },
+      {
+        question: "How does pricing work if I choose a treatment series?",
+        answer:
+          "When you choose a series of three treatments, you may either pay for the full package upfront or pay per session at the single-treatment rate. If you pay per session, the package discount is applied to your final treatment once the full series is completed.",
+      },
     ],
   },
   {
@@ -86,11 +91,6 @@ const faqSections = [
         question: "How long do results last?",
         answer:
           "With proper skincare and sun protection, results can last 6 months or longer. A maintenance schedule helps preserve improvements.",
-      },
-      {
-        question: "How does pricing work if I choose a treatment series?",
-        answer:
-          "When you choose a series of three treatments, you may either pay for the full package upfront or pay per session at the single-treatment rate. If you pay per session, the package discount is applied to your final treatment once the full series is completed.",
       },
     ],
   },

@@ -33,6 +33,11 @@ const faqSections = [
         answer:
           "Yes. It is a safe and natural treatment with minimal risk of irritation or adverse effects, primarily when performed by a trained provider.",
       },
+      {
+        question: "How does pricing work if I choose a treatment series?",
+        answer:
+          "When you choose a series of three treatments, you may either pay for the full package upfront or pay per session at the single-treatment rate. If you pay per session, the package discount is applied to your final treatment once the full series is completed.",
+      },
     ],
   },
   {
@@ -87,11 +92,6 @@ const faqSections = [
         question: "How long do the results last?",
         answer:
           "With proper skincare, results can last several months. Ongoing treatments can maintain and enhance improvements.",
-      },
-      {
-        question: "How does pricing work if I choose a treatment series?",
-        answer:
-          "When you choose a series of three treatments, you may either pay for the full package upfront or pay per session at the single-treatment rate. If you pay per session, the package discount is applied to your final treatment once the full series is completed.",
       },
     ],
   },
