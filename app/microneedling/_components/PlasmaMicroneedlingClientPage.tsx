@@ -16,6 +16,7 @@ import {
   Shield,
   Target,
   Award,
+  Phone,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
@@ -292,84 +293,107 @@ export default function PlasmaMicroneedlingClientPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
+            {/* Single Treatment Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                {/* Header area with fixed height for alignment */}
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
                   Single Treatment
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
                   $295
                 </div>
-                <p className="text-gray-600 mb-6">
-                  Complete plasma microneedling treatment with advanced plasma
-                  technology.
+                <div className="min-h-[20px] mb-3" />
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Complete plasma microneedling treatment with advanced plasma technology.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Comprehensive skin assessment</span>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Comprehensive skin assessment</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Plasma microneedling treatment</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Plasma microneedling treatment</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Post-treatment serum application</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Post-treatment serum application</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Recovery care instructions</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Recovery care instructions</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Single Session
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
+                    <Phone className="h-4 w-4" />
+                    Call to Schedule
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50">
-              <CardContent className="p-8 text-center">
-                <Badge className="mb-4 bg-sage-600 text-white">
-                  Optimal Results
-                </Badge>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            {/* 3-Treatment Series Card (Featured) */}
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-sage-50/50 h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                {/* Header area with badge */}
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Recommended
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
                   3-Treatment Series
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
                   $795
                 </div>
-                <div className="text-sm text-gray-500 mb-4">
-                  Save $90 • $265 per session
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $90 ($265 per session)
                 </div>
-                <p className="text-gray-600 mb-6">
-                  Complete transformation series with three treatments spaced
-                  6-8 weeks apart for maximum results.
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Complete transformation series with three treatments spaced 6–8 weeks apart.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Everything in single treatment</span>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Everything in single treatment</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>3 plasma microneedling sessions</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">3 plasma microneedling sessions</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Progress documentation</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Progress documentation</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Customized treatment plan</span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Customized treatment plan</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Treatment Series
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
+                    <Phone className="h-4 w-4" />
+                    Call to Schedule
+                  </a>
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Package Pricing Callout */}
+          <div className="mt-10 bg-sage-50 border border-sage-200 rounded-lg p-6 max-w-2xl mx-auto">
+            <h4 className="text-base font-semibold text-gray-900 mb-3">How package pricing works</h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Clients who choose a treatment series may pay per session at the single-treatment rate. When the full series is completed, the package discount is applied to the final treatment.
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
+            </p>
           </div>
         </div>
       </section>

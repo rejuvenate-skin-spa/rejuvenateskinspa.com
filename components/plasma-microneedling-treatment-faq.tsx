@@ -88,9 +88,9 @@ const faqSections = [
           "With proper skincare and sun protection, results can last 6 months or longer. A maintenance schedule helps preserve improvements.",
       },
       {
-        question: "What is the cost of plasma microneedling at Rejuvenate Skin Spa?",
+        question: "How does pricing work if I choose a treatment series?",
         answer:
-          "Plasma microneedling treatments typically start at $325 per session. Packages and enhancement options may be available.",
+          "When you choose a series of three treatments, you may either pay for the full package upfront or pay per session at the single-treatment rate. If you pay per session, the package discount is applied to your final treatment once the full series is completed.",
       },
     ],
   },
