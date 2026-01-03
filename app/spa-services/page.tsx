@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import SpaServicesPageClient from "./SpaServicesPageClient"
 
 export const metadata: Metadata = {
-  title: "Spa Services | Dermaplaning, Microblading, Eyebrow Lamination | Rejuvenate Skin Spa | Queen Creek, AZ",
+  title: "Spa Services | Dermaplaning, Microblading & More | Queen Creek, AZ",
   description:
     "Premium spa services in Queen Creek, Arizona. Professional dermaplaning facials, microblading, eyebrow lamination, and red light therapy. Expert practitioners, medical-grade products. Book your appointment today.",
   keywords:

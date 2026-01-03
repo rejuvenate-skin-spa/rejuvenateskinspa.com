@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import PlexrPlasmaPageClient from "./PlexrPlasmaPageClient"
 
 export const metadata: Metadata = {
-  title: "Plexr Plasma Skin Tightening | Non-Surgical Skin Rejuvenation | Queen Creek, AZ",
+  title: "Plexr Plasma Skin Tightening | Non-Surgical | Rejuvenate Skin Spa | Queen Creek, AZ",
   description:
-    "Transform your skin with Plexr Plasma technology at Rejuvenate Skin Spa. Non-surgical skin tightening, wrinkle reduction, and rejuvenation treatments in Queen Creek, Arizona.",
+    "Non-surgical skin tightening with Plexr Plasma technology at Rejuvenate Skin Spa in Queen Creek, AZ. Wrinkle reduction and rejuvenation. Book today!",
   keywords:
     "plexr plasma, skin tightening, non-surgical facelift, wrinkle reduction, plasma technology, Queen Creek, Arizona",
 }

@@ -97,7 +97,7 @@ export function Footer() {
               >
                 <Image
                   src="/brands/instagram.svg"
-                  alt="Instagram"
+                  alt="Rejuvenate Skin Spa on Instagram"
                   width={22}
                   height={22}
                   className="w-[22px] h-[22px]"
@@ -112,7 +112,7 @@ export function Footer() {
               >
                 <Image
                   src="/brands/facebook.svg"
-                  alt="Facebook"
+                  alt="Rejuvenate Skin Spa on Facebook"
                   width={22}
                   height={22}
                   className="w-[22px] h-[22px]"

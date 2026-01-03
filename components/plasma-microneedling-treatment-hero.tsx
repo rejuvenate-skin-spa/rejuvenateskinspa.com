@@ -24,7 +24,8 @@ export default function PlasmaMicroneedlingTreatmentHero() {
         <div className="grid lg:grid-cols-1 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-6xl font-playfair font-bold leading-tight">
-              <span className="text-white">Plasma Pen Microneedling</span>
+              <span className="text-white">Plasma Microneedling</span>
+              <span className="text-sage-300 block">in Queen Creek, AZ</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-lg">
               Experience the fusion of plasma energy and precision

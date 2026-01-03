@@ -9,9 +9,9 @@ import PhoneCtaButton from "@/components/phone-cta-button";
 
 export const metadata: Metadata = {
   title:
-    "Traditional Microneedling | Collagen Induction Therapy | Rejuvenate Skin Spa",
+    "Traditional Microneedling | Collagen Induction Therapy | Queen Creek, AZ",
   description:
-    "Traditional microneedling (collagen induction therapy) in Queen Creek, AZ. Improve fine lines, acne scars, pores, and skin texture with minimal downtime.",
+    "Traditional microneedling (CIT) at Rejuvenate Skin Spa in Queen Creek, AZ. Improve fine lines, acne scars, pores, and skin texture. Book today!",
 };
 
 export default function TraditionalMicroneedlingPage() {

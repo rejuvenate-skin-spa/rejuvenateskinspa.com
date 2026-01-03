@@ -3,9 +3,9 @@ import PomegranateEnzymePeelClientPage from "./PomegranateEnzymePeelClientPage";
 
 export const metadata: Metadata = {
   title:
-    "Pomegranate Enzyme Peel | Level 4-5 Antioxidant Renewal | Rejuvenate Skin Spa",
+    "Pomegranate Enzyme Peel | Antioxidant Renewal | Rejuvenate Skin Spa | Queen Creek, AZ",
   description:
-    "Premium antioxidant renewal treatment for aging, oily, and acne-prone skin. Targets pigmentation, acne scars, and sun damage with pomegranate's powerful antioxidants in Queen Creek, AZ.",
+    "Premium antioxidant renewal for aging, oily, and acne-prone skin. Targets pigmentation and acne scars at Rejuvenate Skin Spa in Queen Creek, AZ.",
   keywords:
     "pomegranate enzyme peel, antioxidant facial, acne treatment, aging skin, oily skin, pigmentation, acne scars, sun damage, Queen Creek spa",
 };

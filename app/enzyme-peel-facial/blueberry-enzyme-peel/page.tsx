@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import BlueberryEnzymePeelClientPage from "./BlueberryEnzymePeelClientPage"
 
 export const metadata: Metadata = {
-  title: "Blueberry Enzyme Peel | Antioxidant Facial Treatment | Rejuvenate Skin Spa",
+  title: "Blueberry Enzyme Peel | Antioxidant Facial | Rejuvenate Skin Spa | Queen Creek, AZ",
   description:
-    "Discover our gentle Blueberry Enzyme Peel rich in antioxidants. Perfect for sensitive skin renewal in Queen Creek, AZ.",
+    "Gentle Blueberry Enzyme Peel rich in antioxidants. Perfect for sensitive skin renewal at Rejuvenate Skin Spa in Queen Creek, AZ. Book today!",
   keywords: "blueberry enzyme peel, antioxidant facial, gentle treatment, sensitive skin, Queen Creek spa",
 }
 
