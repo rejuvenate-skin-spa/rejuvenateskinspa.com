@@ -57,9 +57,13 @@ export default function RootLayout({
     "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
     "@id": "https://www.rejuvenateskinspa.com/#localbusiness",
     "name": "Rejuvenate Skin Spa",
+    "description": "Rejuvenate Skin Spa is a premier medical aesthetics spa in Queen Creek, Arizona, specializing in Plexr plasma skin tightening, microneedling, SQT bio-microneedling, chemical peels, and luxury facial treatments.",
     "url": "https://www.rejuvenateskinspa.com/",
     "telephone": "+14802049366",
     "email": "info@rejuvenateskinspa.com",
+    "image": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.webp",
+    "logo": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.webp",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "20162 E. Sonoqui Blvd.",
@@ -68,7 +72,18 @@ export default function RootLayout({
       "postalCode": "85142",
       "addressCountry": "US"
     },
-    "areaServed": [{ "@type": "City", "name": "Queen Creek" }],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.2486,
+      "longitude": -111.6343
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Queen Creek" },
+      { "@type": "City", "name": "San Tan Valley" },
+      { "@type": "City", "name": "Gilbert" },
+      { "@type": "City", "name": "Mesa" },
+      { "@type": "City", "name": "Chandler" }
+    ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
@@ -81,6 +96,7 @@ export default function RootLayout({
     "@id": "https://www.rejuvenateskinspa.com/#organization",
     "name": "Rejuvenate Skin Spa",
     "url": "https://www.rejuvenateskinspa.com/",
+    "logo": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.webp",
     "telephone": "+14802049366",
     "email": "info@rejuvenateskinspa.com",
     "address": {
