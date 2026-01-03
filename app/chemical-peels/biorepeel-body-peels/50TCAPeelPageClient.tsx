@@ -17,6 +17,7 @@ import BioRePeel50TCABodyPeelFAQ from "@/components/50-tca-peel-faq";
 import FiftyTCAPeelHero from "@/components/50-tca-peel-hero";
 import { Badge } from "@/components/ui/badge";
 import PhoneCtaButton from "@/components/phone-cta-button";
+import { siteConfig } from "@/lib/site-config";
 
 export default function BioRePeel50TCAPeelPageClient() {
   return (
@@ -344,7 +345,7 @@ export default function BioRePeel50TCAPeelPageClient() {
                   asChild
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
                 >
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5" />
                     Call for Pricing
                   </a>
@@ -392,7 +393,7 @@ export default function BioRePeel50TCAPeelPageClient() {
                   asChild
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
                 >
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5" />
                     Call for Pricing
                   </a>

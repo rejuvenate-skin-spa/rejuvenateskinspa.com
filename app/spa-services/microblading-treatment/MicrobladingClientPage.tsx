@@ -6,6 +6,7 @@ import { CheckCircle, Clock, Shield, Star, Eye, Palette, Phone } from "lucide-re
 import Image from "next/image"
 import MicrobladingTreatmentFAQ from "@/components/microblading-treatment-faq"
 import MicrobladingTreatmentHero from "@/components/microblading-treatment-hero"
+import { siteConfig } from "@/lib/site-config"
 
 export default function MicrobladingClientPage() {
   return (
@@ -217,9 +218,9 @@ export default function MicrobladingClientPage() {
                     asChild
                     className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
                   >
-                    <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                       <Phone className="h-4 w-4" />
-                      (480) 204-9366
+                      {siteConfig.phoneDisplay}
                     </a>
                   </Button>
                 </CardContent>
@@ -302,9 +303,9 @@ export default function MicrobladingClientPage() {
               asChild
               className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3"
             >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                (480) 204-9366
+<a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

@@ -15,6 +15,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BioRePeelFacialChemicalPeelHero from "@/components/biorepeel-facial-chemical-peel-hero";
 import BioRePeelFacialChemicalPeelFAQ from "@/components/biorepeel-facial-chemical-peel-faq";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "BioRePeel Chemical Peel | Next Generation TCA Peel | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -376,9 +377,9 @@ export default function BioRePeelTreatmentPage() {
               size="lg"
               className="bg-white text-sage-600 hover:bg-gray-100"
             >
-              <a href="tel:+14802049366" className="flex items-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

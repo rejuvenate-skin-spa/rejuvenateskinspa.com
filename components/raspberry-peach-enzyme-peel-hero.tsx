@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import Image from "next/image";
+import { siteConfig } from "@/lib/site-config";
 
 export default function RaspberryPeachEnzymePeelHero() {
   return (
@@ -35,9 +36,9 @@ export default function RaspberryPeachEnzymePeelHero() {
             asChild
             className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-2 shadow-lg backdrop-blur-sm"
           >
-            <a href="tel:+14802049366" className="flex items-center gap-2">
+            <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
               <Phone className="h-5 w-5" />
-              (480) 204-9366
+              {siteConfig.phoneDisplay}
             </a>
           </Button>
         </div>

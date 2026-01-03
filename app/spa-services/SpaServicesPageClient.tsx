@@ -7,12 +7,28 @@ import Link from "next/link"
 import Image from "next/image"
 import SpaServicesFAQ from "@/components/spa-services-faq"
 import { SpaServicesHero } from "@/components/spa-services-hero"
+import { siteConfig } from "@/lib/site-config"
 
 export default function SpaServicesPageClient() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <SpaServicesHero />
+
+      {/* Definition Section - GEO Optimized */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+            What Are Spa Services?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Spa services at Rejuvenate Skin Spa in Queen Creek, Arizona include professional aesthetic treatments designed to enhance your natural beauty and promote skin health. Services include dermaplaning facials for instant smoothness, microblading for semi-permanent brow enhancement, eyebrow lamination for fuller-looking brows, and red light therapy for collagen stimulation and healing.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Each treatment is performed by licensed professionals using medical-grade products. Appointments typically range from 15 minutes to 3 hours depending on the service, with most requiring little to no downtime.
+          </p>
+        </div>
+      </section>
 
       {/* Services Grid */}
       <section className="py-16 bg-white">
@@ -166,9 +182,9 @@ export default function SpaServicesPageClient() {
             asChild
             className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 shadow-lg"
           >
-            <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+            <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
               <Phone className="h-5 w-5" />
-              (480) 204-9366
+              {siteConfig.phoneDisplay}
             </a>
           </Button>
         </div>

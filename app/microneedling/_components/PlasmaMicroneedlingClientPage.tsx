@@ -7,6 +7,7 @@ import PlasmaMicroneedlingTreatmentFAQ from "@/components/plasma-microneedling-t
 import PlasmaMicroneedlingTreatmentHero from "@/components/plasma-microneedling-treatment-hero"
 import PhoneCtaButton from "@/components/phone-cta-button"
 import Link from "next/link"
+import { siteConfig } from "@/lib/site-config"
 import {
   Clock,
   DollarSign,
@@ -427,9 +428,9 @@ export default function PlasmaMicroneedlingClientPage() {
               asChild
               className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3 shadow-lg"
             >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

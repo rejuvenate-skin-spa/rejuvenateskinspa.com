@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -191,24 +192,26 @@ export default function TermsAndConditionsPage() {
             <address className="not-italic mt-4 text-gray-600">
               <strong>Rejuvenate Skin Spa</strong>
               <br />
-              20162 E. Sonoqui Blvd.
+              {siteConfig.address.street}
               <br />
-              Queen Creek, AZ 85142
+              {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
               <br />
               Email:{" "}
               <a
-                href="mailto:info@rejuvenateskinspa.com"
+                href={`mailto:${siteConfig.email}`}
+                aria-label="Email Rejuvenate Skin Spa"
                 className="text-sage-600 hover:text-sage-700"
               >
-                info@rejuvenateskinspa.com
+                {siteConfig.email}
               </a>
               <br />
               Phone:{" "}
               <a
-                href="tel:4802049366"
+                href={`tel:${siteConfig.phoneTel}`}
+                aria-label="Call Rejuvenate Skin Spa"
                 className="text-sage-600 hover:text-sage-700"
               >
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </address>
           </section>

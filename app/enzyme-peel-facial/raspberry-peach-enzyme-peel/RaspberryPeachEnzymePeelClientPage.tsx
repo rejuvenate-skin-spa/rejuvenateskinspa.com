@@ -6,6 +6,7 @@ import Image from "next/image";
 import RaspberryPeachEnzymePeelFAQ from "@/components/raspberry-peach-enzyme-peel-faq";
 import RaspberryPeachEnzymePeelHero from "@/components/raspberry-peach-enzyme-peel-hero";
 import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/lib/site-config";
 
 const RaspberryPeachEnzymePeelClientPage = () => {
   return (
@@ -239,9 +240,9 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                   asChild
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
                 >
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5" />
-                    (480) 204-9366
+                    {siteConfig.phoneDisplay}
                   </a>
                 </Button>
               </CardContent>
@@ -286,9 +287,9 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                   asChild
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
                 >
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5" />
-                    (480) 204-9366
+                    {siteConfig.phoneDisplay}
                   </a>
                 </Button>
               </CardContent>
@@ -333,9 +334,9 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                   asChild
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
                 >
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5" />
-                    (480) 204-9366
+                    {siteConfig.phoneDisplay}
                   </a>
                 </Button>
               </CardContent>
@@ -439,9 +440,9 @@ const RaspberryPeachEnzymePeelClientPage = () => {
               asChild
               className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base"
             >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

@@ -19,6 +19,7 @@ import {
   Activity,
   Phone,
 } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 export default function RedLightTherapyClientPage() {
   return (
@@ -312,9 +313,9 @@ export default function RedLightTherapyClientPage() {
                   </li>
                 </ul>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-4 w-4" />
-                    (480) 204-9366
+                    {siteConfig.phoneDisplay}
                   </a>
                 </Button>
               </CardContent>
@@ -353,9 +354,9 @@ export default function RedLightTherapyClientPage() {
                   </li>
                 </ul>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-4 w-4" />
-                    (480) 204-9366
+                    {siteConfig.phoneDisplay}
                   </a>
                 </Button>
               </CardContent>
@@ -394,9 +395,9 @@ export default function RedLightTherapyClientPage() {
                   </li>
                 </ul>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                     <Phone className="h-4 w-4" />
-                    (480) 204-9366
+                    {siteConfig.phoneDisplay}
                   </a>
                 </Button>
               </CardContent>
@@ -425,9 +426,9 @@ export default function RedLightTherapyClientPage() {
               asChild
               className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3"
             >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                (480) 204-9366
+<a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

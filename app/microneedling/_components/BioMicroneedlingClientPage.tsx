@@ -20,6 +20,7 @@ import BioMicroneedlingTreatmentFAQ from "@/components/bio-microneedling-treatme
 import BioMicroneedlingTreatmentHero from "@/components/bio-microneedling-treatment-hero";
 import PhoneCtaButton from "@/components/phone-cta-button";
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
 
 export default function BioMicroneedlingClientPage() {
   return (
@@ -411,9 +412,9 @@ export default function BioMicroneedlingClientPage() {
               size="lg"
               className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3 shadow-lg"
             >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

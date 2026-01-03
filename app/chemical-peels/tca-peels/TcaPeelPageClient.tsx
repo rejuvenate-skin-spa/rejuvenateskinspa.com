@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import PhoneCtaButton from "@/components/phone-cta-button";
+import { siteConfig } from "@/lib/site-config";
 
 export default function TcaPeelPageClient() {
   return (
@@ -419,9 +420,9 @@ export default function TcaPeelPageClient() {
               size="lg"
               className="bg-white text-sage-600 hover:bg-gray-100"
             >
-              <a href="tel:+14802049366" className="flex items-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

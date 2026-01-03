@@ -7,11 +7,27 @@ import Link from "next/link"
 import Image from "next/image"
 import ChemicalPeelsHero from "@/components/chemical-peels-hero"
 import ChemicalPeelsFAQ from "@/components/chemical-peels-faq"
+import { siteConfig } from "@/lib/site-config"
 export default function ChemicalPeelsPageClient() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <ChemicalPeelsHero />
+
+      {/* Definition Section - GEO Optimized */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+            What Are Chemical Peels?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Chemical peels are professional skin treatments that use carefully formulated acid solutions to exfoliate damaged outer layers of skin, revealing smoother, more even-toned skin beneath. At Rejuvenate Skin Spa in Queen Creek, Arizona, chemical peels address concerns including fine lines, sun damage, acne scars, uneven pigmentation, and dull skin texture.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Peel strength ranges from light (minimal downtime) to deep (more dramatic results). A consultation helps determine which peel type best matches your skin goals and lifestyle.
+          </p>
+        </div>
+      </section>
 
       {/* Treatment Options */}
       <section className="py-16 bg-sage-50">
@@ -180,9 +196,9 @@ export default function ChemicalPeelsPageClient() {
               size="lg"
               className="bg-white text-sage-600 hover:bg-gray-100 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl"
             >
-              <a href="tel:+14802049366" className="flex items-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

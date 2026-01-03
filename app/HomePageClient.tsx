@@ -6,6 +6,7 @@ import { Star, Award, Users, Clock, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { HomeHero } from "@/components/home-hero";
+import { siteConfig } from "@/lib/site-config";
 
 export default function HomePageClient() {
   return (
@@ -215,9 +216,9 @@ export default function HomePageClient() {
               asChild
               className="bg-white text-sage-600 hover:bg-gray-100 rounded-md px-6 py-3 shadow-lg"
             >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
           </div>

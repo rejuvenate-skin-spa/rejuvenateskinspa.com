@@ -19,6 +19,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { MoleRemovalTreatmentFAQ } from "@/components/mole-removal-treatment-faq"
 import { MoleRemovalTreatmentHero } from "@/components/mole-removal-treatment-hero"
+import { siteConfig } from "@/lib/site-config"
 
 export default function MoleRemovalTreatmentClientPage() {
   return (
@@ -377,9 +378,9 @@ export default function MoleRemovalTreatmentClientPage() {
               asChild
               className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base font-medium rounded-lg shadow-lg min-h-[48px]"
             >
-              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
                 <Phone className="h-5 w-5" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
             </Button>
             <Button
