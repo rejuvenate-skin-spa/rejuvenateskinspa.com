@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "glycolic acid peel, AHA peel, alpha hydroxy acid peel, gentle chemical peel, skin brightening, pore treatment, Queen Creek Arizona, glycolic peel treatment",
 };
 
-export default function GlycolicAcidPeelPage() {
+export default function GlycolicAcidPeelsPage() {
   return <GlycolicAcidPeelPageClient />;
 }
+

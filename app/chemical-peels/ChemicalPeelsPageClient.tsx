@@ -38,7 +38,7 @@ export default function ChemicalPeelsPageClient() {
                 ],
                 duration: "60–90 minutes",
                 downtime: "3–5 days",
-                href: "/chemical-peels/tca-40-peel",
+                href: "/chemical-peels/tca-peels",
                 image: "/images/tca-25.jpg",
               },
               {
@@ -52,7 +52,7 @@ export default function ChemicalPeelsPageClient() {
                 ],
                 duration: "45–60 minutes",
                 downtime: "3–7 days",
-                href: "/chemical-peels/glycolic-50-peel",
+                href: "/chemical-peels/glycolic-acid-peels",
                 image: "/images/glycolic-acid-peel-benefits.jpg",
               },
               {
@@ -66,7 +66,7 @@ export default function ChemicalPeelsPageClient() {
                 ],
                 duration: "30–45 minutes",
                 downtime: "Minimal",
-                href: "/biorepeel-facial-chemical-peel",
+                href: "/chemical-peels/biorepeel-chemical-peels",
                 image: "/images/biorepeel-35-tca-treatment-rejuvenate-skin-spa-queen-creek-az.jpg",
               },
             ].map((treatment, index) => (

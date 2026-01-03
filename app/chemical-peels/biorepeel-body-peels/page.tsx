@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "BioRePeel 50 TCA, body chemical peel, body acne treatment, back acne treatment, body skin resurfacing, TCA body peel, Queen Creek Arizona, body skin rejuvenation",
 };
 
-export default function BioRePeel50TCABodyPage() {
+export default function BioRePeelBodyPeelsPage() {
   return <BioRePeel50TCAPeelPageClient />;
 }
+

@@ -156,7 +156,7 @@ export default function GlycolicAcidPeelPageClient() {
               *Results may vary. Individual results are not guaranteed and may vary from person to person.
             </p>
             <Button asChild className="bg-sage-600 hover:bg-sage-700 text-white">
-              <Link href="/about-us/portfolio">View More Results</Link>
+              <Link href="/portfolio">View More Results</Link>
             </Button>
           </div>
         </div>

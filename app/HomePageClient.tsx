@@ -2,46 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Award, Users, Clock } from "lucide-react";
+import { Star, Award, Users, Clock, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { HomeHero } from "@/components/home-hero";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
 
 export default function HomePageClient() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const isBusinessHours = () => {
-    const now = new Date();
-    const arizonaTime = new Date(
-      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    );
-    const day = arizonaTime.getDay();
-    const hour = arizonaTime.getHours();
-
-    // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18;
-  };
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:4802049366";
-    } else {
-      router.push("/contact");
-    }
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -234,10 +200,13 @@ export default function HomePageClient() {
           </p>
           <div className="flex justify-center">
             <Button
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-600 hover:bg-gray-100 rounded-md px-6 py-2 shadow-lg backdrop-blur-sm"
+              asChild
+              className="bg-white text-sage-600 hover:bg-gray-100 rounded-md px-6 py-3 shadow-lg"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

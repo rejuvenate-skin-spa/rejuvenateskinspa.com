@@ -64,19 +64,19 @@ const navigationItems = [
     title: "Chemical Peels",
     href: "/chemical-peels",
     submenu: [
-      { title: "BioRePeel", href: "/biorepeel-facial-chemical-peel" },
+      { title: "BioRePeel", href: "/chemical-peels/biorepeel-chemical-peels" },
       {
         title: "BioRePeel 35 TCA Facial Peel",
-        href: "/biorepeel-facial-chemical-peel/35-tca-peel",
+        href: "/chemical-peels/biorepeel-facial-peels",
       },
       {
         title: "BioRePeel 50 TCA Body Peel",
-        href: "/biorepeel-facial-chemical-peel/50-tca-peel",
+        href: "/chemical-peels/biorepeel-body-peels",
       },
-      { title: "TCA Peels", href: "/chemical-peel-treatment/tca-peel" },
+      { title: "TCA Peels", href: "/chemical-peels/tca-peels" },
       {
         title: "Glycolic Acid Peels",
-        href: "/chemical-peel-treatment/glycolic-acid-peel",
+        href: "/chemical-peels/glycolic-acid-peels",
       },
     ],
   },

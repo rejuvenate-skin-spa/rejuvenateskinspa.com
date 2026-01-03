@@ -151,7 +151,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/biorepeel-facial-chemical-peel"
+                  href="/chemical-peels/biorepeel-chemical-peels"
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   BioRePeel

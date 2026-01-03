@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "BioRePeel 35 TCA, TCA facial peel, facial rejuvenation, skin resurfacing, chemical peel facial, Queen Creek Arizona, minimal downtime peel, amino acid peel",
 };
 
-export default function BioRePeel35TCAFacialPage() {
+export default function BioRePeelFacialPeelsPage() {
   return <BioRePeel35TCAPeelPageClient />;
 }
+

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "TCA 25% peel, TCA chemical peel, trichloroacetic acid peel, deep chemical peel, skin resurfacing, wrinkle reduction, acne scar treatment, Queen Creek Arizona",
 };
 
-export default function TcaPeelPage() {
+export default function TcaPeelsPage() {
   return <TcaPeelPageClient />;
 }
+

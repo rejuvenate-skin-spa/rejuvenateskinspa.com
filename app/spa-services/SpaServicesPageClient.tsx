@@ -32,7 +32,7 @@ export default function SpaServicesPageClient() {
                 ],
                 duration: "60 minutes",
                 price: "From $90",
-                href: "/spa-services/eyebrow-lamination",
+                href: "/spa-services/eyebrow-lamination-treatment",
                 image: "/images/eyebrow-lamination-feature.jpg",
               },
               {
@@ -47,7 +47,7 @@ export default function SpaServicesPageClient() {
                 ],
                 duration: "45 minutes",
                 price: "From $80",
-                href: "/spa-services/dermaplaning",
+                href: "/spa-services/dermaplaning-treatment",
                 image: "/images/dermaplaning-facial-treatment-in-progress.png",
               },
               {
@@ -56,7 +56,7 @@ export default function SpaServicesPageClient() {
                 benefits: ["Perfectly defined, natural-looking brows", "Long-lasting results", "Saves time & enhances confidence", "Customizable shape & color", "Waterproof & smudge-proof", "Restores thinning or over-plucked brows"],
                 duration: "2–3 hours",
                 price: "From $450",
-                href: "/spa-services/microblading",
+                href: "/spa-services/microblading-treatment",
                 image: "/images/microblading-service.jpg",
               },
               {
@@ -65,7 +65,7 @@ export default function SpaServicesPageClient() {
                 benefits: ["Stimulates collagen & elastin production", "Reduces fine lines & wrinkles", "Improves tone & texture", "Minimizes inflammation & redness", "Accelerates healing & recovery", "Enhances cellular energy"],
                 duration: "15–30 minutes",
                 price: "From $25",
-                href: "/spa-services/red-light-therapy",
+                href: "/spa-services/red-light-therapy-treatment",
                 image: "/images/red-lamp-only.png",
               },
             ].map((service, index) => (

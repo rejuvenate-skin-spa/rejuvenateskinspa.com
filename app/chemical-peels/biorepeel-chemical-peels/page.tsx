@@ -159,7 +159,7 @@ export default function BioRePeelTreatmentPage() {
                 ],
                 duration: "45-60 minutes",
                 price: "From $250",
-                href: "/biorepeel-facial-chemical-peel/35-tca-peel",
+                href: "/chemical-peels/biorepeel-facial-peels",
                 image:
                   "/images/biorepeel-35-tca-facial-treatment.jpg",
                 popular: true,
@@ -177,7 +177,7 @@ export default function BioRePeelTreatmentPage() {
                 ],
                 duration: "60-90 minutes",
                 price: "From $250",
-                href: "/biorepeel-facial-chemical-peel/50-tca-peel",
+                href: "/chemical-peels/biorepeel-body-peels",
                 image:
                   "/images/biorepeel-50-tca-body-treatment.png",
               },
@@ -346,7 +346,7 @@ export default function BioRePeelTreatmentPage() {
               *Results may vary. Individual results are not guaranteed and may
               vary from person to person.
             </p>
-            <Link href="/about-us/portfolio">
+            <Link href="/portfolio">
               <Button className="bg-sage-600 hover:bg-sage-700 text-white">
                 View More Results
               </Button>
@@ -387,3 +387,4 @@ export default function BioRePeelTreatmentPage() {
     </div>
   );
 }
+
