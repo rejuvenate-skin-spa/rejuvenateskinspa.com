@@ -14,10 +14,10 @@ import {
   Heart,
   Shield,
   Leaf,
-  Phone,
 } from "lucide-react";
 import BioMicroneedlingTreatmentFAQ from "@/components/bio-microneedling-treatment-faq";
 import BioMicroneedlingTreatmentHero from "@/components/bio-microneedling-treatment-hero";
+import PhoneCtaButton from "@/components/phone-cta-button";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
@@ -306,12 +306,7 @@ export default function BioMicroneedlingClientPage() {
                     <span className="text-sm text-gray-700">Post-treatment care kit</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
-                    <Phone className="h-4 w-4" />
-                    Call to Schedule
-                  </a>
-                </Button>
+                <PhoneCtaButton className="w-full mt-auto" />
               </CardContent>
             </Card>
 
@@ -354,12 +349,7 @@ export default function BioMicroneedlingClientPage() {
                     <span className="text-sm text-gray-700">Customized serum selection</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
-                    <Phone className="h-4 w-4" />
-                    Call to Schedule
-                  </a>
-                </Button>
+                <PhoneCtaButton className="w-full mt-auto" />
               </CardContent>
             </Card>
           </div>

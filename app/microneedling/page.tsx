@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
 import MicroneedlingHubFAQ from "@/components/microneedling-hub-faq";
+import PhoneCtaButton from "@/components/phone-cta-button";
 
 export const metadata: Metadata = {
   title: "Microneedling | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -79,12 +79,7 @@ export default function MicroneedlingHubPage() {
             <p className="text-xl text-gray-200 mb-8 max-w-lg">
               Three advanced options: Traditional Microneedling, SQT Bio-Microneedling (needle-free), and Plexr Plasma Microneedling at Rejuvenate Skin Spa.
             </p>
-            <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white">
-              <a href="tel:+14802049366" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                (480) 204-9366
-              </a>
-            </Button>
+            <PhoneCtaButton />
           </div>
         </div>
       </section>
