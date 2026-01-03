@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import PlasmaMicroneedlingTreatmentFAQ from "@/components/plasma-microneedling-treatment-faq"
 import PlasmaMicroneedlingTreatmentHero from "@/components/plasma-microneedling-treatment-hero"
+import PhoneCtaButton from "@/components/phone-cta-button"
 import {
   Clock,
   DollarSign,
@@ -16,7 +17,6 @@ import {
   Shield,
   Target,
   Award,
-  Phone,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
@@ -327,12 +327,7 @@ export default function PlasmaMicroneedlingClientPage() {
                     <span className="text-sm text-gray-700">Recovery care instructions</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
-                    <Phone className="h-4 w-4" />
-                    Call to Schedule
-                  </a>
-                </Button>
+                <PhoneCtaButton className="w-full mt-auto" />
               </CardContent>
             </Card>
 
@@ -375,12 +370,7 @@ export default function PlasmaMicroneedlingClientPage() {
                     <span className="text-sm text-gray-700">Customized treatment plan</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto py-2.5">
-                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2 text-sm font-medium">
-                    <Phone className="h-4 w-4" />
-                    Call to Schedule
-                  </a>
-                </Button>
+                <PhoneCtaButton className="w-full mt-auto" />
               </CardContent>
             </Card>
           </div>
