@@ -1,44 +1,10 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import { Phone } from "lucide-react"
 import Image from "next/image"
 
 export default function AboutUsHero() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(
-      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    )
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
-
-    // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
-
-  const handlePrimaryClick = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:4802049366"
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <section className="relative min-h-[400px] lg:min-h-[500px] py-12 lg:py-12 bg-sage-50 flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -71,10 +37,13 @@ export default function AboutUsHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                onClick={handlePrimaryClick}
-                className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-2 shadow-lg backdrop-blur-sm"
+                asChild
+                className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 shadow-lg"
               >
-                Get in Touch
+                <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  (480) 204-9366
+                </a>
               </Button>
             </div>
           </div>

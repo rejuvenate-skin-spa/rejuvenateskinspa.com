@@ -7,40 +7,8 @@ import Image from "next/image"
 import Link from "next/link"
 import SkinTagRemovalTreatmentFAQ from "@/components/skin-tag-removal-treatment-faq"
 import SkinTagRemovalTreatmentHero from "@/components/skin-tag-removal-treatment-hero"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
 
 export default function SkinTagRemovalTreatmentClientPage() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
-
-    // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
-
-  const handlePrimaryClick = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:4802049366"
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <div className="min-h-screen">
       <SkinTagRemovalTreatmentHero />

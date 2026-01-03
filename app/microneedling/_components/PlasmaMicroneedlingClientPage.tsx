@@ -17,46 +17,10 @@ import {
   Shield,
   Target,
   Award,
+  Phone,
 } from "lucide-react"
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
 
 export default function PlasmaMicroneedlingClientPage() {
-  const [isMobile, setIsMobile] = useState(false)
-  const router = useRouter()
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const handleGetInTouch = () => {
-    if (isMobile) {
-      const now = new Date()
-      const hour = now.getHours()
-      const day = now.getDay()
-
-      // Business hours: Mon-Fri 9AM-6PM, Sat 9AM-4PM, closed Sunday
-      const isBusinessHours =
-        (day >= 1 && day <= 5 && hour >= 9 && hour < 18) || // Mon-Fri 9AM-6PM
-        (day === 6 && hour >= 9 && hour < 16) // Sat 9AM-4PM
-
-      if (isBusinessHours) {
-        window.location.href = "tel:+14805551234"
-      } else {
-        router.push("/contact")
-      }
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Hero Section */}
@@ -448,10 +412,13 @@ export default function PlasmaMicroneedlingClientPage() {
           </p>
           <div className="flex justify-center">
             <Button
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm"
+              asChild
+              className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3 shadow-lg"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

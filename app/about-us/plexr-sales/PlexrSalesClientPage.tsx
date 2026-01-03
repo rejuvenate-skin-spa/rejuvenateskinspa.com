@@ -1,34 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
+import { Phone } from "lucide-react"
 
 export default function PlexrSalesClientPage() {
-  const [isMobile, setIsMobile] = useState(false)
-  const router = useRouter()
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const handleGetInTouch = () => {
-    const now = new Date()
-    const currentHour = now.getHours()
-    const isBusinessHours = currentHour >= 9 && currentHour < 17
-
-    if (isMobile && isBusinessHours) {
-      window.location.href = "tel:4802049366"
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -136,12 +110,13 @@ export default function PlexrSalesClientPage() {
           <p className="text-xl text-sage-100 mb-8 max-w-2xl mx-auto">
             Contact us today to learn more about Plexr equipment sales and training opportunities.
           </p>
-          <button
-            onClick={handleGetInTouch}
-            className="bg-white text-sage-600 px-4 py-1.5 text-base rounded-md font-semibold hover:bg-gray-50 transition-colors duration-200 shadow-sm"
+          <a
+            href="tel:+14802049366"
+            className="inline-flex items-center justify-center gap-2 bg-white text-sage-600 px-6 py-3 text-base rounded-md font-semibold hover:bg-gray-50 transition-colors duration-200 shadow-sm"
           >
-            Get in Touch
-          </button>
+            <Phone className="h-5 w-5" />
+            (480) 204-9366
+          </a>
         </div>
       </section>
     </main>

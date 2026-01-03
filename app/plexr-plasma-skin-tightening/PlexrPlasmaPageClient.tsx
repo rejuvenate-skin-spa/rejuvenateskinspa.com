@@ -7,8 +7,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PlexrPlasmaSkinTighteningHero } from "@/components/plexr-plasma-skin-tightening-hero"
 import { PlexrPlasmaFAQ } from "@/components/plexr-plasma-skin-tightening-faq"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
 import { Phone, Info } from "lucide-react"
 
 const treatmentOptions = [
@@ -62,37 +60,6 @@ const removalServices = [
 ]
 
 export default function PlexrPlasmaPageClient() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(
-      now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-    )
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
-
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:4802049366"
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <div className="min-h-screen">
       <PlexrPlasmaSkinTighteningHero />

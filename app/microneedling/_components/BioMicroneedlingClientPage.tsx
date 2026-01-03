@@ -14,47 +14,13 @@ import {
   Heart,
   Shield,
   Leaf,
+  Phone,
 } from "lucide-react";
 import BioMicroneedlingTreatmentFAQ from "@/components/bio-microneedling-treatment-faq";
 import BioMicroneedlingTreatmentHero from "@/components/bio-microneedling-treatment-hero";
 import PhoneCtaButton from "@/components/phone-cta-button";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 export default function BioMicroneedlingClientPage() {
-  const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const isBusinessHours = () => {
-    const now = new Date();
-    const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
-    const hour = now.getHours();
-
-    // Business hours: Monday-Friday 9AM-6PM, Saturday 9AM-4PM
-    if (day === 0) return false; // Closed Sunday
-    if (day >= 1 && day <= 5) return hour >= 9 && hour < 18; // Mon-Fri 9AM-6PM
-    if (day === 6) return hour >= 9 && hour < 16; // Sat 9AM-4PM
-    return false;
-  };
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14805551234";
-    } else {
-      router.push("/contact");
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Hero Section */}
@@ -428,11 +394,14 @@ export default function BioMicroneedlingClientPage() {
           </p>
           <div className="flex justify-center">
             <Button
+              asChild
               size="lg"
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm"
+              className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3 shadow-lg"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>
