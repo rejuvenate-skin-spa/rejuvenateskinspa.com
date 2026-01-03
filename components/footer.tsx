@@ -3,52 +3,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
-import { useState, useEffect } from "react"
+import { siteConfig } from "@/lib/site-config"
 
 export function Footer() {
-  const [isMobile, setIsMobile] = useState(false)
-  const [isBusinessHours, setIsBusinessHours] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    const checkBusinessHours = () => {
-      const now = new Date()
-      const arizonaTime = new Date(
-        now.toLocaleString("en-US", { timeZone: "America/Phoenix" })
-      )
-      const day = arizonaTime.getDay() // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-      const hour = arizonaTime.getHours()
-
-      // Monday (1) through Saturday (6), 8 AM to 6 PM
-      const isWeekday = day >= 1 && day <= 6
-      const isDuringHours = hour >= 8 && hour < 18
-
-      setIsBusinessHours(isWeekday && isDuringHours)
-    }
-
-    checkMobile()
-    checkBusinessHours()
-
-    window.addEventListener("resize", checkMobile)
-    const interval = setInterval(checkBusinessHours, 60000) // Check every minute
-
-    return () => {
-      window.removeEventListener("resize", checkMobile)
-      clearInterval(interval)
-    }
-  }, [])
-
-  const handlePhoneClick = () => {
-    if (isMobile && isBusinessHours) {
-      window.location.href = "tel:4802049366"
-    } else {
-      window.location.href = "/contact"
-    }
-  }
-
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10 sm:py-12">
@@ -71,18 +28,20 @@ export function Footer() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
-                href="tel:4802049366"
+                href={`tel:${siteConfig.phoneTel}`}
+                aria-label="Call Rejuvenate Skin Spa"
                 className="flex items-center text-sm text-gray-600 hover:text-sage-600 transition-colors py-2 sm:py-0 min-h-[44px] sm:min-h-0"
               >
                 <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                (480) 204-9366
+                {siteConfig.phoneDisplay}
               </a>
               <a
-                href="mailto:info@rejuvenateskinspa.com"
+                href={`mailto:${siteConfig.email}`}
+                aria-label="Email Rejuvenate Skin Spa"
                 className="flex items-center text-sm text-gray-600 hover:text-sage-600 transition-colors py-2 sm:py-0 min-h-[44px] sm:min-h-0"
               >
                 <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
-                info@rejuvenateskinspa.com
+                {siteConfig.email}
               </a>
             </div>
             {/* Social Follow */}
@@ -200,9 +159,9 @@ export function Footer() {
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 text-sage-600" />
                 <div className="text-sm text-gray-600">
-                  20162 E. Sonoqui Blvd.
+                  {siteConfig.address.street}
                   <br />
-                  Queen Creek AZ 85142
+                  {siteConfig.address.city} {siteConfig.address.state} {siteConfig.address.zip}
                 </div>
               </div>
               <div className="flex items-start">

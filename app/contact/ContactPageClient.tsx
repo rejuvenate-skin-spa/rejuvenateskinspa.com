@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 // GoHighLevel booking embed - uncomment when ready to enable
 // import { GoHighLevelEmbed } from "@/components/gohighlevel-embed"
 
@@ -77,10 +78,11 @@ export default function ContactPageClient() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                     <a
-                      href="tel:4802049366"
+                      href={`tel:${siteConfig.phoneTel}`}
+                      aria-label="Call Rejuvenate Skin Spa"
                       className="text-gray-600 hover:text-sage-600 transition-colors"
                     >
-                      (480) 204-9366
+                      {siteConfig.phoneDisplay}
                     </a>
                     <p className="text-sm text-gray-500">
                       Mon-Fri: 8AM-6PM, Sat: 9AM-5PM, Sun: Closed
@@ -95,10 +97,11 @@ export default function ContactPageClient() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <a
-                      href="mailto:info@rejuvenateskinspa.com"
+                      href={`mailto:${siteConfig.email}`}
+                      aria-label="Email Rejuvenate Skin Spa"
                       className="text-gray-600 hover:text-sage-600 transition-colors"
                     >
-                      info@rejuvenateskinspa.com
+                      {siteConfig.email}
                     </a>
                     <p className="text-sm text-gray-500">
                       We will get back to you promptly

@@ -4,6 +4,7 @@ import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { StickyMobilePhoneCta } from "@/components/sticky-mobile-phone-cta"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const playfair = Playfair_Display({
@@ -144,8 +145,9 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
         <Navigation />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen pb-24 md:pb-0">{children}</main>
         <Footer />
+        <StickyMobilePhoneCta />
       </body>
     </html>
   )

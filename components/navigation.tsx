@@ -4,8 +4,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/site-config";
 
 const navigationItems = [
   {
@@ -240,6 +241,16 @@ export function Navigation() {
                 )}
               </div>
             ))}
+
+            {/* Desktop Phone CTA */}
+            <a
+              href={`tel:${siteConfig.phoneTel}`}
+              aria-label="Call Rejuvenate Skin Spa"
+              className="hidden lg:flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium ml-4 transition-colors duration-200"
+            >
+              <Phone className="h-4 w-4" />
+              {siteConfig.phoneDisplay}
+            </a>
           </div>
 
           {/* Mobile menu button - min 44px tap target */}
@@ -329,13 +340,15 @@ export function Navigation() {
                   </div>
                 ))}
 
-                {/* Get in Touch Button - prominent CTA */}
+                {/* Phone CTA - prominent mobile CTA */}
                 <div className="pt-6">
                   <a
-                    href="tel:4802049366"
-                    className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-4 px-4 rounded-md transition-colors duration-200 flex items-center justify-center text-lg min-h-[52px]"
+                    href={`tel:${siteConfig.phoneTel}`}
+                    aria-label="Call Rejuvenate Skin Spa"
+                    className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-4 px-4 rounded-md transition-colors duration-200 flex items-center justify-center gap-2 text-lg min-h-[52px]"
                   >
-                    Get in Touch
+                    <Phone className="h-5 w-5" />
+                    {siteConfig.phoneDisplay}
                   </a>
                 </div>
               </div>
