@@ -127,7 +127,7 @@ export default function TraditionalMicroneedlingPage() {
       </section>
 
       {/* Treatment Areas */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
@@ -138,7 +138,7 @@ export default function TraditionalMicroneedlingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               "Face, neck, décolleté",
               "Hands, arms, legs",
@@ -146,9 +146,9 @@ export default function TraditionalMicroneedlingPage() {
               "Wrinkles & fine lines",
               "Uneven tone & pigmentation",
             ].map((area, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center bg-white shadow-md border-l-4 border-l-sage-600 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <p className="text-gray-700 font-medium">{area}</p>
+                  <p className="text-gray-800 font-semibold">{area}</p>
                 </CardContent>
               </Card>
             ))}
@@ -162,14 +162,14 @@ export default function TraditionalMicroneedlingPage() {
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-playfair">
-              Treatment Investment
+              Microneedling Treatment Options
             </h2>
             <p className="text-lg text-gray-600">
               Professional microneedling for natural skin rejuvenation
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
             {/* Single Treatment Card */}
             <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
               <CardContent className="p-6 h-full flex flex-col">
@@ -179,7 +179,7 @@ export default function TraditionalMicroneedlingPage() {
                   Single Treatment
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $200
+                  $199
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -207,23 +207,23 @@ export default function TraditionalMicroneedlingPage() {
               </CardContent>
             </Card>
 
-            {/* 3-Treatment Series Card (Featured) */}
+            {/* 3-Treatment Package Card (Featured) */}
             <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-sage-50/50 h-full">
               <CardContent className="p-6 h-full flex flex-col">
                 {/* Header area with badge */}
                 <div className="flex justify-center mb-3">
                   <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
-                    Recommended
+                    Most Popular
                   </Badge>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
-                  3-Treatment Series
+                  3-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $540
+                  $549
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $60 ($180 per session)
+                  Save $48 ($183 per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Optimal results with three treatments spaced 4–6 weeks apart for maximum collagen stimulation.
@@ -231,19 +231,62 @@ export default function TraditionalMicroneedlingPage() {
                 <ul className="space-y-3 mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Everything in single treatment</span>
+                    <span className="text-sm text-gray-700">Stimulates collagen production</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">3 microneedling sessions</span>
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Progress tracking & photos</span>
+                    <span className="text-sm text-gray-700">Reduces fine lines & pores</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Customized treatment plan</span>
+                    <span className="text-sm text-gray-700">Softens acne scarring</span>
+                  </li>
+                </ul>
+                <PhoneCtaButton className="w-full mt-auto" />
+              </CardContent>
+            </Card>
+
+            {/* 6-Treatment Package Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                {/* Header area with badge */}
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-gray-600 text-white text-xs px-3 py-1">
+                    Best Value
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  6-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $999
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $195 ($167 per session)
+                </div>
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Comprehensive transformation with six treatments for dramatic, long-lasting results.
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Stimulates collagen production</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Reduces fine lines & pores</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Softens acne scarring</span>
                   </li>
                 </ul>
                 <PhoneCtaButton className="w-full mt-auto" />

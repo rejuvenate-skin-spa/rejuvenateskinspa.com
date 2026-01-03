@@ -2,43 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Star } from "lucide-react"
+import { CheckCircle, Clock, Star, Phone } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import SpaServicesFAQ from "@/components/spa-services-faq"
 import { SpaServicesHero } from "@/components/spa-services-hero"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
 
 export default function SpaServicesPageClient() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-    const day = arizonaTime.getDay()
-    const hour = arizonaTime.getHours()
-
-    // Monday-Saturday (1-6), 8am-6pm
-    return day >= 1 && day <= 6 && hour >= 8 && hour < 18
-  }
-
-  const handlePrimaryClick = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:4802049366"
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -47,12 +17,12 @@ export default function SpaServicesPageClient() {
       {/* Services Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {[
               {
                 title: "Eyebrow Lamination",
                 description:
-                  "Create fuller, lifted, and perfectly shaped brows using a gentle keratin formula. Smooth, define, and enhance your natural beauty. (6-8 weeks)",
+                  "Create fuller, lifted, and perfectly shaped brows using a gentle keratin formula. Smooth, define, and enhance your natural beauty. (6–8 weeks)",
                 benefits: [
                   "Instantly lifts and defines the brows",
                   "Creates the appearance of thicker, fuller brows",
@@ -62,28 +32,29 @@ export default function SpaServicesPageClient() {
                 ],
                 duration: "60 minutes",
                 price: "From $90",
-                href: "/spa-services/enzyme-facial-peels",
+                href: "/spa-services/eyebrow-lamination",
                 image: "/images/eyebrow-lamination-feature.jpg",
               },
               {
                 title: "Dermaplaning Facial",
-                description: "Professional exfoliation treatment that removes dead skin cells and fine facial hair.",
+                description: "Professional exfoliation treatment using a surgical-grade blade to gently remove dead skin cells and fine vellus hair (peach fuzz), revealing a smoother, brighter complexion instantly.",
                 benefits: [
-                  "Smoother skin texture",
-                  "Better product absorption",
-                  "Instant results",
-                  "Makeup applies flawlessly",
+                  "Instantly smoother, softer skin texture",
+                  "Enhanced product absorption and efficacy",
+                  "Makeup applies flawlessly and evenly",
+                  "Reduces appearance of fine lines",
+                  "Safe for most skin types with no downtime",
                 ],
                 duration: "45 minutes",
-                price: "From $90",
+                price: "From $80",
                 href: "/spa-services/dermaplaning",
                 image: "/images/dermaplaning-facial-treatment-in-progress.png",
               },
               {
                 title: "Microblading",
                 description: "Semi-permanent eyebrow enhancement using precise hair-stroke technique.",
-                benefits: ["Perfectly Defined, Natural-Looking Brows", "Long-Lasting Results", "Saves Time & Enhances Confidence", "Customizable Shape & Color", "Waterproof & Smudge-Proof", "Restores Thinning or Over-Plucked Brows", "Customized shape and color for natural-looking results"],
-                duration: "2-3 hours",
+                benefits: ["Perfectly defined, natural-looking brows", "Long-lasting results", "Saves time & enhances confidence", "Customizable shape & color", "Waterproof & smudge-proof", "Restores thinning or over-plucked brows"],
+                duration: "2–3 hours",
                 price: "From $450",
                 href: "/spa-services/microblading",
                 image: "/images/microblading-service.jpg",
@@ -91,22 +62,22 @@ export default function SpaServicesPageClient() {
               {
                 title: "Red Light Therapy",
                 description: "Non-invasive treatment that promotes healing, stimulates collagen, and reduces fine lines and wrinkles with advanced LED technology.",
-                benefits: ["Stimulates Collagen & Elastin Production", "Reduces Fine Lines & Wrinkles", "Improves Tone & Texture", "Minimizes Inflammation & Redness", "Accelerates Healing & Recovery", "Enhances Cellular Energy"],
-                duration: "15-30 minutes",
+                benefits: ["Stimulates collagen & elastin production", "Reduces fine lines & wrinkles", "Improves tone & texture", "Minimizes inflammation & redness", "Accelerates healing & recovery", "Enhances cellular energy"],
+                duration: "15–30 minutes",
                 price: "From $25",
-                href: "/microneedling",
+                href: "/spa-services/red-light-therapy",
                 image: "/images/red-lamp-only.png",
               },
             ].map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
                 <div className="relative h-64 bg-gray-100 flex items-center justify-center">
                   <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className={service.title === "Red Light Therapy" ? "object-contain" : "object-cover"} />
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
 
-                  <div className="space-y-4 mb-6">
+                  <div className="space-y-4 mb-6 flex-grow">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                       <ul className="space-y-1">
@@ -131,8 +102,8 @@ export default function SpaServicesPageClient() {
                     </div>
                   </div>
 
-                  <Link href={service.href}>
-                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">View {service.title}</Button>
+                  <Link href={service.href} className="mt-auto">
+                    <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Learn about {service.title}</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -192,10 +163,13 @@ export default function SpaServicesPageClient() {
             Treat yourself to a spa service today and experience the ultimate in relaxation and skin rejuvenation.
           </p>
           <Button
-            onClick={handlePrimaryClick}
-            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm"
+            asChild
+            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 shadow-lg"
           >
-            Get in Touch
+            <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+              <Phone className="h-5 w-5" />
+              (480) 204-9366
+            </a>
           </Button>
         </div>
       </section>

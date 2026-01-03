@@ -115,7 +115,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much do TCA peels cost at Rejuvenate Skin Spa?",
         answer:
-          "TCA peel sessions start at $175, with pricing determined by the treatment strength and area. Body peels or multi-session packages may be available at a discounted rate.",
+          "TCA 25% peel sessions are $199. Package pricing and combination treatments may be available to achieve enhanced results and added value.",
       },
     ],
   },

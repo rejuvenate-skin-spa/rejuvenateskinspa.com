@@ -99,7 +99,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does the Pomegranate Enzyme Peel cost at Rejuvenate Skin Spa?",
         answer:
-          "This treatment typically starts at $95. Discounts may be available for treatment packages or facial upgrades.",
+          "This treatment is $120 per session. Package pricing is available for 3-treatment and 6-treatment packages.",
       },
     ],
   },

@@ -100,7 +100,7 @@ const faqData: FAQSection[] = [
       {
         question: "What is the cost of microblading at Rejuvenate Skin Spa?",
         answer:
-          "Microblading sessions typically start at $495, including the initial appointment and one touch-up. Additional touch-ups may be priced separately.",
+          "Microblading sessions are $450, including the initial appointment and one touch-up. Additional touch-ups are $150.",
       },
     ],
   },

@@ -96,7 +96,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does the Raspberry-Peach Enzyme Peel cost at Rejuvenate Skin Spa?",
         answer:
-          "This treatment typically starts at $95 per session. Bundle pricing may be available for facial packages or seasonal promotions.",
+          "This treatment is $120 per session. A 3-Treatment Package is $320 (Save $40) and a 6-Treatment Package is $599 (Save $121).",
       },
     ],
   },

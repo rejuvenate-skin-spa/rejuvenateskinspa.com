@@ -123,7 +123,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does dermaplaning cost at Rejuvenate Skin Spa?",
         answer:
-          "Dermaplaning treatments typically start at $95. It can also be added to facials or peels for enhanced results.",
+          "Dermaplaning treatments start at $80. Package pricing and combination treatments with facials or peels are also available.",
       },
     ],
   },

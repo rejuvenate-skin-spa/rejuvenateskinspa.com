@@ -10,41 +10,15 @@ import {
   Zap,
   Target,
   Award,
+  Phone,
 } from "lucide-react";
 import Image from "next/image";
 import BioRePeel50TCABodyPeelFAQ from "@/components/50-tca-peel-faq";
 import FiftyTCAPeelHero from "@/components/50-tca-peel-hero";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { Badge } from "@/components/ui/badge";
+import PhoneCtaButton from "@/components/phone-cta-button";
 
 export default function BioRePeel50TCAPeelPageClient() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const isBusinessHours = () => {
-    const now = new Date();
-    const hour = now.getHours();
-    const day = now.getDay();
-    return day >= 1 && day <= 5 && hour >= 9 && hour < 17;
-  };
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802818888";
-    } else {
-      router.push("/contact");
-    }
-  };
-
   return (
     <div className="min-h-screen">
       <FiftyTCAPeelHero />
@@ -320,8 +294,117 @@ export default function BioRePeel50TCAPeelPageClient() {
         </div>
       </section>
 
-      {/* Recovery, Aftercare & Results */}
+      {/* Pricing & Packages */}
       <section className="py-16 bg-sage-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              BioRePeel Body Treatment Options
+            </h2>
+            <p className="text-lg text-gray-600">
+              Professional BioRePeel 50 TCA body treatments
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
+            {/* Single Body Part Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  Single Body Part
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  Starting at $249
+                </div>
+                <div className="min-h-[20px] mb-3" />
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Targeted treatment for one body area such as back, chest, arms, or legs.
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Complete BioRePeel 50 TCA treatment</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Improves texture & reduces scarring</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Post-treatment care included</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700 italic">Pricing depends on body region selected</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    Call for Pricing
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Multiple Body Parts Card */}
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-white h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Best Value
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  Multiple Body Parts
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  Starting at $499
+                </div>
+                <div className="min-h-[20px] mb-3" />
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Treat multiple body areas in a single session for comprehensive results.
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Treat 2 or more body areas</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Combined treatment savings</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Comprehensive aftercare support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700 italic">Pricing depends on number and size of body parts</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    Call for Pricing
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Recovery, Aftercare & Results */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
@@ -400,91 +483,6 @@ export default function BioRePeel50TCAPeelPageClient() {
         <BioRePeel50TCABodyPeelFAQ />
       </div>
 
-      {/* Pricing & Packages */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Treatment Investment
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                title: "Single Area Treatment",
-                price: "$250-$350",
-                duration: "45-75 minutes",
-                features: [
-                  "BioRePeel 50 TCA treatment",
-                  "Area-specific consultation",
-                  "Post-treatment care",
-                  "Detailed aftercare instructions",
-                  "Follow-up check-in",
-                ],
-                popular: true,
-              },
-              {
-                title: "Multiple Area Package",
-                price: "$600-$800",
-                duration: "2-3 areas",
-                features: [
-                  "Treat 2-3 body areas",
-                  "15% package discount",
-                  "Comprehensive consultation",
-                  "Extended aftercare support",
-                  "Priority rebooking",
-                ],
-              },
-            ].map((pkg, index) => (
-              <Card
-                key={index}
-                className={`relative ${
-                  pkg.popular ? "ring-2 ring-sage-600" : ""
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                    {pkg.title}
-                  </h3>
-                  <div className="text-4xl font-bold text-sage-600 mb-2">
-                    {pkg.price}
-                  </div>
-                  <p className="text-gray-500 mb-6">{pkg.duration}</p>
-                  <ul className="space-y-3 mb-8">
-                    {pkg.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="text-gray-600 flex items-center justify-center"
-                      >
-                        <CheckCircle className="h-4 w-4 text-sage-600 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    className={`w-full ${
-                      pkg.popular
-                        ? "bg-sage-600 hover:bg-sage-700 text-white"
-                        : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
-                    }`}
-                  >
-                    Get in Touch
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -496,13 +494,7 @@ export default function BioRePeel50TCAPeelPageClient() {
             smooth, clear body skin you deserve.
           </p>
           <div className="flex justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2"
-              onClick={handleGetInTouch}
-            >
-              Get in Touch
-            </Button>
+            <PhoneCtaButton className="bg-white text-sage-600 hover:bg-gray-100" />
           </div>
         </div>
       </section>

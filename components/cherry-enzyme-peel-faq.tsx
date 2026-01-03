@@ -99,7 +99,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does a Cherry Enzyme Peel cost at Rejuvenate Skin Spa?",
         answer:
-          "This treatment typically starts at $95 per session. Discounts may be available for packages or as part of customized facials.",
+          "This treatment is $120 per session. Package pricing is available for 3-treatment packages.",
       },
     ],
   },

@@ -97,7 +97,7 @@ const faqData: FAQSection[] = [
       },
       {
         question: "How much does the Pumpkin-Orange Enzyme Peel cost at Rejuvenate Skin Spa?",
-        answer: "This treatment typically starts at $95. Seasonal packages or facial upgrades may be available.",
+        answer: "This treatment is $120 per session. A 3-Treatment Package is $320 (Save $40) and a 6-Treatment Package is $599 (Save $121).",
       },
     ],
   },

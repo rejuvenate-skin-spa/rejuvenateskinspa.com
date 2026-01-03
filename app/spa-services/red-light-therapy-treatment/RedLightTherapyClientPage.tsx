@@ -17,24 +17,10 @@ import {
   Shield,
   Sun,
   Activity,
+  Phone,
 } from "lucide-react"
 
 export default function RedLightTherapyClientPage() {
-  const handleGetInTouchClick = () => {
-    const isMobile =
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    const currentHour = new Date().getHours()
-    const isBusinessHours = currentHour >= 9 && currentHour < 17
-
-    if (isMobile && isBusinessHours) {
-      window.location.href = "tel:+14805551234"
-    } else {
-      window.location.href = "/contact"
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Hero Section */}
@@ -43,7 +29,7 @@ export default function RedLightTherapyClientPage() {
       {/* Quick Stats */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
               <Clock className="h-8 w-8 text-sage-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-gray-900">15-30 min</div>
@@ -60,11 +46,6 @@ export default function RedLightTherapyClientPage() {
                 No Downtime
               </div>
               <div className="text-sm text-gray-600">Recovery Time</div>
-            </div>
-            <div className="text-center">
-              <Users className="h-8 w-8 text-sage-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">400+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
           </div>
         </div>
@@ -302,9 +283,9 @@ export default function RedLightTherapyClientPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
+              <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Single Session
                 </h3>
@@ -312,7 +293,7 @@ export default function RedLightTherapyClientPage() {
                 <p className="text-gray-600 mb-6">
                   Try red light therapy with a single 15-30 minute session.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
+                <ul className="text-left space-y-2 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
                     <span>15-30 minute session</span>
@@ -330,17 +311,17 @@ export default function RedLightTherapyClientPage() {
                     <span>No downtime</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Single Session
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50">
-              <CardContent className="p-8 text-center">
-                <Badge className="mb-4 bg-sage-600 text-white">
-                  Popular Choice
-                </Badge>
+            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
+              <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   5-Session Package
                 </h3>
@@ -351,9 +332,9 @@ export default function RedLightTherapyClientPage() {
                   Save $25 • $40 per session
                 </div>
                 <p className="text-gray-600 mb-6">
-                  Best value for consistent results and ongoing wellness.
+                  Better value for consistent results and ongoing wellness.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
+                <ul className="text-left space-y-2 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
                     <span>5 red light sessions</span>
@@ -371,14 +352,17 @@ export default function RedLightTherapyClientPage() {
                     <span>Wellness consultation</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Package
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
+            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
+              <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   10-Session Package
                 </h3>
@@ -391,7 +375,7 @@ export default function RedLightTherapyClientPage() {
                 <p className="text-gray-600 mb-6">
                   Maximum value for long-term wellness and therapeutic benefits.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
+                <ul className="text-left space-y-2 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
                     <span>10 red light sessions</span>
@@ -409,8 +393,11 @@ export default function RedLightTherapyClientPage() {
                     <span>Wellness support</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Package
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -435,10 +422,13 @@ export default function RedLightTherapyClientPage() {
           </p>
           <div className="flex justify-center">
             <Button
-              onClick={handleGetInTouchClick}
-              className="bg-white text-sage-700 hover:bg-gray-100 px-4 py-1.5 text-base"
+              asChild
+              className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

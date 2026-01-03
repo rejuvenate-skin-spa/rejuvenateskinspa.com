@@ -9,10 +9,12 @@ import {
   Clock,
   Shield,
   Sparkles,
+  Phone,
 } from "lucide-react";
 import Image from "next/image";
 import BlueberryEnzymePeelHero from "@/components/blueberry-enzyme-peel-hero";
 import BlueberryEnzymePeelFAQ from "@/components/blueberry-enzyme-peel-faq";
+import { Badge } from "@/components/ui/badge";
 
 export default function BlueberryEnzymePeelClientPage() {
   return (
@@ -168,70 +170,161 @@ export default function BlueberryEnzymePeelClientPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Treatment Pricing
+              Blueberry Peel Treatment Options
             </h2>
             <p className="text-xl text-gray-600">
-              Gentle, effective treatment at an affordable price
+              Professional enzyme peel treatments for radiant skin
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto">
+            {/* Single Treatment Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
                   Single Treatment
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$89</div>
-                <p className="text-gray-700 mb-6">
-                  Perfect for experiencing our gentle blueberry treatment
-                </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Get in Touch
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $120
+                </div>
+                <div className="min-h-[20px] mb-3" />
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Antioxidant-rich formula</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Brightens & clarifies skin</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Refines pores</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">No downtime</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Best Value
-                </span>
-              </div>
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Series of 3
-                </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">
-                  $240
+            {/* 3-Treatment Package Card (Featured) */}
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-white h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Most Popular
+                  </Badge>
                 </div>
-                <div className="text-sm text-gray-500 mb-4">Save $27</div>
-                <p className="text-gray-700 mb-6">
-                  Recommended series for optimal skin health
-                </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Series
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  3-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $320
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $40 ($107 per session)
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Antioxidant-rich formula</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Cumulative brightening results</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Enhanced collagen stimulation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Package savings included</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Series of 6
-                </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">
-                  $450
+            {/* 6-Treatment Package Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-gray-600 text-white text-xs px-3 py-1">
+                    Best Value
+                  </Badge>
                 </div>
-                <div className="text-sm text-gray-500 mb-4">Save $84</div>
-                <p className="text-gray-700 mb-6">
-                  Maximum benefits for long-term skin care
-                </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Series
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  6-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $599
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $121 ($100 per session)
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Maximum transformation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Long-term skin health</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Sustained collagen boost</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Best per-session value</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Package Pricing Callout */}
+          <div className="mt-10 bg-white border border-sage-200 rounded-lg p-6 max-w-2xl mx-auto">
+            <h4 className="text-base font-semibold text-gray-900 mb-3">How package pricing works</h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Clients who choose a treatment series may pay per session at the single-treatment rate. When the full series is completed, the package discount is applied to the final treatment.
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
+            </p>
           </div>
         </div>
       </section>
@@ -305,74 +398,6 @@ export default function BlueberryEnzymePeelClientPage() {
         <BlueberryEnzymePeelFAQ />
       </div>
 
-      {/* Related Treatments */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Other Enzyme Peels
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore our complete collection of natural enzyme treatments
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Cherry Enzyme Peel
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  Antioxidant-rich treatment for brightening and anti-aging
-                  benefits.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Raspberry-Peach Peel
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  Gentle hydrating treatment perfect for dry or mature skin.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Pumpkin Orange Peel
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  Seasonal favorite for deep exfoliation and skin renewal.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-sage-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -385,23 +410,13 @@ export default function BlueberryEnzymePeelClientPage() {
           </p>
           <div className="flex justify-center">
             <Button
-              className="bg-white text-sage-600 hover:bg-gray-100 px-4 py-1.5 text-base"
-              onClick={() => {
-                const isMobile =
-                  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                    navigator.userAgent
-                  );
-                const currentHour = new Date().getHours();
-                const isBusinessHours = currentHour >= 9 && currentHour < 17;
-
-                if (isMobile && isBusinessHours) {
-                  window.location.href = "tel:+14805551234";
-                } else {
-                  window.location.href = "/contact";
-                }
-              }}
+              asChild
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

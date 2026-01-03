@@ -100,7 +100,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does the Blueberry Enzyme Peel cost at Rejuvenate Skin Spa?",
         answer:
-          "This treatment typically starts at $95 per session. Package deals and custom facial enhancements may be available.",
+          "This treatment is $120 per session. A 3-Treatment Package is $320 (Save $40) and a 6-Treatment Package is $599 (Save $121).",
       },
     ],
   },

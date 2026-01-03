@@ -9,6 +9,7 @@ import {
   Zap,
   Heart,
   Award,
+  Phone,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -157,7 +158,7 @@ export default function BioRePeelTreatmentPage() {
                   "Stimulates collagen production",
                 ],
                 duration: "45-60 minutes",
-                price: "From $200",
+                price: "From $250",
                 href: "/biorepeel-facial-chemical-peel/35-tca-peel",
                 image:
                   "/images/biorepeel-35-tca-facial-treatment.jpg",
@@ -183,9 +184,7 @@ export default function BioRePeelTreatmentPage() {
             ].map((treatment, index) => (
               <Card
                 key={index}
-                className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 ${
-                  treatment.popular ? "ring-2 ring-sage-600" : ""
-                }`}
+                className="overflow-hidden hover:shadow-lg transition-shadow duration-300 ring-2 ring-sage-600"
               >
                 {treatment.popular && (
                   <div className="absolute top-4 right-4 z-10">
@@ -356,103 +355,6 @@ export default function BioRePeelTreatmentPage() {
         </div>
       </section>
 
-      {/* Treatment Packages */}
-      <section className="py-16 bg-sage-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Treatment Packages
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the package that best fits your skin goals and budget.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Single Treatment",
-                price: "$200",
-                duration: "One session",
-                features: [
-                  "BioRePeel 35 TCA facial",
-                  "Skin consultation",
-                  "Post-treatment care",
-                  "Aftercare instructions",
-                ],
-              },
-              {
-                title: "Rejuvenation Series",
-                price: "$500",
-                duration: "3 treatments",
-                features: [
-                  "3 BioRePeel sessions",
-                  "15% package savings",
-                  "Customized treatment plan",
-                  "Complimentary skincare kit",
-                ],
-                popular: true,
-              },
-              {
-                title: "Complete Transformation",
-                price: "$900",
-                duration: "6 treatments",
-                features: [
-                  "6 BioRePeel sessions",
-                  "25% package savings",
-                  "Priority booking",
-                  "Free maintenance treatment",
-                ],
-              },
-            ].map((pkg, index) => (
-              <Card
-                key={index}
-                className={`relative ${
-                  pkg.popular ? "ring-2 ring-sage-600" : ""
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Best Value
-                    </span>
-                  </div>
-                )}
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {pkg.title}
-                  </h3>
-                  <div className="text-3xl font-bold text-sage-600 mb-1">
-                    {pkg.price}
-                  </div>
-                  <p className="text-gray-500 mb-6">{pkg.duration}</p>
-                  <ul className="space-y-2 mb-6">
-                    {pkg.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="text-sm text-gray-600 flex items-center justify-center"
-                      >
-                        <CheckCircle className="h-4 w-4 text-sage-600 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    className={`w-full ${
-                      pkg.popular
-                        ? "bg-sage-600 hover:bg-sage-700 text-white"
-                        : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
-                    }`}
-                  >
-                    Get in Touch
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <div id="faq">
         <BioRePeelFacialChemicalPeelFAQ />
@@ -468,19 +370,16 @@ export default function BioRePeelTreatmentPage() {
             Discover the revolutionary treatment that's transforming skin
             rejuvenation with minimal downtime and maximum results.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button
+              asChild
               size="lg"
               className="bg-white text-sage-600 hover:bg-gray-100"
             >
-              Book Your Treatment
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage-600 bg-transparent"
-            >
-              Call (555) 123-4567
+              <a href="tel:+14802049366" className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

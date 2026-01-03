@@ -286,14 +286,14 @@ export default function PlasmaMicroneedlingClientPage() {
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-playfair">
-              Premium Treatment Investment
+              Plasma Microneedling Treatment Options
             </h2>
             <p className="text-lg text-gray-600">
               Advanced plasma microneedling technology for superior results
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
             {/* Single Treatment Card */}
             <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
               <CardContent className="p-6 h-full flex flex-col">
@@ -303,7 +303,7 @@ export default function PlasmaMicroneedlingClientPage() {
                   Single Treatment
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $295
+                  $299
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -312,42 +312,42 @@ export default function PlasmaMicroneedlingClientPage() {
                 <ul className="space-y-3 mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Comprehensive skin assessment</span>
+                    <span className="text-sm text-gray-700">Stimulates collagen & elastin</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Plasma microneedling treatment</span>
+                    <span className="text-sm text-gray-700">Tightens & firms skin</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Post-treatment serum application</span>
+                    <span className="text-sm text-gray-700">Reduces fine lines & wrinkles</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Recovery care instructions</span>
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
                   </li>
                 </ul>
                 <PhoneCtaButton className="w-full mt-auto" />
               </CardContent>
             </Card>
 
-            {/* 3-Treatment Series Card (Featured) */}
+            {/* 3-Treatment Package Card (Featured) */}
             <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-sage-50/50 h-full">
               <CardContent className="p-6 h-full flex flex-col">
                 {/* Header area with badge */}
                 <div className="flex justify-center mb-3">
                   <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
-                    Recommended
+                    Most Popular
                   </Badge>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
-                  3-Treatment Series
+                  3-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $795
+                  $799
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $90 ($265 per session)
+                  Save $98 ($266 per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Complete transformation series with three treatments spaced 6–8 weeks apart.
@@ -355,19 +355,62 @@ export default function PlasmaMicroneedlingClientPage() {
                 <ul className="space-y-3 mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Everything in single treatment</span>
+                    <span className="text-sm text-gray-700">Stimulates collagen & elastin</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">3 plasma microneedling sessions</span>
+                    <span className="text-sm text-gray-700">Tightens & firms skin</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Progress documentation</span>
+                    <span className="text-sm text-gray-700">Reduces fine lines & wrinkles</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Customized treatment plan</span>
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
+                  </li>
+                </ul>
+                <PhoneCtaButton className="w-full mt-auto" />
+              </CardContent>
+            </Card>
+
+            {/* 6-Treatment Package Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                {/* Header area with badge */}
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-gray-600 text-white text-xs px-3 py-1">
+                    Best Value
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  6-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $1,499
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $295 ($250 per session)
+                </div>
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Comprehensive transformation with six treatments for dramatic, long-lasting results.
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Stimulates collagen & elastin</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Tightens & firms skin</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Reduces fine lines & wrinkles</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
                   </li>
                 </ul>
                 <PhoneCtaButton className="w-full mt-auto" />

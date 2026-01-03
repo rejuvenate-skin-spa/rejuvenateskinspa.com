@@ -110,7 +110,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does the BioRePeel 50 TCA Body Peel cost?",
         answer:
-          "Treatment prices typically range from $250 to $375 per area, depending on the size and any additional services. Package pricing may be available for multiple sessions or combination services.",
+          "Treatment prices start at $249 for a single body part. Pricing depends on the body region selected. Multiple body part treatments start at $499.",
       },
     ],
   },
@@ -143,7 +143,7 @@ export default function BioRePeel50TCABodyPeelFAQ() {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-sage-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">

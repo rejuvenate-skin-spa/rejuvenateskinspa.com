@@ -2,46 +2,80 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Clock, Shield, Star, Leaf, Sparkles } from "lucide-react";
+import { CheckCircle, Clock, Shield, Star, Leaf, Sparkles, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import EnzymePeelFacialHero from "@/components/enzyme-peel-facial-hero";
 import EnzymePeelFacialFAQ from "@/components/enzyme-peel-facial-faq";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import PhoneCtaButton from "@/components/phone-cta-button";
 
 export default function EnzymePeelFacialPageClient() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const handleGetInTouch = () => {
-    if (isMobile) {
-      const now = new Date();
-      const hour = now.getHours();
-      const day = now.getDay();
-
-      // Business hours: Mon-Fri 9AM-6PM, Sat 9AM-4PM, closed Sunday
-      const isBusinessHours =
-        (day >= 1 && day <= 5 && hour >= 9 && hour < 18) || // Mon-Fri 9AM-6PM
-        (day === 6 && hour >= 9 && hour < 16); // Sat 9AM-4PM
-
-      if (isBusinessHours) {
-        window.location.href = "tel:+14802818888";
-      } else {
-        router.push("/contact");
-      }
-    } else {
-      router.push("/contact");
-    }
-  };
+  const enzymePeels = [
+    {
+      name: "Pumpkin Orange Peel",
+      features: ["Strongest 15% formula", "Deep exfoliation", "Clients may peel", "Anti-aging benefits"],
+      price: "$120",
+      intensity: "5",
+      intensityColor: "bg-red-600",
+      href: "/enzyme-peel-facial/pumpkin-orange-enzyme-peel",
+    },
+    {
+      name: "Pomegranate Peel",
+      features: ["Powerful antioxidants", "Brightening effect", "Anti-aging", "Packed with a punch"],
+      price: "$120",
+      intensity: "4-5",
+      intensityColor: "bg-orange-600",
+      href: "/enzyme-peel-facial/pomegranate-enzyme-peel",
+    },
+    {
+      name: "Blueberry Peel",
+      features: ["Glycolic & salicylic acid", "Antioxidant-rich", "Improves clarity", "Refines pores"],
+      price: "$120",
+      intensity: "3-4",
+      intensityColor: "bg-yellow-600",
+      href: "/enzyme-peel-facial/blueberry-enzyme-peel",
+    },
+    {
+      name: "Cherry Peel",
+      features: ["Brightening formula", "Deep hydration", "Even complexion", "Gentle exfoliation"],
+      price: "$120",
+      intensity: "3",
+      intensityColor: "bg-yellow-500",
+      href: "/enzyme-peel-facial/cherry-enzyme-peel",
+    },
+    {
+      name: "Lemon Zest Peel",
+      features: ["Zesty brightening", "Refreshes dull skin", "Vitamin C boost", "Natural glow"],
+      price: "$120",
+      intensity: "2-3",
+      intensityColor: "bg-green-500",
+      href: "/enzyme-peel-facial/lemon-enzyme-peel",
+    },
+    {
+      name: "Coconut Papaya Peel",
+      features: ["Mild & nourishing", "All skin types", "Sensitive skin safe", "Gentle hydration"],
+      price: "$120",
+      intensity: "0-2",
+      intensityColor: "bg-green-400",
+      href: "/enzyme-peel-facial/coconut-papaya-enzyme-peel",
+    },
+    {
+      name: "Raspberry Peach Peel",
+      features: ["Ultra-gentle formula", "Sensitive skin safe", "Soothing treatment", "Light exfoliation"],
+      price: "$120",
+      intensity: "0-2",
+      intensityColor: "bg-green-400",
+      href: "/enzyme-peel-facial/raspberry-peach-enzyme-peel",
+    },
+    {
+      name: "Passion Fruit Peel",
+      features: ["Warming sensation", "High heat factor", "Deep penetration", "Unique experience"],
+      price: "$120",
+      intensity: "HEAT",
+      intensityColor: "bg-blue-500",
+      href: "/enzyme-peel-facial/passion-fruit-enzyme-peel",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -315,92 +349,52 @@ export default function EnzymePeelFacialPageClient() {
         </div>
       </section>
 
-      {/* Pricing & Packages */}
+      {/* Enzyme Peel Treatment Options */}
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Treatment Packages
+              Enzyme Peel Treatment Options
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the perfect enzyme peel for your skin type and goals.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Single Treatment",
-                price: "$120",
-                duration: "60 minutes",
-                features: [
-                  "Skin consultation",
-                  "Enzyme facial peel",
-                  "Hydrating mask",
-                  "Post-treatment skincare",
-                ],
-              },
-              {
-                title: "Monthly Package",
-                price: "$320",
-                duration: "3 treatments",
-                features: [
-                  "3 enzyme peels",
-                  "15% savings",
-                  "Customized treatment plan",
-                  "Take-home skincare kit",
-                ],
-                popular: true,
-              },
-              {
-                title: "Seasonal Package",
-                price: "$600",
-                duration: "6 treatments",
-                features: [
-                  "6 enzyme peels",
-                  "25% savings",
-                  "Priority booking",
-                  "Complimentary add-ons",
-                ],
-              },
-            ].map((pkg, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {enzymePeels.map((peel, index) => (
               <Card
                 key={index}
-                className={`relative ${
-                  pkg.popular ? "ring-2 ring-sage-600" : ""
-                }`}
+                className="bg-white hover:shadow-lg transition-shadow duration-300 h-full"
               >
-                {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
+                <CardContent className="p-5 flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`${peel.intensityColor} text-white px-2 py-1 rounded text-xs font-bold`}>
+                      {peel.intensity}
+                    </span>
+                    <span className="text-lg font-bold text-sage-600">
+                      {peel.price}
                     </span>
                   </div>
-                )}
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {pkg.title}
+                  <h3 className="text-base font-semibold text-gray-900 mb-3">
+                    {peel.name}
                   </h3>
-                  <div className="text-3xl font-bold text-sage-600 mb-1">
-                    {pkg.price}
-                  </div>
-                  <p className="text-gray-500 mb-6">{pkg.duration}</p>
-                  <ul className="space-y-2 mb-6">
-                    {pkg.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="text-sm text-gray-600 flex items-center justify-center"
-                      >
-                        <CheckCircle className="h-4 w-4 text-sage-600 mr-2" />
+                  <ul className="space-y-1.5 mb-4 flex-grow">
+                    {peel.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-1.5 text-xs text-gray-600">
+                        <CheckCircle className="h-3 w-3 text-sage-600 flex-shrink-0 mt-0.5" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Button
-                    className={`w-full ${
-                      pkg.popular
-                        ? "bg-sage-600 hover:bg-sage-700 text-white"
-                        : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"
-                    }`}
+                    asChild
+                    variant="outline"
+                    className="w-full border-sage-600 text-sage-600 hover:bg-sage-50"
                   >
-                    Get in Touch
+                    <Link href={peel.href}>
+                      Learn More
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -424,13 +418,7 @@ export default function EnzymePeelFacialPageClient() {
             Experience the gentle power of enzyme peels and reveal your skin's
             natural glow.
           </p>
-          <Button
-            size="lg"
-            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2"
-            onClick={handleGetInTouch}
-          >
-            Get in Touch
-          </Button>
+          <PhoneCtaButton className="bg-white text-sage-600 hover:bg-gray-100" />
         </div>
       </section>
     </div>

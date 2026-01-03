@@ -2,98 +2,16 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield } from "lucide-react"
+import { CheckCircle, Clock, Shield, Phone } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import ChemicalPeelsHero from "@/components/chemical-peels-hero"
-import { useState, useEffect } from "react"
-
+import ChemicalPeelsFAQ from "@/components/chemical-peels-faq"
 export default function ChemicalPeelsPageClient() {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const day = now.getDay() // 0 = Sunday, 1 = Monday, etc.
-    const hour = now.getHours()
-
-    // Business hours: Monday-Friday 9AM-6PM, Saturday 9AM-3PM
-    if (day >= 1 && day <= 5) {
-      // Monday to Friday
-      return hour >= 9 && hour < 18
-    } else if (day === 6) {
-      // Saturday
-      return hour >= 9 && hour < 15
-    }
-    return false // Sunday or outside business hours
-  }
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802818888"
-    } else {
-      window.location.href = "/contact"
-    }
-  }
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <ChemicalPeelsHero />
-
-      {/* Before/After Gallery */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">See the Transformation</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See real before and after results from our chemical peel treatments.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="relative md:translate-x-12">
-              <div className="relative w-full h-96 rounded-lg shadow-lg overflow-hidden">
-                <Image
-                  src="/images/chemical-peel-before-1.jpg"
-                  alt="Chemical Peel Results - Before"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative w-full h-96 rounded-lg shadow-lg overflow-hidden">
-                <Image
-                  src="/images/chemical-peel-before-2.jpg"
-                  alt="Chemical Peel Results - After"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <p className="text-sm text-gray-500 mb-4">
-              *Results may vary. Individual results are not guaranteed and may vary from person to person.
-            </p>
-            <Button asChild className="bg-sage-600 hover:bg-sage-700 text-white">
-              <Link href="/about-us/portfolio">View More Results</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Treatment Options */}
       <section className="py-16 bg-sage-50">
@@ -107,7 +25,7 @@ export default function ChemicalPeelsPageClient() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {[
               {
                 title: "TCA 25% Peel",
@@ -118,8 +36,8 @@ export default function ChemicalPeelsPageClient() {
                   "Minimizes acne scars",
                   "Addresses sun damage and age spots",
                 ],
-                duration: "60-90 minutes",
-                downtime: "3-5 days",
+                duration: "60–90 minutes",
+                downtime: "3–5 days",
                 href: "/chemical-peels/tca-40-peel",
                 image: "/images/tca-25.jpg",
               },
@@ -132,13 +50,27 @@ export default function ChemicalPeelsPageClient() {
                   "Reduces pore size",
                   "Improves skin elasticity",
                 ],
-                duration: "45-60 minutes",
-                downtime: "3-7 days",
+                duration: "45–60 minutes",
+                downtime: "3–7 days",
                 href: "/chemical-peels/glycolic-50-peel",
-                image: "/images/glycolic-20-40-peel-treatment.jpg",
+                image: "/images/glycolic-acid-peel-benefits.jpg",
+              },
+              {
+                title: "BioRePeel",
+                description: "Advanced bio-stimulating peel with TCA and amino acids for rejuvenation.",
+                benefits: [
+                  "Little to no visible peeling",
+                  "Stimulates collagen production",
+                  "Improves skin texture and tone",
+                  "Safe for all skin types",
+                ],
+                duration: "30–45 minutes",
+                downtime: "Minimal",
+                href: "/biorepeel-facial-chemical-peel",
+                image: "/images/biorepeel-35-tca-treatment-rejuvenate-skin-spa-queen-creek-az.jpg",
               },
             ].map((treatment, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                 <div className="relative h-48 m-4">
                   <Image
                     src={treatment.image || "/placeholder.svg"}
@@ -147,11 +79,11 @@ export default function ChemicalPeelsPageClient() {
                     className="object-cover rounded-lg"
                   />
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{treatment.title}</h3>
                   <p className="text-gray-600 mb-4">{treatment.description}</p>
 
-                  <div className="space-y-4 mb-6">
+                  <div className="space-y-4 mb-6 flex-grow">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                       <ul className="space-y-1">
@@ -176,7 +108,7 @@ export default function ChemicalPeelsPageClient() {
                     </div>
                   </div>
 
-                  <Link href={treatment.href}>
+                  <Link href={treatment.href} className="mt-auto">
                     <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">View {treatment.title} Details</Button>
                   </Link>
                 </CardContent>
@@ -231,8 +163,11 @@ export default function ChemicalPeelsPageClient() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <ChemicalPeelsFAQ />
+
       {/* CTA Section */}
-      <section id="faq-section" className="py-16 bg-sage-600 text-white">
+      <section className="py-16 bg-sage-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">Ready for Radiant Skin?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
@@ -241,10 +176,14 @@ export default function ChemicalPeelsPageClient() {
           </p>
           <div className="flex justify-center">
             <Button
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl"
+              asChild
+              size="lg"
+              className="bg-white text-sage-600 hover:bg-gray-100 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

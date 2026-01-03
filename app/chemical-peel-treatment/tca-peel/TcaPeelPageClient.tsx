@@ -5,46 +5,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { TcaPeelFAQ } from "@/components/tca-peel-faq";
 import TcaPeelHero from "@/components/tca-peel-hero";
-import { CheckCircle, Clock, Shield, Star } from "lucide-react";
+import { CheckCircle, Clock, Shield, Star, Phone } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import PhoneCtaButton from "@/components/phone-cta-button";
 
 export default function TcaPeelPageClient() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const isBusinessHours = () => {
-    const now = new Date();
-    const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
-    const hour = now.getHours();
-
-    // Business hours: Monday-Friday 9AM-6PM, Saturday 9AM-4PM
-    if (day === 0) return false; // Closed Sunday
-    if (day >= 1 && day <= 5) return hour >= 9 && hour < 18; // Mon-Fri 9AM-6PM
-    if (day === 6) return hour >= 9 && hour < 16; // Sat 9AM-4PM
-    return false;
-  };
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802818888";
-    } else {
-      router.push("/contact");
-    }
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -376,6 +343,61 @@ export default function TcaPeelPageClient() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-16 bg-sage-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              TCA Peel Treatment Options
+            </h2>
+            <p className="text-lg text-gray-600">
+              Professional TCA 25% chemical peel treatment
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto">
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-white">
+              <CardContent className="p-6 flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Medium-Depth Peel
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  TCA 25% Peel
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $199
+                </div>
+                <p className="text-sm text-gray-500 mb-5 text-center">
+                  30–45 minutes
+                </p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Reduces deep wrinkles & fine lines</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Improves acne scars & texture</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Addresses sun damage & age spots</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Stimulates collagen production</span>
+                  </li>
+                </ul>
+                <PhoneCtaButton className="w-full" />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <div id="faq-section">
         <TcaPeelFAQ />
@@ -393,11 +415,14 @@ export default function TcaPeelPageClient() {
           </p>
           <div className="flex justify-center">
             <Button
+              asChild
               size="lg"
-              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2"
-              onClick={handleGetInTouch}
+              className="bg-white text-sage-600 hover:bg-gray-100"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

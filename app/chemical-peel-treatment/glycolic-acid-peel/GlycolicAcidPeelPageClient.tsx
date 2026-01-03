@@ -5,40 +5,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { GlycolicAcidPeelFAQ } from "@/components/glycolic-acid-peel-faq"
 import { GlycolicAcidPeelHero } from "@/components/glycolic-acid-peel-hero"
-import { CheckCircle, Clock, Shield, Star, Sparkles } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Sparkles, Phone } from "lucide-react"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
 import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
 
 export default function GlycolicAcidPeelPageClient() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const day = now.getDay()
-    const hour = now.getHours()
-    return day >= 1 && day <= 5 && hour >= 9 && hour <= 17
-  }
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802818888"
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -315,60 +287,155 @@ export default function GlycolicAcidPeelPageClient() {
         </div>
       </section>
 
-      {/* Peel Strengths */}
+      {/* Pricing Section */}
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              Glycolic Acid Peel Options
+              Glycolic Acid Peel Treatment Options
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We offer different strengths to match your skin's needs and tolerance level.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Light Peel (20-30%)",
-                description: "Perfect for first-time clients or sensitive skin",
-                benefits: ["Gentle exfoliation", "Minimal downtime", "Immediate glow"],
-                ideal: "Maintenance and prevention",
-              },
-              {
-                title: "Medium Peel (35-50%)",
-                description: "Our most popular option for visible results",
-                benefits: ["Noticeable improvement", "Balanced effectiveness", "Moderate peeling"],
-                ideal: "Active skin concerns",
-              },
-              {
-                title: "Deep Peel (50-70%)",
-                description: "Maximum strength for significant concerns",
-                benefits: ["Dramatic results", "Deep exfoliation", "Advanced treatment"],
-                ideal: "Severe skin issues",
-              },
-            ].map((peel, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-900">{peel.title}</h3>
-                  <p className="text-gray-600">{peel.description}</p>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {peel.benefits.map((benefit, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-center">
-                          <CheckCircle className="h-3 w-3 text-sage-600 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="pt-2 border-t border-gray-200">
-                    <span className="text-sm font-medium text-sage-600">Ideal for: {peel.ideal}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
+            {/* Light Peel Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  Light Peel
+                </h3>
+                <p className="text-sm text-gray-500 mb-1 text-center">20–30% Concentration</p>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $149
+                </div>
+                <p className="text-sm text-gray-500 mb-5 text-center">20–30 minutes</p>
+                <p className="text-sm text-gray-600 mb-4 text-center">
+                  Perfect for first-time clients or sensitive skin
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Gentle exfoliation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Minimal downtime</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Immediate glow</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-sage-600 font-medium mb-4 text-center">
+                  Ideal for: Maintenance and prevention
+                </p>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Medium Peel Card (Featured) */}
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-white h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Most Popular
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  Medium Peel
+                </h3>
+                <p className="text-sm text-gray-500 mb-1 text-center">35–50% Concentration</p>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $149
+                </div>
+                <p className="text-sm text-gray-500 mb-5 text-center">20–30 minutes</p>
+                <p className="text-sm text-gray-600 mb-4 text-center">
+                  Our most popular option for visible results
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Noticeable improvement</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Balanced effectiveness</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Moderate peeling</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-sage-600 font-medium mb-4 text-center">
+                  Ideal for: Active skin concerns
+                </p>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Deep Peel Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  Deep Peel
+                </h3>
+                <p className="text-sm text-gray-500 mb-1 text-center">50–70% Concentration</p>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $149
+                </div>
+                <p className="text-sm text-gray-500 mb-5 text-center">20–30 minutes</p>
+                <p className="text-sm text-gray-600 mb-4 text-center">
+                  Maximum strength for significant concerns
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Dramatic results</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Deep exfoliation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Advanced treatment</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-sage-600 font-medium mb-4 text-center">
+                  Ideal for: Severe skin issues
+                </p>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -388,10 +455,14 @@ export default function GlycolicAcidPeelPageClient() {
           </p>
           <div className="flex justify-center">
             <Button
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 text-base font-medium shadow-md backdrop-blur-sm"
+              asChild
+              size="lg"
+              className="bg-white text-sage-600 hover:bg-gray-100"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

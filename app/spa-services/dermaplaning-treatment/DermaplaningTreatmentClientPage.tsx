@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Zap, Heart, Phone } from "lucide-react"
 import Image from "next/image"
 import DermaplaningTreatmentFAQ from "@/components/dermaplaning-treatment-faq"
 import DermaplaningTreatmentHero from "@/components/dermaplaning-treatment-hero"
@@ -173,12 +173,12 @@ export default function DermaplaningTreatmentClientPage() {
                 ],
               },
               {
-                title: "Monthly Package",
+                title: "3 Treatment Package",
                 price: "$200",
-                duration: "3 treatments",
+                duration: "Save $40",
                 features: [
                   "3 dermaplaning sessions",
-                  "10% savings",
+                  "17% savings vs. single treatments",
                   "Priority scheduling",
                   "Complimentary skincare sample",
                 ],
@@ -212,13 +212,28 @@ export default function DermaplaningTreatmentClientPage() {
                     ))}
                   </ul>
                   <Button
+                    asChild
                     className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
                   >
-                    Get in Touch
+                    <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      (480) 204-9366
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Package Pricing Callout */}
+          <div className="mt-10 bg-white border border-sage-200 rounded-lg p-6 max-w-2xl mx-auto">
+            <h4 className="text-base font-semibold text-gray-900 mb-3">How package pricing works</h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Clients who choose a treatment series may pay per session at the single-treatment rate. When the full series is completed, the package discount is applied to the final treatment.
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
+            </p>
           </div>
         </div>
       </section>
@@ -236,23 +251,13 @@ export default function DermaplaningTreatmentClientPage() {
             Experience the immediate benefits of dermaplaning and reveal your smoothest skin yet.
           </p>
           <Button
-            onClick={() => {
-              const isMobile = window.innerWidth <= 768
-              const now = new Date()
-              const arizonaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Phoenix" }))
-              const day = arizonaTime.getDay()
-              const hour = arizonaTime.getHours()
-              const isBusinessHours = day >= 1 && day <= 6 && hour >= 8 && hour < 18
-
-              if (isMobile && isBusinessHours) {
-                window.location.href = "tel:4802049366"
-              } else {
-                window.location.href = "/contact"
-              }
-            }}
-            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-2 shadow-lg backdrop-blur-sm"
+            asChild
+            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 shadow-lg"
           >
-            Get in Touch
+            <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+              <Phone className="h-5 w-5" />
+              (480) 204-9366
+            </a>
           </Button>
         </div>
       </section>

@@ -130,7 +130,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does BioRePeel cost?",
         answer:
-          "Prices typically range from $175 to $275 per session, depending on the area treated and any additional services (such as microneedling). Packages may be available at discounted rates for multiple sessions.",
+          "BioRePeel treatments start at $250. Pricing varies depending on whether you choose a facial (35 TCA) or body (50 TCA) treatment. Package pricing is available for multiple sessions.",
       },
     ],
   },
@@ -166,7 +166,7 @@ export default function BioRePeelFacialChemicalPeelFAQ() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-sage-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">

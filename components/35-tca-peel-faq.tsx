@@ -110,7 +110,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does a BioRePeel 35 TCA Facial Peel cost?",
         answer:
-          "At Rejuvenate Skin Spa, single sessions typically range from $200 to $275, with discounted pricing available for treatment packages or combination services.",
+          "At Rejuvenate Skin Spa, single sessions are $249. Package pricing is available for 3-treatment and 6-treatment packages.",
       },
     ],
   },

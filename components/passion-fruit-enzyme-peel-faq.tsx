@@ -98,7 +98,7 @@ const faqData: FAQSection[] = [
       },
       {
         question: "How much does a Passion Fruit Enzyme Peel cost at Rejuvenate Skin Spa?",
-        answer: "This treatment typically starts at $95. Bundle pricing may be available for multi-session packages.",
+        answer: "This treatment is $120 per session. Package pricing is available for 3-treatment and 6-treatment packages.",
       },
     ],
   },

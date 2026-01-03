@@ -120,7 +120,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does a glycolic acid peel cost at Rejuvenate Skin Spa?",
         answer:
-          "Sessions typically start at $125. Package pricing and combination treatments may be available to achieve enhanced results and added value.",
+          "Sessions are $149. Package pricing and combination treatments may be available to achieve enhanced results and added value.",
       },
     ],
   },

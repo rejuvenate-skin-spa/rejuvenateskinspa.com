@@ -265,14 +265,14 @@ export default function BioMicroneedlingClientPage() {
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-playfair">
-              Investment in Your Skin
+              Bio Microneedling Treatment Options
             </h2>
             <p className="text-lg text-gray-600">
               Professional bio microneedling with organic serums
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
             {/* Single Treatment Card */}
             <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
               <CardContent className="p-6 h-full flex flex-col">
@@ -282,7 +282,7 @@ export default function BioMicroneedlingClientPage() {
                   Single Treatment
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $250
+                  $249
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -291,42 +291,42 @@ export default function BioMicroneedlingClientPage() {
                 <ul className="space-y-3 mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Skin consultation & analysis</span>
+                    <span className="text-sm text-gray-700">Stimulates collagen & elastin</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Bio microneedling treatment</span>
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Organic bio-serum application</span>
+                    <span className="text-sm text-gray-700">Reduces fine lines & pores</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Post-treatment care kit</span>
+                    <span className="text-sm text-gray-700">Enhances skin radiance</span>
                   </li>
                 </ul>
                 <PhoneCtaButton className="w-full mt-auto" />
               </CardContent>
             </Card>
 
-            {/* 3-Treatment Series Card (Featured) */}
+            {/* 3-Treatment Package Card (Featured) */}
             <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-sage-50/50 h-full">
               <CardContent className="p-6 h-full flex flex-col">
                 {/* Header area with badge */}
                 <div className="flex justify-center mb-3">
                   <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
-                    Recommended
+                    Most Popular
                   </Badge>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
-                  3-Treatment Series
+                  3-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $650
+                  $699
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $100 ($217 per session)
+                  Save $48 ($233 per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Optimal results with three treatments spaced 4–6 weeks apart for maximum collagen stimulation.
@@ -334,19 +334,62 @@ export default function BioMicroneedlingClientPage() {
                 <ul className="space-y-3 mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Everything in single treatment</span>
+                    <span className="text-sm text-gray-700">Stimulates collagen & elastin</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">3 bio microneedling sessions</span>
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Progress tracking & photos</span>
+                    <span className="text-sm text-gray-700">Reduces fine lines & pores</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Customized serum selection</span>
+                    <span className="text-sm text-gray-700">Enhances skin radiance</span>
+                  </li>
+                </ul>
+                <PhoneCtaButton className="w-full mt-auto" />
+              </CardContent>
+            </Card>
+
+            {/* 6-Treatment Package Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                {/* Header area with badge */}
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-gray-600 text-white text-xs px-3 py-1">
+                    Best Value
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  6-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $1,299
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $195 ($217 per session)
+                </div>
+                <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
+                  Comprehensive transformation with six treatments for dramatic, long-lasting results.
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Stimulates collagen & elastin</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Improves skin texture & tone</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Reduces fine lines & pores</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Enhances skin radiance</span>
                   </li>
                 </ul>
                 <PhoneCtaButton className="w-full mt-auto" />

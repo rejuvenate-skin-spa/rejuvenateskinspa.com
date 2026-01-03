@@ -2,41 +2,12 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Eye, Palette } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Eye, Palette, Phone } from "lucide-react"
 import Image from "next/image"
 import MicrobladingTreatmentFAQ from "@/components/microblading-treatment-faq"
 import MicrobladingTreatmentHero from "@/components/microblading-treatment-hero"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
 
 export default function MicrobladingClientPage() {
-  const router = useRouter()
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  const isBusinessHours = () => {
-    const now = new Date()
-    const day = now.getDay()
-    const hour = now.getHours()
-    return day >= 1 && day <= 5 && hour >= 9 && hour < 17
-  }
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14802818888"
-    } else {
-      router.push("/contact")
-    }
-  }
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -243,9 +214,13 @@ export default function MicrobladingClientPage() {
                     ))}
                   </ul>
                   <Button
+                    asChild
                     className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
                   >
-                    Get in Touch
+                    <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      (480) 204-9366
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -324,10 +299,13 @@ export default function MicrobladingClientPage() {
           </p>
           <div className="flex justify-center">
             <Button
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-600 hover:bg-gray-100 px-4 py-1.5 text-base"
+              asChild
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

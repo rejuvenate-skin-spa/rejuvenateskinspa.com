@@ -100,7 +100,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does the Coconut-Papaya Enzyme Peel cost at Rejuvenate Skin Spa?",
         answer:
-          "The treatment typically starts at $95. Package pricing or add-ons may be available for enhanced facial experiences.",
+          "This treatment is $120 per session. Package pricing is available for 3-treatment and 6-treatment packages.",
       },
     ],
   },

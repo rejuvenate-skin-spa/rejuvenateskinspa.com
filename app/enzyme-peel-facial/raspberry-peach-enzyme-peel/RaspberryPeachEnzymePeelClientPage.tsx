@@ -1,41 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Star, Users, Clock, Droplets, Heart } from "lucide-react";
+import { CheckCircle, Star, Users, Clock, Droplets, Heart, Phone } from "lucide-react";
 import Image from "next/image";
 import RaspberryPeachEnzymePeelFAQ from "@/components/raspberry-peach-enzyme-peel-faq";
 import RaspberryPeachEnzymePeelHero from "@/components/raspberry-peach-enzyme-peel-hero";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
 
 const RaspberryPeachEnzymePeelClientPage = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const isBusinessHours = () => {
-    const now = new Date();
-    const hour = now.getHours();
-    const day = now.getDay();
-    return day >= 1 && day <= 6 && hour >= 9 && hour <= 18;
-  };
-
-  const handleGetInTouch = () => {
-    if (isMobile && isBusinessHours()) {
-      window.location.href = "tel:+14801234567";
-    } else {
-      router.push("/contact");
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -224,70 +196,161 @@ const RaspberryPeachEnzymePeelClientPage = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Treatment Pricing
+              Raspberry Peach Peel Treatment Options
             </h2>
             <p className="text-xl text-gray-600">
-              Affordable luxury for your skin care needs
+              Professional enzyme peel treatments for radiant skin
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto">
+            {/* Single Treatment Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
                   Single Treatment
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$89</div>
-                <p className="text-gray-700 mb-6">
-                  Perfect for trying our gentle raspberry-peach treatment
-                </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Get in Touch
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $120
+                </div>
+                <div className="min-h-[20px] mb-3" />
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Ultra-gentle formula</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Sensitive skin safe</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Soothing treatment</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">No downtime</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Series of 3
-                </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">
-                  $240
+            {/* 3-Treatment Package Card (Featured) */}
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-white h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Most Popular
+                  </Badge>
                 </div>
-                <div className="text-sm text-gray-500 mb-4">Save $27</div>
-                <p className="text-gray-700 mb-6">
-                  Optimal results with our recommended treatment series
-                </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Series
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  3-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $320
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $40 ($107 per session)
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Ultra-gentle formula</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Cumulative soothing benefits</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Enhanced skin renewal</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Package savings included</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Series of 6
-                </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">
-                  $450
+            {/* 6-Treatment Package Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-gray-600 text-white text-xs px-3 py-1">
+                    Best Value
+                  </Badge>
                 </div>
-                <div className="text-sm text-gray-500 mb-4">Save $84</div>
-                <p className="text-gray-700 mb-6">
-                  Maximum value for long-term skin health
-                </p>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Book Series
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  6-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $599
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $121 ($100 per session)
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Maximum transformation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Long-term skin health</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Sustained gentle renewal</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Best per-session value</span>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Package Pricing Callout */}
+          <div className="mt-10 bg-white border border-sage-200 rounded-lg p-6 max-w-2xl mx-auto">
+            <h4 className="text-base font-semibold text-gray-900 mb-3">How package pricing works</h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Clients who choose a treatment series may pay per session at the single-treatment rate. When the full series is completed, the package discount is applied to the final treatment.
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
+            </p>
           </div>
         </div>
       </section>
@@ -361,74 +424,6 @@ const RaspberryPeachEnzymePeelClientPage = () => {
         <RaspberryPeachEnzymePeelFAQ />
       </div>
 
-      {/* Related Treatments */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Other Enzyme Peels
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore our complete collection of natural enzyme treatments
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Cherry Enzyme Peel
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  Antioxidant-rich treatment for brightening and anti-aging
-                  benefits.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Blueberry Enzyme Peel
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  Vitamin-rich treatment for sensitive skin and gentle renewal.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Pumpkin Orange Peel
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  Seasonal favorite for deep exfoliation and skin renewal.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-sage-600 text-sage-600 hover:bg-sage-600 hover:text-white bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-sage-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -441,10 +436,13 @@ const RaspberryPeachEnzymePeelClientPage = () => {
           </p>
           <div className="flex justify-center">
             <Button
-              onClick={handleGetInTouch}
-              className="bg-white text-sage-600 hover:bg-gray-100 px-4 py-1.5 text-base"
+              asChild
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

@@ -100,7 +100,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much do these services cost at Rejuvenate Skin Spa?",
         answer:
-          "Prices vary depending on the service. Treatments typically range from $25 for red light therapy to over $350 for advanced microneedling. Packages and add-ons are available.",
+          "Prices vary depending on the service. Treatments range from $25 for red light therapy to $450 for microblading. Microneedling starts at $199. Package pricing is available for most services.",
       },
     ],
   },

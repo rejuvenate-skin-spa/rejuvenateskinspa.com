@@ -2,10 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Star, Users } from "lucide-react";
+import { CheckCircle, Star, Users, Phone } from "lucide-react";
 import Image from "next/image";
 import LemonEnzymePeelFAQ from "@/components/lemon-enzyme-peel-faq";
 import LemonEnzymePeelHero from "@/components/lemon-enzyme-peel-hero";
+import { Badge } from "@/components/ui/badge";
 
 export default function LemonEnzymePeelClientPage() {
   return (
@@ -178,111 +179,163 @@ export default function LemonEnzymePeelClientPage() {
 
       {/* Pricing Section */}
       <section className="py-16 bg-sage-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <Badge className="mb-4 bg-sage-100 text-sage-800">Pricing</Badge>
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Treatment Packages
+              Lemon Zest Peel Treatment Options
             </h2>
+            <p className="text-xl text-gray-600">
+              Professional enzyme peel treatments for radiant skin
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto">
+            {/* Single Treatment Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="min-h-[28px] mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
                   Single Treatment
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
                   $120
                 </div>
-                <div className="text-sm text-gray-600 mb-4">60 minutes</div>
-                <ul className="space-y-2 text-gray-700 mb-6">
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Skin consultation
+                <div className="min-h-[20px] mb-3" />
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Zesty brightening formula</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Enzyme facial peel
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Vitamin C boost</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Hydrating mask
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Refreshes dull skin</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Post-treatment skincare
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">No downtime</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Get in Touch
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-600 shadow-lg transform scale-105">
-              <CardContent className="p-6 text-center">
-                <div className="bg-sage-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                  Most Popular
+            {/* 3-Treatment Package Card (Featured) */}
+            <Card className="border border-sage-300 hover:shadow-md transition-shadow bg-white h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-sage-600 text-white text-xs px-3 py-1">
+                    Most Popular
+                  </Badge>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Monthly Package
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  3-Treatment Package
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
                   $320
                 </div>
-                <div className="text-sm text-gray-600 mb-4">3 treatments</div>
-                <ul className="space-y-2 text-gray-700 mb-6">
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />3
-                    enzyme peels
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $40 ($107 per session)
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Zesty brightening formula</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    15% savings
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Cumulative brightening results</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Customized treatment plan
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Enhanced collagen stimulation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Package savings included</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Get in Touch
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Seasonal Package
-                </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-2">
-                  $600
+            {/* 6-Treatment Package Card */}
+            <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full bg-white">
+              <CardContent className="p-6 h-full flex flex-col">
+                <div className="flex justify-center mb-3">
+                  <Badge className="bg-gray-600 text-white text-xs px-3 py-1">
+                    Best Value
+                  </Badge>
                 </div>
-                <div className="text-sm text-gray-600 mb-4">6 treatments</div>
-                <ul className="space-y-2 text-gray-700 mb-6">
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />6
-                    enzyme peels
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                  6-Treatment Package
+                </h3>
+                <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
+                  $599
+                </div>
+                <div className="text-xs text-sage-700 font-medium mb-3 text-center">
+                  Save $121 ($100 per session)
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Maximum transformation</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    25% savings
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Long-term skin health</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Priority booking
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Sustained brightening</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    Complimentary add-ons
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-sage-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Best per-session value</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
-                  Get in Touch
+                <Button
+                  asChild
+                  className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
+                >
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    (480) 204-9366
+                  </a>
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Package Pricing Callout */}
+          <div className="mt-10 bg-white border border-sage-200 rounded-lg p-6 max-w-2xl mx-auto">
+            <h4 className="text-base font-semibold text-gray-900 mb-3">How package pricing works</h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Clients who choose a treatment series may pay per session at the single-treatment rate. When the full series is completed, the package discount is applied to the final treatment.
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
+            </p>
           </div>
         </div>
       </section>
@@ -304,23 +357,13 @@ export default function LemonEnzymePeelClientPage() {
           </p>
           <div className="flex justify-center">
             <Button
-              className="bg-white text-sage-600 hover:bg-gray-100 px-4 py-1.5 text-base"
-              onClick={() => {
-                const isMobile =
-                  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                    navigator.userAgent
-                  );
-                const currentHour = new Date().getHours();
-                const isBusinessHours = currentHour >= 9 && currentHour < 17;
-
-                if (isMobile && isBusinessHours) {
-                  window.location.href = "tel:+14805551234";
-                } else {
-                  window.location.href = "/contact";
-                }
-              }}
+              asChild
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

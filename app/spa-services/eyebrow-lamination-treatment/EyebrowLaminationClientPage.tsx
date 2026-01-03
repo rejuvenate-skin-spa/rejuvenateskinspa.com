@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Clock, DollarSign, Star, CheckCircle, Eye, Sparkles, Heart, Shield } from "lucide-react"
+import { Clock, DollarSign, Star, CheckCircle, Eye, Sparkles, Heart, Shield, Phone } from "lucide-react"
 import { EyebrowLaminationFAQ } from "@/components/eyebrow-lamination-treatment-faq"
 import { EyebrowLaminationTreatmentHero } from "@/components/eyebrow-lamination-treatment-hero"
 
@@ -217,15 +217,15 @@ export default function EyebrowLaminationClientPage() {
             <p className="text-lg text-gray-600">Professional eyebrow lamination with lasting results</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
+              <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Eyebrow Lamination</h3>
                 <div className="text-4xl font-bold text-sage-600 mb-4">$85</div>
                 <p className="text-gray-600 mb-6">
                   Complete eyebrow lamination treatment including consultation, shaping, and aftercare guidance.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
+                <ul className="text-left space-y-2 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
                     <span>Professional consultation</span>
@@ -243,19 +243,23 @@ export default function EyebrowLaminationClientPage() {
                     <span>Aftercare instructions</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Get in Touch</Button>
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    (480) 204-9366
+                  </a>
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50">
-              <CardContent className="p-8 text-center">
-                <Badge className="mb-4 bg-sage-600 text-white">Popular Choice</Badge>
+            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
+              <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Lamination + Tint</h3>
                 <div className="text-4xl font-bold text-sage-600 mb-4">$110</div>
                 <p className="text-gray-600 mb-6">
                   Complete package including lamination and professional tinting for enhanced color and definition.
                 </p>
-                <ul className="text-left space-y-2 mb-8">
+                <ul className="text-left space-y-2 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
                     <span>Everything in basic package</span>
@@ -273,7 +277,12 @@ export default function EyebrowLaminationClientPage() {
                     <span>Enhanced definition</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Get in Touch</Button>
+                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
+                  <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    (480) 204-9366
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -294,23 +303,13 @@ export default function EyebrowLaminationClientPage() {
           </p>
           <div className="flex justify-center">
             <Button
-              className="bg-white text-sage-700 hover:bg-gray-100 px-4 py-1.5 text-base"
-              onClick={() => {
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                  navigator.userAgent,
-                )
-                const now = new Date()
-                const hour = now.getHours()
-                const isBusinessHours = hour >= 9 && hour < 17
-
-                if (isMobile && isBusinessHours) {
-                  window.location.href = "tel:+14805551234"
-                } else {
-                  window.location.href = "/contact"
-                }
-              }}
+              asChild
+              className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3"
             >
-              Get in Touch
+              <a href="tel:+14802049366" className="flex items-center justify-center gap-2">
+                <Phone className="h-5 w-5" />
+                (480) 204-9366
+              </a>
             </Button>
           </div>
         </div>

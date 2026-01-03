@@ -124,7 +124,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does an enzyme peel cost at Rejuvenate Skin Spa?",
         answer:
-          "Enzyme peel treatments typically start at $95. Discounts may be available for treatment packages or when combined with other facial services.",
+          "Enzyme peel treatments are $120 per session. A 3-Treatment Package is $320 (Save $40) and a 6-Treatment Package is $599 (Save $121).",
       },
     ],
   },

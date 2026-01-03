@@ -100,7 +100,7 @@ const faqData: FAQSection[] = [
       {
         question: "How much does a Lemon Zest Enzyme Peel cost at Rejuvenate Skin Spa?",
         answer:
-          "This treatment typically starts at $95. Package pricing may be available for ongoing skin brightening goals.",
+          "This treatment is $120 per session. Package pricing is available for 3-treatment and 6-treatment packages.",
       },
     ],
   },
