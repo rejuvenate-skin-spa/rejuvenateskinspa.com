@@ -64,6 +64,18 @@ export default function PlexrPlasmaPageClient() {
     <div className="min-h-screen">
       <PlexrPlasmaSkinTighteningHero />
 
+      {/* Definition Section - GEO Optimized */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+            What Is Plexr Plasma Skin Tightening?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Plexr plasma skin tightening is a non-surgical cosmetic procedure that uses ionized gas (plasma) to tighten, lift, and resurface the skin. The Plexr device creates a controlled micro-injury that stimulates collagen production and causes immediate skin contraction. At Rejuvenate Skin Spa in Queen Creek, Arizona, Plexr treatments address loose eyelids, fine lines, wrinkles, and skin laxity without incisions or general anesthesia.
+          </p>
+        </div>
+      </section>
+
       {/* Introduction Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -400,6 +412,29 @@ export default function PlexrPlasmaPageClient() {
               height={800}
               className="rounded-lg shadow-xl w-full"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Related Treatments - Internal Linking */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6 text-center">
+            Related Treatments at Rejuvenate Skin Spa
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/microneedling/plasma-microneedling" className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-gray-900 mb-2">Plasma Microneedling</h3>
+              <p className="text-sm text-gray-600">Combines plasma energy with microneedling for enhanced collagen stimulation.</p>
+            </Link>
+            <Link href="/microneedling" className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-gray-900 mb-2">All Microneedling Options</h3>
+              <p className="text-sm text-gray-600">Compare traditional, SQT Bio, and plasma microneedling treatments.</p>
+            </Link>
+            <Link href="/chemical-peels" className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-gray-900 mb-2">Chemical Peels</h3>
+              <p className="text-sm text-gray-600">Professional-grade peels for resurfacing and skin renewal.</p>
+            </Link>
           </div>
         </div>
       </section>

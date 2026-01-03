@@ -19,6 +19,7 @@ import {
 import BioMicroneedlingTreatmentFAQ from "@/components/bio-microneedling-treatment-faq";
 import BioMicroneedlingTreatmentHero from "@/components/bio-microneedling-treatment-hero";
 import PhoneCtaButton from "@/components/phone-cta-button";
+import Link from "next/link";
 
 export default function BioMicroneedlingClientPage() {
   return (
@@ -35,21 +36,13 @@ export default function BioMicroneedlingClientPage() {
                 Advanced Treatment
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-playfair">
-                What SQT Bio-Microneedling
+                What Is SQT Bio-Microneedling?
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                This revolutionary needle-free microneedling treatment uses
-                millions of microscopic, marine- derived sponge spicules to
-                naturally activate the skin's repair and renewal process. As
-                these mineral-rich spicules are gently massaged into the skin,
-                they create invisible micro-channels that enhance the absorption
-                of potent serums, peptides, and nutrients deep within the dermal
-                layers. This process awakens cellular activity, triggering a
-                natural exfoliation and regeneration cycle that accelerates cell
-                turnover and stimulates the production of fresh collagen and
-                elastin. The result is skin that feels smoother, firmer,
-                brighter, and more refined, all without needles or downtime. The
-                natural yet powerful path to Collagen Renewal.
+                SQT Bio-Microneedling is a needle-free skin rejuvenation treatment that uses marine-derived silica spicules to stimulate collagen production and cellular renewal. Unlike traditional microneedling, SQT (Silicon Quartz Technology) delivers millions of microscopic natural spicules into the skin through massage rather than mechanical puncture. Rejuvenate Skin Spa in Queen Creek, Arizona offers SQT Bio-Microneedling as a gentler alternative for clients seeking skin texture improvement with minimal downtime.
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                The treatment creates invisible micro-channels that enhance serum absorption while triggering the skin's natural repair response. As these mineral-rich spicules are gently massaged into the skin, they awaken cellular activity, triggering a natural exfoliation and regeneration cycle that accelerates cell turnover and stimulates the production of fresh collagen and elastin. The result is skin that feels smoother, firmer, brighter, and more refined.
               </p>
             </div>
             <div className="relative">
@@ -376,6 +369,26 @@ export default function BioMicroneedlingClientPage() {
         </div>
       </section>
       {/* PRICING SECTION END */}
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Explore Other Microneedling Options
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Not sure which treatment is right for you? Compare all options or call us.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/microneedling" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              View All Microneedling Services →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Explore Plexr Plasma Treatments →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <div id="faq-section">

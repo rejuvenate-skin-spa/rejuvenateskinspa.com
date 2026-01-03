@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import PlasmaMicroneedlingTreatmentFAQ from "@/components/plasma-microneedling-treatment-faq"
 import PlasmaMicroneedlingTreatmentHero from "@/components/plasma-microneedling-treatment-hero"
 import PhoneCtaButton from "@/components/phone-cta-button"
+import Link from "next/link"
 import {
   Clock,
   DollarSign,
@@ -38,19 +39,10 @@ export default function PlasmaMicroneedlingClientPage() {
                 What is Plasma Microneedling?
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Plasma needling is revolutionary needle-free microneedling
-                treatment that delivers all the collagen-stimulating benefits of
-                microneedling without the use of traditional sharp needles or
-                downtime. Combining our advanced plasma energy technology with
-                our triangle tip pen, we are able to creates microscopic
-                channels deep into the skin's surface through ionized gas rather
-                than physical punctures.
+                Plasma Microneedling is a needle-free skin resurfacing treatment that combines plasma energy technology with collagen induction therapy. Unlike traditional microneedling that uses physical needles, plasma microneedling creates microscopic channels through ionized gas, delivering skin tightening and texture improvement without puncture wounds. Rejuvenate Skin Spa in Queen Creek, Arizona offers plasma microneedling as an advanced option for clients seeking dramatic results with reduced recovery time.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                The result is a completely needle-free, non-invasive facial
-                rejuvenation that tightens, brightens, and refines your skin
-                while preparing it to deeply absorb powerful rejuvenating
-                serums.
+                The treatment tightens, brightens, and refines skin while preparing it to absorb rejuvenating serums at deeper levels than topical application alone. Using advanced plasma energy technology with a triangle tip pen, microscopic channels are created deep into the skin's surface through ionized gas rather than physical punctures.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center">
@@ -391,6 +383,26 @@ export default function PlasmaMicroneedlingClientPage() {
             <p className="text-sm text-gray-600 leading-relaxed">
               Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Explore Other Microneedling Options
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Not sure which treatment is right for you? Compare all options or call us.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/microneedling" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              View All Microneedling Services →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Explore Plexr Plasma Treatments →
+            </Link>
           </div>
         </div>
       </section>

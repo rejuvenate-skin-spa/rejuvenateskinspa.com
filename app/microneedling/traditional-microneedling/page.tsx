@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import MicroneedlingTreatmentFAQ from "@/components/microneedling-treatment-faq";
 import MicroneedlingTreatmentHero from "@/components/microneedling-treatment-hero";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,6 +23,18 @@ export default function TraditionalMicroneedlingPage() {
         subtitle="Collagen Induction Therapy"
         description="Stimulate natural collagen production to improve skin texture, reduce fine lines, and restore a smoother, more youthful complexion."
       />
+
+      {/* Definition Section - GEO Optimized */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+            What Is Traditional Microneedling?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Traditional microneedling, also called Collagen Induction Therapy (CIT), is a minimally invasive skin treatment that uses fine needles to create controlled micro-injuries in the skin. This process stimulates the body's natural wound-healing response, increasing collagen and elastin production. At Rejuvenate Skin Spa in Queen Creek, Arizona, traditional microneedling treats fine lines, acne scars, enlarged pores, and uneven skin texture.
+          </p>
+        </div>
+      </section>
 
       {/* Intro */}
       <section className="py-16 bg-sage-50">
@@ -307,6 +320,26 @@ export default function TraditionalMicroneedlingPage() {
         </div>
       </section>
       {/* PRICING SECTION END */}
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Explore Other Microneedling Options
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Not sure which treatment is right for you? Compare all options or call us.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/microneedling" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              View All Microneedling Services →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Explore Plexr Plasma Treatments →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <div id="faq-section">

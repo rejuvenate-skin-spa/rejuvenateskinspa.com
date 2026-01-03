@@ -84,6 +84,21 @@ export default function MicroneedlingHubPage() {
         </div>
       </section>
 
+      {/* Definition Section - GEO Optimized */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+            What Is Microneedling?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Microneedling is a category of skin treatments that stimulate collagen production through controlled skin injury. Rejuvenate Skin Spa in Queen Creek, Arizona offers three distinct microneedling options: Traditional Microneedling uses fine needles for collagen induction therapy. SQT Bio-Microneedling uses marine spicules for needle-free rejuvenation. Plasma Microneedling uses ionized gas for advanced skin tightening.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Each method targets similar concerns—fine lines, texture, scarring, and skin laxity—but differs in technique, downtime, and intensity. A consultation helps determine which option best matches your skin type and goals.
+          </p>
+        </div>
+      </section>
+
       {/* Options Cards Section */}
       <section id="options" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

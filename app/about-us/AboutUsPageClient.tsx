@@ -11,6 +11,21 @@ export default function AboutUsPageClient() {
       {/* Hero Section */}
       <AboutUsHero />
 
+      {/* Entity Definition - GEO Optimized */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-4">
+            About Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Rejuvenate Skin Spa is a professional skincare studio located at 20162 E. Sonoqui Blvd. in Queen Creek, Arizona. The spa specializes in non-surgical aesthetic treatments designed to improve skin texture, tone, and firmness without invasive procedures or extended downtime.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Founded and operated by Bridgette Ball, a licensed aesthetician with advanced certifications in Plexr plasma technology and chemical peel applications, Rejuvenate Skin Spa serves clients throughout Queen Creek, San Tan Valley, Gilbert, Mesa, and the greater Phoenix East Valley.
+          </p>
+        </div>
+      </section>
+
       {/* Our Approach */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +36,7 @@ export default function AboutUsPageClient() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  We specialize in results-driven, non-surgical treatments that enhance 
+                  Rejuvenate Skin Spa specializes in results-driven, non-surgical treatments that enhance 
                   your natural beauty. No invasive procedures. Minimal downtime. 
                   Real, visible improvement.
                 </p>
@@ -31,7 +46,7 @@ export default function AboutUsPageClient() {
                   lifestyle.
                 </p>
                 <p>
-                  Based in Queen Creek, Arizona, we bring advanced skincare to our 
+                  Based in Queen Creek, Arizona, Rejuvenate Skin Spa brings advanced skincare to the 
                   local community in a space that feels welcoming from the moment 
                   you walk in.
                 </p>
