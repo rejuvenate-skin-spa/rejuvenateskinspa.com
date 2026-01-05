@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
-import { Navigation } from "@/components/navigation"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { StickyMobilePhoneCta } from "@/components/sticky-mobile-phone-cta"
 
@@ -144,7 +144,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
-        <Navigation />
+        <Header />
         <main className="min-h-screen pb-24 md:pb-0">{children}</main>
         <Footer />
         <StickyMobilePhoneCta />

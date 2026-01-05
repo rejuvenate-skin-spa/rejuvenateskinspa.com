@@ -8,6 +8,8 @@ import { ChevronDown, Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
+// Phone icon still used in mobile menu
+
 const navigationItems = [
   {
     title: "Plasma",
@@ -184,7 +186,7 @@ export function Navigation() {
   }, [isOpen]);
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <nav className="bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -241,16 +243,6 @@ export function Navigation() {
                 )}
               </div>
             ))}
-
-            {/* Desktop Phone CTA */}
-            <a
-              href={`tel:${siteConfig.phoneTel}`}
-              aria-label="Call Rejuvenate Skin Spa"
-              className="hidden lg:flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium ml-4 transition-colors duration-200"
-            >
-              <Phone className="h-4 w-4" />
-              {siteConfig.phoneDisplay}
-            </a>
           </div>
 
           {/* Mobile menu button - min 44px tap target */}
