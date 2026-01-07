@@ -20,12 +20,12 @@ const navigationItems = [
         href: "/plexr-plasma-skin-tightening/ablative-skin-resurfacing",
       },
       {
-        title: "Nano-Ablative Skin Resurfacing",
-        href: "/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing",
-      },
-      {
         title: "Semi-Ablative Skin Resurfacing",
         href: "/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing",
+      },
+      {
+        title: "Nano-Ablative Skin Resurfacing",
+        href: "/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing",
       },
       {
         title: "Mole Removal",

@@ -85,16 +85,13 @@ export default function MicroneedlingHubPage() {
       </section>
 
       {/* Definition Section - GEO Optimized */}
-      <section className="py-10 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-4">
             What Is Microneedling?
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Microneedling is a category of skin treatments that stimulate collagen production through controlled skin injury. Rejuvenate Skin Spa in Queen Creek, Arizona offers three distinct microneedling options: Traditional Microneedling uses fine needles for collagen induction therapy. SQT Bio-Microneedling uses marine spicules for needle-free rejuvenation. Plasma Microneedling uses ionized gas for advanced skin tightening.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Each method targets similar concerns—fine lines, texture, scarring, and skin laxity—but differs in technique, downtime, and intensity. A consultation helps determine which option best matches your skin type and goals.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Microneedling is a category of skin treatments that stimulate collagen production through controlled skin injury. Rejuvenate Skin Spa in Queen Creek, Arizona offers three distinct microneedling options: Traditional Microneedling uses fine needles for collagen induction therapy. SQT Bio-Microneedling uses marine spicules for needle-free rejuvenation. Plasma Microneedling uses ionized gas for advanced skin tightening. Each method targets similar concerns, including fine lines, texture, scarring, and skin laxity, but differs in technique, downtime, and intensity. A consultation helps determine which option best matches your skin type and goals.
           </p>
         </div>
       </section>
@@ -143,58 +140,111 @@ export default function MicroneedlingHubPage() {
 
       {/* How to Choose Section */}
       <section className="py-16 bg-sage-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            How to Choose the Right Microneedling Option
-          </h2>
-        <ul className="space-y-3">
-          <li className="flex items-start gap-3">
-            <span className="text-sage-600 mt-0.5">•</span>
-            <span className="text-gray-700">Consider how much downtime fits your schedule—SQT Bio offers minimal recovery, while Traditional and Plasma may involve a few days of redness.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-sage-600 mt-0.5">•</span>
-            <span className="text-gray-700">If you have sensitive or reactive skin, SQT Bio's needle-free approach may be a gentler starting point.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-sage-600 mt-0.5">•</span>
-            <span className="text-gray-700">For deeper texture concerns or skin laxity, Plasma Microneedling offers a more intensive option.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-sage-600 mt-0.5">•</span>
-            <span className="text-gray-700">Traditional Microneedling is a versatile choice for general rejuvenation and is suitable for most skin types.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-sage-600 mt-0.5">•</span>
-            <span className="text-gray-700">Not sure which is right for you? Call us to discuss your goals—we're happy to help you decide.</span>
-          </li>
-        </ul>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              How to Choose the Right Microneedling Option
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Consider these factors to find the treatment that best fits your skin goals and lifestyle.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">⏱️</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Downtime</h3>
+              <p className="text-sm text-gray-600">
+                SQT Bio offers minimal recovery. Traditional and Plasma may involve a few days of redness.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🌿</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Sensitivity</h3>
+              <p className="text-sm text-gray-600">
+                Sensitive or reactive skin? SQT Bio's needle-free approach is a gentler starting point.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">✨</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Intensity</h3>
+              <p className="text-sm text-gray-600">
+                For deeper texture concerns or skin laxity, Plasma Microneedling offers more intensive results.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Versatility</h3>
+              <p className="text-sm text-gray-600">
+                Traditional Microneedling is a versatile choice for general rejuvenation, suitable for most skin types.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-700 mb-4">
+              Not sure which is right for you? We're happy to help you decide.
+            </p>
+            <PhoneCtaButton />
+          </div>
         </div>
       </section>
 
       {/* What to Expect Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-            What to Expect
-          </h2>
-          <p className="text-gray-700 mb-4 leading-relaxed">
-            Microneedling treatments are performed in a comfortable, professional setting. Your provider will discuss your goals, prepare your skin, and guide you through aftercare to support optimal results.
-          </p>
-          <ul className="space-y-2">
-            <li className="flex items-start gap-3">
-              <span className="text-sage-600 mt-0.5">•</span>
-              <span className="text-gray-700">Appointment length typically ranges from 45 to 75 minutes depending on the treatment type.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-sage-600 mt-0.5">•</span>
-              <span className="text-gray-700">Mild redness or sensitivity is common and usually resolves within a few days.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-sage-600 mt-0.5">•</span>
-              <span className="text-gray-700">Sessions are generally spaced 4–6 weeks apart to allow for proper healing and collagen development.</span>
-            </li>
-          </ul>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+              What to Expect
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Microneedling treatments are performed in a comfortable, professional setting for optimal results.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Consultation",
+                description: "Discuss your goals and determine the best microneedling option for your skin.",
+              },
+              {
+                step: "02",
+                title: "Preparation",
+                description: "Skin cleansing and topical numbing cream applied for comfort.",
+              },
+              {
+                step: "03",
+                title: "Treatment",
+                description: "45–75 minute session with your chosen microneedling technique.",
+              },
+              {
+                step: "04",
+                title: "Recovery",
+                description: "Mild redness resolves in days. Sessions spaced 4–6 weeks apart.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-sage-600 text-white rounded-full text-xl font-bold mb-4">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

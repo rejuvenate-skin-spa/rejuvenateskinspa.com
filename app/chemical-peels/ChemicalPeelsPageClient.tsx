@@ -15,22 +15,19 @@ export default function ChemicalPeelsPageClient() {
       <ChemicalPeelsHero />
 
       {/* Definition Section - GEO Optimized */}
-      <section className="py-10 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-4">
             What Are Chemical Peels?
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Chemical peels are professional skin treatments that use carefully formulated acid solutions to exfoliate damaged outer layers of skin, revealing smoother, more even-toned skin beneath. At Rejuvenate Skin Spa in Queen Creek, Arizona, chemical peels address concerns including fine lines, sun damage, acne scars, uneven pigmentation, and dull skin texture.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Peel strength ranges from light (minimal downtime) to deep (more dramatic results). A consultation helps determine which peel type best matches your skin goals and lifestyle.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Chemical peels are professional skin treatments that use carefully formulated acid solutions to exfoliate damaged outer layers of skin, revealing smoother, more even-toned skin beneath. At Rejuvenate Skin Spa in Queen Creek, Arizona, chemical peels address concerns including fine lines, sun damage, acne scars, uneven pigmentation, and dull skin texture. Peel strength ranges from light (minimal downtime) to deep (more dramatic results). A consultation helps determine which peel type best matches your skin goals and lifestyle.
           </p>
         </div>
       </section>
 
       {/* Treatment Options */}
-      <section className="py-16 bg-sage-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
@@ -135,7 +132,7 @@ export default function ChemicalPeelsPageClient() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">What to Expect</h2>

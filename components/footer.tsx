@@ -143,7 +143,7 @@ export function Footer() {
             <ul className="space-y-1 sm:space-y-2">
               <li>
                 <Link
-                  href="/about-us/plexr-sales"
+                  href="/plexr-sales"
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   Plexr® Plasma

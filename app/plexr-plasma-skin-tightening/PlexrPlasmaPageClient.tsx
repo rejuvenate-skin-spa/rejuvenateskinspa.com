@@ -66,12 +66,12 @@ export default function PlexrPlasmaPageClient() {
       <PlexrPlasmaSkinTighteningHero />
 
       {/* Definition Section - GEO Optimized */}
-      <section className="py-10 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-4">
             What Is Plexr Plasma Skin Tightening?
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Plexr plasma skin tightening is a non-surgical cosmetic procedure that uses ionized gas (plasma) to tighten, lift, and resurface the skin. The Plexr device creates a controlled micro-injury that stimulates collagen production and causes immediate skin contraction. At Rejuvenate Skin Spa in Queen Creek, Arizona, Plexr treatments address loose eyelids, fine lines, wrinkles, and skin laxity without incisions or general anesthesia.
           </p>
         </div>
@@ -355,7 +355,7 @@ export default function PlexrPlasmaPageClient() {
       </section>
 
       {/* Removal Services */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-sage-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-4">

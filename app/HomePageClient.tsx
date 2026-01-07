@@ -15,13 +15,13 @@ export default function HomePageClient() {
       <HomeHero />
 
       {/* Entity Definition Section - GEO Optimized */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className="py-12 bg-sage-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-4">
-            What Is Rejuvenate Skin Spa?
+            Welcome to Rejuvenate Skin Spa
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by licensed aesthetician Bridgette Ball, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Gilbert, and Mesa.
+            Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by licensed cosmetologist Bridgette Ball, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.
           </p>
         </div>
       </section>
