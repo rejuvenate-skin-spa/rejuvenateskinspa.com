@@ -8,10 +8,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react"
 import { siteConfig } from "@/lib/site-config"
 // GoHighLevel booking embed - uncomment when ready to enable
 // import { GoHighLevelEmbed } from "@/components/gohighlevel-embed"
+
+// GoHighLevel webhook URL
+const GOHIGHLEVEL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/KB0Nd23r7UWcLfVIufyr/webhook-trigger/7602e435-7fb3-4130-894f-2af941cd7036"
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -21,11 +24,67 @@ export default function ContactPageClient() {
     service: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null)
+  const [submitMessage, setSubmitMessage] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+    setSubmitMessage("")
+
+    try {
+      // Clean phone number (remove all non-digit characters except +)
+      const cleanPhone = formData.phone.replace(/[^\d+]/g, "")
+      
+      // Prepare payload for GoHighLevel webhook
+      // Match exact field names from the mapping reference:
+      // name, email, phone, service_of_interest, additional_information
+      const payload: Record<string, string> = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: cleanPhone,
+      }
+      
+      // Add optional fields if they have values (exact names from mapping reference)
+      if (formData.service) {
+        payload.service_of_interest = formData.service
+      }
+      if (formData.message) {
+        payload.additional_information = formData.message.trim()
+      }
+
+      const response = await fetch(GOHIGHLEVEL_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      // Success
+      setSubmitStatus("success")
+      setSubmitMessage("Thank you! We've received your message and will get back to you soon.")
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      })
+    } catch (error) {
+      setSubmitStatus("error")
+      setSubmitMessage("Sorry, there was an error submitting your form. Please try again or contact us directly.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -150,6 +209,22 @@ export default function ContactPageClient() {
                 <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
                   Request a Consultation
                 </h3>
+                
+                {/* Success/Error Messages */}
+                {submitStatus === "success" && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-green-800">{submitMessage}</p>
+                  </div>
+                )}
+                
+                {submitStatus === "error" && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md flex items-start">
+                    <AlertCircle className="h-5 w-5 text-red-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-red-800">{submitMessage}</p>
+                  </div>
+                )}
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -226,10 +301,11 @@ export default function ContactPageClient() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-sage-600 hover:bg-sage-700 text-white min-h-[48px] text-base"
+                    disabled={isSubmitting}
+                    className="w-full bg-sage-600 hover:bg-sage-700 text-white min-h-[48px] text-base disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="h-4 w-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
 
                   <p className="text-sm text-gray-500 text-center">
