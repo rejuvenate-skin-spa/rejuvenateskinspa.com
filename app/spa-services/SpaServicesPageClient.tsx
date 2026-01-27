@@ -15,6 +15,18 @@ export default function SpaServicesPageClient() {
       {/* Hero Section */}
       <SpaServicesHero />
 
+      {/* Definition Section - GEO Optimized */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-4">
+            What Are Spa Services?
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Spa services are professional beauty and skincare treatments designed to enhance your natural appearance and promote relaxation. At Rejuvenate Skin Spa in Queen Creek, Arizona, our spa services include dermaplaning facials for instant smoothness, microblading for perfectly defined brows, eyebrow lamination for fuller-looking brows, and red light therapy for cellular rejuvenation. Each treatment is performed by licensed professionals using premium products tailored to your skin type and goals.
+          </p>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
