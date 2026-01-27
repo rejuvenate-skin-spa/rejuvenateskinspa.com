@@ -7,11 +7,35 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Clock, Shield, Star, Zap, Heart } from "lucide-react";
 import PhoneCtaButton from "@/components/phone-cta-button";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com";
+
 export const metadata: Metadata = {
   title:
     "Traditional Microneedling | Collagen Induction Therapy | Queen Creek, AZ",
   description:
     "Traditional microneedling (CIT) at Rejuvenate Skin Spa in Queen Creek, AZ. Improve fine lines, acne scars, pores, and skin texture. Book today!",
+  openGraph: {
+    title: "Traditional Microneedling | Queen Creek, AZ",
+    description:
+      "Traditional microneedling (CIT) at Rejuvenate Skin Spa in Queen Creek, AZ. Improve fine lines, acne scars, and skin texture.",
+    url: `${siteUrl}/microneedling/traditional-microneedling`,
+    images: [
+      {
+        url: `${siteUrl}/og/og-traditional-microneedling.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Traditional Microneedling at Rejuvenate Skin Spa in Queen Creek, Arizona",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Traditional Microneedling | Queen Creek, AZ",
+    description:
+      "Traditional microneedling (CIT) at Rejuvenate Skin Spa in Queen Creek, AZ.",
+    images: [`${siteUrl}/og/og-traditional-microneedling.jpg`],
+  },
 };
 
 export default function TraditionalMicroneedlingPage() {

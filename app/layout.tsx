@@ -12,29 +12,36 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 })
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com"
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com"
-  ),
-  title: "Rejuvenate Skin Spa - Advanced Skincare Treatments | Queen Creek, AZ",
+  metadataBase: new URL(siteUrl),
+  title: "Rejuvenate Skin Spa | Advanced Skincare Treatments | Queen Creek, AZ",
   description:
     "Transform your skin with advanced skincare treatments at Rejuvenate Skin Spa in Queen Creek, Arizona. Specializing in Plexr plasma skin tightening, chemical peels, microneedling, and luxury facial services.",
   keywords:
     "skin spa, plasma treatment, chemical peels, facial treatments, skincare, Queen Creek Arizona",
-  generator: "v0.app",
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+  },
   openGraph: {
-    title:
-      "Rejuvenate Skin Spa | Advanced Skincare Treatments | Queen Creek, AZ",
+    title: "Rejuvenate Skin Spa | Queen Creek, Arizona",
     description:
-      "Transform your skin with advanced skincare treatments at Rejuvenate Skin Spa in Queen Creek, Arizona. Specializing in Plexr plasma skin tightening, chemical peels, microneedling, and luxury facial services.",
-    url: "https://www.rejuvenateskinspa.com",
+      "Advanced skincare treatments including Plexr plasma skin tightening, chemical peels, microneedling, and luxury facial services in Queen Creek, AZ.",
+    url: siteUrl,
     siteName: "Rejuvenate Skin Spa",
     images: [
       {
-        url: "/images/rejuvenate-logo.webp",
+        url: `${siteUrl}/og/og-home.jpg`,
         width: 1200,
         height: 630,
-        alt: "Rejuvenate Skin Spa - Advanced Skincare Treatments",
+        alt: "Rejuvenate Skin Spa in Queen Creek, Arizona",
+        type: "image/jpeg",
       },
     ],
     locale: "en_US",
@@ -42,11 +49,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Rejuvenate Skin Spa | Advanced Skincare Treatments | Queen Creek, AZ",
+    title: "Rejuvenate Skin Spa | Queen Creek, Arizona",
     description:
-      "Transform your skin with advanced skincare treatments at Rejuvenate Skin Spa in Queen Creek, Arizona.",
-    images: ["/images/rejuvenate-logo.webp"],
+      "Advanced skincare treatments including Plexr plasma skin tightening, chemical peels, microneedling, and luxury facial services in Queen Creek, AZ.",
+    images: [
+      {
+        url: `${siteUrl}/og/og-home.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Rejuvenate Skin Spa in Queen Creek, Arizona",
+      },
+    ],
   },
 }
 
@@ -57,16 +70,20 @@ export default function RootLayout({
 }) {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+    "@type": "HealthAndBeautyBusiness",
+    "additionalType": "https://schema.org/MedicalBusiness",
     "@id": "https://www.rejuvenateskinspa.com/#localbusiness",
     "name": "Rejuvenate Skin Spa",
+    "alternateName": "Rejuvenate Skin Spa Queen Creek",
     "description": "Rejuvenate Skin Spa is a premier medical aesthetics spa in Queen Creek, Arizona, specializing in Plexr plasma skin tightening, microneedling, SQT bio-microneedling, chemical peels, and luxury facial treatments.",
     "url": "https://www.rejuvenateskinspa.com/",
     "telephone": "+14802049366",
     "email": "info@rejuvenateskinspa.com",
-    "image": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.webp",
+    "image": "https://www.rejuvenateskinspa.com/og/og-home.jpg",
     "logo": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.webp",
     "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "20162 E. Sonoqui Blvd.",
@@ -81,15 +98,20 @@ export default function RootLayout({
       "longitude": -111.6343
     },
     "areaServed": [
-      { "@type": "City", "name": "Queen Creek" },
+      { "@type": "City", "name": "Queen Creek", "sameAs": "https://en.wikipedia.org/wiki/Queen_Creek,_Arizona" },
       { "@type": "City", "name": "San Tan Valley" },
       { "@type": "City", "name": "Gilbert" },
       { "@type": "City", "name": "Mesa" },
-      { "@type": "City", "name": "Chandler" }
+      { "@type": "City", "name": "Chandler" },
+      { "@type": "City", "name": "Apache Junction" }
     ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/rejuvenateskinspa/",
+      "https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
     ]
   }
 

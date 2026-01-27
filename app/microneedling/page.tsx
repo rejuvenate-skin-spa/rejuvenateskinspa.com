@@ -6,10 +6,34 @@ import { Button } from "@/components/ui/button";
 import MicroneedlingHubFAQ from "@/components/microneedling-hub-faq";
 import PhoneCtaButton from "@/components/phone-cta-button";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com";
+
 export const metadata: Metadata = {
-  title: "Microneedling | Rejuvenate Skin Spa | Queen Creek, AZ",
+  title: "Microneedling Services | Traditional, SQT Bio & Plasma | Queen Creek, AZ",
   description:
     "Explore microneedling options at Rejuvenate Skin Spa in Queen Creek, AZ: Traditional Microneedling (CIT), SQT Bio-Microneedling, and Plasma Microneedling.",
+  openGraph: {
+    title: "Microneedling Services | Rejuvenate Skin Spa | Queen Creek, AZ",
+    description:
+      "Three microneedling options: Traditional CIT, SQT Bio-Microneedling, and Plasma Microneedling at Rejuvenate Skin Spa in Queen Creek, Arizona.",
+    url: `${siteUrl}/microneedling`,
+    images: [
+      {
+        url: `${siteUrl}/og/og-microneedling.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Microneedling Services at Rejuvenate Skin Spa in Queen Creek, Arizona",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Microneedling Services | Rejuvenate Skin Spa | Queen Creek, AZ",
+    description:
+      "Three microneedling options at Rejuvenate Skin Spa in Queen Creek, AZ.",
+    images: [`${siteUrl}/og/og-microneedling.jpg`],
+  },
 };
 
 const options = [
