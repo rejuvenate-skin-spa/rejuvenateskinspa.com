@@ -13,7 +13,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.rejuvenateskinspa.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com"
+  ),
   title: "Rejuvenate Skin Spa - Advanced Skincare Treatments | Queen Creek, AZ",
   description:
     "Transform your skin with advanced skincare treatments at Rejuvenate Skin Spa in Queen Creek, Arizona. Specializing in Plexr plasma skin tightening, chemical peels, microneedling, and luxury facial services.",

@@ -39,9 +39,9 @@ export default function TraditionalMicroneedlingPage() {
       {/* Intro */}
       <section className="py-16 bg-sage-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
             Traditional Microneedling – Collagen Induction Therapy (CIT)
-          </h1>
+          </h2>
           <p className="text-xl text-sage-600 font-semibold italic mb-8">
             Stimulate. Restore. Renew.
           </p>
