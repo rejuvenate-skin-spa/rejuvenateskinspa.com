@@ -284,7 +284,7 @@ export default function RedLightTherapyClientPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-2xl mx-auto">
             <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
               <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -351,47 +351,6 @@ export default function RedLightTherapyClientPage() {
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
                     <span>Wellness consultation</span>
-                  </li>
-                </ul>
-                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
-              <CardContent className="p-8 text-center flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  10-Session Package
-                </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">
-                  $360
-                </div>
-                <div className="text-sm text-gray-500 mb-4">
-                  Save $90 • $36 per session
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Maximum value for long-term wellness and therapeutic benefits.
-                </p>
-                <ul className="text-left space-y-2 mb-8 flex-grow">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>10 red light sessions</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Priority booking</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Personalized protocol</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Wellness support</span>
                   </li>
                 </ul>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
