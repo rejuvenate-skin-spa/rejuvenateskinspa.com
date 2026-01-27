@@ -327,10 +327,7 @@ export default function RedLightTherapyClientPage() {
                   5-Session Package
                 </h3>
                 <div className="text-4xl font-bold text-sage-600 mb-4">
-                  $200
-                </div>
-                <div className="text-sm text-gray-500 mb-4">
-                  Save $25 • $40 per session
+                  $100
                 </div>
                 <p className="text-gray-600 mb-6">
                   Better value for consistent results and ongoing wellness.
