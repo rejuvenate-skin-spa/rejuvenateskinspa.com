@@ -1,9 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
 import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export default function BioMicroneedlingTreatmentHero() {
   return (
@@ -35,16 +33,7 @@ export default function BioMicroneedlingTreatmentHero() {
           revitalize your youthful glow. Fast result and little to no downtime.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="bg-sage-600 hover:bg-sage-700 text-white"
-          >
-<a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  {siteConfig.phoneDisplay}
-            </a>
-          </Button>
+          <SmartContactCTA />
         </div>
       </div>
     </section>

@@ -1,9 +1,7 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
-import { Phone } from "lucide-react"
 import Image from "next/image"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function TcaPeelHero() {
   return (
@@ -35,16 +33,7 @@ export default function TcaPeelHero() {
               Ideal for treating deep wrinkles, acne scars, and sun damage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                asChild
-                size="lg" 
-                className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg backdrop-blur-sm"
-              >
-                <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  {siteConfig.phoneDisplay}
-                </a>
-              </Button>
+              <SmartContactCTA />
             </div>
           </div>
         </div>

@@ -1,9 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Phone } from "lucide-react"
 import Image from "next/image"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function AboutUsHero() {
   return (
@@ -37,15 +35,7 @@ export default function AboutUsHero() {
               Founder-led since 2025 by Bridgette Ball.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 shadow-lg"
-              >
-                <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  {siteConfig.phoneDisplay}
-                </a>
-              </Button>
+              <SmartContactCTA className="px-6 py-3" />
             </div>
           </div>
           <div className="hidden lg:block"></div>

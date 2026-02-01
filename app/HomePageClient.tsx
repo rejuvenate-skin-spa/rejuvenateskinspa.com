@@ -21,7 +21,7 @@ export default function HomePageClient() {
             Welcome to Rejuvenate Skin Spa
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by licensed cosmetologist Bridgette Ball, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.
+            Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by Bridgette Ball, a licensed cosmetologist with advanced training in skin aesthetics, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.
           </p>
         </div>
       </section>

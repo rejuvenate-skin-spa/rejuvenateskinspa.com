@@ -85,7 +85,7 @@ export default function MicroneedlingHubPage() {
       <section className="relative min-h-[500px] py-12 overflow-hidden flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/microneedling-services-rejuventate-skin-spa-queen-creek-az.avif"
+            src="/images/spa-services-rejuventate-skin-spa-queen-creek-az.avif"
             alt="Microneedling Treatment at Rejuvenate Skin Spa in Queen Creek, AZ"
             fill
             className="object-cover object-right"

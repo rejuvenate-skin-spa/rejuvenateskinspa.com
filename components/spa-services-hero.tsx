@@ -1,9 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Phone } from "lucide-react"
 import Image from "next/image"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 interface SpaServicesHeroProps {
   title?: string
@@ -45,16 +43,7 @@ export function SpaServicesHero({
             </h1>
             <p className="text-xl text-gray-100 max-w-lg">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg"
-              >
-                <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  {siteConfig.phoneDisplay}
-                </a>
-              </Button>
+              <SmartContactCTA />
             </div>
           </div>
         </div>

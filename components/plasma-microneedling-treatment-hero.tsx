@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import PhoneCtaButton from "@/components/phone-cta-button"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function PlasmaMicroneedlingTreatmentHero() {
   return (
@@ -33,7 +33,7 @@ export default function PlasmaMicroneedlingTreatmentHero() {
               tightens, and transforms your skin from within.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <PhoneCtaButton />
+              <SmartContactCTA />
             </div>
           </div>
           <div className="relative">

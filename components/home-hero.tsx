@@ -1,9 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { Phone } from "lucide-react"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 interface HomeHeroProps {
   title?: string
@@ -25,8 +23,8 @@ export function HomeHero({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/spa-services-rejuventate-skin-spa-queen-creek-az.avif"
-          alt="Natural spa elements with cucumber slices and skincare products"
+          src="/images/semi-ablative-resurfacing-hero.png"
+          alt="Advanced skincare treatment at Rejuvenate Skin Spa"
           fill
           className="object-cover object-right"
           priority
@@ -49,19 +47,7 @@ export function HomeHero({
             </h1>
             <p className="text-lg sm:text-xl text-gray-100 max-w-lg">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button
-                asChild
-                className="bg-sage-600 hover:bg-sage-700 text-white shadow-lg rounded-md px-6 py-3 w-full sm:w-auto min-h-[48px] text-base"
-              >
-                <a
-                  href={`tel:${siteConfig.phoneTel}`}
-                  aria-label="Call Rejuvenate Skin Spa"
-                  className="flex items-center justify-center gap-2"
-                >
-                  <Phone className="h-5 w-5" />
-                  {siteConfig.phoneDisplay}
-                </a>
-              </Button>
+              <SmartContactCTA className="px-6 py-3 w-full sm:w-auto min-h-[48px] text-base" />
             </div>
           </div>
         </div>
