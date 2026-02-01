@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "max-video-preview": -1,
   },
   openGraph: {
-    title: "Rejuvenate Skin Spa | Queen Creek, Arizona",
+    title: "Rejuvenate Skin Spa",
     description:
       "Advanced skincare treatments including Plexr plasma skin tightening, chemical peels, microneedling, and luxury facial services in Queen Creek, AZ.",
     url: siteUrl,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rejuvenate Skin Spa | Queen Creek, Arizona",
+    title: "Rejuvenate Skin Spa",
     description:
       "Advanced skincare treatments including Plexr plasma skin tightening, chemical peels, microneedling, and luxury facial services in Queen Creek, AZ.",
     images: [
