@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Star, Phone } from "lucide-react"
+import { CheckCircle, Clock, Star } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import SpaServicesFAQ from "@/components/spa-services-faq"
 import { SpaServicesHero } from "@/components/spa-services-hero"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function SpaServicesPageClient() {
   return (
@@ -175,15 +175,10 @@ export default function SpaServicesPageClient() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Treat yourself to a spa service today and experience the ultimate in relaxation and skin rejuvenation.
           </p>
-          <Button
-            asChild
-            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 shadow-lg"
-          >
-            <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-              <Phone className="h-5 w-5" />
-              {siteConfig.phoneDisplay}
-            </a>
-          </Button>
+          <SmartContactCTA
+            className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3"
+            showPhoneWhenOpen={true}
+          />
         </div>
       </section>
     </div>

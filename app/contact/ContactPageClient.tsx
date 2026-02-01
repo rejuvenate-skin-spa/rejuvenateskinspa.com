@@ -18,7 +18,8 @@ const GOHIGHLEVEL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/KB0N
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     service: "",
@@ -42,7 +43,7 @@ export default function ContactPageClient() {
       // Match exact field names from the mapping reference:
       // name, email, phone, service_of_interest, additional_information
       const payload: Record<string, string> = {
-        name: formData.name.trim(),
+        name: `${formData.firstName.trim()} ${formData.lastName.trim()}`,
         email: formData.email.trim(),
         phone: cleanPhone,
       }
@@ -73,7 +74,8 @@ export default function ContactPageClient() {
       
       // Reset form
       setFormData({
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
         phone: "",
         service: "",
@@ -207,7 +209,7 @@ export default function ContactPageClient() {
             <Card className="shadow-lg">
               <CardContent className="p-5 sm:p-8">
                 <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
-                  Request a Consultation
+                  How can we help you?
                 </h3>
                 
                 {/* Success/Error Messages */}
@@ -226,31 +228,44 @@ export default function ContactPageClient() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="firstName">First Name *</Label>
                       <Input
-                        id="name"
-                        name="name"
+                        id="firstName"
+                        name="firstName"
                         type="text"
                         required
-                        value={formData.name}
+                        value={formData.firstName}
                         onChange={handleChange}
                         className="mt-1"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Label htmlFor="lastName">Last Name *</Label>
                       <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
+                        id="lastName"
+                        name="lastName"
+                        type="text"
                         required
-                        value={formData.phone}
+                        value={formData.lastName}
                         onChange={handleChange}
                         className="mt-1"
                       />
                     </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="mt-1"
+                    />
                   </div>
 
                   <div>

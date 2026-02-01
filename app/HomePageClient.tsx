@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Award, Users, Clock, Phone } from "lucide-react";
+import { Star, Award, Users, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { HomeHero } from "@/components/home-hero";
-import { siteConfig } from "@/lib/site-config";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export default function HomePageClient() {
   return (
@@ -212,15 +212,10 @@ export default function HomePageClient() {
             Contact Rejuvenate Skin Spa to discuss your skincare goals. We offer personalized treatment plans designed to deliver real, visible results.
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
-              className="bg-white text-sage-600 hover:bg-gray-100 rounded-md px-6 py-3 shadow-lg"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            <SmartContactCTA
+              className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3"
+              showPhoneWhenOpen={true}
+            />
           </div>
         </div>
       </section>

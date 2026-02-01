@@ -11,6 +11,11 @@ interface SmartContactCTAProps {
   variant?: "default" | "outline" | "ghost"
   size?: "default" | "sm" | "lg"
   showIcon?: boolean
+  /**
+   * If true, shows phone number during open hours instead of "Contact Us".
+   * Default: false (always shows "Contact Us")
+   */
+  showPhoneWhenOpen?: boolean
 }
 
 /**
@@ -19,22 +24,26 @@ interface SmartContactCTAProps {
  * Behavior:
  * - During business hours: links to tel: for direct call
  * - Outside business hours: links to /contact page
- * - Label is always "Contact Us"
+ * - Label depends on showPhoneWhenOpen prop
  */
 export function SmartContactCTA({
   className,
   variant = "default",
   size = "lg",
   showIcon = true,
+  showPhoneWhenOpen = false,
 }: SmartContactCTAProps) {
   const { isOpen } = usePhoenixBusinessHours()
 
   // Determine href and icon based on open status
   const href = isOpen ? `tel:${siteConfig.phoneTel}` : "/contact"
   const ariaLabel = isOpen
-    ? "Call Rejuvenate Skin Spa"
+    ? `Call Rejuvenate Skin Spa at ${siteConfig.phoneDisplay}`
     : "Contact Rejuvenate Skin Spa"
   const Icon = isOpen ? Phone : Mail
+
+  // Label: phone number when open (if showPhoneWhenOpen), otherwise "Contact Us"
+  const label = isOpen && showPhoneWhenOpen ? siteConfig.phoneDisplay : "Contact Us"
 
   // Base button styling matching existing CTA buttons
   const buttonClasses = cn(
@@ -55,7 +64,7 @@ export function SmartContactCTA({
         className="flex items-center justify-center gap-2"
       >
         {showIcon && <Icon className="h-5 w-5" />}
-        Contact Us
+        {label}
       </a>
     </Button>
   )
