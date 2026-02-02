@@ -317,7 +317,7 @@ export default function BioRePeel50TCAPeelPageClient() {
                   Single Body Part
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  Starting at $249
+                  Starting at $299
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -365,7 +365,7 @@ export default function BioRePeel50TCAPeelPageClient() {
                   Multiple Body Parts
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  Starting at $499
+                  Starting at $599
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
