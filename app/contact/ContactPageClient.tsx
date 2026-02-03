@@ -143,7 +143,7 @@ export default function ContactPageClient() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[280px] sm:h-[400px] lg:h-[500px] bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
+      <section className="relative py-8 sm:py-10 lg:py-12 bg-gradient-to-r from-sage-100 to-sage-50 flex items-center">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
