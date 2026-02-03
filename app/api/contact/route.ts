@@ -27,12 +27,15 @@ function countUrls(text: string) {
   return matches ? matches.length : 0;
 }
 
-function allowTurnstileBypass(origin: string) {
-  return (
-    process.env.NODE_ENV !== "production" ||
-    origin.startsWith("http://localhost") ||
-    origin.startsWith("http://127.0.0.1")
-  );
+const isProduction = process.env.NODE_ENV === "production";
+const GENERIC_ERROR = "Unable to submit. Please try again.";
+
+function spamReject(reason: string) {
+  if (isProduction) {
+    console.error(`Contact API spam/block: ${reason}`);
+    return NextResponse.json({ error: GENERIC_ERROR }, { status: 400 });
+  }
+  return NextResponse.json({ error: reason }, { status: 400 });
 }
 
 const PROD_HOST = "www.rejuvenateskinspa.com";
@@ -99,7 +102,6 @@ export async function POST(req: Request) {
     if (!isAllowedOrigin(req)) {
       return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
     }
-    const origin = getEffectiveOrigin(req);
 
     const ip = getClientIp(req);
     const body = await req.json();
@@ -110,32 +112,32 @@ export async function POST(req: Request) {
     }
 
     const data = parsed.data;
-    const bypass = allowTurnstileBypass(origin);
     const hasToken = (data.turnstileToken ?? "").trim().length > 0;
 
-    // Production: require Turnstile config and token
-    if (process.env.NODE_ENV === "production") {
-      if (!process.env.TURNSTILE_SECRET_KEY) {
-        return NextResponse.json({ error: "Turnstile not configured" }, { status: 500 });
-      }
-      if (!bypass && !hasToken) {
-        return NextResponse.json({ error: "Missing security token" }, { status: 400 });
-      }
-    }
-
-    // Honeypot: if filled, reject
+    // Always enforce honeypot: website must be empty
     if (data.website && data.website.trim().length > 0) {
-      return NextResponse.json({ error: "Spam detected." }, { status: 400 });
+      return spamReject("Honeypot filled");
     }
 
-    // Time trap: too fast = likely bot
-    if (!data.startedAt || Date.now() - data.startedAt < 3000) {
-      return NextResponse.json({ error: "Spam detected." }, { status: 400 });
+    // Always enforce timing gate: form must be open long enough
+    const MIN_SUBMIT_MS = 3000;
+    if (!data.startedAt || Date.now() - data.startedAt < MIN_SUBMIT_MS) {
+      return spamReject("Timing gate failed");
+    }
+
+    // Production: require non-empty turnstile token
+    if (isProduction) {
+      if (!process.env.TURNSTILE_SECRET_KEY) {
+        return NextResponse.json({ error: GENERIC_ERROR }, { status: 500 });
+      }
+      if (!hasToken) {
+        return spamReject("Missing security token");
+      }
     }
 
     // Simple URL rule: most legit spa inquiries have 0 URLs
     if (countUrls(data.message) > 0) {
-      return NextResponse.json({ error: "Spam detected." }, { status: 400 });
+      return spamReject("URLs in message");
     }
 
     // Normalize US phone to E.164: 10 digits -> +1XXXXXXXXXX; 11 digits starting with 1 -> same
@@ -149,8 +151,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Please enter a valid phone number." }, { status: 400 });
     }
 
-    // Turnstile verification (skip only when bypass allowed and no token)
-    if (!bypass || hasToken) {
+    // Turnstile: production always verify; development verify only when token present (allow empty for curl)
+    if (isProduction || hasToken) {
       const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -163,6 +165,9 @@ export async function POST(req: Request) {
 
       const verify = await verifyRes.json();
       if (!verify.success) {
+        if (isProduction) {
+          return spamReject("Turnstile verification failed");
+        }
         return NextResponse.json({ error: "Bot check failed." }, { status: 400 });
       }
     }
