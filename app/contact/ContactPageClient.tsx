@@ -160,6 +160,7 @@ export default function ContactPageClient() {
       <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
+            <div className="order-2 lg:order-1">
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -244,7 +245,9 @@ export default function ContactPageClient() {
                 </div>
               </div>
             </div>
+            </div>
 
+            <div className="order-1 lg:order-2">
             {/* Contact Form */}
             <Card className="shadow-lg">
               <CardContent className="p-5 sm:p-8">
@@ -402,6 +405,7 @@ export default function ContactPageClient() {
                 </form>
               </CardContent>
             </Card>
+            </div>
           </div>
         </div>
       </section>
