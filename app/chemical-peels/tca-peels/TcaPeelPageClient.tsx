@@ -5,12 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { TcaPeelFAQ } from "@/components/tca-peel-faq";
 import TcaPeelHero from "@/components/tca-peel-hero";
-import { CheckCircle, Clock, Shield, Star, Phone } from "lucide-react";
+import { CheckCircle, Clock, Shield, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import PhoneCtaButton from "@/components/phone-cta-button";
-import { siteConfig } from "@/lib/site-config";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export default function TcaPeelPageClient() {
   return (
@@ -415,16 +415,12 @@ export default function TcaPeelPageClient() {
             this powerful treatment can rejuvenate your skin.
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
               size="lg"
+              showPhoneWhenOpen
               className="bg-white text-sage-600 hover:bg-gray-100"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

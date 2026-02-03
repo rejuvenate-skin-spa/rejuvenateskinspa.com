@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Star, Users, Phone } from "lucide-react";
+import { CheckCircle, Star, Users } from "lucide-react";
 import Image from "next/image";
 import PomegranateEnzymePeelFAQ from "@/components/pomegranate-enzyme-peel-faq";
 import PomegranateEnzymePeelHero from "@/components/pomegranate-enzyme-peel-hero";
 import { Badge } from "@/components/ui/badge";
-import { siteConfig } from "@/lib/site-config";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export default function PomegranateEnzymePeelClientPage() {
   return (
@@ -198,15 +198,10 @@ export default function PomegranateEnzymePeelClientPage() {
                     <span className="text-sm text-gray-700">No downtime</span>
                   </li>
                 </ul>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
 
@@ -245,15 +240,10 @@ export default function PomegranateEnzymePeelClientPage() {
                     <span className="text-sm text-gray-700">Package savings included</span>
                   </li>
                 </ul>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
 
@@ -292,15 +282,10 @@ export default function PomegranateEnzymePeelClientPage() {
                     <span className="text-sm text-gray-700">Best per-session value</span>
                   </li>
                 </ul>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
           </div>
@@ -334,15 +319,11 @@ export default function PomegranateEnzymePeelClientPage() {
             experience the pinnacle of natural skincare luxury.
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
+              showPhoneWhenOpen
               className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base shadow-md"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

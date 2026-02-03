@@ -9,13 +9,12 @@ import {
   Zap,
   Heart,
   Award,
-  Phone,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import BioRePeelFacialChemicalPeelHero from "@/components/biorepeel-facial-chemical-peel-hero";
 import BioRePeelFacialChemicalPeelFAQ from "@/components/biorepeel-facial-chemical-peel-faq";
-import { siteConfig } from "@/lib/site-config";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export const metadata: Metadata = {
   title: "BioRePeel Chemical Peel | Next Generation TCA Peel | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -372,16 +371,12 @@ export default function BioRePeelTreatmentPage() {
             rejuvenation with minimal downtime and maximum results.
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
               size="lg"
+              showPhoneWhenOpen
               className="bg-white text-sage-600 hover:bg-gray-100"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

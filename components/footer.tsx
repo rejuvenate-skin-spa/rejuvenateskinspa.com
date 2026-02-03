@@ -2,8 +2,9 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Mail, MapPin, Clock } from "lucide-react"
 import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export function Footer() {
   return (
@@ -27,14 +28,12 @@ export function Footer() {
               Licensed Plexr® Technology Provider in Arizona
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a
-                href={`tel:${siteConfig.phoneTel}`}
-                aria-label="Call Rejuvenate Skin Spa"
-                className="flex items-center text-sm text-gray-600 hover:text-sage-600 transition-colors py-2 sm:py-0 min-h-[44px] sm:min-h-0"
-              >
-                <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                {siteConfig.phoneDisplay}
-              </a>
+              <SmartContactCTA
+                variant="ghost"
+                size="default"
+                showPhoneWhenOpen
+                className="flex items-center justify-start text-sm text-gray-600 hover:text-sage-600 hover:bg-transparent py-2 sm:py-0 min-h-[44px] sm:min-h-0 w-full sm:w-auto shadow-none"
+              />
               <a
                 href={`mailto:${siteConfig.email}`}
                 aria-label="Email Rejuvenate Skin Spa"

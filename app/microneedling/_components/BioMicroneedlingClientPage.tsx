@@ -14,13 +14,12 @@ import {
   Heart,
   Shield,
   Leaf,
-  Phone,
 } from "lucide-react";
 import BioMicroneedlingTreatmentFAQ from "@/components/bio-microneedling-treatment-faq";
 import BioMicroneedlingTreatmentHero from "@/components/bio-microneedling-treatment-hero";
 import PhoneCtaButton from "@/components/phone-cta-button";
 import Link from "next/link";
-import { siteConfig } from "@/lib/site-config";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export default function BioMicroneedlingClientPage() {
   return (
@@ -407,16 +406,12 @@ export default function BioMicroneedlingClientPage() {
             naturally radiant skin
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
               size="lg"
+              showPhoneWhenOpen
               className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3 shadow-lg"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

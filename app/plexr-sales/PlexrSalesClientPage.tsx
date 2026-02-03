@@ -1,7 +1,6 @@
 "use client"
 
-import { Phone } from "lucide-react"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function PlexrSalesClientPage() {
   return (
@@ -111,14 +110,11 @@ export default function PlexrSalesClientPage() {
           <p className="text-xl text-sage-100 mb-8 max-w-2xl mx-auto">
             Contact us today to learn more about Plexr equipment sales and training opportunities.
           </p>
-          <a
-            href={`tel:${siteConfig.phoneTel}`}
-            aria-label="Call Rejuvenate Skin Spa"
+          <SmartContactCTA
+            variant="outline"
+            showPhoneWhenOpen
             className="inline-flex items-center justify-center gap-2 bg-white text-sage-600 px-6 py-3 text-base rounded-md font-semibold hover:bg-gray-50 transition-colors duration-200 shadow-sm"
-          >
-            <Phone className="h-5 w-5" />
-            {siteConfig.phoneDisplay}
-          </a>
+          />
         </div>
       </section>
     </main>

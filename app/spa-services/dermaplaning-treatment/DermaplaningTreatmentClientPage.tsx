@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart, Phone } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Zap, Heart } from "lucide-react"
 import Image from "next/image"
 import DermaplaningTreatmentFAQ from "@/components/dermaplaning-treatment-faq"
 import DermaplaningTreatmentHero from "@/components/dermaplaning-treatment-hero"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function DermaplaningTreatmentClientPage() {
   return (
@@ -212,15 +212,11 @@ export default function DermaplaningTreatmentClientPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    asChild
+                  <SmartContactCTA
+                    variant={pkg.popular ? "default" : "outline"}
+                    showPhoneWhenOpen
                     className={`w-full ${pkg.popular ? "bg-sage-600 hover:bg-sage-700 text-white" : "bg-white border border-sage-600 text-sage-600 hover:bg-sage-50"}`}
-                  >
-                    <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                      <Phone className="h-4 w-4" />
-                      {siteConfig.phoneDisplay}
-                    </a>
-                  </Button>
+                  />
                 </CardContent>
               </Card>
             ))}
@@ -251,15 +247,11 @@ export default function DermaplaningTreatmentClientPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Experience the immediate benefits of dermaplaning and reveal your smoothest skin yet.
           </p>
-          <Button
-            asChild
+          <SmartContactCTA
+            variant="outline"
+            showPhoneWhenOpen
             className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 shadow-lg"
-          >
-<a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-            </a>
-          </Button>
+          />
         </div>
       </section>
     </div>

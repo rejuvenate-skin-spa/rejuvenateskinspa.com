@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { CheckCircle, Phone } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
+import { CheckCircle } from "lucide-react";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export default function CherryEnzymePeelClientPage() {
   return (
@@ -180,15 +180,10 @@ export default function CherryEnzymePeelClientPage() {
                     <span className="text-sm text-gray-700">No downtime</span>
                   </li>
                 </ul>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
 
@@ -227,15 +222,10 @@ export default function CherryEnzymePeelClientPage() {
                     <span className="text-sm text-gray-700">Package savings included</span>
                   </li>
                 </ul>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
 
@@ -274,15 +264,10 @@ export default function CherryEnzymePeelClientPage() {
                     <span className="text-sm text-gray-700">Best per-session value</span>
                   </li>
                 </ul>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
           </div>
@@ -310,15 +295,10 @@ export default function CherryEnzymePeelClientPage() {
             Get in touch today and discover your most radiant
             complexion.
           </p>
-          <Button
-            asChild
+          <SmartContactCTA
+            showPhoneWhenOpen
             className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 text-base font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
-          >
-            <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-              <Phone className="h-5 w-5" />
-              {siteConfig.phoneDisplay}
-            </a>
-          </Button>
+          />
         </div>
       </section>
 

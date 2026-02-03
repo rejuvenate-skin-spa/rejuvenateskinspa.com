@@ -3,10 +3,10 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Clock, DollarSign, Star, CheckCircle, Eye, Sparkles, Heart, Shield, Phone } from "lucide-react"
+import { Clock, DollarSign, Star, CheckCircle, Eye, Sparkles, Heart, Shield } from "lucide-react"
 import { EyebrowLaminationFAQ } from "@/components/eyebrow-lamination-treatment-faq"
 import { EyebrowLaminationTreatmentHero } from "@/components/eyebrow-lamination-treatment-hero"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function EyebrowLaminationClientPage() {
   return (
@@ -244,12 +244,10 @@ export default function EyebrowLaminationClientPage() {
                     <span>Aftercare instructions</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                <SmartContactCTA
+                  showPhoneWhenOpen
+                  className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto"
+                />
               </CardContent>
             </Card>
 
@@ -278,12 +276,10 @@ export default function EyebrowLaminationClientPage() {
                     <span>Enhanced definition</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto">
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                <SmartContactCTA
+                  showPhoneWhenOpen
+                  className="w-full bg-sage-600 hover:bg-sage-700 text-white mt-auto"
+                />
               </CardContent>
             </Card>
           </div>
@@ -303,15 +299,11 @@ export default function EyebrowLaminationClientPage() {
             Treat yourself to an eyebrow lamination appointment today and wake up to beautiful brows every day
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
+              showPhoneWhenOpen
               className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

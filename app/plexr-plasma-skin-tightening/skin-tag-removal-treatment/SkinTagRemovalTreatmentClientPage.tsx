@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, AlertTriangle, Phone, Info } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, AlertTriangle, Info } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import SkinTagRemovalTreatmentFAQ from "@/components/skin-tag-removal-treatment-faq"
 import SkinTagRemovalTreatmentHero from "@/components/skin-tag-removal-treatment-hero"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function SkinTagRemovalTreatmentClientPage() {
   return (
@@ -309,15 +309,11 @@ export default function SkinTagRemovalTreatmentClientPage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
+              showPhoneWhenOpen
               className="bg-white text-sage-600 hover:bg-gray-100 px-6 py-3 text-base font-medium rounded-lg shadow-lg min-h-[48px]"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
             <Button
               asChild
               variant="outline"

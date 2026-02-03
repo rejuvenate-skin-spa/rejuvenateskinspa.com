@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Phone } from "lucide-react"
+import { CheckCircle, Clock, Shield } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import ChemicalPeelsHero from "@/components/chemical-peels-hero"
 import ChemicalPeelsFAQ from "@/components/chemical-peels-faq"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 export default function ChemicalPeelsPageClient() {
   return (
     <div className="min-h-screen">
@@ -188,16 +188,12 @@ export default function ChemicalPeelsPageClient() {
             skin.
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
               size="lg"
+              showPhoneWhenOpen
               className="bg-white text-sage-600 hover:bg-gray-100 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

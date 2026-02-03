@@ -7,7 +7,7 @@ import PlasmaMicroneedlingTreatmentFAQ from "@/components/plasma-microneedling-t
 import PlasmaMicroneedlingTreatmentHero from "@/components/plasma-microneedling-treatment-hero"
 import PhoneCtaButton from "@/components/phone-cta-button"
 import Link from "next/link"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 import {
   Clock,
   DollarSign,
@@ -19,7 +19,6 @@ import {
   Shield,
   Target,
   Award,
-  Phone,
 } from "lucide-react"
 
 export default function PlasmaMicroneedlingClientPage() {
@@ -424,15 +423,11 @@ export default function PlasmaMicroneedlingClientPage() {
             technology available
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
+              showPhoneWhenOpen
               className="bg-white text-sage-700 hover:bg-gray-100 px-6 py-3 shadow-lg"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

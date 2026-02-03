@@ -5,11 +5,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { GlycolicAcidPeelFAQ } from "@/components/glycolic-acid-peel-faq"
 import { GlycolicAcidPeelHero } from "@/components/glycolic-acid-peel-hero"
-import { CheckCircle, Clock, Shield, Star, Sparkles, Phone } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Sparkles } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import { siteConfig } from "@/lib/site-config"
+import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export default function GlycolicAcidPeelPageClient() {
   return (
@@ -334,15 +334,10 @@ export default function GlycolicAcidPeelPageClient() {
                 <p className="text-xs text-sage-600 font-medium mb-4 text-center">
                   Ideal for: Maintenance and prevention
                 </p>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
 
@@ -382,15 +377,10 @@ export default function GlycolicAcidPeelPageClient() {
                 <p className="text-xs text-sage-600 font-medium mb-4 text-center">
                   Ideal for: Active skin concerns
                 </p>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
 
@@ -426,15 +416,10 @@ export default function GlycolicAcidPeelPageClient() {
                 <p className="text-xs text-sage-600 font-medium mb-4 text-center">
                   Ideal for: Severe skin issues
                 </p>
-                <Button
-                  asChild
+                <SmartContactCTA
+                  showPhoneWhenOpen
                   className="w-full mt-auto bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
-                </Button>
+                />
               </CardContent>
             </Card>
           </div>
@@ -455,16 +440,12 @@ export default function GlycolicAcidPeelPageClient() {
             skin.
           </p>
           <div className="flex justify-center">
-            <Button
-              asChild
+            <SmartContactCTA
+              variant="outline"
               size="lg"
+              showPhoneWhenOpen
               className="bg-white text-sage-600 hover:bg-gray-100"
-            >
-              <a href={`tel:${siteConfig.phoneTel}`} aria-label="Call Rejuvenate Skin Spa" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </Button>
+            />
           </div>
         </div>
       </section>

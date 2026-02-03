@@ -4,9 +4,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X, Phone } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site-config";
+import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 // Phone icon still used in mobile menu
 
@@ -332,16 +332,12 @@ export function Navigation() {
                   </div>
                 ))}
 
-                {/* Phone CTA - prominent mobile CTA */}
+                {/* Phone CTA - prominent mobile CTA (click-to-call when open, Contact Us when closed) */}
                 <div className="pt-6">
-                  <a
-                    href={`tel:${siteConfig.phoneTel}`}
-                    aria-label="Call Rejuvenate Skin Spa"
-                    className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-4 px-4 rounded-md transition-colors duration-200 flex items-center justify-center gap-2 text-lg min-h-[52px]"
-                  >
-                    <Phone className="h-5 w-5" />
-                    {siteConfig.phoneDisplay}
-                  </a>
+                  <SmartContactCTA
+                    showPhoneWhenOpen
+                    className="w-full font-medium py-4 px-4 text-lg min-h-[52px]"
+                  />
                 </div>
               </div>
             </div>
