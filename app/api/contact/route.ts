@@ -4,7 +4,7 @@ import { z } from "zod";
 
 const ContactSchema = z.object({
   name: z.string().min(1).max(80),
-  email: z.string().email().max(120).optional().or(z.literal("")),
+  email: z.string().trim().email("Please enter a valid email address.").max(120),
   phone: z.string().max(40).optional().or(z.literal("")),
   message: z.string().min(5).max(2000),
   service_of_interest: z.string().max(120).optional(),
@@ -175,7 +175,7 @@ export async function POST(req: Request) {
 
     const ghlPayload: Record<string, string> = {
       name: data.name,
-      email: data.email || "",
+      email: data.email.trim().toLowerCase(),
       phone: normalizedPhone,
       message: data.message,
       source: "rejuvenateskinspa.com",

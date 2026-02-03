@@ -16,6 +16,8 @@ import { siteConfig } from "@/lib/site-config"
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+
 function formatUSPhone(digits: string): string {
   const d = digits.replace(/\D/g, "").slice(0, 10)
   if (d.length === 0) return ""
@@ -61,6 +63,12 @@ export default function ContactPageClient() {
     if (!local && !turnstileToken) {
       setSubmitStatus("error")
       setSubmitMessage("Please complete the security check.")
+      return
+    }
+    const emailTrimmed = formData.email.trim()
+    if (!EMAIL_REGEX.test(emailTrimmed)) {
+      setSubmitStatus("error")
+      setSubmitMessage("Please enter a valid email address.")
       return
     }
     setIsSubmitting(true)
@@ -322,6 +330,8 @@ export default function ContactPageClient() {
                       id="email"
                       name="email"
                       type="email"
+                      inputMode="email"
+                      autoComplete="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
