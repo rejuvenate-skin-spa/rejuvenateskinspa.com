@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^0.4.1",
     "@radix-ui/react-label": "2.1.1",
     "@radix-ui/react-slot": "1.1.1",
     "autoprefixer": "^10.4.20",
@@ -20,7 +21,8 @@
     "react": "^19",
     "react-dom": "^19",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^22",

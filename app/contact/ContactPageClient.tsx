@@ -2,7 +2,8 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
+import { Turnstile } from "@marsidev/react-turnstile"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -13,10 +14,20 @@ import { siteConfig } from "@/lib/site-config"
 // GoHighLevel booking embed - uncomment when ready to enable
 // import { GoHighLevelEmbed } from "@/components/gohighlevel-embed"
 
-// GoHighLevel webhook URL
-const GOHIGHLEVEL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/KB0Nd23r7UWcLfVIufyr/webhook-trigger/7602e435-7fb3-4130-894f-2af941cd7036"
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""
+
+function isLocalOrigin() {
+  if (typeof window === "undefined") return false
+  const h = window.location.hostname
+  return h === "localhost" || h === "127.0.0.1"
+}
 
 export default function ContactPageClient() {
+  const formStartedAt = useRef<number | null>(null)
+  useEffect(() => {
+    formStartedAt.current = Date.now()
+  }, [])
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -24,55 +35,64 @@ export default function ContactPageClient() {
     phone: "",
     service: "",
     message: "",
+    website: "", // honeypot – leave empty
   })
+  const [turnstileToken, setTurnstileToken] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null)
   const [submitMessage, setSubmitMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const local = isLocalOrigin()
+    if (!local && !TURNSTILE_SITE_KEY) {
+      setSubmitStatus("error")
+      setSubmitMessage("Online form is temporarily unavailable. Please call or text us to get in touch.")
+      return
+    }
+    if (!local && !turnstileToken) {
+      setSubmitStatus("error")
+      setSubmitMessage("Please complete the security check.")
+      return
+    }
     setIsSubmitting(true)
     setSubmitStatus(null)
     setSubmitMessage("")
 
     try {
-      // Clean phone number (remove all non-digit characters except +)
       const cleanPhone = formData.phone.replace(/[^\d+]/g, "")
-      
-      // Prepare payload for GoHighLevel webhook
-      // Match exact field names from the mapping reference:
-      // name, email, phone, service_of_interest, additional_information
-      const payload: Record<string, string> = {
-        name: `${formData.firstName.trim()} ${formData.lastName.trim()}`,
-        email: formData.email.trim(),
-        phone: cleanPhone,
-      }
-      
-      // Add optional fields if they have values (exact names from mapping reference)
-      if (formData.service) {
-        payload.service_of_interest = formData.service
-      }
-      if (formData.message) {
-        payload.additional_information = formData.message.trim()
-      }
+      const name = `${formData.firstName.trim()} ${formData.lastName.trim()}`
+      const message =
+        (formData.service ? `Service of interest: ${formData.service}\n\n` : "") +
+        (formData.message?.trim() ?? "")
 
-      const response = await fetch(GOHIGHLEVEL_WEBHOOK_URL, {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email: formData.email.trim(),
+          phone: cleanPhone,
+          message: message || "(No message provided)",
+          service_of_interest: formData.service || undefined,
+          additional_information: formData.message?.trim() || undefined,
+          website: formData.website,
+          startedAt: formStartedAt.current ?? Date.now(),
+          turnstileToken: local ? "" : turnstileToken,
+        }),
       })
 
+      const json = await response.json().catch(() => ({}))
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        setSubmitStatus("error")
+        setSubmitMessage(
+          typeof json?.error === "string" ? json.error : "Sorry, there was an error submitting your form. Please try again or contact us directly."
+        )
+        return
       }
 
-      // Success
       setSubmitStatus("success")
       setSubmitMessage("Thank you! We've received your message and will get back to you soon.")
-      
-      // Reset form
       setFormData({
         firstName: "",
         lastName: "",
@@ -80,8 +100,10 @@ export default function ContactPageClient() {
         phone: "",
         service: "",
         message: "",
+        website: "",
       })
-    } catch (error) {
+      setTurnstileToken("")
+    } catch {
       setSubmitStatus("error")
       setSubmitMessage("Sorry, there was an error submitting your form. Please try again or contact us directly.")
     } finally {
@@ -228,6 +250,19 @@ export default function ContactPageClient() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot – hidden from users, leave empty */}
+                  <div className="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden>
+                    <Label htmlFor="website">Website</Label>
+                    <Input
+                      id="website"
+                      name="website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData.website}
+                      onChange={handleChange}
+                    />
+                  </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="firstName">First Name *</Label>
@@ -302,17 +337,29 @@ export default function ContactPageClient() {
                   </div>
 
                   <div>
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">Message *</Label>
                     <Textarea
                       id="message"
                       name="message"
                       rows={4}
+                      required
+                      minLength={5}
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about your goals, questions, or preferred timing."
                       className="mt-1"
                     />
                   </div>
+
+                  {TURNSTILE_SITE_KEY && (
+                    <div className="flex justify-center">
+                      <Turnstile
+                        siteKey={TURNSTILE_SITE_KEY}
+                        onSuccess={setTurnstileToken}
+                        onExpire={() => setTurnstileToken("")}
+                      />
+                    </div>
+                  )}
 
                   <Button
                     type="submit"
