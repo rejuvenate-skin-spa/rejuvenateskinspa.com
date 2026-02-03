@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     url: `${siteUrl}/contact`,
     images: [
       {
-        url: `${siteUrl}/og/og-contact.jpg`,
+        url: "https://www.rejuvenateskinspa.com/og/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact Rejuvenate Skin Spa in Queen Creek, Arizona",
+        alt: "Rejuvenate Skin Spa",
       },
     ],
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Contact Rejuvenate Skin Spa | Queen Creek, AZ",
     description:
       "Call (480) 204-9366 or visit us at 20162 E. Sonoqui Blvd, Queen Creek, AZ 85142.",
-    images: [`${siteUrl}/og/og-contact.jpg`],
+    images: ["https://www.rejuvenateskinspa.com/og/og-home.jpg"],
   },
 }
 
