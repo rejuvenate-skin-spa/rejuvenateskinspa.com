@@ -16,6 +16,14 @@ import { siteConfig } from "@/lib/site-config"
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""
 
+function formatUSPhone(digits: string): string {
+  const d = digits.replace(/\D/g, "").slice(0, 10)
+  if (d.length === 0) return ""
+  if (d.length <= 3) return `(${d}`
+  if (d.length <= 6) return `(${d.slice(0, 3)}) ${d.slice(3)}`
+  return `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`
+}
+
 function isLocalOrigin() {
   if (typeof window === "undefined") return false
   const h = window.location.hostname
@@ -60,7 +68,6 @@ export default function ContactPageClient() {
     setSubmitMessage("")
 
     try {
-      const cleanPhone = formData.phone.replace(/[^\d+]/g, "")
       const name = `${formData.firstName.trim()} ${formData.lastName.trim()}`
       const message =
         (formData.service ? `Service of interest: ${formData.service}\n\n` : "") +
@@ -72,7 +79,7 @@ export default function ContactPageClient() {
         body: JSON.stringify({
           name,
           email: formData.email.trim(),
-          phone: cleanPhone,
+          phone: formData.phone,
           message: message || "(No message provided)",
           service_of_interest: formData.service || undefined,
           additional_information: formData.message?.trim() || undefined,
@@ -116,10 +123,13 @@ export default function ContactPageClient() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    const { name, value } = e.target
+    if (name === "phone") {
+      const digits = value.replace(/\D/g, "").slice(0, 10)
+      setFormData({ ...formData, phone: digits })
+      return
+    }
+    setFormData({ ...formData, [name]: value })
   }
 
   return (
@@ -296,8 +306,11 @@ export default function ContactPageClient() {
                       id="phone"
                       name="phone"
                       type="tel"
+                      inputMode="tel"
+                      autoComplete="tel"
+                      maxLength={14}
                       required
-                      value={formData.phone}
+                      value={formatUSPhone(formData.phone)}
                       onChange={handleChange}
                       className="mt-1"
                     />

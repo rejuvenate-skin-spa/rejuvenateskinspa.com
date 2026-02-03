@@ -138,6 +138,17 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Spam detected." }, { status: 400 });
     }
 
+    // Normalize US phone to E.164: 10 digits -> +1XXXXXXXXXX; 11 digits starting with 1 -> same
+    const digits = (data.phone ?? "").replace(/\D/g, "");
+    let normalizedPhone: string;
+    if (digits.length === 10) {
+      normalizedPhone = "+1" + digits;
+    } else if (digits.length === 11 && digits.startsWith("1")) {
+      normalizedPhone = "+1" + digits.slice(1);
+    } else {
+      return NextResponse.json({ error: "Please enter a valid phone number." }, { status: 400 });
+    }
+
     // Turnstile verification (skip only when bypass allowed and no token)
     if (!bypass || hasToken) {
       const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
@@ -165,7 +176,7 @@ export async function POST(req: Request) {
     const ghlPayload: Record<string, string> = {
       name: data.name,
       email: data.email || "",
-      phone: data.phone || "",
+      phone: normalizedPhone,
       message: data.message,
       source: "rejuvenateskinspa.com",
     };
