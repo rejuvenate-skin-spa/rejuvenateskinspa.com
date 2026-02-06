@@ -257,7 +257,13 @@ export default function ContactPageClient() {
                 
                 {/* Success/Error Messages */}
                 {submitStatus === "success" && (
-                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md flex items-start">
+                  <div
+                    id="contact-success"
+                    data-gtm="contact-success"
+                    role="status"
+                    aria-live="polite"
+                    className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md flex items-start"
+                  >
                     <CheckCircle2 className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-green-800">{submitMessage}</p>
                   </div>
