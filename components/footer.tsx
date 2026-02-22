@@ -47,7 +47,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mt-5">
               <span className="text-sm font-medium text-gray-800">Follow Us:</span>
               <a
-                href="https://www.instagram.com/rejuvenateskinspa/"
+                href="https://www.instagram.com/rejuvenate_skin_spa"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Rejuvenate Skin Spa on Instagram"

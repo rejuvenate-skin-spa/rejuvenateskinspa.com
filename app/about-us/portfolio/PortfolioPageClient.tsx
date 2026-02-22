@@ -70,7 +70,7 @@ export default function PortfolioPageClient() {
                   className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white shadow-lg rounded-md px-6 py-2"
                 >
                   <Link
-                    href="https://instagram.com/rejuvenateskinspa"
+                    href="https://www.instagram.com/rejuvenate_skin_spa"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -145,7 +145,7 @@ export default function PortfolioPageClient() {
               className="border-white text-white hover:bg-white/10 px-6 py-2"
             >
               <Link
-                href="https://instagram.com/rejuvenateskinspa"
+                href="https://www.instagram.com/rejuvenate_skin_spa"
                 target="_blank"
                 rel="noopener noreferrer"
               >

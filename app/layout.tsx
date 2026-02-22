@@ -125,7 +125,7 @@ export default function RootLayout({
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
     ],
     "sameAs": [
-      "https://www.instagram.com/rejuvenateskinspa/",
+      "https://www.instagram.com/rejuvenate_skin_spa",
       "https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
     ]
   }
@@ -148,7 +148,7 @@ export default function RootLayout({
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://www.instagram.com/rejuvenateskinspa/",
+      "https://www.instagram.com/rejuvenate_skin_spa",
       "https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
     ]
   }

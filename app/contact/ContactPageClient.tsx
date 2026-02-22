@@ -45,7 +45,7 @@ export default function ContactPageClient() {
     phone: "",
     service: "",
     message: "",
-    website: "", // honeypot – leave empty
+    contact_hp: "", // honeypot – leave empty (name chosen to avoid autofill)
   })
   const [turnstileToken, setTurnstileToken] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -81,28 +81,40 @@ export default function ContactPageClient() {
         (formData.service ? `Service of interest: ${formData.service}\n\n` : "") +
         (formData.message?.trim() ?? "")
 
+      // Payload must NEVER include "website" – browser/password-manager autofill fills it and triggers honeypot false positives. Use contact_hp only.
+      const payload: Record<string, unknown> = {
+        name,
+        email: formData.email.trim(),
+        phone: formData.phone,
+        message: message || "(No message provided)",
+        service_of_interest: formData.service || undefined,
+        additional_information: formData.message?.trim() || undefined,
+        contact_hp: formData.contact_hp,
+        startedAt: formStartedAt.current ?? Date.now(),
+        turnstileToken: local ? "" : turnstileToken,
+      }
+      // Regression guard: outbound payload must never contain "website" (browser autofill triggers honeypot).
+      if ("website" in payload) {
+        console.error("[contact] Forbidden key 'website' in outbound payload (autofill triggers honeypot); removing.")
+        delete payload.website
+      }
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email: formData.email.trim(),
-          phone: formData.phone,
-          message: message || "(No message provided)",
-          service_of_interest: formData.service || undefined,
-          additional_information: formData.message?.trim() || undefined,
-          website: formData.website,
-          startedAt: formStartedAt.current ?? Date.now(),
-          turnstileToken: local ? "" : turnstileToken,
-        }),
+        body: JSON.stringify(payload),
       })
 
       const json = await response.json().catch(() => ({}))
       if (!response.ok) {
         setSubmitStatus("error")
-        setSubmitMessage(
-          typeof json?.error === "string" ? json.error : "Sorry, there was an error submitting your form. Please try again or contact us directly."
-        )
+        const serverMessage =
+          typeof json?.error === "string"
+            ? json.error
+            : json?.code === "WEBHOOK_FAILED" || response.status === 502
+              ? `Message could not be sent. Please call us at ${siteConfig.phoneDisplay}.`
+              : "Sorry, there was an error submitting your form. Please try again or contact us directly."
+        setSubmitMessage(serverMessage)
         return
       }
 
@@ -115,7 +127,7 @@ export default function ContactPageClient() {
         phone: "",
         service: "",
         message: "",
-        website: "",
+        contact_hp: "",
       })
       setTurnstileToken("")
     } catch {
@@ -277,16 +289,18 @@ export default function ContactPageClient() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Honeypot – hidden from users, leave empty */}
-                  <div className="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden>
-                    <Label htmlFor="website">Website</Label>
+                  {/* Honeypot – hidden, leave empty; name/attrs avoid password-manager autofill */}
+                  <div className="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
+                    <Label htmlFor="contact_hp">Leave blank</Label>
                     <Input
-                      id="website"
-                      name="website"
+                      id="contact_hp"
+                      name="contact_hp"
                       type="text"
                       tabIndex={-1}
-                      autoComplete="off"
-                      value={formData.website}
+                      autoComplete="new-password"
+                      aria-hidden="true"
+                      data-lpignore="true"
+                      value={formData.contact_hp}
                       onChange={handleChange}
                     />
                   </div>

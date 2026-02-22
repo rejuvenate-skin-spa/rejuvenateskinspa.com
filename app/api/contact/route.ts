@@ -2,6 +2,10 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
+function requestId(): string {
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 const ContactSchema = z.object({
   name: z.string().min(1).max(80),
   email: z.string().trim().email("Please enter a valid email address.").max(120),
@@ -11,7 +15,7 @@ const ContactSchema = z.object({
   additional_information: z.string().max(2000).optional(),
 
   // Anti-spam fields
-  website: z.string().optional().or(z.literal("")),       // honeypot
+  contact_hp: z.string().optional().or(z.literal("")),     // honeypot (name avoids autofill)
   startedAt: z.number().int().optional(),                 // time trap (ms)
   turnstileToken: z.string(),                             // required in prod; empty allowed for local bypass
 });
@@ -30,12 +34,22 @@ function countUrls(text: string) {
 const isProduction = process.env.NODE_ENV === "production";
 const GENERIC_ERROR = "Unable to submit. Please try again.";
 
-function spamReject(reason: string) {
+function jsonError(
+  message: string,
+  status: number,
+  code?: string
+) {
+  const body: { ok: false; error: string; code?: string } = { ok: false, error: message };
+  if (code) body.code = code;
+  return NextResponse.json(body, { status });
+}
+
+function spamReject(reason: string, reqId: string) {
+  console.error(`[contact] reqId=${reqId} spam/block: ${reason}`);
   if (isProduction) {
-    console.error(`Contact API spam/block: ${reason}`);
-    return NextResponse.json({ error: GENERIC_ERROR }, { status: 400 });
+    return NextResponse.json({ ok: false, error: GENERIC_ERROR, code: "SPAM" }, { status: 400 });
   }
-  return NextResponse.json({ error: reason }, { status: 400 });
+  return NextResponse.json({ ok: false, error: reason, code: "SPAM" }, { status: 400 });
 }
 
 const PROD_HOST = "www.rejuvenateskinspa.com";
@@ -98,46 +112,59 @@ function getEffectiveOrigin(req: Request): string {
 }
 
 export async function POST(req: Request) {
+  const reqId = requestId();
   try {
     if (!isAllowedOrigin(req)) {
-      return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
+      console.error(`[contact] reqId=${reqId} origin rejected`);
+      return jsonError("Invalid origin.", 403, "ORIGIN");
     }
 
     const ip = getClientIp(req);
     const body = await req.json();
 
+    // Forbidden: "website" must never be in payload – browser autofill fills it and triggers honeypot false positives. Strip and log if present.
+    if (body && typeof body === "object" && "website" in body) {
+      console.error(`[contact] reqId=${reqId} forbidden key in payload: website (autofill triggers honeypot)`);
+      delete (body as Record<string, unknown>).website;
+    }
+
     const parsed = ContactSchema.safeParse(body);
     if (!parsed.success) {
-      return NextResponse.json({ error: "Invalid form data." }, { status: 400 });
+      const first = parsed.error.flatten().fieldErrors;
+      const detail = Object.keys(first).length ? Object.keys(first)[0] : "validation";
+      console.error(`[contact] reqId=${reqId} validation failed: ${detail}`);
+      return jsonError("Invalid form data.", 400, "VALIDATION");
     }
 
     const data = parsed.data;
     const hasToken = (data.turnstileToken ?? "").trim().length > 0;
 
-    // Always enforce honeypot: website must be empty
-    if (data.website && data.website.trim().length > 0) {
-      return spamReject("Honeypot filled");
+    // Always enforce honeypot: contact_hp must be empty (field name avoids browser/password-manager autofill)
+    if (data.contact_hp && data.contact_hp.trim().length > 0) {
+      console.error(`[contact] reqId=${reqId} honeypot field tripped: contact_hp`);
+      return spamReject("Honeypot filled", reqId);
     }
 
     // Always enforce timing gate: form must be open long enough
     const MIN_SUBMIT_MS = 3000;
     if (!data.startedAt || Date.now() - data.startedAt < MIN_SUBMIT_MS) {
-      return spamReject("Timing gate failed");
+      return spamReject("Timing gate failed", reqId);
     }
 
     // Production: require non-empty turnstile token
     if (isProduction) {
       if (!process.env.TURNSTILE_SECRET_KEY) {
-        return NextResponse.json({ error: GENERIC_ERROR }, { status: 500 });
+        console.error(`[contact] reqId=${reqId} TURNSTILE_SECRET_KEY missing`);
+        return jsonError(GENERIC_ERROR, 500, "CONFIG");
       }
       if (!hasToken) {
-        return spamReject("Missing security token");
+        return spamReject("Missing security token", reqId);
       }
     }
 
     // Simple URL rule: most legit spa inquiries have 0 URLs
     if (countUrls(data.message) > 0) {
-      return spamReject("URLs in message");
+      return spamReject("URLs in message", reqId);
     }
 
     // Normalize US phone to E.164: 10 digits -> +1XXXXXXXXXX; 11 digits starting with 1 -> same
@@ -148,7 +175,7 @@ export async function POST(req: Request) {
     } else if (digits.length === 11 && digits.startsWith("1")) {
       normalizedPhone = "+1" + digits.slice(1);
     } else {
-      return NextResponse.json({ error: "Please enter a valid phone number." }, { status: 400 });
+      return jsonError("Please enter a valid phone number.", 400);
     }
 
     // Turnstile: production always verify; development verify only when token present (allow empty for curl)
@@ -163,21 +190,26 @@ export async function POST(req: Request) {
         }),
       });
 
-      const verify = await verifyRes.json();
+      const verify = (await verifyRes.json()) as { success?: boolean; "error-codes"?: string[] };
       if (!verify.success) {
-        if (isProduction) {
-          return spamReject("Turnstile verification failed");
-        }
-        return NextResponse.json({ error: "Bot check failed." }, { status: 400 });
+        const codes = verify["error-codes"] ?? [];
+        console.error(`[contact] reqId=${reqId} Turnstile failed error-codes=${codes.join(",")}`);
+        const msg =
+          isProduction
+            ? "Security check failed or expired. Please refresh the page and try again."
+            : `Bot check failed. (${codes.join(", ") || "unknown"})`;
+        return jsonError(msg, 400, "TURNSTILE_FAILED");
       }
     }
 
     // Forward to GoHighLevel webhook (now private, server-side)
     const ghlUrl = process.env.GOHIGHLEVEL_WEBHOOK_URL;
     if (!ghlUrl) {
-      return NextResponse.json({ error: "Server misconfigured." }, { status: 500 });
+      console.error(`[contact] reqId=${reqId} GOHIGHLEVEL_WEBHOOK_URL missing`);
+      return jsonError(GENERIC_ERROR, 500, "CONFIG");
     }
 
+    // Do not forward honeypot (contact_hp) or any "website" field to GoHighLevel.
     const ghlPayload: Record<string, string> = {
       name: data.name,
       email: data.email.trim().toLowerCase(),
@@ -195,11 +227,19 @@ export async function POST(req: Request) {
     });
 
     if (!ghlRes.ok) {
-      return NextResponse.json({ error: "Failed to submit." }, { status: 502 });
+      const snippet = (await ghlRes.text()).slice(0, 200).replace(/\s+/g, " ");
+      console.error(`[contact] reqId=${reqId} webhook failed status=${ghlRes.status} body=${snippet}`);
+      return jsonError(
+        "Message could not be sent. Please call us at (480) 204-9366.",
+        502,
+        "WEBHOOK_FAILED"
+      );
     }
 
     return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ error: "Unexpected error." }, { status: 500 });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unexpected error";
+    console.error(`[contact] reqId=${reqId} exception: ${message}`);
+    return jsonError("Unexpected error.", 500, "ERROR");
   }
 }

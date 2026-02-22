@@ -33,7 +33,7 @@ export default function PortfolioPage() {
           {/* Social Links */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="https://www.instagram.com/rejuvenateskinspa/"
+              href="https://www.instagram.com/rejuvenate_skin_spa"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-medium rounded-lg transition-all"
