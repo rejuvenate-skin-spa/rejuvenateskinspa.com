@@ -1,6 +1,7 @@
-// app/api/contact/route.ts
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { Resend } from "resend";
+import { getSquareClient } from "@/lib/square";
 
 function requestId(): string {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
@@ -14,10 +15,9 @@ const ContactSchema = z.object({
   service_of_interest: z.string().max(120).optional(),
   additional_information: z.string().max(2000).optional(),
 
-  // Anti-spam fields
-  contact_hp: z.string().optional().or(z.literal("")),     // honeypot (name avoids autofill)
-  startedAt: z.number().int().optional(),                 // time trap (ms)
-  turnstileToken: z.string(),                             // required in prod; empty allowed for local bypass
+  contact_hp: z.string().optional().or(z.literal("")),
+  startedAt: z.number().int().optional(),
+  turnstileToken: z.string(),
 });
 
 function getClientIp(req: Request) {
@@ -34,11 +34,7 @@ function countUrls(text: string) {
 const isProduction = process.env.NODE_ENV === "production";
 const GENERIC_ERROR = "Unable to submit. Please try again.";
 
-function jsonError(
-  message: string,
-  status: number,
-  code?: string
-) {
+function jsonError(message: string, status: number, code?: string) {
   const body: { ok: false; error: string; code?: string } = { ok: false, error: message };
   if (code) body.code = code;
   return NextResponse.json(body, { status });
@@ -67,14 +63,12 @@ function isAllowedOrigin(req: Request): boolean {
   const origin = req.headers.get("origin")?.trim() ?? "";
   const hasValidOrigin = origin && origin !== "null";
   if (hasValidOrigin) {
-    // Current allowlist when Origin is present
     return (
       origin.includes("https://www.rejuvenateskinspa.com") ||
       origin.includes("http://localhost") ||
       origin.includes("http://127.0.0.1")
     );
   }
-  // Fallback when Origin missing/empty/"null": check Host and Referer
   const hostHeader = req.headers.get("host")?.trim() ?? "";
   const hostname = hostHeader ? hostHeader.split(":")[0] : "";
   const referer = req.headers.get("referer")?.trim() ?? "";
@@ -91,26 +85,6 @@ function isAllowedOrigin(req: Request): boolean {
   );
 }
 
-function getEffectiveOrigin(req: Request): string {
-  const origin = req.headers.get("origin")?.trim() ?? "";
-  if (origin && origin !== "null") return origin;
-  const host = req.headers.get("host")?.trim() ?? "";
-  const referer = req.headers.get("referer")?.trim() ?? "";
-  if (referer) {
-    try {
-      const u = new URL(referer);
-      return u.origin;
-    } catch {
-      // fall through
-    }
-  }
-  const hostname = host ? host.split(":")[0] : "";
-  if (!hostname) return "";
-  const scheme =
-    hostname === "localhost" || hostname === "127.0.0.1" ? "http" : "https";
-  return `${scheme}://${host}`;
-}
-
 export async function POST(req: Request) {
   const reqId = requestId();
   try {
@@ -122,9 +96,8 @@ export async function POST(req: Request) {
     const ip = getClientIp(req);
     const body = await req.json();
 
-    // Forbidden: "website" must never be in payload – browser autofill fills it and triggers honeypot false positives. Strip and log if present.
     if (body && typeof body === "object" && "website" in body) {
-      console.error(`[contact] reqId=${reqId} forbidden key in payload: website (autofill triggers honeypot)`);
+      console.error(`[contact] reqId=${reqId} forbidden key in payload: website`);
       delete (body as Record<string, unknown>).website;
     }
 
@@ -139,19 +112,16 @@ export async function POST(req: Request) {
     const data = parsed.data;
     const hasToken = (data.turnstileToken ?? "").trim().length > 0;
 
-    // Always enforce honeypot: contact_hp must be empty (field name avoids browser/password-manager autofill)
     if (data.contact_hp && data.contact_hp.trim().length > 0) {
       console.error(`[contact] reqId=${reqId} honeypot field tripped: contact_hp`);
       return spamReject("Honeypot filled", reqId);
     }
 
-    // Always enforce timing gate: form must be open long enough
     const MIN_SUBMIT_MS = 3000;
     if (!data.startedAt || Date.now() - data.startedAt < MIN_SUBMIT_MS) {
       return spamReject("Timing gate failed", reqId);
     }
 
-    // Production: require non-empty turnstile token
     if (isProduction) {
       if (!process.env.TURNSTILE_SECRET_KEY) {
         console.error(`[contact] reqId=${reqId} TURNSTILE_SECRET_KEY missing`);
@@ -162,12 +132,10 @@ export async function POST(req: Request) {
       }
     }
 
-    // Simple URL rule: most legit spa inquiries have 0 URLs
     if (countUrls(data.message) > 0) {
       return spamReject("URLs in message", reqId);
     }
 
-    // Normalize US phone to E.164: 10 digits -> +1XXXXXXXXXX; 11 digits starting with 1 -> same
     const digits = (data.phone ?? "").replace(/\D/g, "");
     let normalizedPhone: string;
     if (digits.length === 10) {
@@ -178,7 +146,6 @@ export async function POST(req: Request) {
       return jsonError("Please enter a valid phone number.", 400);
     }
 
-    // Turnstile: production always verify; development verify only when token present (allow empty for curl)
     if (isProduction || hasToken) {
       const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
         method: "POST",
@@ -202,38 +169,115 @@ export async function POST(req: Request) {
       }
     }
 
-    // Forward to GoHighLevel webhook (now private, server-side)
-    const ghlUrl = process.env.GOHIGHLEVEL_WEBHOOK_URL;
-    if (!ghlUrl) {
-      console.error(`[contact] reqId=${reqId} GOHIGHLEVEL_WEBHOOK_URL missing`);
-      return jsonError(GENERIC_ERROR, 500, "CONFIG");
+    // --- Square Customers API ---
+
+    const nameParts = data.name.trim().split(/\s+/);
+    const givenName = nameParts[0] || data.name.trim();
+    const familyName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : undefined;
+    const emailNormalized = data.email.trim().toLowerCase();
+
+    const rawMessage = data.additional_information?.trim() || "";
+    const noteLines: string[] = [];
+    if (data.service_of_interest) noteLines.push(`Service: ${data.service_of_interest}`);
+    if (rawMessage) noteLines.push(`Message: ${rawMessage}`);
+    noteLines.push(`Date: ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`);
+    const note = noteLines.join("\n");
+
+    const square = getSquareClient();
+
+    // Search for existing customer by email
+    let existingCustomerId: string | undefined;
+    try {
+      const searchResult = await square.customers.search({
+        query: {
+          filter: {
+            emailAddress: { exact: emailNormalized },
+          },
+        },
+      });
+      if (searchResult.customers && searchResult.customers.length > 0) {
+        existingCustomerId = searchResult.customers[0].id;
+      }
+    } catch (searchErr) {
+      console.error(`[contact] reqId=${reqId} Square customer search failed:`, searchErr);
     }
 
-    // Do not forward honeypot (contact_hp) or any "website" field to GoHighLevel.
-    const ghlPayload: Record<string, string> = {
-      name: data.name,
-      email: data.email.trim().toLowerCase(),
-      phone: normalizedPhone,
-      message: data.message,
-      source: "rejuvenateskinspa.com",
-    };
-    if (data.service_of_interest) ghlPayload.service_of_interest = data.service_of_interest;
-    if (data.additional_information) ghlPayload.additional_information = data.additional_information;
+    if (existingCustomerId) {
+      try {
+        const existing = await square.customers.get({ customerId: existingCustomerId });
+        const prevNote = existing.customer?.note ?? "";
+        const separator = prevNote ? "\n---\n" : "";
+        const updatedNote = prevNote + separator + note;
+        try {
+          await square.customers.update({ customerId: existingCustomerId, phoneNumber: normalizedPhone, note: updatedNote });
+        } catch {
+          await square.customers.update({ customerId: existingCustomerId, note: updatedNote });
+        }
+        console.log(`[contact] reqId=${reqId} updated Square customer=${existingCustomerId}`);
+      } catch (updateErr) {
+        console.error(`[contact] reqId=${reqId} Square customer update failed:`, updateErr);
+        return jsonError(
+          "Message could not be sent. Please call us at (480) 204-9366.",
+          502,
+          "SQUARE_FAILED"
+        );
+      }
+    } else {
+      try {
+        const idempotencyKey = `contact-${emailNormalized}-${Date.now()}`;
+        const payload: Record<string, string | undefined> = {
+          idempotencyKey,
+          givenName,
+          familyName,
+          emailAddress: emailNormalized,
+          phoneNumber: normalizedPhone,
+          note,
+          referenceId: "rejuvenateskinspa.com",
+        };
+        let createResult;
+        try {
+          createResult = await square.customers.create(payload);
+        } catch {
+          delete payload.phoneNumber;
+          payload.idempotencyKey = `contact-${emailNormalized}-${Date.now()}`;
+          createResult = await square.customers.create(payload);
+        }
+        console.log(`[contact] reqId=${reqId} created Square customer=${createResult.customer?.id}`);
+      } catch (createErr) {
+        console.error(`[contact] reqId=${reqId} Square customer create failed:`, createErr);
+        return jsonError(
+          "Message could not be sent. Please call us at (480) 204-9366.",
+          502,
+          "SQUARE_FAILED"
+        );
+      }
+    }
 
-    const ghlRes = await fetch(ghlUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(ghlPayload),
-    });
+    // --- Email notifications (fire-and-forget — don't block the response) ---
+    const resendKey = process.env.RESEND_API_KEY;
+    if (resendKey) {
+      const resend = new Resend(resendKey);
+      const fromAddress = process.env.RESEND_FROM_EMAIL || "Rejuvenate Skin Spa <onboarding@resend.dev>";
+      const notifyEmail = process.env.NOTIFY_EMAIL || "info@rejuvenateskinspa.com";
+      const serviceName = data.service_of_interest || "Not specified";
 
-    if (!ghlRes.ok) {
-      const snippet = (await ghlRes.text()).slice(0, 200).replace(/\s+/g, " ");
-      console.error(`[contact] reqId=${reqId} webhook failed status=${ghlRes.status} body=${snippet}`);
-      return jsonError(
-        "Message could not be sent. Please call us at (480) 204-9366.",
-        502,
-        "WEBHOOK_FAILED"
-      );
+      resend.emails.send({
+        from: fromAddress,
+        to: notifyEmail,
+        subject: `New inquiry from ${data.name.trim()}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <table style="border-collapse:collapse;font-family:sans-serif;font-size:14px;">
+            <tr><td style="padding:6px 12px;font-weight:bold;">Name</td><td style="padding:6px 12px;">${data.name.trim()}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:bold;">Email</td><td style="padding:6px 12px;"><a href="mailto:${emailNormalized}">${emailNormalized}</a></td></tr>
+            <tr><td style="padding:6px 12px;font-weight:bold;">Phone</td><td style="padding:6px 12px;"><a href="tel:${normalizedPhone}">${normalizedPhone}</a></td></tr>
+            <tr><td style="padding:6px 12px;font-weight:bold;">Service</td><td style="padding:6px 12px;">${serviceName}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:bold;">Message</td><td style="padding:6px 12px;">${rawMessage || "(No message)"}</td></tr>
+          </table>
+        `.trim(),
+      }).catch((err) => {
+        console.error(`[contact] reqId=${reqId} notification email failed:`, err);
+      });
     }
 
     return NextResponse.json({ ok: true });

@@ -145,6 +145,11 @@ const navigationItems = [
     href: "/contact",
     submenu: [],
   },
+  {
+    title: "Book Now",
+    href: "/book",
+    submenu: [],
+  },
 ];
 
 export function Navigation() {

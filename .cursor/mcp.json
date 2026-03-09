@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "square": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.squareup.com/sse"]
+    }
+  }
+}

@@ -11,8 +11,6 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react"
 import { siteConfig } from "@/lib/site-config"
-// GoHighLevel booking embed - uncomment when ready to enable
-// import { GoHighLevelEmbed } from "@/components/gohighlevel-embed"
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""
 
@@ -429,40 +427,6 @@ export default function ContactPageClient() {
           </div>
         </div>
       </section>
-
-      {/* 
-        ============================================================
-        GOHIGHLEVEL ONLINE BOOKING EMBED
-        ============================================================
-        
-        TO ENABLE ONLINE BOOKING:
-        1. Uncomment the import at the top of this file
-        2. Uncomment the section below
-        3. Replace "YOUR_CALENDAR_ID" with your actual GoHighLevel calendar ID
-           (Get this from: GoHighLevel > Calendars > Your Calendar > Embed > Copy iframe URL)
-        
-        Example URL format: 
-        https://api.leadconnectorhq.com/widget/booking/ABC123xyz
-        
-        <section className="py-10 sm:py-16 bg-white">
-          <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-4">
-                Book Online
-              </h2>
-              <p className="text-lg text-gray-600">
-                Select a time that works for you and we will confirm your appointment.
-              </p>
-            </div>
-            <GoHighLevelEmbed 
-              enabled={true}
-              embedUrl="https://api.leadconnectorhq.com/widget/booking/YOUR_CALENDAR_ID"
-              height="700px"
-            />
-          </div>
-        </section>
-        ============================================================
-      */}
 
       {/* Map Section */}
       <section className="py-10 sm:py-16 bg-sage-50">

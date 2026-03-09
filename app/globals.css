@@ -102,3 +102,9 @@
     color: var(--sage-600);
   }
 }
+
+.square-booking-widget iframe {
+  min-height: 1400px !important;
+  height: auto !important;
+  width: 100% !important;
+}
