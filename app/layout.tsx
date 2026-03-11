@@ -167,6 +167,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs Index" />
+        <link rel="alternate" type="text/plain" href="/ai.txt" title="AI Discovery" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
