@@ -427,8 +427,8 @@ export default function ContactPageClient() {
           </div>
         </div>
       </section>
-
-      {/* Map Section */}
+  
+      {/*  Map Section  */}
       <section className="py-10 sm:py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
