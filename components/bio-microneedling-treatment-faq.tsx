@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { buildFAQPage } from "@/lib/schema";
 
 const faqSections = [
   {
@@ -108,21 +109,11 @@ export default function BioMicroneedlingTreatmentFAQ() {
     );
   };
 
-  // Generate FAQ schema markup
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqSections.flatMap((section) =>
-      section.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      }))
-    ),
-  };
+  const faqSchema = buildFAQPage(
+    faqSections.flatMap((section) =>
+      section.faqs.map((faq) => ({ question: faq.question, answer: faq.answer }))
+    )
+  );
 
   return (
     <>

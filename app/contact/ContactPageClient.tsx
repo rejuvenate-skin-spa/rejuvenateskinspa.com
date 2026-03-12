@@ -9,7 +9,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertCircle, ArrowRight } from "lucide-react"
+import Link from "next/link"
 import { siteConfig } from "@/lib/site-config"
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""
@@ -253,6 +254,15 @@ export default function ContactPageClient() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <Link
+                  href="/about-us/bridgette-ball"
+                  className="inline-flex items-center text-sage-600 hover:text-sage-700 text-sm font-medium transition-colors"
+                >
+                  Meet Bridgette Ball
+                  <ArrowRight className="h-3.5 w-3.5 ml-1.5" />
+                </Link>
               </div>
             </div>
             </div>

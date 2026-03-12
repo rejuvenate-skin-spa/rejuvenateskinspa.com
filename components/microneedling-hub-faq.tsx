@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { buildFAQPage } from "@/lib/schema"
 
 interface FAQ {
   question: string
@@ -127,21 +128,11 @@ export default function MicroneedlingHubFAQ() {
     }))
   }
 
-  // Generate FAQ schema markup
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.flatMap((section) =>
-      section.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer.replace(/\n/g, " "),
-        },
-      })),
-    ),
-  }
+  const faqSchema = buildFAQPage(
+    faqData.flatMap((section) =>
+      section.faqs.map((faq) => ({ question: faq.question, answer: faq.answer }))
+    )
+  )
 
   return (
     <>

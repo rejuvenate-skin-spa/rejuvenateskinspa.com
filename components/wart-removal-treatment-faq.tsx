@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { buildFAQPage } from "@/lib/schema"
 
 const faqData = [
   {
@@ -148,32 +149,15 @@ export default function WartRemovalTreatmentFAQ() {
     setOpenItems((prev) => (prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]))
   }
 
-  const allQuestions = faqData.flatMap((section) =>
-    section.questions.map((q) => ({
-      question: q.question,
-      answer: q.answer,
-    })),
+  const faqSchema = buildFAQPage(
+    faqData.flatMap((section) =>
+      section.questions.map((q) => ({ question: q.question, answer: q.answer }))
+    )
   )
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: allQuestions.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

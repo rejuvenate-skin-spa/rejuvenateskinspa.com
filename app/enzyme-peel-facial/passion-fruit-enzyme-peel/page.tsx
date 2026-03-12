@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import PassionFruitEnzymePeelClientPage from "./PassionFruitEnzymePeelClientPage";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 
 export const metadata: Metadata = {
   title:
@@ -11,5 +14,17 @@ export const metadata: Metadata = {
 };
 
 export default function PassionFruitEnzymePeelPage() {
-  return <PassionFruitEnzymePeelClientPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/enzyme-peel-facial/passion-fruit-enzyme-peel")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/enzyme-peel-facial/passion-fruit-enzyme-peel")!)) }}
+      />
+      <PassionFruitEnzymePeelClientPage />
+    </>
+  );
 }

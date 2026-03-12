@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 import PumpkinOrangeEnzymePeelClientPage from "./PumpkinOrangeEnzymePeelClientPage"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
+import { buildService } from "@/lib/schema"
+import { getService } from "@/lib/services"
 
 export const metadata: Metadata = {
   title: "Pumpkin-Orange Enzyme Peel | Renewal Facial | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -9,5 +12,17 @@ export const metadata: Metadata = {
 }
 
 export default function PumpkinOrangeEnzymePeelPage() {
-  return <PumpkinOrangeEnzymePeelClientPage />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/enzyme-peel-facial/pumpkin-orange-enzyme-peel")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/enzyme-peel-facial/pumpkin-orange-enzyme-peel")!)) }}
+      />
+      <PumpkinOrangeEnzymePeelClientPage />
+    </>
+  )
 }

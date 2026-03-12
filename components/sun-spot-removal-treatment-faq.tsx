@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { buildFAQPage } from "@/lib/schema"
 
 interface FAQItem {
   question: string
@@ -158,22 +159,11 @@ export default function SunSpotRemovalTreatmentFAQ() {
     setOpenItems((prev) => (prev.includes(itemId) ? prev.filter((id) => id !== itemId) : [...prev, itemId]))
   }
 
-  const allFAQs = faqSections.flatMap((section) =>
-    section.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
+  const faqSchema = buildFAQPage(
+    faqSections.flatMap((section) =>
+      section.faqs.map((item) => ({ question: item.question, answer: item.answer }))
+    )
   )
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: allFAQs,
-  }
 
   return (
     <>

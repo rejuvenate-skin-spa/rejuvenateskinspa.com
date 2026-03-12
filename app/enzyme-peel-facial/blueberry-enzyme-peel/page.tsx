@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 import BlueberryEnzymePeelClientPage from "./BlueberryEnzymePeelClientPage"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
+import { buildService } from "@/lib/schema"
+import { getService } from "@/lib/services"
 
 export const metadata: Metadata = {
   title: "Blueberry Enzyme Peel | Antioxidant Facial | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -9,5 +12,17 @@ export const metadata: Metadata = {
 }
 
 export default function BlueberryEnzymePeelPage() {
-  return <BlueberryEnzymePeelClientPage />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/enzyme-peel-facial/blueberry-enzyme-peel")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/enzyme-peel-facial/blueberry-enzyme-peel")!)) }}
+      />
+      <BlueberryEnzymePeelClientPage />
+    </>
+  )
 }

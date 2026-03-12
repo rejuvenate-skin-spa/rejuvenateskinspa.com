@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 import CoconutPapayaEnzymePeelClientPage from "./CoconutPapayaEnzymePeelClientPage"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
+import { buildService } from "@/lib/schema"
+import { getService } from "@/lib/services"
 
 export const metadata: Metadata = {
   title: "Coconut-Papaya Enzyme Peel | Tropical Hydrating Facial | Rejuvenate Skin Spa",
@@ -9,5 +12,17 @@ export const metadata: Metadata = {
 }
 
 export default function CoconutPapayaEnzymePeelPage() {
-  return <CoconutPapayaEnzymePeelClientPage />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/enzyme-peel-facial/coconut-papaya-enzyme-peel")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/enzyme-peel-facial/coconut-papaya-enzyme-peel")!)) }}
+      />
+      <CoconutPapayaEnzymePeelClientPage />
+    </>
+  )
 }

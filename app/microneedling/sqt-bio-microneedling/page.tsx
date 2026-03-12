@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 import BioMicroneedlingClientPage from "../_components/BioMicroneedlingClientPage";
 
 const siteUrl =
@@ -35,6 +38,18 @@ export const metadata: Metadata = {
 };
 
 export default function SqtBioMicroneedlingPage() {
-  return <BioMicroneedlingClientPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/microneedling/sqt-bio-microneedling")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/microneedling/sqt-bio-microneedling")!)) }}
+      />
+      <BioMicroneedlingClientPage />
+    </>
+  );
 }
 

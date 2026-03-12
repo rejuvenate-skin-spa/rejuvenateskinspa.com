@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from 'lucide-react'
+import { buildFAQPage } from "@/lib/schema"
 
 interface FAQItem {
   question: string
@@ -168,33 +169,15 @@ export default function NanoAblativeSkinResurfacingFAQ() {
     setOpenItems((prev) => (prev.includes(itemId) ? prev.filter((id) => id !== itemId) : [...prev, itemId]))
   }
 
-  const generateFAQSchema = () => {
-    const faqItems = faqSections.flatMap((section) =>
-      section.items.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.answer,
-        },
-      })),
+  const faqSchema = buildFAQPage(
+    faqSections.flatMap((section) =>
+      section.items.map((item) => ({ question: item.question, answer: item.answer }))
     )
-
-    return {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqItems,
-    }
-  }
+  )
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema()),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section id="faq-section" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">

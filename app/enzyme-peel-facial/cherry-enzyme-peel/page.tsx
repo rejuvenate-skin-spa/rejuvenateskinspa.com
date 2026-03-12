@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import CherryEnzymePeelClientPage from "./CherryEnzymePeelClientPage";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 
 export const metadata: Metadata = {
   title:
@@ -11,5 +14,17 @@ export const metadata: Metadata = {
 };
 
 export default function CherryEnzymePeelPage() {
-  return <CherryEnzymePeelClientPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/enzyme-peel-facial/cherry-enzyme-peel")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/enzyme-peel-facial/cherry-enzyme-peel")!)) }}
+      />
+      <CherryEnzymePeelClientPage />
+    </>
+  );
 }

@@ -6,6 +6,12 @@ import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { StickyMobilePhoneCta } from "@/components/sticky-mobile-phone-cta"
+import { siteConfig } from "@/lib/site-config"
+import {
+  buildLocalBusiness,
+  buildOrganization,
+  buildWebSite,
+} from "@/lib/schema"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const playfair = Playfair_Display({
@@ -13,8 +19,7 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 })
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com"
+const siteUrl = siteConfig.url
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -83,86 +88,9 @@ export default function RootLayout({
 }) {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "additionalType": "https://schema.org/MedicalBusiness",
-    "@id": "https://www.rejuvenateskinspa.com/#localbusiness",
-    "name": "Rejuvenate Skin Spa",
-    "alternateName": "Rejuvenate Skin Spa Queen Creek",
-    "description": "Rejuvenate Skin Spa is a premier medical aesthetics spa in Queen Creek, Arizona, specializing in Plexr plasma skin tightening, microneedling, SQT bio-microneedling, chemical peels, and luxury facial treatments.",
-    "url": "https://www.rejuvenateskinspa.com/",
-    "telephone": "+14802049366",
-    "email": "info@rejuvenateskinspa.com",
-    "image": "https://www.rejuvenateskinspa.com/og/og-home.jpg",
-    "logo": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.webp",
-    "priceRange": "$$",
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Credit Card",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "20162 E. Sonoqui Blvd.",
-      "addressLocality": "Queen Creek",
-      "addressRegion": "AZ",
-      "postalCode": "85142",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 33.2486,
-      "longitude": -111.6343
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Queen Creek", "sameAs": "https://en.wikipedia.org/wiki/Queen_Creek,_Arizona" },
-      { "@type": "City", "name": "San Tan Valley" },
-      { "@type": "City", "name": "Gilbert" },
-      { "@type": "City", "name": "Mesa" },
-      { "@type": "City", "name": "Chandler" },
-      { "@type": "City", "name": "Apache Junction" }
-    ],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/rejuvenate_skin_spa",
-      "https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
-    ]
-  }
-
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://www.rejuvenateskinspa.com/#organization",
-    "name": "Rejuvenate Skin Spa",
-    "url": "https://www.rejuvenateskinspa.com/",
-    "logo": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.webp",
-    "telephone": "+14802049366",
-    "email": "info@rejuvenateskinspa.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "20162 E. Sonoqui Blvd.",
-      "addressLocality": "Queen Creek",
-      "addressRegion": "AZ",
-      "postalCode": "85142",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://www.instagram.com/rejuvenate_skin_spa",
-      "https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
-    ]
-  }
-
-  const webSiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.rejuvenateskinspa.com/#website",
-    "url": "https://www.rejuvenateskinspa.com/",
-    "name": "Rejuvenate Skin Spa",
-    "publisher": {
-      "@id": "https://www.rejuvenateskinspa.com/#organization"
-    }
-  }
+  const localBusinessJsonLd = buildLocalBusiness()
+  const organizationJsonLd = buildOrganization()
+  const webSiteJsonLd = buildWebSite()
 
   return (
     <html lang="en">

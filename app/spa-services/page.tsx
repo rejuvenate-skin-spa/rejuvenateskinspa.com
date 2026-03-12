@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import SpaServicesPageClient from "./SpaServicesPageClient"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com"
@@ -34,5 +35,13 @@ export const metadata: Metadata = {
 }
 
 export default function SpaServicesPage() {
-  return <SpaServicesPageClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/spa-services")) }}
+      />
+      <SpaServicesPageClient />
+    </>
+  )
 }

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import GlycolicAcidPeelPageClient from "./GlycolicAcidPeelPageClient";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Glycolic Acid Peel | AHA Chemical Peel | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 };
 
 export default function GlycolicAcidPeelsPage() {
-  return <GlycolicAcidPeelPageClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/chemical-peels/glycolic-acid-peels")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/chemical-peels/glycolic-acid-peels")!)) }}
+      />
+      <GlycolicAcidPeelPageClient />
+    </>
+  );
 }
 

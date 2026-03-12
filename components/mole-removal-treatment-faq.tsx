@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { buildFAQPage } from "@/lib/schema"
 
 const faqSections = [
   {
@@ -148,21 +149,11 @@ export function MoleRemovalTreatmentFAQ() {
     setOpenItems((prev) => (prev.includes(itemId) ? prev.filter((id) => id !== itemId) : [...prev, itemId]))
   }
 
-  // Generate FAQ schema markup
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqSections.flatMap((section) =>
-      section.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    ),
-  }
+  const faqSchema = buildFAQPage(
+    faqSections.flatMap((section) =>
+      section.faqs.map((item) => ({ question: item.question, answer: item.answer }))
+    )
+  )
 
   return (
     <>

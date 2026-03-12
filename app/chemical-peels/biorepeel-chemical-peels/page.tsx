@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -27,6 +30,14 @@ export const metadata: Metadata = {
 export default function BioRePeelTreatmentPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/chemical-peels/biorepeel-chemical-peels")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/chemical-peels/biorepeel-chemical-peels")!)) }}
+      />
       {/* Hero Section */}
       <BioRePeelFacialChemicalPeelHero />
 

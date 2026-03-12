@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { buildFAQPage } from "@/lib/schema"
 
 interface FAQItem {
   question: string
@@ -142,27 +143,15 @@ export function GlycolicAcidPeelFAQ() {
     ))
   }
 
+  const faqSchema = buildFAQPage(
+    faqData.flatMap((section) =>
+      section.faqs.map((faq) => ({ question: faq.question, answer: faq.answer }))
+    )
+  )
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqData.flatMap((section) =>
-              section.faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer,
-                },
-              })),
-            ),
-          }),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

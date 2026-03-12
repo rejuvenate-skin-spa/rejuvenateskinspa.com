@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { buildFAQPage } from "@/lib/schema"
 
 const faqData = [
   {
@@ -158,21 +159,11 @@ export default function SemiAblativeSkinResurfacingFAQ() {
     setOpenItems((prev) => (prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]))
   }
 
-  // Generate FAQ schema markup
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.flatMap((section) =>
-      section.questions.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    ),
-  }
+  const faqSchema = buildFAQPage(
+    faqData.flatMap((section) =>
+      section.questions.map((q) => ({ question: q.question, answer: q.answer }))
+    )
+  )
 
   return (
     <section className="py-16 bg-gray-50">

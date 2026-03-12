@@ -93,6 +93,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/about-us/bridgette-ball"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
+                >
+                  Meet Bridgette Ball
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/portfolio"
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >

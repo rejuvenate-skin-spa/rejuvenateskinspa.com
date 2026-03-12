@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import MicroneedlingHubFAQ from "@/components/microneedling-hub-faq";
 import PhoneCtaButton from "@/components/phone-cta-button";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com";
@@ -81,6 +82,10 @@ const options = [
 export default function MicroneedlingHubPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/microneedling")) }}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[500px] py-12 overflow-hidden flex items-center">
         <div className="absolute inset-0">

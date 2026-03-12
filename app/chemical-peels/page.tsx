@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import ChemicalPeelsPageClient from "./ChemicalPeelsPageClient"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.rejuvenateskinspa.com"
@@ -34,5 +35,13 @@ export const metadata: Metadata = {
 }
 
 export default function ChemicalPeelsPage() {
-  return <ChemicalPeelsPageClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/chemical-peels")) }}
+      />
+      <ChemicalPeelsPageClient />
+    </>
+  )
 }

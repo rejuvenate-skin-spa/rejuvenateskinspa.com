@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import SunSpotRemovalTreatmentClientPage from "./SunSpotRemovalTreatmentClientPage";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Sun Spot Removal | Plexr Plasma Treatment | Queen Creek, AZ",
@@ -10,5 +13,17 @@ export const metadata: Metadata = {
 };
 
 export default function SunSpotRemovalTreatmentPage() {
-  return <SunSpotRemovalTreatmentClientPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/plexr-plasma-skin-tightening/sun-spot-removal-treatment")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/plexr-plasma-skin-tightening/sun-spot-removal-treatment")!)) }}
+      />
+      <SunSpotRemovalTreatmentClientPage />
+    </>
+  );
 }

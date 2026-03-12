@@ -1,4 +1,7 @@
 import type { Metadata } from "next"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
+import { buildService } from "@/lib/schema"
+import { getService } from "@/lib/services"
 import EyebrowLaminationClientPage from "./EyebrowLaminationClientPage"
 
 const siteUrl =
@@ -34,5 +37,17 @@ export const metadata: Metadata = {
 }
 
 export default function EyebrowLaminationPage() {
-  return <EyebrowLaminationClientPage />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/spa-services/eyebrow-lamination-treatment")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/spa-services/eyebrow-lamination-treatment")!)) }}
+      />
+      <EyebrowLaminationClientPage />
+    </>
+  )
 }

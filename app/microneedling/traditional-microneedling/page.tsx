@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 import MicroneedlingTreatmentFAQ from "@/components/microneedling-treatment-faq";
 import MicroneedlingTreatmentHero from "@/components/microneedling-treatment-hero";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,6 +44,15 @@ export const metadata: Metadata = {
 export default function TraditionalMicroneedlingPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/microneedling/traditional-microneedling")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/microneedling/traditional-microneedling")!)) }}
+      />
+
       {/* Hero */}
       <MicroneedlingTreatmentHero
         title="Traditional Microneedling"

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Phone } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 
 export default function BookPageClient() {
@@ -57,6 +58,15 @@ export default function BookPageClient() {
             <Phone className="h-4 w-4 mr-2" />
             {siteConfig.phoneDisplay}
           </a>
+          <div className="mt-4">
+            <Link
+              href="/about-us/bridgette-ball"
+              className="inline-flex items-center text-sage-600 hover:text-sage-700 text-sm font-medium transition-colors"
+            >
+              Meet Bridgette Ball
+              <ArrowRight className="h-3.5 w-3.5 ml-1.5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

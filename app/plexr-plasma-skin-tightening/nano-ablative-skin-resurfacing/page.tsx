@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 import NanoAblativeClientPage from "./NanoAblativeClientPage"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
+import { buildService } from "@/lib/schema"
+import { getService } from "@/lib/services"
 
 export const metadata: Metadata = {
   title: "Nano-Ablative Resurfacing | Plexr Plasma | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -10,5 +13,17 @@ export const metadata: Metadata = {
 }
 
 export default function NanoAblativeSkinResurfacingPage() {
-  return <NanoAblativeClientPage />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing")!)) }}
+      />
+      <NanoAblativeClientPage />
+    </>
+  )
 }

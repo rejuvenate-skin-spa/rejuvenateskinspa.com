@@ -1,4 +1,7 @@
 import type { Metadata } from "next"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
+import { buildService } from "@/lib/schema"
+import { getService } from "@/lib/services"
 import MicrobladingClientPage from "./MicrobladingClientPage"
 
 const siteUrl =
@@ -33,5 +36,17 @@ export const metadata: Metadata = {
 }
 
 export default function MicrobladingPage() {
-  return <MicrobladingClientPage />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/spa-services/microblading-treatment")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/spa-services/microblading-treatment")!)) }}
+      />
+      <MicrobladingClientPage />
+    </>
+  )
 }

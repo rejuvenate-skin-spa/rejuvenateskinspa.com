@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import BioRePeel50TCAPeelPageClient from "./50TCAPeelPageClient";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "BioRePeel 50 TCA Body Peel | Body Skin Rejuvenation | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 };
 
 export default function BioRePeelBodyPeelsPage() {
-  return <BioRePeel50TCAPeelPageClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/chemical-peels/biorepeel-body-peels")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/chemical-peels/biorepeel-body-peels")!)) }}
+      />
+      <BioRePeel50TCAPeelPageClient />
+    </>
+  );
 }
 

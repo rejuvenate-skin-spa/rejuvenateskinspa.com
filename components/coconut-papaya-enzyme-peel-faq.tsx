@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { buildFAQPage } from "@/lib/schema"
 
 interface FAQItem {
   question: string
@@ -113,24 +114,15 @@ export default function CoconutPapayaEnzymePeelFAQ() {
     setOpenItems((prev) => (prev.includes(itemId) ? prev.filter((id) => id !== itemId) : [...prev, itemId]))
   }
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.flatMap((section) =>
-      section.items.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.answer,
-        },
-      })),
-    ),
-  }
+  const faqSchema = buildFAQPage(
+    faqData.flatMap((section) =>
+      section.items.map((item) => ({ question: item.question, answer: item.answer }))
+    )
+  )
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import AblativeSkinResurfacingClientPage from "./AblativeSkinResurfacingClientPage";
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
+import { buildService } from "@/lib/schema";
+import { getService } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Ablative Skin Resurfacing | Deep Plexr Plasma Treatment | Rejuvenate Skin Spa | Queen Creek, AZ",
@@ -10,5 +13,17 @@ export const metadata: Metadata = {
 };
 
 export default function AblativeSkinResurfacingPage() {
-  return <AblativeSkinResurfacingClientPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("/plexr-plasma-skin-tightening/ablative-skin-resurfacing")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildService(getService("/plexr-plasma-skin-tightening/ablative-skin-resurfacing")!)) }}
+      />
+      <AblativeSkinResurfacingClientPage />
+    </>
+  );
 }

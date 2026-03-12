@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
-import { Sparkles, Zap, Leaf, Shield, MessageCircle, ClipboardList, Heart, Calendar } from "lucide-react"
+import { Sparkles, Zap, Leaf, Shield, MessageCircle, ClipboardList, Heart, Calendar, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import AboutUsHero from "@/components/about-us-hero"
 
 export default function AboutUsPageClient() {
@@ -24,6 +25,15 @@ export default function AboutUsPageClient() {
           <p className="text-lg text-gray-700 leading-relaxed">
             Founded and operated by Bridgette Ball, a licensed cosmetologist with advanced certifications in Plexr plasma technology and chemical peel applications, Rejuvenate Skin Spa serves clients throughout Queen Creek, San Tan Valley, Gilbert, Mesa, and the greater Phoenix East Valley.
           </p>
+          <div className="mt-6">
+            <Link
+              href="/about-us/bridgette-ball"
+              className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+            >
+              Meet Bridgette Ball
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </div>
         </div>
       </section>
 
