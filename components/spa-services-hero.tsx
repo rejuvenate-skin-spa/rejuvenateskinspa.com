@@ -21,7 +21,7 @@ export function SpaServicesHero({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/home-hero-temp.jpg"
+          src="/images/home-hero-temp.avif"
           alt="Luxury spa services at Rejuvenate Skin Spa"
           fill
           className="object-cover object-right"

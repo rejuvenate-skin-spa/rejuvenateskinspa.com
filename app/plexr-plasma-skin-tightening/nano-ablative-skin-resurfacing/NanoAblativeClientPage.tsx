@@ -13,6 +13,7 @@ import {
   Heart,
   Users,
   Info,
+  ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +29,7 @@ export default function NanoAblativeClientPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-              Next-Generation Microscopic Skin Renewal with Zero Downtime
+              What Is Nano-Ablative Skin Resurfacing?
             </h2>
             <div className="space-y-4 text-gray-600 mb-8">
               <p>
@@ -39,7 +40,7 @@ export default function NanoAblativeClientPage() {
             {/* Image */}
             <div className="relative mb-8 max-w-2xl mx-auto">
               <Image
-                src="/images/nano-ablative-shower-results-rejuvenate-skin-spa-queen-creek-az.jpg"
+                src="/images/nano-ablative-shower-results-rejuvenate-skin-spa-queen-creek-az.avif"
                 alt="Nano plasma technology process"
                 width={600}
                 height={400}
@@ -407,6 +408,45 @@ export default function NanoAblativeClientPage() {
           <p className="text-gray-600">
             This personalized approach helps us create a treatment plan tailored to your unique needs and ensures you achieve the best possible results.
           </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers nano-ablative skin resurfacing using the genuine Plexr plasma device with its specialized triangle tip. This is the gentlest level of Plexr plasma treatment — ideal for clients new to plasma or those who need zero downtime. Every session includes a professional skin assessment and customized serum infusion.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Plexr Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Plexr Plasma Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Plexr Treatments →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Semi-Ablative Resurfacing →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/ablative-skin-resurfacing" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Ablative Resurfacing →
+            </Link>
+          </div>
         </div>
       </section>
 

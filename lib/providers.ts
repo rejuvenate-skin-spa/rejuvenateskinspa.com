@@ -4,21 +4,10 @@
  * Single source of truth for provider/practitioner data.
  * Used by Person schema, provider pages, and internal linking.
  *
- * ┌─────────────────────────────────────────────────────────┐
- * │  TODO — Fill in the following before publishing:        │
- * │                                                         │
- * │  • image: Add a professional headshot path              │
- * │    (e.g. "/images/bridgette-ball-headshot.jpg")         │
- * │                                                         │
- * │  • credentials: Add specific license numbers,           │
- * │    certification names, or training programs if you     │
- * │    want them displayed and included in schema.          │
- * │                                                         │
- * │  • yearsOfExperience: Add if you want this in copy.     │
- * │                                                         │
- * │  • sameAs: Add personal LinkedIn, Instagram, or other   │
- * │    profile URLs if they exist and should be linked.     │
- * └─────────────────────────────────────────────────────────┘
+ * TODO — Optional enrichment when data is available:
+ *  • credentials: specific license numbers, certification names
+ *  • yearsOfExperience: if you want this in page copy
+ *  • sameAs: personal LinkedIn, Instagram, or other profile URLs
  */
 
 export interface ProviderEntry {
@@ -43,7 +32,7 @@ export const bridgetteBall: ProviderEntry = {
   description:
     "Bridgette Ball is the founder and lead practitioner at Rejuvenate Skin Spa in Queen Creek, Arizona. A licensed cosmetologist with advanced certifications in Plexr plasma technology and chemical peel applications, Bridgette specializes in non-surgical aesthetic skin treatments.",
 
-  image: "/images/Bridge.jpg",
+  image: "/images/bridgette-ball.avif",
 
   // TODO: Add verified personal profile URLs if they exist
   sameAs: undefined,

@@ -12,6 +12,7 @@ import {
   AlertTriangle,
   Award,
   Info,
+  ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -157,7 +158,7 @@ export default function AblativeSkinResurfacingClientPage() {
                   </div>
                   <div className="mt-6 relative rounded-lg shadow-lg overflow-hidden">
                     <Image
-                      src="/images/plasma-neck-before-after.png"
+                      src="/images/plasma-neck-before-after.avif"
                       alt="Plasma neck treatment before and after results"
                       width={600}
                       height={400}
@@ -430,6 +431,45 @@ export default function AblativeSkinResurfacingClientPage() {
           <p className="text-gray-600">
             This comprehensive approach ensures we can deliver dramatic results while prioritizing your safety and setting realistic expectations for the recovery process.
           </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa for Ablative Resurfacing
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona is a licensed Plexr provider offering ablative skin resurfacing — the most intensive plasma option for clients seeking dramatic skin transformation. Every ablative treatment begins with a comprehensive consultation to evaluate your skin, review your health history, and set clear expectations for recovery and results.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Plexr Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Plexr Plasma Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Plexr Treatments →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Semi-Ablative Resurfacing →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/sun-spot-removal-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Sun Spot Removal →
+            </Link>
+          </div>
         </div>
       </section>
 

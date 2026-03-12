@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, AlertTriangle, Info } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Zap, Heart, Users, AlertTriangle, Info, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import WartRemovalTreatmentFAQ from "@/components/wart-removal-treatment-faq"
@@ -20,7 +20,7 @@ export default function WartRemovalTreatmentClientPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Advanced Wart Removal Technology
+                What Is Plasma Wart Removal?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -37,7 +37,7 @@ export default function WartRemovalTreatmentClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/wart-removal-treatment.jpg"
+                src="/images/wart-removal-treatment.avif"
                 alt="Plasma wart treatment process"
                 width={500}
                 height={400}
@@ -292,6 +292,53 @@ export default function WartRemovalTreatmentClientPage() {
         </div>
       </section>
 
+      {/* Recovery & Aftercare */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Recovery &amp; Aftercare
+          </h2>
+          <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+            <p>
+              After plasma wart removal, a small scab or crust forms at the treatment site. This is a normal part of the healing process. Most clients can return to daily activities immediately, though the treated area should be kept clean and protected from sun exposure.
+            </p>
+            <p>
+              Healing time typically ranges from 1 to 4 weeks depending on the size and location of the wart. Your practitioner will provide specific aftercare instructions tailored to your treatment during your appointment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Postpone */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone Treatment
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active skin infections or open wounds near the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>History of keloid scarring (discuss during consultation)</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            If you are unsure whether this treatment is right for you, a consultation will help determine the best approach.
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-sage-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -353,6 +400,45 @@ export default function WartRemovalTreatmentClientPage() {
           <p className="text-gray-600">
             This personalized approach helps us create a treatment plan tailored to your unique needs and ensures you achieve the best possible results.
           </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona is a licensed Plexr technology provider offering plasma wart removal — a non-surgical method that targets wart tissue without cutting or scarring. Every treatment begins with a consultation to assess the type and location of the wart and determine the best approach for effective removal.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Plexr Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Plexr Plasma Services →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/mole-removal-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Mole Removal →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/skin-tag-removal-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Skin Tag Removal →
+            </Link>
+          </div>
         </div>
       </section>
 

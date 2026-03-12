@@ -14,7 +14,7 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <Image
-              src="/images/rejuvenate-logo.webp"
+              src="/images/rejuvenate-logo.avif"
               alt="Rejuvenate Skin Spa"
               width={200}
               height={60}

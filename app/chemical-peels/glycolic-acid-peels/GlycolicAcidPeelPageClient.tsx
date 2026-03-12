@@ -2,11 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { BeforeAfterSlider } from "@/components/before-after-slider"
+import Image from "next/image"
 import { GlycolicAcidPeelFAQ } from "@/components/glycolic-acid-peel-faq"
 import { GlycolicAcidPeelHero } from "@/components/glycolic-acid-peel-hero"
-import { CheckCircle, Clock, Shield, Star, Sparkles } from "lucide-react"
-import Image from "next/image"
+import { CheckCircle, Clock, Shield, Star, Sparkles, AlertTriangle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
@@ -22,7 +21,7 @@ export default function GlycolicAcidPeelPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              About Glycolic Acid Peels
+              What Is a Glycolic Acid Peel?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Glycolic acid peels are alpha hydroxy acid (AHA) treatments that gently exfoliate the skin's surface,
@@ -55,7 +54,7 @@ export default function GlycolicAcidPeelPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/glycolic-acid-peel-benefits.jpg"
+                src="/images/glycolic-acid-peel-benefits.avif"
                 alt="Glycolic acid peel benefits"
                 width={500}
                 height={400}
@@ -136,20 +135,22 @@ export default function GlycolicAcidPeelPageClient() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <BeforeAfterSlider
-              beforeImage="/images/glycolic-acid-peel-results-before-after-2.jpg"
-              afterImage="/images/glycolic-acid-peel-results-before-after-2.jpg"
-              alt="Glycolic Acid Peel Results - Skin Texture"
-              imageClassName="object-contain object-center"
-              containerClassName="relative w-full h-[450px] overflow-hidden rounded-lg cursor-col-resize select-none bg-gray-50 border border-gray-200"
-            />
-            <BeforeAfterSlider
-              beforeImage="/images/glycolic-acid-peel-results-2.jpg"
-              afterImage="/images/glycolic-acid-peel-results-2.jpg"
-              alt="Glycolic Acid Peel Results - Skin Brightness"
-              imageClassName="object-contain object-center"
-              containerClassName="relative w-full h-[450px] overflow-hidden rounded-lg cursor-col-resize select-none bg-gray-50 border border-gray-200"
-            />
+            <div className="relative w-full h-[450px] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
+              <Image
+                src="/images/glycolic-acid-peel-results-before-after-2.avif"
+                alt="Glycolic Acid Peel Results - Skin Texture"
+                fill
+                className="object-contain object-center"
+              />
+            </div>
+            <div className="relative w-full h-[450px] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
+              <Image
+                src="/images/glycolic-acid-peel-results-2.avif"
+                alt="Glycolic Acid Peel Results - Skin Brightness"
+                fill
+                className="object-contain object-center"
+              />
+            </div>
           </div>
 
           <div className="text-center">
@@ -422,6 +423,79 @@ export default function GlycolicAcidPeelPageClient() {
                 />
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone a Glycolic Acid Peel
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active sunburn, rash, or open wounds on the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent use of retinoids or prescription-strength exfoliants</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>History of cold sores in the treatment area (discuss during consultation)</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Your practitioner will assess your skin and review your history during your consultation to ensure a glycolic acid peel is appropriate for you.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers professional-grade glycolic acid peels performed by a licensed cosmetologist. Each treatment is customized to your skin type and tolerance level, and begins with a skin analysis to determine the ideal concentration and approach. We focus on safe, progressive improvement rather than aggressive treatments.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Chemical Peel Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Chemical Peels →
+            </Link>
+            <Link href="/chemical-peels/tca-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              TCA Peels →
+            </Link>
+            <Link href="/chemical-peels/biorepeel-chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              BioRePeel →
+            </Link>
           </div>
         </div>
       </section>

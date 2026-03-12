@@ -8,7 +8,7 @@ export function MoleRemovalTreatmentHero() {
     <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/plexr-mole-removal-treatment-rejuvenate-skin-spa-queen-creek-az.jpg"
+          src="/images/plexr-mole-removal-treatment-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Plexr Plasma Mole Removal Treatment"
           fill
           className="object-cover object-left"

@@ -7,27 +7,27 @@ import Link from "next/link"
 
 const placeholderImages = [
   {
-    src: "/images/plexr-plasma-results.jpg",
+    src: "/images/plexr-plasma-results.avif",
     alt: "Plasma skin tightening results",
   },
   {
-    src: "/images/glycolic-acid-peel-results-2.jpg",
+    src: "/images/glycolic-acid-peel-results-2.avif",
     alt: "Chemical peel results",
   },
   {
-    src: "/images/microneedling-feature.jpg",
+    src: "/images/microneedling-feature.avif",
     alt: "Microneedling treatment results",
   },
   {
-    src: "/images/biorepeel-real-results-1.png",
+    src: "/images/biorepeel-real-results-1.avif",
     alt: "BioRePeel treatment results",
   },
   {
-    src: "/images/dermaplaning-facial-hero.jpg",
+    src: "/images/dermaplaning-facial-hero.avif",
     alt: "Dermaplaning facial results",
   },
   {
-    src: "/images/eyebrow-lamination-results.jpg",
+    src: "/images/eyebrow-lamination-results.avif",
     alt: "Eyebrow lamination results",
   },
 ]

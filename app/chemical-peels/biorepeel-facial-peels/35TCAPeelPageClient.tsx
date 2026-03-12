@@ -9,8 +9,11 @@ import {
   Zap,
   Heart,
   Users,
+  AlertTriangle,
+  ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import TCAFacialPeelFAQ from "@/components/35-tca-peel-faq";
 import TCApeelHero from "@/components/35-tca-peel-hero";
 import PhoneCtaButton from "@/components/phone-cta-button";
@@ -27,7 +30,7 @@ export default function BioRePeel35TCAPeelPageClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Gentle Yet Powerful Facial Rejuvenation
+                What Is the BioRePeel 35 TCA Facial Peel?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -47,7 +50,7 @@ export default function BioRePeel35TCAPeelPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/biorepeel-35-tca-treatment-rejuvenate-skin-spa-queen-creek-az.jpg"
+                src="/images/biorepeel-35-tca-treatment-rejuvenate-skin-spa-queen-creek-az.avif"
                 alt="BioRePeel 35 TCA treatment"
                 width={500}
                 height={400}
@@ -266,7 +269,7 @@ export default function BioRePeel35TCAPeelPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/biorepeel-ideal-candidate.png"
+                src="/images/biorepeel-ideal-candidate.avif"
                 alt="Ideal candidate for BioRePeel 35"
                 width={500}
                 height={400}
@@ -421,6 +424,75 @@ export default function BioRePeel35TCAPeelPageClient() {
             <p className="text-sm text-gray-600 leading-relaxed">
               Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone a BioRePeel Facial
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active sunburn, open wounds, or skin infections in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Known sensitivity to TCA or any BioRePeel ingredients</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            BioRePeel 35 TCA is formulated to be gentler than traditional TCA peels and suitable for regular treatments. A consultation ensures the formula and frequency are appropriate for your skin type.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers the BioRePeel 35 TCA facial peel as a standalone treatment or as part of a customized series. Each session begins with a skin assessment to determine the best application protocol, and single-session, 3-treatment, and 6-treatment packages are available.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Chemical Peel Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chemical-peels/biorepeel-chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              BioRePeel Overview →
+            </Link>
+            <Link href="/chemical-peels/biorepeel-body-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              BioRePeel 50 TCA Body →
+            </Link>
+            <Link href="/chemical-peels/tca-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              TCA Peels →
+            </Link>
           </div>
         </div>
       </section>

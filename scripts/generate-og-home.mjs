@@ -3,7 +3,7 @@
  *
  * Usage: node scripts/generate-og-home.mjs
  *
- * Input:  public/images/semi-ablative-resurfacing-hero.png
+ * Input:  public/images/semi-ablative-resurfacing-hero.avif
  * Output: public/og/og-home.jpg (1200x630, < 500KB)
  */
 
@@ -17,8 +17,8 @@ const ROOT = path.resolve(__dirname, "..");
 
 const CONFIG = {
   // Input paths
-  heroImage: path.join(ROOT, "public/images/semi-ablative-resurfacing-hero.png"),
-  logoImage: path.join(ROOT, "public/images/rejuvenate-logo.webp"),
+  heroImage: path.join(ROOT, "public/images/semi-ablative-resurfacing-hero.avif"),
+  logoImage: path.join(ROOT, "public/images/rejuvenate-logo.avif"),
 
   // Output
   outputPath: path.join(ROOT, "public/og/og-home.jpg"),

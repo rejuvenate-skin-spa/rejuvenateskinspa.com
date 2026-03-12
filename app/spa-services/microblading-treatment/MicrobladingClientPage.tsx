@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Eye, Palette } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Eye, Palette, AlertTriangle, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import MicrobladingTreatmentFAQ from "@/components/microblading-treatment-faq"
 import MicrobladingTreatmentHero from "@/components/microblading-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
@@ -20,7 +21,7 @@ export default function MicrobladingClientPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Perfect Brows, Every Day
+                What Is Microblading?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -37,7 +38,7 @@ export default function MicrobladingClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/microblading-procedure.jpg"
+                src="/images/microblading-procedure.avif"
                 alt="Natural eyebrow enhancement"
                 width={500}
                 height={400}
@@ -271,13 +272,86 @@ export default function MicrobladingClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/microblading-healing-process.jpg"
+                src="/images/microblading-healing-process.avif"
                 alt="Microblading healing process"
                 width={500}
                 height={400}
                 className="rounded-lg shadow-xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone Microblading
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of blood thinners or Accutane</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active skin conditions or infections in the brow area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent Botox in the forehead area (wait at least 2 weeks)</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>History of keloid scarring (discuss during consultation)</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Microblading is a semi-permanent cosmetic procedure that involves depositing pigment into the skin. A consultation is recommended to review your health history and confirm candidacy.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers microblading performed by a certified microblading specialist. The complete package includes the initial session plus a 6–8 week touch-up to refine shape and color. All tools are sterile and single-use, and every appointment begins with custom brow mapping and color matching.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Spa Services
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/spa-services" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Spa Services →
+            </Link>
+            <Link href="/spa-services/eyebrow-lamination-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Eyebrow Lamination →
+            </Link>
+            <Link href="/spa-services/dermaplaning-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Dermaplaning →
+            </Link>
           </div>
         </div>
       </section>

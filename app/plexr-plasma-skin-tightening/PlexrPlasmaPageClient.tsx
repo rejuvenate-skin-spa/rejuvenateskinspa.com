@@ -6,8 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { PlexrPlasmaSkinTighteningHero } from "@/components/plexr-plasma-skin-tightening-hero"
 import { PlexrPlasmaFAQ } from "@/components/plexr-plasma-skin-tightening-faq"
-import { BeforeAfterSlider } from "@/components/before-after-slider"
-import { Info } from "lucide-react"
+import { Info, ArrowRight } from "lucide-react"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 const treatmentOptions = [
@@ -77,6 +76,37 @@ export default function PlexrPlasmaPageClient() {
         </div>
       </section>
 
+      {/* Who Is Plexr For? */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who Is Plexr Plasma Skin Tightening For?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Common Concerns It Addresses</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>Loose or sagging eyelid skin (hooded eyes)</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>Fine lines and wrinkles around the eyes, mouth, or forehead</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>Skin laxity on the neck, jawline, or décolleté</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>Unwanted moles, skin tags, warts, or sun spots</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>Stretch marks and acne scarring</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">You May Be a Good Candidate If</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>You want visible skin tightening without surgery</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>You are in generally good health</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>You can commit to the recommended recovery period</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>You are not currently pregnant or nursing</li>
+                <li className="flex items-start"><span className="w-2 h-2 bg-sage-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>You have realistic expectations about results and timing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Introduction Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,7 +123,7 @@ export default function PlexrPlasmaPageClient() {
                 {/* Left Image */}
                 <div className="relative w-full aspect-[3/2] rounded-lg shadow-xl overflow-hidden">
                   <Image
-                    src="/images/plasma-eye-lift.jpg"
+                    src="/images/plasma-eye-lift.avif"
                     alt="Plexr Plasma Pen Eye Lift Treatment"
                     fill
                     className="object-cover"
@@ -102,7 +132,7 @@ export default function PlexrPlasmaPageClient() {
                 {/* Right Image */}
                 <div className="relative w-full aspect-[3/2] rounded-lg shadow-xl overflow-hidden">
                   <Image
-                    src="/images/neck-plasma.png"
+                    src="/images/neck-plasma.avif"
                     alt="Plexr Plasma Pen Neck Treatment"
                     fill
                     className="object-cover"
@@ -350,6 +380,32 @@ export default function PlexrPlasmaPageClient() {
         </div>
       </section>
 
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6 text-center">
+            Why Choose Rejuvenate Skin Spa for Plexr Plasma
+          </h2>
+          <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+            <p>
+              Rejuvenate Skin Spa in Queen Creek, Arizona is a licensed Plexr technology provider with advanced certifications in Plexr plasma applications. Every Plexr treatment at Rejuvenate begins with a thorough consultation to assess your skin, discuss your goals, and determine the appropriate treatment level.
+            </p>
+            <p>
+              We use the genuine Plexr device — a CE-certified, medical-grade plasma system — not a generic plasma pen. This matters because the quality and safety of the device directly affects your results and healing experience.
+            </p>
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/about-us/bridgette-ball"
+              className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+            >
+              Meet Bridgette Ball
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Removal Services */}
       <section className="py-16 bg-sage-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -403,7 +459,7 @@ export default function PlexrPlasmaPageClient() {
           </div>
           <div className="relative max-w-4xl mx-auto">
             <Image
-              src="/images/plexr-plasma-results.jpg"
+              src="/images/plexr-plasma-results.avif"
               alt="Plexr Plasma Pen Results"
               width={1200}
               height={800}

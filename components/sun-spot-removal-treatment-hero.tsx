@@ -8,7 +8,7 @@ export default function SunSpotRemovalTreatmentHero() {
     <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center overflow-hidden">
       <div className="absolute inset-0 h-[140%]">
         <Image
-          src="/images/shutterstock-2171144943-sun-spot-edited.jpg"
+          src="/images/shutterstock-2171144943-sun-spot-edited.avif"
           alt="Sun spot removal treatment background"
           fill
           className="object-cover object-center"

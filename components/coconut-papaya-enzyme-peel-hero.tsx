@@ -8,7 +8,7 @@ export default function CoconutPapayaEnzymePeelHero() {
     <section className="relative min-h-[500px] py-12 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/coconut-papaya-enzyme-peel-facial-treatment-services-rejuvenate-skin-spa-queen-creek-az.jpg"
+          src="/images/coconut-papaya-enzyme-peel-facial-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Coconut-Papaya Enzyme Peel Treatment"
           fill
           className="object-cover object-center"

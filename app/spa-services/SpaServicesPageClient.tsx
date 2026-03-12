@@ -46,7 +46,7 @@ export default function SpaServicesPageClient() {
                 duration: "60 minutes",
                 price: "From $90",
                 href: "/spa-services/eyebrow-lamination-treatment",
-                image: "/images/eyebrow-lamination-feature.jpg",
+                image: "/images/eyebrow-lamination-feature.avif",
               },
               {
                 title: "Dermaplaning Facial",
@@ -61,7 +61,7 @@ export default function SpaServicesPageClient() {
                 duration: "45 minutes",
                 price: "From $80",
                 href: "/spa-services/dermaplaning-treatment",
-                image: "/images/dermaplaning-facial-treatment-in-progress.png",
+                image: "/images/dermaplaning-facial-treatment-in-progress.avif",
               },
               {
                 title: "Microblading",
@@ -70,7 +70,7 @@ export default function SpaServicesPageClient() {
                 duration: "2–3 hours",
                 price: "From $450",
                 href: "/spa-services/microblading-treatment",
-                image: "/images/microblading-service.jpg",
+                image: "/images/microblading-service.avif",
               },
               {
                 title: "Red Light Therapy",
@@ -79,7 +79,7 @@ export default function SpaServicesPageClient() {
                 duration: "15–30 minutes",
                 price: "From $25",
                 href: "/spa-services/red-light-therapy-treatment",
-                image: "/images/red-lamp-only.png",
+                image: "/images/red-lamp-only.avif",
               },
             ].map((service, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">

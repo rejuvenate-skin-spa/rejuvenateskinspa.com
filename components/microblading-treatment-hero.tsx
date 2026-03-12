@@ -8,7 +8,7 @@ export default function MicrobladingTreatmentHero() {
     <section className="relative min-h-[500px] py-12 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/microblading-procedure-rejuvenate-skin-spa-queen-creek-az.jpg"
+          src="/images/microblading-procedure-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Microblading services background"
           fill
           className="object-cover object-center"

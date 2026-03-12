@@ -8,7 +8,7 @@ export default function DermaplaningTreatmentHero() {
     <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/dermaplaning-facial-rejuvenate-skin-spa-queen-creek-az.png"
+          src="/images/dermaplaning-facial-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="Rejuvenate Med Spa"
           fill
           className="object-cover object-right"

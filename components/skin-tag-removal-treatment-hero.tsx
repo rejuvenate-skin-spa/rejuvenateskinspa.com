@@ -8,7 +8,7 @@ export default function SkinTagRemovalTreatmentHero() {
     <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/skin-tag-removal-hero.jpg"
+          src="/images/skin-tag-removal-hero.avif"
           alt="Rejuvenate Med Spa Queen Creek AZ"
           fill
           className="object-cover object-center"

@@ -17,8 +17,11 @@ import {
   Shield,
   Sun,
   Activity,
+  AlertTriangle,
+  ArrowRight,
 } from "lucide-react"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import Link from "next/link"
 
 export default function RedLightTherapyClientPage() {
   return (
@@ -96,7 +99,7 @@ export default function RedLightTherapyClientPage() {
             </div>
             <div className="relative">
               <img
-                src="/images/red-light-therapy-treatment-rejuvenate-skin-spa-queen-creek-az.png"
+                src="/images/red-light-therapy-treatment-rejuvenate-skin-spa-queen-creek-az.avif"
                 alt="Red Light Therapy Treatment"
                 className="rounded-lg shadow-lg"
               />
@@ -353,6 +356,75 @@ export default function RedLightTherapyClientPage() {
                 />
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone Red Light Therapy
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active use of photosensitizing medications (discuss with your provider)</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>History of photosensitivity disorders such as lupus or porphyria</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active skin cancer or suspicious lesions in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy (consult your healthcare provider first)</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Red light therapy is non-invasive and generally well-tolerated. If you have questions about whether it is appropriate for you, your practitioner can discuss your health history during your visit.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers red light therapy as a standalone wellness service and as a complement to other treatments. Our full-body LED panel delivers therapeutic wavelengths (660–850nm) in a relaxing environment with flexible scheduling. At $25 per session, it is one of the most accessible treatments we offer.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Spa Services
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/spa-services" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Spa Services →
+            </Link>
+            <Link href="/spa-services/dermaplaning-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Dermaplaning →
+            </Link>
+            <Link href="/microneedling" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Microneedling →
+            </Link>
           </div>
         </div>
       </section>

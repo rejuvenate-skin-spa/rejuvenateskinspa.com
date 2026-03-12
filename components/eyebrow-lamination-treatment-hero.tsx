@@ -8,7 +8,7 @@ export function EyebrowLaminationTreatmentHero() {
     <section className="relative min-h-[500px] py-12 bg-sage-50 overflow-hidden flex items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/eyebrow-lamination-hero.jpg"
+          src="/images/eyebrow-lamination-hero.avif"
           alt="Rejuvenate Med Spa Queen Creek AZ"
           fill
           className="object-cover object-left"

@@ -8,7 +8,7 @@ export default function PassionFruitEnzymePeelHero() {
     <section className="relative min-h-[500px] py-12 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/passion-fruit-enzyme-peel-hero.jpg"
+          src="/images/passion-fruit-enzyme-peel-hero.avif"
           alt="Passion Fruit Enzyme Peel Treatment"
           fill
           className="object-cover object-right"

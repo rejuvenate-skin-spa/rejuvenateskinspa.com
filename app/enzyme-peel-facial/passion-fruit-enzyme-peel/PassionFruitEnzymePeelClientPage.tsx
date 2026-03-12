@@ -110,7 +110,7 @@ export default function PassionFruitEnzymePeelClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/passion-fruit-enzyme-peel.jpg"
+                src="/images/passion-fruit-enzyme-peel.avif"
                 alt="Passion Fruit Enzyme Peel Benefits"
                 width={600}
                 height={500}

@@ -3,10 +3,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Clock, DollarSign, Star, CheckCircle, Eye, Sparkles, Heart, Shield } from "lucide-react"
+import { Clock, DollarSign, Star, CheckCircle, Eye, Sparkles, Heart, Shield, AlertTriangle, ArrowRight } from "lucide-react"
 import { EyebrowLaminationFAQ } from "@/components/eyebrow-lamination-treatment-faq"
 import { EyebrowLaminationTreatmentHero } from "@/components/eyebrow-lamination-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import Link from "next/link"
 
 export default function EyebrowLaminationClientPage() {
   return (
@@ -76,7 +77,7 @@ export default function EyebrowLaminationClientPage() {
             </div>
             <div className="relative">
               <img
-                src="/images/eyebrow-lamination-results.jpg"
+                src="/images/eyebrow-lamination-results.avif"
                 alt="Eyebrow Lamination Results"
                 className="rounded-lg shadow-lg"
               />
@@ -282,6 +283,75 @@ export default function EyebrowLaminationClientPage() {
                 />
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone Eyebrow Lamination
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Irritated, sunburned, or broken skin in the brow area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active eye infections or styes</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Known sensitivity to perming or lifting solutions</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent Botox or filler injections near the brow area (wait at least 2 weeks)</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Eyebrow lamination is a gentle, non-invasive treatment suitable for most clients. If you have any concerns, your practitioner will assess your brows at the start of your appointment.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers professional eyebrow lamination with optional tinting for a complete brow transformation. Every appointment includes a consultation to discuss your desired shape and style, ensuring results that complement your natural features.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Spa Services
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/spa-services" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Spa Services →
+            </Link>
+            <Link href="/spa-services/microblading-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Microblading →
+            </Link>
+            <Link href="/spa-services/dermaplaning-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Dermaplaning →
+            </Link>
           </div>
         </div>
       </section>

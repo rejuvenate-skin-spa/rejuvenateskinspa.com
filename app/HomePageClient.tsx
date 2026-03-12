@@ -44,7 +44,7 @@ export default function HomePageClient() {
                 title: "Plexr Plasma Skin Tightening",
                 description:
                   "Non-surgical skin tightening using Plexr plasma pen technology",
-                image: "/images/plasma-skin-tightening-treatment-rejuvenate-skin-spa-queen-creek-az.png",
+                image: "/images/plasma-skin-tightening-treatment-rejuvenate-skin-spa-queen-creek-az.avif",
                 href: "/plexr-plasma-skin-tightening",
                 linkText: "View Plasma Options",
                 features: [
@@ -58,7 +58,7 @@ export default function HomePageClient() {
                 title: "Microneedling",
                 description:
                   "Collagen induction therapy for improved texture, tone, and firmness",
-                image: "/images/microneedling-feature.png",
+                image: "/images/microneedling-feature.avif",
                 href: "/microneedling",
                 linkText: "View Microneedling Options",
                 features: [
@@ -72,7 +72,7 @@ export default function HomePageClient() {
                 title: "Chemical and Enzyme Peels",
                 description:
                   "Professional-grade peels for smoother, brighter skin",
-                image: "/images/2537645807-skin-peel.jpg",
+                image: "/images/2537645807-skin-peel.avif",
                 href: "/chemical-peels",
                 linkText: "View Peel Options",
                 features: [

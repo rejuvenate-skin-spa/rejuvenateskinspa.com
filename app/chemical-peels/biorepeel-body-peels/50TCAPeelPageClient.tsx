@@ -10,8 +10,11 @@ import {
   Zap,
   Target,
   Award,
+  AlertTriangle,
+  ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import BioRePeel50TCABodyPeelFAQ from "@/components/50-tca-peel-faq";
 import FiftyTCAPeelHero from "@/components/50-tca-peel-hero";
 import { Badge } from "@/components/ui/badge";
@@ -29,7 +32,7 @@ export default function BioRePeel50TCAPeelPageClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Intensive Body Skin Rejuvenation
+                What Is the BioRePeel 50 TCA Body Peel?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -50,7 +53,7 @@ export default function BioRePeel50TCAPeelPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/chemical-peel-back-image.jpg"
+                src="/images/chemical-peel-back-image.avif"
                 alt="BioRePeel 50 TCA body treatment results"
                 width={500}
                 height={400}
@@ -283,7 +286,7 @@ export default function BioRePeel50TCAPeelPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/biorepeel-50-tca-body-treatment.png"
+                src="/images/biorepeel-50-tca-body-treatment.avif"
                 alt="BioRePeel 50 TCA body treatment results"
                 width={700}
                 height={560}
@@ -459,13 +462,82 @@ export default function BioRePeel50TCAPeelPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/mans-back-biorepeel-50.jpg"
+                src="/images/mans-back-biorepeel-50.avif"
                 alt="BioRePeel 50 TCA body treatment results"
                 width={500}
                 height={400}
                 className="rounded-lg shadow-xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone a BioRePeel Body Peel
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active sunburn, open wounds, or skin infections in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Known sensitivity to TCA or any BioRePeel ingredients</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            The BioRePeel 50 TCA body formula uses a higher concentration than the facial version and is designed for the thicker skin on the body. A consultation ensures the treatment is appropriate for your skin condition and treatment area.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers the BioRePeel 50 TCA body peel for targeted treatment of back acne, body scarring, hyperpigmentation, and rough texture. Every treatment begins with an assessment to identify the right body zones and protocol for your concerns.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Chemical Peel Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chemical-peels/biorepeel-chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              BioRePeel Overview →
+            </Link>
+            <Link href="/chemical-peels/biorepeel-facial-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              BioRePeel 35 TCA Facial →
+            </Link>
+            <Link href="/chemical-peels/tca-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              TCA Peels →
+            </Link>
           </div>
         </div>
       </section>

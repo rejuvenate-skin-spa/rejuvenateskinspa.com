@@ -12,6 +12,8 @@ import {
   Zap,
   Heart,
   Award,
+  AlertTriangle,
+  ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -63,7 +65,7 @@ export default function BioRePeelTreatmentPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/biorepeel-next-gen.jpg"
+                src="/images/biorepeel-next-gen.avif"
                 alt="BioRePeelCl3 Next Generation Chemical Peel"
                 width={500}
                 height={400}
@@ -172,7 +174,7 @@ export default function BioRePeelTreatmentPage() {
                 price: "From $250",
                 href: "/chemical-peels/biorepeel-facial-peels",
                 image:
-                  "/images/biorepeel-35-tca-facial-treatment.jpg",
+                  "/images/biorepeel-35-tca-facial-treatment.avif",
                 popular: true,
               },
               {
@@ -190,7 +192,7 @@ export default function BioRePeelTreatmentPage() {
                 price: "From $250",
                 href: "/chemical-peels/biorepeel-body-peels",
                 image:
-                  "/images/biorepeel-50-tca-body-treatment.png",
+                  "/images/biorepeel-50-tca-body-treatment.avif",
               },
             ].map((treatment, index) => (
               <Card
@@ -328,7 +330,7 @@ export default function BioRePeelTreatmentPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative">
               <Image
-                src="/images/biorepeel-real-results-1.png"
+                src="/images/biorepeel-real-results-1.avif"
                 alt="BioRePeel before and after results"
                 width={500}
                 height={400}
@@ -340,7 +342,7 @@ export default function BioRePeelTreatmentPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/biorepeel-real-results-2.png"
+                src="/images/biorepeel-real-results-2.avif"
                 alt="BioRePeel skin transformation"
                 width={500}
                 height={400}
@@ -361,6 +363,75 @@ export default function BioRePeelTreatmentPage() {
               <Button className="bg-sage-600 hover:bg-sage-700 text-white">
                 View More Results
               </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone a BioRePeel
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active sunburn, open wounds, or skin infections in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Known sensitivity to TCA or any BioRePeel ingredients</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            While BioRePeel is gentler than traditional TCA peels and suitable for most skin types, a consultation ensures the treatment is appropriate for your skin and health history.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa for BioRePeel
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers BioRePeelCl3® treatments performed by a licensed cosmetologist with advanced certifications in chemical peel applications. We offer both the BioRePeel 35 TCA facial peel and the BioRePeel 50 TCA body peel, and every treatment begins with a skin assessment to determine the right formula and protocol for your concerns.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Chemical Peel Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Chemical Peels →
+            </Link>
+            <Link href="/chemical-peels/tca-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              TCA Peels →
+            </Link>
+            <Link href="/chemical-peels/glycolic-acid-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Glycolic Acid Peels →
             </Link>
           </div>
         </div>

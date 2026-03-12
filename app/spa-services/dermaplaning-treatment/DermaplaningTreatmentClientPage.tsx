@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, Shield, Star, Zap, Heart } from "lucide-react"
+import { CheckCircle, Clock, Shield, Star, Zap, Heart, AlertTriangle, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import DermaplaningTreatmentFAQ from "@/components/dermaplaning-treatment-faq"
 import DermaplaningTreatmentHero from "@/components/dermaplaning-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
@@ -20,7 +21,7 @@ export default function DermaplaningTreatmentClientPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Instant Skin Transformation
+                What Is Dermaplaning?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -38,7 +39,7 @@ export default function DermaplaningTreatmentClientPage() {
             <div className="relative">
               <div className="relative rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/images/dermaplaning-procedure-rejuvenate-skin-spa-queen-creek-az.jpg"
+                  src="/images/dermaplaning-procedure-rejuvenate-skin-spa-queen-creek-az.avif"
                   alt="Smooth skin after dermaplaning"
                   width={500}
                   height={400}
@@ -231,6 +232,79 @@ export default function DermaplaningTreatmentClientPage() {
             <p className="text-sm text-gray-600 leading-relaxed">
               Clients may also choose to pay for the full series upfront to receive the package pricing immediately.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone Dermaplaning
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active acne breakouts, especially inflamed or cystic acne</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active rosacea flare-ups or eczema in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Sunburn or irritated skin</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of prescription retinoids or strong exfoliating products in the past few days</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent chemical peel or laser treatment on the same area</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Dermaplaning is a gentle exfoliation suitable for most skin types, but timing matters. Your practitioner will assess your skin at the start of each session to confirm it is ready for treatment.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers professional dermaplaning performed by a licensed cosmetologist using a sterile surgical blade. Unlike at-home tools, professional dermaplaning provides a deeper, more even exfoliation with precise technique. We also offer dermaplaning combined with a custom facial for enhanced results.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Spa Services
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/spa-services" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Spa Services →
+            </Link>
+            <Link href="/chemical-peels/glycolic-acid-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Glycolic Acid Peels →
+            </Link>
+            <Link href="/enzyme-peel-facial" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Enzyme Peel Facials →
+            </Link>
           </div>
         </div>
       </section>

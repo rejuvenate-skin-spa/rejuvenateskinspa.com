@@ -55,7 +55,7 @@ function PumpkinOrangeEnzymePeelClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/pumpkin-orange-enzyme-peel-benefits.jpg"
+                src="/images/pumpkin-orange-enzyme-peel-benefits.avif"
                 alt="Pumpkin-Orange Enzyme Peel Benefits"
                 width={600}
                 height={500}

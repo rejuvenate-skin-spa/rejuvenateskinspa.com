@@ -13,6 +13,7 @@ import {
   AlertTriangle,
   FileText,
   Info,
+  ArrowRight,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -52,7 +53,7 @@ export default function MoleRemovalTreatmentClientPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Say Goodbye to unwanted moles with Plexr Plasma
+                What Is Plexr Plasma Mole Removal?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -64,7 +65,7 @@ export default function MoleRemovalTreatmentClientPage() {
                   minimizing the risk of scarring. This type of procedure allows
                   for precise depth control and immediate tissue coagulation,
                   resulting in minimal bleeding and faster healing compared to
-                  conventional excision method
+                  conventional excision methods.
                 </p>
                 <p>
                   Plexr Plasma is ideal for clients seeking a non-invasive, cosmetic alternative for
@@ -75,7 +76,7 @@ export default function MoleRemovalTreatmentClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/plexr-mole-removal-hero.jpg"
+                src="/images/plexr-mole-removal-hero.avif"
                 alt="Precise plasma mole removal process"
                 width={500}
                 height={400}
@@ -121,7 +122,7 @@ export default function MoleRemovalTreatmentClientPage() {
                 icon: Shield,
                 title: "Lower Risk of Scarring",
                 description:
-                  "Precise plasma energy minimizes damage to surrounding tissue, compared you traditional removal methods, leaving you a better cosmetic outcome.",
+                  "Precise plasma energy minimizes damage to surrounding tissue compared to traditional removal methods, resulting in a better cosmetic outcome.",
               },
               {
                 icon: Zap,
@@ -139,7 +140,7 @@ export default function MoleRemovalTreatmentClientPage() {
                 icon: Heart,
                 title: "Comfortable Procedure",
                 description:
-                  "Local anesthesia ensures a comfortable experience throughout the treatment, and No scalpels, cutting, or stitches",
+                  "Local anesthesia ensures a comfortable experience throughout the treatment. No scalpels, cutting, or stitches required.",
               },
               {
                 icon: Star,
@@ -422,6 +423,45 @@ export default function MoleRemovalTreatmentClientPage() {
           <p className="text-gray-600">
             This personalized approach helps us create a treatment plan tailored to your unique needs and ensures you achieve the best possible results.
           </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona is a licensed Plexr technology provider offering plasma mole removal — a precise, non-surgical method that sublimates mole tissue without scalpels or stitches. Every treatment begins with a consultation to review your medical clearance, assess the mole, and plan the most precise removal approach.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Plexr Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Plexr Plasma Services →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/skin-tag-removal-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Skin Tag Removal →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/wart-removal-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Wart Removal →
+            </Link>
+          </div>
         </div>
       </section>
 

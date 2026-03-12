@@ -8,7 +8,7 @@ export default function RaspberryPeachEnzymePeelHero() {
     <section className="relative min-h-[500px] py-12 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/raspberry-peach-enzyme-peel-benefits.png"
+          src="/images/raspberry-peach-enzyme-peel-benefits.avif"
           alt="Raspberry-Peach Enzyme Peel Treatment"
           fill
           className="object-cover object-right"

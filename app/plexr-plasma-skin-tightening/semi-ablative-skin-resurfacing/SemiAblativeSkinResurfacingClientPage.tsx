@@ -12,6 +12,7 @@ import {
   Users,
   AlertTriangle,
   Info,
+  ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,7 +32,7 @@ export default function SemiAblativeSkinResurfacingClientPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Advanced Skin Transformation
+                What Is Semi-Ablative Skin Resurfacing?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -44,7 +45,7 @@ export default function SemiAblativeSkinResurfacingClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/semi-ablative-transformation.png"
+                src="/images/semi-ablative-transformation.avif"
                 alt="Advanced plasma technology process"
                 width={400}
                 height={300}
@@ -376,6 +377,45 @@ export default function SemiAblativeSkinResurfacingClientPage() {
           <p className="text-gray-600">
             This personalized approach ensures we create a treatment plan that addresses your specific concerns while setting realistic expectations for recovery and results.
           </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers semi-ablative skin resurfacing using Plexr plasma technology. This treatment delivers significant skin improvements with a manageable 2–5 day recovery, making it a practical alternative to fully ablative procedures. Every treatment begins with a detailed consultation to evaluate your skin and determine if this depth of treatment is right for your goals.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Plexr Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Plexr Plasma Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/plexr-plasma-skin-tightening" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Plexr Treatments →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/ablative-skin-resurfacing" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Ablative Resurfacing →
+            </Link>
+            <Link href="/plexr-plasma-skin-tightening/sun-spot-removal-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Sun Spot Removal →
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -9,7 +9,7 @@ export default function SemiAblativeSkinResurfacingHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/semi-ablative-resurfacing-hero.png"
+          src="/images/semi-ablative-resurfacing-hero.avif"
           alt="Semi-ablative skin resurfacing treatment background"
           fill
           className="object-cover object-right"

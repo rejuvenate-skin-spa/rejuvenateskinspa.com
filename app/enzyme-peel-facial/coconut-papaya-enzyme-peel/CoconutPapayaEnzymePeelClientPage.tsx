@@ -70,7 +70,7 @@ export default function CoconutPapayaEnzymePeelClientPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/coconut-papaya-enzyme-peel.jpg"
+                src="/images/coconut-papaya-enzyme-peel.avif"
                 alt="Coconut-Papaya Enzyme Peel Benefits"
                 width={600}
                 height={500}

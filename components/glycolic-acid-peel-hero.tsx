@@ -8,7 +8,7 @@ export function GlycolicAcidPeelHero() {
     <section className="relative min-h-[500px] py-12 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/glycolic-acid-peel-hero.jpg"
+          src="/images/glycolic-acid-peel-hero.avif"
           alt="Glycolic acid peel treatment background"
           fill
           className="object-cover object-right"

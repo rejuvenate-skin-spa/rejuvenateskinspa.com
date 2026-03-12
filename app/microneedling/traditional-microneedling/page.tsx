@@ -7,7 +7,7 @@ import MicroneedlingTreatmentFAQ from "@/components/microneedling-treatment-faq"
 import MicroneedlingTreatmentHero from "@/components/microneedling-treatment-hero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Clock, Shield, Star, Zap, Heart } from "lucide-react";
+import { CheckCircle, Clock, Shield, Star, Zap, Heart, AlertTriangle, ArrowRight } from "lucide-react";
 import PhoneCtaButton from "@/components/phone-cta-button";
 
 const siteUrl =
@@ -356,6 +356,82 @@ export default function TraditionalMicroneedlingPage() {
         </div>
       </section>
       {/* PRICING SECTION END */}
+
+      {/* What to Expect */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            What to Expect During and After Treatment
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">During Treatment</h3>
+              <p className="text-gray-600 leading-relaxed">
+                A topical numbing cream is applied before treatment to minimize discomfort. The microneedling device is then passed over the treatment area, creating controlled micro-channels. Most sessions take 30–60 minutes depending on the area being treated.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Recovery &amp; Aftercare</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Expect mild redness similar to a sunburn for 24–48 hours. Most clients return to normal activities the next day. Avoid direct sun exposure and active skincare ingredients (retinol, AHAs) for several days following treatment. Your practitioner will provide specific aftercare guidance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone Microneedling
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active acne breakouts or skin infections in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>History of keloid scarring (discuss during consultation)</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent sunburn or chemical peel within the past 2 weeks</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Your practitioner will review your full health history during your consultation to determine if microneedling is appropriate for you.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers traditional microneedling performed by a licensed cosmetologist with professional-grade equipment. Every treatment begins with a consultation to assess your skin, discuss your goals, and build a personalized treatment plan. We focus on realistic expectations and clear aftercare guidance so you can feel confident throughout the process.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
 
       {/* Related Treatments */}
       <section className="py-12 bg-sage-50">

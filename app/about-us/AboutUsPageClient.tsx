@@ -65,7 +65,7 @@ export default function AboutUsPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/microneedling-pen.jpg"
+                src="/images/microneedling-pen.avif"
                 alt="Advanced skincare treatment"
                 width={600}
                 height={500}

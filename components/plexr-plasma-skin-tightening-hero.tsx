@@ -24,7 +24,7 @@ export function PlexrPlasmaSkinTighteningHero({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/plasma-skin-tightening-treatment-services-rejuvenate-skin-spa-queen-creek-az.webp"
+          src="/images/plasma-skin-tightening-treatment-services-rejuvenate-skin-spa-queen-creek-az.avif"
           alt="PLEXR plasma skin tightening treatment at Rejuvenate Skin Spa"
           fill
           className="object-cover object-right"

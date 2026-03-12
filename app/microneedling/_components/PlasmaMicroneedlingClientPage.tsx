@@ -19,6 +19,8 @@ import {
   Shield,
   Target,
   Award,
+  AlertTriangle,
+  ArrowRight,
 } from "lucide-react"
 
 export default function PlasmaMicroneedlingClientPage() {
@@ -65,7 +67,7 @@ export default function PlasmaMicroneedlingClientPage() {
             </div>
             <div className="relative">
               <img
-                src="/images/f10a28e0-b307-4440-9abd-b180cb406d10.png"
+                src="/images/f10a28e0-b307-4440-9abd-b180cb406d10.avif"
                 alt="Plasma Pen Microneedling"
                 className="rounded-lg shadow-lg w-full max-w-md mx-auto"
               />
@@ -404,6 +406,59 @@ export default function PlasmaMicroneedlingClientPage() {
               Explore Plexr Plasma Treatments →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone Plasma Microneedling
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active acne breakouts or skin infections in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>History of keloid scarring (discuss during consultation)</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent sunburn or chemical peel within the past 2 weeks</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Plasma microneedling is an advanced treatment that combines plasma energy with microneedling. A consultation is recommended to assess your skin and determine the best approach.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers plasma microneedling using Plexr plasma technology combined with targeted microneedling for enhanced collagen stimulation. As a licensed Plexr provider, Bridgette Ball brings advanced certifications in both plasma and microneedling techniques to every treatment.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
         </div>
       </section>
 

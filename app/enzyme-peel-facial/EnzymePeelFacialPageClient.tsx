@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Clock, Shield, Star, Leaf, Sparkles, Phone } from "lucide-react";
+import { CheckCircle, Clock, Shield, Star, Leaf, Sparkles, Phone, AlertTriangle, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import EnzymePeelFacialHero from "@/components/enzyme-peel-facial-hero";
@@ -204,7 +204,7 @@ export default function EnzymePeelFacialPageClient() {
             </div>
             <div className="flex flex-col justify-center h-full">
               <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
-                Natural Skin Renewal & Rejuvenation
+                What Are Enzyme Peel Facials?
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
@@ -399,6 +399,75 @@ export default function EnzymePeelFacialPageClient() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone an Enzyme Peel
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active sunburn or irritated skin in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Open wounds, active eczema, or inflamed skin conditions</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent chemical peel or laser treatment within the past 2 weeks</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Known allergy to any of the fruit enzymes used in the formula</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            Enzyme peels are among the gentlest professional exfoliation options available. Your practitioner will assess your skin at the start of each session to confirm readiness.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers eight different enzyme peel formulas — from ultra-gentle raspberry peach to the intense 15% pumpkin orange — so every client gets a treatment matched to their skin type and goals. All peels use 100% natural fruit enzymes with pharmaceutical-grade formulations and no harsh synthetic chemicals.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Chemical Peels →
+            </Link>
+            <Link href="/spa-services/dermaplaning-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Dermaplaning →
+            </Link>
+            <Link href="/microneedling" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Microneedling →
+            </Link>
           </div>
         </div>
       </section>

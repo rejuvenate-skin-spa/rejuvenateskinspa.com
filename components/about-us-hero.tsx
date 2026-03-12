@@ -8,7 +8,7 @@ export default function AboutUsHero() {
     <section className="relative min-h-[400px] lg:min-h-[500px] py-12 lg:py-12 bg-sage-50 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.jpg"
+          src="/images/rejuvenate-med-spa-queen-creek-az-homepage-hero.avif"
           alt="Rejuvenate Skin Spa"
           fill
           className="object-cover object-center"

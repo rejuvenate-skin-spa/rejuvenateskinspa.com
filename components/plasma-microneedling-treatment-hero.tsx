@@ -8,7 +8,7 @@ export default function PlasmaMicroneedlingTreatmentHero() {
     <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/plasma-pen-microneedling-background.jpg"
+          src="/images/plasma-pen-microneedling-background.avif"
           alt="Plasma Pen Microneedling Background"
           fill
           className="object-cover object-left"

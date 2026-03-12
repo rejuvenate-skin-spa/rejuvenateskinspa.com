@@ -2,10 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { TcaPeelFAQ } from "@/components/tca-peel-faq";
 import TcaPeelHero from "@/components/tca-peel-hero";
-import { CheckCircle, Clock, Shield, Star } from "lucide-react";
+import { CheckCircle, Clock, Shield, Star, AlertTriangle, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -23,7 +22,7 @@ export default function TcaPeelPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
-              About TCA Chemical Peels
+              What Is a TCA Chemical Peel?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               TCA (Trichloroacetic Acid) peels are considered medium to deep
@@ -70,7 +69,7 @@ export default function TcaPeelPageClient() {
             </div>
             <div className="relative">
               <Image
-                src="/images/chemical-peel-treatment-close-up.png"
+                src="/images/chemical-peel-treatment-close-up.avif"
                 alt="TCA peel process"
                 width={500}
                 height={400}
@@ -166,7 +165,7 @@ export default function TcaPeelPageClient() {
           <div className="flex justify-center gap-8 mb-12">
             <div className="relative rounded-lg shadow-lg overflow-hidden" style={{ width: '5in', height: '7in' }}>
               <Image
-                src="/images/tca-peel-results-before.png"
+                src="/images/tca-peel-results-before.avif"
                 alt="TCA Peel Results Before"
                 width={480}
                 height={672}
@@ -175,7 +174,7 @@ export default function TcaPeelPageClient() {
             </div>
             <div className="relative rounded-lg shadow-lg overflow-hidden" style={{ width: '5in', height: '7in' }}>
               <Image
-                src="/images/tca-peel-results-after.png"
+                src="/images/tca-peel-results-after.avif"
                 alt="TCA Peel Results After"
                 width={480}
                 height={672}
@@ -395,6 +394,79 @@ export default function TcaPeelPageClient() {
                 <PhoneCtaButton className="w-full" />
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Who May Want to Postpone */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Who May Want to Postpone a TCA Peel
+          </h2>
+          <ul className="space-y-3 text-gray-600 text-lg">
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Active sunburn, open wounds, or skin infections in the treatment area</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Pregnancy or nursing</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Use of isotretinoin (Accutane) within the past 6 months</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>Recent use of prescription retinoids or strong exfoliating products</span>
+            </li>
+            <li className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 mt-1 flex-shrink-0" />
+              <span>History of cold sores in the treatment area (discuss during consultation)</span>
+            </li>
+          </ul>
+          <p className="mt-6 text-gray-600">
+            TCA peels are stronger than light chemical peels and require a professional assessment beforehand. Your practitioner will evaluate your skin and health history during your consultation.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Rejuvenate */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-3xl font-playfair font-bold text-gray-900 mb-6">
+            Why Choose Rejuvenate Skin Spa
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers professional-grade TCA peels performed by a licensed cosmetologist with advanced certifications in chemical peel applications. Every treatment begins with a skin assessment to determine the right approach for your concerns and tolerance level. We focus on safe, controlled application with clear aftercare guidance.
+          </p>
+          <Link
+            href="/about-us/bridgette-ball"
+            className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+          >
+            Meet Bridgette Ball
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related Treatments */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl font-playfair font-bold text-gray-900 mb-4">
+            Related Chemical Peel Treatments
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              All Chemical Peels →
+            </Link>
+            <Link href="/chemical-peels/glycolic-acid-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Glycolic Acid Peels →
+            </Link>
+            <Link href="/chemical-peels/biorepeel-chemical-peels" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              BioRePeel →
+            </Link>
           </div>
         </div>
       </section>

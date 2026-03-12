@@ -8,7 +8,7 @@ export function AblativeSkinResurfacingHero() {
     <section className="relative min-h-[500px] py-12 bg-sage-50 flex items-center">
       <div className="absolute inset-0">
         <Image
-          src="/images/heroablative.png"
+          src="/images/heroablative.avif"
           alt="Rejuvenate Med Spa Queen Creek AZ"
           fill
           className="object-cover object-right"

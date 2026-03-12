@@ -197,7 +197,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/rejuvenate-logo.webp"
+              src="/images/rejuvenate-logo.avif"
               alt="Rejuvenate Skin Spa"
               width={200}
               height={60}

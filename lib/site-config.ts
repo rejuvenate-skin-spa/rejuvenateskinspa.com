@@ -20,7 +20,7 @@ export const siteConfig = {
     longitude: -111.6343,
   },
   image: "/og/og-home.jpg",
-  logo: "/images/rejuvenate-logo.webp",
+  logo: "/images/rejuvenate-logo.avif",
   priceRange: "$$",
   currenciesAccepted: "USD",
   paymentAccepted: "Cash, Credit Card",

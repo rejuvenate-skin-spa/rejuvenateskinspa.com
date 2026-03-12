@@ -23,7 +23,7 @@ export function HomeHero({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/semi-ablative-resurfacing-hero.png"
+          src="/images/semi-ablative-resurfacing-hero.avif"
           alt="Advanced skincare treatment at Rejuvenate Skin Spa"
           fill
           className="object-cover object-right"
