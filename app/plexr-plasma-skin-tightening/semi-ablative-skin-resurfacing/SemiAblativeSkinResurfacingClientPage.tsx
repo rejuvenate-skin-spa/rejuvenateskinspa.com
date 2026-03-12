@@ -17,10 +17,13 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { SmartContactCTA } from "@/components/SmartContactCTA";
+import { PLEXR_CONSULT_PRICING, formatPrice } from "@/lib/services";
 import SemiAblativeSkinResurfacingFAQ from "@/components/semi-ablative-skin-resurfacing-faq";
 import SemiAblativeSkinResurfacingHero from "@/components/semi-ablative-skin-resurfacing-hero";
 
 export default function SemiAblativeSkinResurfacingClientPage() {
+  const consultFee = PLEXR_CONSULT_PRICING[0];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -357,7 +360,7 @@ export default function SemiAblativeSkinResurfacingClientPage() {
             </div>
             <ul className="space-y-3 text-sage-100 text-sm ml-10">
               <li>• In-person consultation required for Plasma services</li>
-              <li>• $100 consultation fee</li>
+              <li>• {formatPrice(consultFee.price)} consultation fee</li>
               <li>• Fee is applied toward treatment if you proceed</li>
               <li>• Non-refundable if you choose not to proceed</li>
             </ul>

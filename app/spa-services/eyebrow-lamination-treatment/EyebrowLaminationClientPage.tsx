@@ -8,8 +8,12 @@ import { EyebrowLaminationFAQ } from "@/components/eyebrow-lamination-treatment-
 import { EyebrowLaminationTreatmentHero } from "@/components/eyebrow-lamination-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
 import Link from "next/link"
+import { getService, formatPrice } from "@/lib/services"
 
 export default function EyebrowLaminationClientPage() {
+  const service = getService("/spa-services/eyebrow-lamination-treatment")!;
+  const pricing = service.pricing!;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Hero Section */}
@@ -26,7 +30,7 @@ export default function EyebrowLaminationClientPage() {
             </div>
             <div className="text-center">
               <DollarSign className="h-8 w-8 text-sage-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">$85</div>
+              <div className="text-2xl font-bold text-gray-900">{formatPrice(pricing[0].price)}</div>
               <div className="text-sm text-gray-600">Starting Price</div>
             </div>
             <div className="text-center">
@@ -223,7 +227,7 @@ export default function EyebrowLaminationClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
               <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Eyebrow Lamination</h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$85</div>
+                <div className="text-4xl font-bold text-sage-600 mb-4">{formatPrice(pricing[0].price)}</div>
                 <p className="text-gray-600 mb-6">
                   Complete eyebrow lamination treatment including consultation, shaping, and aftercare guidance.
                 </p>
@@ -255,7 +259,7 @@ export default function EyebrowLaminationClientPage() {
             <Card className="border-sage-200 hover:shadow-lg transition-shadow bg-sage-50 h-full flex flex-col">
               <CardContent className="p-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Lamination + Tint</h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$110</div>
+                <div className="text-4xl font-bold text-sage-600 mb-4">{formatPrice(pricing[1].price)}</div>
                 <p className="text-gray-600 mb-6">
                   Complete package including lamination and professional tinting for enhanced color and definition.
                 </p>

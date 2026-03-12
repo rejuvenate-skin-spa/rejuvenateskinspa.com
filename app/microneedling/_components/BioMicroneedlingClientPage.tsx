@@ -17,6 +17,7 @@ import {
   AlertTriangle,
   ArrowRight,
 } from "lucide-react";
+import { getService, formatPrice, getPackageSavings } from "@/lib/services";
 import BioMicroneedlingTreatmentFAQ from "@/components/bio-microneedling-treatment-faq";
 import BioMicroneedlingTreatmentHero from "@/components/bio-microneedling-treatment-hero";
 import PhoneCtaButton from "@/components/phone-cta-button";
@@ -24,6 +25,11 @@ import Link from "next/link";
 import { SmartContactCTA } from "@/components/SmartContactCTA";
 
 export default function BioMicroneedlingClientPage() {
+  const service = getService("/microneedling/sqt-bio-microneedling")!;
+  const pricing = service.pricing!;
+  const pkg3 = getPackageSavings(pricing[0].price, pricing[1]);
+  const pkg6 = getPackageSavings(pricing[0].price, pricing[2]);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Hero Section */}
@@ -243,7 +249,7 @@ export default function BioMicroneedlingClientPage() {
                   Single Treatment
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $249
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -284,10 +290,10 @@ export default function BioMicroneedlingClientPage() {
                   3-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $699
+                  {formatPrice(pricing[1].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $48 ($233 per session)
+                  Save {formatPrice(pkg3.savings)} ({formatPrice(pkg3.perSession)} per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Optimal results with three treatments spaced 4–6 weeks apart for maximum collagen stimulation.
@@ -327,10 +333,10 @@ export default function BioMicroneedlingClientPage() {
                   6-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $1,299
+                  {formatPrice(pricing[2].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $195 ($217 per session)
+                  Save {formatPrice(pkg6.savings)} ({formatPrice(pkg6.perSession)} per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Comprehensive transformation with six treatments for dramatic, long-lasting results.

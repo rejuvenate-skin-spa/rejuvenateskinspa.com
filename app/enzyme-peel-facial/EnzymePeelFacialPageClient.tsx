@@ -8,13 +8,16 @@ import Link from "next/link";
 import EnzymePeelFacialHero from "@/components/enzyme-peel-facial-hero";
 import EnzymePeelFacialFAQ from "@/components/enzyme-peel-facial-faq";
 import PhoneCtaButton from "@/components/phone-cta-button";
+import { getService, getStartingPrice, formatPrice } from "@/lib/services";
 
 export default function EnzymePeelFacialPageClient() {
+  const enzymePrice = formatPrice(getStartingPrice(getService("/enzyme-peel-facial/blueberry-enzyme-peel")!)!.price);
+
   const enzymePeels = [
     {
       name: "Pumpkin Orange Peel",
       features: ["Strongest 15% formula", "Deep exfoliation", "Clients may peel", "Anti-aging benefits"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "5",
       intensityColor: "bg-red-600",
       href: "/enzyme-peel-facial/pumpkin-orange-enzyme-peel",
@@ -22,7 +25,7 @@ export default function EnzymePeelFacialPageClient() {
     {
       name: "Pomegranate Peel",
       features: ["Powerful antioxidants", "Brightening effect", "Anti-aging", "Packed with a punch"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "4-5",
       intensityColor: "bg-orange-600",
       href: "/enzyme-peel-facial/pomegranate-enzyme-peel",
@@ -30,7 +33,7 @@ export default function EnzymePeelFacialPageClient() {
     {
       name: "Blueberry Peel",
       features: ["Glycolic & salicylic acid", "Antioxidant-rich", "Improves clarity", "Refines pores"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "3-4",
       intensityColor: "bg-yellow-600",
       href: "/enzyme-peel-facial/blueberry-enzyme-peel",
@@ -38,7 +41,7 @@ export default function EnzymePeelFacialPageClient() {
     {
       name: "Cherry Peel",
       features: ["Brightening formula", "Deep hydration", "Even complexion", "Gentle exfoliation"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "3",
       intensityColor: "bg-yellow-500",
       href: "/enzyme-peel-facial/cherry-enzyme-peel",
@@ -46,7 +49,7 @@ export default function EnzymePeelFacialPageClient() {
     {
       name: "Lemon Zest Peel",
       features: ["Zesty brightening", "Refreshes dull skin", "Vitamin C boost", "Natural glow"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "2-3",
       intensityColor: "bg-green-500",
       href: "/enzyme-peel-facial/lemon-enzyme-peel",
@@ -54,7 +57,7 @@ export default function EnzymePeelFacialPageClient() {
     {
       name: "Coconut Papaya Peel",
       features: ["Mild & nourishing", "All skin types", "Sensitive skin safe", "Gentle hydration"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "0-2",
       intensityColor: "bg-green-400",
       href: "/enzyme-peel-facial/coconut-papaya-enzyme-peel",
@@ -62,7 +65,7 @@ export default function EnzymePeelFacialPageClient() {
     {
       name: "Raspberry Peach Peel",
       features: ["Ultra-gentle formula", "Sensitive skin safe", "Soothing treatment", "Light exfoliation"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "0-2",
       intensityColor: "bg-green-400",
       href: "/enzyme-peel-facial/raspberry-peach-enzyme-peel",
@@ -70,7 +73,7 @@ export default function EnzymePeelFacialPageClient() {
     {
       name: "Passion Fruit Peel",
       features: ["Warming sensation", "High heat factor", "Deep penetration", "Unique experience"],
-      price: "$120",
+      price: enzymePrice,
       intensity: "HEAT",
       intensityColor: "bg-blue-500",
       href: "/enzyme-peel-facial/passion-fruit-enzyme-peel",

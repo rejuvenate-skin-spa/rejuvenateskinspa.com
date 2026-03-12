@@ -7,8 +7,14 @@ import RaspberryPeachEnzymePeelFAQ from "@/components/raspberry-peach-enzyme-pee
 import RaspberryPeachEnzymePeelHero from "@/components/raspberry-peach-enzyme-peel-hero";
 import { Badge } from "@/components/ui/badge";
 import { SmartContactCTA } from "@/components/SmartContactCTA";
+import { getService, formatPrice, getPackageSavings } from "@/lib/services";
 
 const RaspberryPeachEnzymePeelClientPage = () => {
+  const service = getService("/enzyme-peel-facial/raspberry-peach-enzyme-peel")!;
+  const pricing = service.pricing!;
+  const pkg3 = getPackageSavings(pricing[0].price, pricing[1]);
+  const pkg6 = getPackageSavings(pricing[0].price, pricing[2]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -215,7 +221,7 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                   Single Treatment
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $120
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <ul className="space-y-3 mb-6 flex-grow">
@@ -255,10 +261,10 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                   3-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $320
+                  {formatPrice(pricing[1].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $40 ($107 per session)
+                  Save {formatPrice(pkg3.savings)} ({formatPrice(pkg3.perSession)} per session)
                 </div>
                 <ul className="space-y-3 mb-6 flex-grow">
                   <li className="flex items-start gap-2">
@@ -297,10 +303,10 @@ const RaspberryPeachEnzymePeelClientPage = () => {
                   6-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $599
+                  {formatPrice(pricing[2].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $121 ($100 per session)
+                  Save {formatPrice(pkg6.savings)} ({formatPrice(pkg6.perSession)} per session)
                 </div>
                 <ul className="space-y-3 mb-6 flex-grow">
                   <li className="flex items-start gap-2">

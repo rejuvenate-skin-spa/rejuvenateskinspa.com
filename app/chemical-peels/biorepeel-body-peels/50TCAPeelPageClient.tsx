@@ -20,8 +20,12 @@ import FiftyTCAPeelHero from "@/components/50-tca-peel-hero";
 import { Badge } from "@/components/ui/badge";
 import PhoneCtaButton from "@/components/phone-cta-button";
 import { SmartContactCTA } from "@/components/SmartContactCTA";
+import { getService, formatPrice } from "@/lib/services";
 
 export default function BioRePeel50TCAPeelPageClient() {
+  const service = getService("/chemical-peels/biorepeel-body-peels")!;
+  const pricing = service.pricing!;
+
   return (
     <div className="min-h-screen">
       <FiftyTCAPeelHero />
@@ -319,7 +323,7 @@ export default function BioRePeel50TCAPeelPageClient() {
                   Single Body Part
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  Starting at $299
+                  Starting at {formatPrice(pricing[0].price)}
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -363,7 +367,7 @@ export default function BioRePeel50TCAPeelPageClient() {
                   Multiple Body Parts
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  Starting at $599
+                  Starting at {formatPrice(pricing[1].price)}
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">

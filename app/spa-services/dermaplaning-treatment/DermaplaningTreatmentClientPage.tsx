@@ -8,8 +8,13 @@ import Link from "next/link"
 import DermaplaningTreatmentFAQ from "@/components/dermaplaning-treatment-faq"
 import DermaplaningTreatmentHero from "@/components/dermaplaning-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import { getService, formatPrice, getPackageSavings } from "@/lib/services"
 
 export default function DermaplaningTreatmentClientPage() {
+  const service = getService("/spa-services/dermaplaning-treatment")!;
+  const pricing = service.pricing!;
+  const pkg3 = getPackageSavings(pricing[0].price, pricing[1]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -165,7 +170,7 @@ export default function DermaplaningTreatmentClientPage() {
             {[
               {
                 title: "Single Treatment",
-                price: "$80",
+                price: formatPrice(pricing[0].price),
                 duration: "35 minutes",
                 features: [
                   "Professional dermaplaning",
@@ -176,8 +181,8 @@ export default function DermaplaningTreatmentClientPage() {
               },
               {
                 title: "3 Treatment Package",
-                price: "$200",
-                duration: "Save $40",
+                price: formatPrice(pricing[1].price),
+                duration: `Save ${formatPrice(pkg3.savings)}`,
                 features: [
                   "3 dermaplaning sessions",
                   "17% savings vs. single treatments",
@@ -188,7 +193,7 @@ export default function DermaplaningTreatmentClientPage() {
               },
               {
                 title: "Dermaplaning + Facial",
-                price: "$150",
+                price: formatPrice(pricing[2].price),
                 duration: "60 minutes",
                 features: ["Dermaplaning treatment", "Customized facial", "Charcohol mask", "LED light therapy"],
               },

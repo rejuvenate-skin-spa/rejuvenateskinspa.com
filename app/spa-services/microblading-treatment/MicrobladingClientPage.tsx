@@ -8,8 +8,12 @@ import Link from "next/link"
 import MicrobladingTreatmentFAQ from "@/components/microblading-treatment-faq"
 import MicrobladingTreatmentHero from "@/components/microblading-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import { getService, formatPrice } from "@/lib/services"
 
 export default function MicrobladingClientPage() {
+  const service = getService("/spa-services/microblading-treatment")!;
+  const pricing = service.pricing!;
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -171,7 +175,7 @@ export default function MicrobladingClientPage() {
             {[
               {
                 title: "Complete Microblading",
-                price: "$450",
+                price: formatPrice(pricing[0].price),
                 duration: "Initial + Touch-up",
                 features: [
                   "Initial 2-3 hour session",
@@ -184,7 +188,7 @@ export default function MicrobladingClientPage() {
               },
               {
                 title: "Touch-Up Session",
-                price: "$150",
+                price: formatPrice(pricing[1].price),
                 duration: "1-2 hours",
                 features: [
                   "Color refresh",

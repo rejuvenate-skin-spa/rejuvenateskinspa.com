@@ -8,6 +8,7 @@ import { PlexrPlasmaSkinTighteningHero } from "@/components/plexr-plasma-skin-ti
 import { PlexrPlasmaFAQ } from "@/components/plexr-plasma-skin-tightening-faq"
 import { Info, ArrowRight } from "lucide-react"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import { PLEXR_CONSULT_PRICING, formatPrice } from "@/lib/services"
 
 const treatmentOptions = [
   {
@@ -60,6 +61,8 @@ const removalServices = [
 ]
 
 export default function PlexrPlasmaPageClient() {
+  const consultFee = PLEXR_CONSULT_PRICING[0];
+
   return (
     <div className="min-h-screen">
       <PlexrPlasmaSkinTighteningHero />
@@ -357,7 +360,7 @@ export default function PlexrPlasmaPageClient() {
             </div>
             <ul className="space-y-3 text-sage-100 text-sm ml-10">
               <li>• In-person consultation required for Plasma services</li>
-              <li>• $100 consultation fee</li>
+              <li>• {formatPrice(consultFee.price)} consultation fee</li>
               <li>• Fee is applied toward treatment if you proceed</li>
               <li>• Non-refundable if you choose not to proceed</li>
             </ul>

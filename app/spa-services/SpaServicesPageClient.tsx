@@ -8,8 +8,14 @@ import Image from "next/image"
 import SpaServicesFAQ from "@/components/spa-services-faq"
 import { SpaServicesHero } from "@/components/spa-services-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import { getService, getStartingPrice, formatPrice } from "@/lib/services"
 
 export default function SpaServicesPageClient() {
+  const eyebrowPrice = getStartingPrice(getService("/spa-services/eyebrow-lamination-treatment")!)!;
+  const dermaplaningPrice = getStartingPrice(getService("/spa-services/dermaplaning-treatment")!)!;
+  const microbladingPrice = getStartingPrice(getService("/spa-services/microblading-treatment")!)!;
+  const redLightPrice = getStartingPrice(getService("/spa-services/red-light-therapy-treatment")!)!;
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -44,7 +50,7 @@ export default function SpaServicesPageClient() {
                   "Long-lasting results with no downtime",
                 ],
                 duration: "60 minutes",
-                price: "From $90",
+                price: `From ${formatPrice(eyebrowPrice.price)}`,
                 href: "/spa-services/eyebrow-lamination-treatment",
                 image: "/images/eyebrow-lamination-feature.avif",
               },
@@ -59,7 +65,7 @@ export default function SpaServicesPageClient() {
                   "Safe for most skin types with no downtime",
                 ],
                 duration: "45 minutes",
-                price: "From $80",
+                price: `From ${formatPrice(dermaplaningPrice.price)}`,
                 href: "/spa-services/dermaplaning-treatment",
                 image: "/images/dermaplaning-facial-treatment-in-progress.avif",
               },
@@ -68,7 +74,7 @@ export default function SpaServicesPageClient() {
                 description: "Semi-permanent eyebrow enhancement using precise hair-stroke technique.",
                 benefits: ["Perfectly defined, natural-looking brows", "Long-lasting results", "Saves time & enhances confidence", "Customizable shape & color", "Waterproof & smudge-proof", "Restores thinning or over-plucked brows"],
                 duration: "2–3 hours",
-                price: "From $450",
+                price: `From ${formatPrice(microbladingPrice.price)}`,
                 href: "/spa-services/microblading-treatment",
                 image: "/images/microblading-service.avif",
               },
@@ -77,7 +83,7 @@ export default function SpaServicesPageClient() {
                 description: "Non-invasive treatment that promotes healing, stimulates collagen, and reduces fine lines and wrinkles with advanced LED technology.",
                 benefits: ["Stimulates collagen & elastin production", "Reduces fine lines & wrinkles", "Improves tone & texture", "Minimizes inflammation & redness", "Accelerates healing & recovery", "Enhances cellular energy"],
                 duration: "15–30 minutes",
-                price: "From $25",
+                price: `From ${formatPrice(redLightPrice.price)}`,
                 href: "/spa-services/red-light-therapy-treatment",
                 image: "/images/red-lamp-only.avif",
               },

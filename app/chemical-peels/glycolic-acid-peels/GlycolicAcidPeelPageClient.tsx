@@ -9,8 +9,12 @@ import { CheckCircle, Clock, Shield, Star, Sparkles, AlertTriangle, ArrowRight }
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import { getService, formatPrice } from "@/lib/services"
 
 export default function GlycolicAcidPeelPageClient() {
+  const service = getService("/chemical-peels/glycolic-acid-peels")!;
+  const pricing = service.pricing!;
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -312,7 +316,7 @@ export default function GlycolicAcidPeelPageClient() {
                 </h3>
                 <p className="text-sm text-gray-500 mb-1 text-center">20–30% Concentration</p>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $149
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <p className="text-sm text-gray-500 mb-5 text-center">20–30 minutes</p>
                 <p className="text-sm text-gray-600 mb-4 text-center">
@@ -355,7 +359,7 @@ export default function GlycolicAcidPeelPageClient() {
                 </h3>
                 <p className="text-sm text-gray-500 mb-1 text-center">35–50% Concentration</p>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $149
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <p className="text-sm text-gray-500 mb-5 text-center">20–30 minutes</p>
                 <p className="text-sm text-gray-600 mb-4 text-center">
@@ -394,7 +398,7 @@ export default function GlycolicAcidPeelPageClient() {
                 </h3>
                 <p className="text-sm text-gray-500 mb-1 text-center">50–70% Concentration</p>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $149
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <p className="text-sm text-gray-500 mb-5 text-center">20–30 minutes</p>
                 <p className="text-sm text-gray-600 mb-4 text-center">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 import { buildService } from "@/lib/schema";
-import { getService } from "@/lib/services";
+import { getService, getStartingPrice, formatPrice } from "@/lib/services";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -30,6 +30,9 @@ export const metadata: Metadata = {
 };
 
 export default function BioRePeelTreatmentPage() {
+  const facialStarting = getStartingPrice(getService("/chemical-peels/biorepeel-facial-peels")!);
+  const bodyStarting = getStartingPrice(getService("/chemical-peels/biorepeel-body-peels")!);
+
   return (
     <div className="min-h-screen">
       <script
@@ -171,7 +174,7 @@ export default function BioRePeelTreatmentPage() {
                   "Stimulates collagen production",
                 ],
                 duration: "45-60 minutes",
-                price: "From $250",
+                price: `From ${formatPrice(facialStarting!.price)}`,
                 href: "/chemical-peels/biorepeel-facial-peels",
                 image:
                   "/images/biorepeel-35-tca-facial-treatment.avif",
@@ -189,7 +192,7 @@ export default function BioRePeelTreatmentPage() {
                   "Rejuvenates décolletage and hands",
                 ],
                 duration: "60-90 minutes",
-                price: "From $250",
+                price: `From ${formatPrice(bodyStarting!.price)}`,
                 href: "/chemical-peels/biorepeel-body-peels",
                 image:
                   "/images/biorepeel-50-tca-body-treatment.avif",

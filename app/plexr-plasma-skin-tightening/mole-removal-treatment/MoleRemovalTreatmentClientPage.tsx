@@ -20,8 +20,11 @@ import Link from "next/link"
 import { MoleRemovalTreatmentFAQ } from "@/components/mole-removal-treatment-faq"
 import { MoleRemovalTreatmentHero } from "@/components/mole-removal-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import { PLEXR_CONSULT_PRICING, formatPrice } from "@/lib/services"
 
 export default function MoleRemovalTreatmentClientPage() {
+  const consultFee = PLEXR_CONSULT_PRICING[0];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -95,7 +98,7 @@ export default function MoleRemovalTreatmentClientPage() {
             <h3 className="text-base font-semibold text-gray-900">Consultation Required for Plexr Plasma Removal Services</h3>
           </div>
           <ul className="text-sm text-gray-600 space-y-1 ml-8">
-            <li>• $100 consultation fee (applied toward treatment if you proceed)</li>
+            <li>• {formatPrice(consultFee.price)} consultation fee ({consultFee.note?.toLowerCase()})</li>
             <li>• General pricing guidance is available by phone</li>
             <li>• Final recommendations and exact pricing are confirmed in person</li>
           </ul>
@@ -403,7 +406,7 @@ export default function MoleRemovalTreatmentClientPage() {
             </div>
             <ul className="space-y-3 text-sage-100 text-sm ml-10">
               <li>• In-person consultation required for Plasma services</li>
-              <li>• $100 consultation fee</li>
+              <li>• {formatPrice(consultFee.price)} consultation fee</li>
               <li>• Fee is applied toward treatment if you proceed</li>
               <li>• Non-refundable if you choose not to proceed</li>
             </ul>

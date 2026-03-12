@@ -18,8 +18,14 @@ import TCAFacialPeelFAQ from "@/components/35-tca-peel-faq";
 import TCApeelHero from "@/components/35-tca-peel-hero";
 import PhoneCtaButton from "@/components/phone-cta-button";
 import { Badge } from "@/components/ui/badge";
+import { getService, formatPrice, getPackageSavings } from "@/lib/services";
 
 export default function BioRePeel35TCAPeelPageClient() {
+  const service = getService("/chemical-peels/biorepeel-facial-peels")!;
+  const pricing = service.pricing!;
+  const pack3 = getPackageSavings(pricing[0].price, pricing[1]);
+  const pack6 = getPackageSavings(pricing[0].price, pricing[2]);
+
   return (
     <div className="min-h-screen">
       <TCApeelHero />
@@ -302,7 +308,7 @@ export default function BioRePeel35TCAPeelPageClient() {
                   Single Treatment
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $249
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -342,10 +348,10 @@ export default function BioRePeel35TCAPeelPageClient() {
                   3-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $699
+                  {formatPrice(pricing[1].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $48 ($233 per session)
+                  Save {formatPrice(pack3.savings)} ({formatPrice(pack3.perSession)} per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Optimal results with three treatments spaced 2–4 weeks apart.
@@ -384,10 +390,10 @@ export default function BioRePeel35TCAPeelPageClient() {
                   6-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $1,299
+                  {formatPrice(pricing[2].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $195 ($217 per session)
+                  Save {formatPrice(pack6.savings)} ({formatPrice(pack6.perSession)} per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Comprehensive transformation with six treatments for dramatic, long-lasting results.

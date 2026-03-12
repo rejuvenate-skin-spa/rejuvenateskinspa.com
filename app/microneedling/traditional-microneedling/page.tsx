@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 import { buildService } from "@/lib/schema";
-import { getService } from "@/lib/services";
+import { getService, formatPrice, getPackageSavings } from "@/lib/services";
 import MicroneedlingTreatmentFAQ from "@/components/microneedling-treatment-faq";
 import MicroneedlingTreatmentHero from "@/components/microneedling-treatment-hero";
 import { Card, CardContent } from "@/components/ui/card";
@@ -42,6 +42,11 @@ export const metadata: Metadata = {
 };
 
 export default function TraditionalMicroneedlingPage() {
+  const service = getService("/microneedling/traditional-microneedling")!;
+  const pricing = service.pricing!;
+  const pkg3 = getPackageSavings(pricing[0].price, pricing[1]);
+  const pkg6 = getPackageSavings(pricing[0].price, pricing[2]);
+
   return (
     <div className="min-h-screen">
       <script
@@ -228,7 +233,7 @@ export default function TraditionalMicroneedlingPage() {
                   Single Treatment
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $199
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <div className="min-h-[20px] mb-3" />
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
@@ -269,10 +274,10 @@ export default function TraditionalMicroneedlingPage() {
                   3-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $549
+                  {formatPrice(pricing[1].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $48 ($183 per session)
+                  Save {formatPrice(pkg3.savings)} ({formatPrice(pkg3.perSession)} per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Optimal results with three treatments spaced 4–6 weeks apart for maximum collagen stimulation.
@@ -312,10 +317,10 @@ export default function TraditionalMicroneedlingPage() {
                   6-Treatment Package
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $999
+                  {formatPrice(pricing[2].price)}
                 </div>
                 <div className="text-xs text-sage-700 font-medium mb-3 text-center">
-                  Save $195 ($167 per session)
+                  Save {formatPrice(pkg6.savings)} ({formatPrice(pkg6.perSession)} per session)
                 </div>
                 <p className="text-sm text-gray-600 mb-5 text-center leading-relaxed">
                   Comprehensive transformation with six treatments for dramatic, long-lasting results.

@@ -8,8 +8,11 @@ import Link from "next/link"
 import SunSpotRemovalTreatmentFAQ from "@/components/sun-spot-removal-treatment-faq"
 import SunSpotRemovalTreatmentHero from "@/components/sun-spot-removal-treatment-hero"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
+import { PLEXR_CONSULT_PRICING, formatPrice } from "@/lib/services"
 
 export default function SunSpotRemovalTreatmentClientPage() {
+  const consultFee = PLEXR_CONSULT_PRICING[0];
+
   return (
     <div className="min-h-screen">
       <SunSpotRemovalTreatmentHero />
@@ -56,7 +59,7 @@ export default function SunSpotRemovalTreatmentClientPage() {
             <h3 className="text-base font-semibold text-gray-900">Consultation Required for Plexr Plasma Removal Services</h3>
           </div>
           <ul className="text-sm text-gray-600 space-y-1 ml-8">
-            <li>• $100 consultation fee (applied toward treatment if you proceed)</li>
+            <li>• {formatPrice(consultFee.price)} consultation fee ({consultFee.note?.toLowerCase()})</li>
             <li>• General pricing guidance is available by phone</li>
             <li>• Final recommendations and exact pricing are confirmed in person</li>
           </ul>
@@ -342,7 +345,7 @@ export default function SunSpotRemovalTreatmentClientPage() {
             </div>
             <ul className="space-y-3 text-sage-100 text-sm ml-10">
               <li>• In-person consultation required for Plasma services</li>
-              <li>• $100 consultation fee</li>
+              <li>• {formatPrice(consultFee.price)} consultation fee</li>
               <li>• Fee is applied toward treatment if you proceed</li>
               <li>• Non-refundable if you choose not to proceed</li>
             </ul>

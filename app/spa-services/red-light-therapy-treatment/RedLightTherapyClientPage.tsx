@@ -22,8 +22,12 @@ import {
 } from "lucide-react"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
 import Link from "next/link"
+import { getService, formatPrice } from "@/lib/services"
 
 export default function RedLightTherapyClientPage() {
+  const service = getService("/spa-services/red-light-therapy-treatment")!;
+  const pricing = service.pricing!;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Hero Section */}
@@ -40,7 +44,7 @@ export default function RedLightTherapyClientPage() {
             </div>
             <div className="text-center">
               <DollarSign className="h-8 w-8 text-sage-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">$25</div>
+              <div className="text-2xl font-bold text-gray-900">{formatPrice(pricing[0].price)}</div>
               <div className="text-sm text-gray-600">Per Session</div>
             </div>
             <div className="text-center">
@@ -292,7 +296,7 @@ export default function RedLightTherapyClientPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Single Session
                 </h3>
-                <div className="text-4xl font-bold text-sage-600 mb-4">$25</div>
+                <div className="text-4xl font-bold text-sage-600 mb-4">{formatPrice(pricing[0].price)}</div>
                 <p className="text-gray-600 mb-6">
                   Try red light therapy with a single 15-30 minute session.
                 </p>
@@ -327,7 +331,7 @@ export default function RedLightTherapyClientPage() {
                   5-Session Package
                 </h3>
                 <div className="text-4xl font-bold text-sage-600 mb-4">
-                  $100
+                  {formatPrice(pricing[1].price)}
                 </div>
                 <p className="text-gray-600 mb-6">
                   Better value for consistent results and ongoing wellness.
@@ -397,7 +401,7 @@ export default function RedLightTherapyClientPage() {
             Why Choose Rejuvenate Skin Spa
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Rejuvenate Skin Spa in Queen Creek, Arizona offers red light therapy as a standalone wellness service and as a complement to other treatments. Our full-body LED panel delivers therapeutic wavelengths (660–850nm) in a relaxing environment with flexible scheduling. At $25 per session, it is one of the most accessible treatments we offer.
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers red light therapy as a standalone wellness service and as a complement to other treatments. Our full-body LED panel delivers therapeutic wavelengths (660–850nm) in a relaxing environment with flexible scheduling. At {formatPrice(pricing[0].price)} per session, it is one of the most accessible treatments we offer.
           </p>
           <Link
             href="/about-us/bridgette-ball"

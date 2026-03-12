@@ -10,8 +10,12 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import PhoneCtaButton from "@/components/phone-cta-button";
 import { SmartContactCTA } from "@/components/SmartContactCTA";
+import { getService, formatPrice } from "@/lib/services";
 
 export default function TcaPeelPageClient() {
+  const service = getService("/chemical-peels/tca-peels")!;
+  const pricing = service.pricing!;
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -368,7 +372,7 @@ export default function TcaPeelPageClient() {
                   TCA 25% Peel
                 </h3>
                 <div className="text-3xl font-bold text-sage-600 mb-1 text-center">
-                  $199
+                  {formatPrice(pricing[0].price)}
                 </div>
                 <p className="text-sm text-gray-500 mb-5 text-center">
                   30–45 minutes
