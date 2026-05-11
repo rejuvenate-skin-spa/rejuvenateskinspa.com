@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "Plexr plasma specialist",
     "licensed cosmetologist Queen Creek AZ",
   ],
+  alternates: { canonical: "/about-us/bridgette-ball" },
 };
 
 const specialties = [
@@ -106,7 +107,7 @@ export default function BridgetteBallPage() {
             <div className="grid lg:grid-cols-[auto_1fr] gap-8 items-center">
               <div className="relative">
                 <Image
-                  src="/images/bridgette-ball.avif"
+                  src="/images/bridgette-ball-rejuventate-skin-spa.jpeg"
                   alt="Bridgette Ball, founder of Rejuvenate Skin Spa"
                   width={375}
                   height={428}
