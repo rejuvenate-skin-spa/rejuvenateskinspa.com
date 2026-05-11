@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Contact Rejuvenate Skin Spa in Queen Creek, AZ. Call (480) 204-9366 or visit 20162 E. Sonoqui Blvd. Schedule your skincare consultation today!",
   keywords:
     "contact Rejuvenate Skin Spa, Queen Creek skin spa, schedule consultation, skincare appointment, med spa Queen Creek, (480) 204-9366, Sonoqui Blvd Queen Creek",
+  alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Rejuvenate Skin Spa | Queen Creek, AZ",
     description:
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/contact`,
     images: [
       {
-        url: "https://www.rejuvenateskinspa.com/og/og-home.jpg",
+        url: `${siteUrl}/og/og-home.jpg`,
         width: 1200,
         height: 630,
         alt: "Rejuvenate Skin Spa",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     title: "Contact Rejuvenate Skin Spa | Queen Creek, AZ",
     description:
       "Call (480) 204-9366 or visit us at 20162 E. Sonoqui Blvd, Queen Creek, AZ 85142.",
-    images: ["https://www.rejuvenateskinspa.com/og/og-home.jpg"],
+    images: [`${siteUrl}/og/og-home.jpg`],
   },
 }
 

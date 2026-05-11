@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Professional chemical peel treatments in Queen Creek, Arizona. TCA 25% peels and Glycolic 20-40% peels for skin rejuvenation, wrinkle reduction, and acne scar treatment. Expert skincare at Rejuvenate Skin Spa.",
   keywords:
     "chemical peels Queen Creek, TCA peel, glycolic peel, skin resurfacing, chemical peel treatment Arizona, acne scar treatment, wrinkle reduction, skin rejuvenation",
+  alternates: { canonical: "/chemical-peels" },
   openGraph: {
     title: "Chemical Peels | TCA & Glycolic | Queen Creek, AZ",
     description:

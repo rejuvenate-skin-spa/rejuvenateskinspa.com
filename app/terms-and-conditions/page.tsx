@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions | Rejuvenate Skin Spa | Queen Creek, AZ",
   description:
     "Terms and Conditions for Rejuvenate Skin Spa in Queen Creek, Arizona. Please review our policies regarding services, appointments, and use of our website.",
+  alternates: { canonical: "/terms-and-conditions" },
 }
 
 export default function TermsAndConditionsPage() {

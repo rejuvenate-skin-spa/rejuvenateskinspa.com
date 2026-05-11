@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Professional glycolic acid peel treatments in Queen Creek, Arizona. Gentle AHA exfoliation for brighter skin, fine lines, clogged pores, and uneven tone. Minimal downtime. Book your consultation.",
   keywords:
     "glycolic acid peel, AHA peel, alpha hydroxy acid peel, gentle chemical peel, skin brightening, pore treatment, Queen Creek Arizona, glycolic peel treatment",
+  alternates: { canonical: "/chemical-peels/glycolic-acid-peels" },
 };
 
 export default function GlycolicAcidPeelsPage() {

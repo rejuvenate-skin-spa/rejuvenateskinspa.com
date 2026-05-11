@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Experience our tropical Coconut-Papaya Enzyme Peel for deep hydration and gentle exfoliation. Perfect for dry skin. Book in Queen Creek, AZ.",
   keywords: "coconut papaya enzyme peel, tropical facial, hydrating treatment, natural enzyme peel, Queen Creek spa",
+  alternates: { canonical: "/enzyme-peel-facial/coconut-papaya-enzyme-peel" },
 }
 
 export default function CoconutPapayaEnzymePeelPage() {

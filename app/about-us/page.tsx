@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     "Rejuvenate Skin Spa in Queen Creek, AZ specializes in Plexr plasma, chemical peels, and microneedling. Founded by Bridgette Ball. Book a consultation today!",
   keywords:
     "about Rejuvenate Skin Spa, skincare spa Queen Creek, aesthetic medicine Arizona, certified skincare specialists, skin spa history, Queen Creek med spa",
+  alternates: { canonical: "/about-us" },
 }
 
 export default function AboutUsPage() {

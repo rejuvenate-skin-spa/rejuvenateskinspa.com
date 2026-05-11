@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Natural fruit enzyme peels in Queen Creek, AZ. Gentle exfoliation with pumpkin, pomegranate, blueberry, and more. No downtime. Book at Rejuvenate Skin Spa!",
   keywords:
     "enzyme peel facial, fruit enzyme peel, natural facial peel, enzyme facial treatment, gentle chemical peel alternative, sensitive skin treatment, Queen Creek facial, natural exfoliation, enzyme peel Arizona",
+  alternates: { canonical: "/enzyme-peel-facial" },
   openGraph: {
     title: "Enzyme Peel Facials | Natural Fruit Peels | Queen Creek, AZ",
     description:

@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Results Gallery | Rejuvenate Skin Spa | Queen Creek, Arizona",
   description:
     "View real client results and transformations at Rejuvenate Skin Spa in Queen Creek, Arizona. See before and after photos showcasing our advanced skincare treatments.",
+  alternates: { canonical: "/portfolio" },
 }
 
 export default function PortfolioPage() {

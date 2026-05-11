@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "Transform your brows with professional eyebrow lamination at Rejuvenate Skin Spa in Queen Creek, AZ. Get fuller, perfectly shaped eyebrows that last 6-8 weeks. Book your appointment today!",
   keywords:
     "eyebrow lamination, brow lamination, eyebrow treatment, brow shaping, Queen Creek spa, Rejuvenate Skin Spa",
+  alternates: { canonical: "/spa-services/eyebrow-lamination-treatment" },
   openGraph: {
     title: "Eyebrow Lamination | Rejuvenate Skin Spa | Queen Creek, AZ",
     description:

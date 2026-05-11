@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Gentle exfoliation and deep hydration with raspberry and peach extract. Ideal for sensitive or dry skin at Rejuvenate Skin Spa in Queen Creek, AZ.",
   keywords:
     "raspberry peach enzyme peel, gentle facial, hydrating treatment, anti-inflammatory, sensitive skin, dry skin, Queen Creek spa",
+  alternates: { canonical: "/enzyme-peel-facial/raspberry-peach-enzyme-peel" },
 };
 
 export default function RaspberryPeachEnzymePeelPage() {

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Tropical radiance renewal with 30% glycolic acid and collagen peptides. Deep exfoliation and anti-aging benefits at Rejuvenate Skin Spa in Queen Creek, AZ.",
   keywords:
     "passion fruit enzyme peel, glycolic acid peel, collagen peptides, anti-aging facial, deep exfoliation, Queen Creek spa",
+  alternates: { canonical: "/enzyme-peel-facial/passion-fruit-enzyme-peel" },
 };
 
 export default function PassionFruitEnzymePeelPage() {

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Professional skin tag removal using Plexr plasma technology in Queen Creek, Arizona. Quick, painless treatment with minimal downtime. Remove skin tags safely and effectively.",
   keywords:
     "skin tag removal, Plexr plasma, skin tag treatment, mole removal, skin growth removal, Queen Creek Arizona, non-surgical removal",
+  alternates: { canonical: "/plexr-plasma-skin-tightening/skin-tag-removal-treatment" },
 };
 
 export default function SkinTagRemovalTreatmentPage() {

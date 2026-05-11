@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Professional wart removal using Plexr plasma technology in Queen Creek, Arizona. Effective, non-surgical wart treatment with minimal downtime. Safe and precise removal.",
   keywords:
     "wart removal, Plexr plasma, wart treatment, non-surgical wart removal, skin wart removal, Queen Creek Arizona, plasma wart removal",
+  alternates: { canonical: "/plexr-plasma-skin-tightening/wart-removal-treatment" },
 };
 
 export default function WartRemovalTreatmentPage() {

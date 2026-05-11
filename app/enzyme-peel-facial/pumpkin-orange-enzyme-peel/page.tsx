@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Pumpkin-Orange Enzyme Peel for skin renewal and rejuvenation at Rejuvenate Skin Spa in Queen Creek, AZ. Book your treatment today!",
   keywords: "pumpkin orange enzyme peel, seasonal facial, renewal treatment, natural enzyme peel, Queen Creek spa",
+  alternates: { canonical: "/enzyme-peel-facial/pumpkin-orange-enzyme-peel" },
 }
 
 export default function PumpkinOrangeEnzymePeelPage() {

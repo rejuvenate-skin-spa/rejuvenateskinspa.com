@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     "Transform your eyebrows with professional microblading at Rejuvenate Skin Spa in Queen Creek, AZ. Semi-permanent, natural-looking results that last 1-3 years.",
   keywords: "microblading, eyebrow enhancement, semi-permanent makeup, Queen Creek, Arizona, natural brows",
+  alternates: { canonical: "/spa-services/microblading-treatment" },
   openGraph: {
     title: "Microblading Treatment | Rejuvenate Skin Spa | Queen Creek, AZ",
     description:

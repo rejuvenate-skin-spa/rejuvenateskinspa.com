@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Professional Plexr plasma device sales and training at Rejuvenate Skin Spa in Queen Creek, Arizona. Get the latest plasma technology for your practice.",
   keywords: "Plexr sales, plasma device, professional equipment, Queen Creek, Arizona, medical spa equipment",
+  alternates: { canonical: "/plexr-sales" },
 }
 
 export default function PlexrSalesPage() {

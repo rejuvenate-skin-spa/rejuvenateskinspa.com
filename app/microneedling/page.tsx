@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Microneedling Services | Traditional, SQT Bio & Plasma | Queen Creek, AZ",
   description:
     "Explore microneedling options at Rejuvenate Skin Spa in Queen Creek, AZ: Traditional Microneedling (CIT), SQT Bio-Microneedling, and Plasma Microneedling.",
+  alternates: { canonical: "/microneedling" },
   openGraph: {
     title: "Microneedling Services | Rejuvenate Skin Spa | Queen Creek, AZ",
     description:

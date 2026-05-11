@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Professional mole removal using Plexr plasma technology in Queen Creek, Arizona. Safe, precise mole removal with minimal scarring. Non-surgical treatment option.",
   keywords:
     "mole removal, Plexr plasma, mole treatment, non-surgical mole removal, skin mole removal, Queen Creek Arizona, plasma mole removal",
+  alternates: { canonical: "/plexr-plasma-skin-tightening/mole-removal-treatment" },
 };
 
 export default function MoleRemovalTreatmentPage() {

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Professional TCA 25% chemical peel treatment in Queen Creek, Arizona. Medium to deep depth peel for wrinkles, acne scars, sun damage, and skin texture improvement. Dramatic skin transformation.",
   keywords:
     "TCA 25% peel, TCA chemical peel, trichloroacetic acid peel, deep chemical peel, skin resurfacing, wrinkle reduction, acne scar treatment, Queen Creek Arizona",
+  alternates: { canonical: "/chemical-peels/tca-peels" },
 };
 
 export default function TcaPeelsPage() {

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Powerful brightening peel with arbutin, lactic acid, glycolic acid, and kojic acid. Ideal for sun-damaged skin at Rejuvenate Skin Spa in Queen Creek, AZ.",
   keywords:
     "lemon enzyme peel, brightening facial, arbutin treatment, kojic acid, sun damage treatment, hyperpigmentation, Queen Creek spa",
+  alternates: { canonical: "/enzyme-peel-facial/lemon-enzyme-peel" },
 };
 
 export default function LemonEnzymePeelPage() {

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "BioRePeel 35 TCA facial treatment in Queen Creek, Arizona. Gentle yet powerful facial rejuvenation with 35% TCA, amino acids, and vitamins. Minimal downtime, visible results. Book your consultation today.",
   keywords:
     "BioRePeel 35 TCA, TCA facial peel, facial rejuvenation, skin resurfacing, chemical peel facial, Queen Creek Arizona, minimal downtime peel, amino acid peel",
+  alternates: { canonical: "/chemical-peels/biorepeel-facial-peels" },
 };
 
 export default function BioRePeelFacialPeelsPage() {

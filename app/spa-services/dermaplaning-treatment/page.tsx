@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "Professional dermaplaning facial treatment in Queen Creek, Arizona. Safe exfoliation that removes dead skin cells and fine facial hair. Instant results, no downtime. Perfect for all skin types.",
   keywords:
     "dermaplaning, dermaplaning facial, exfoliation treatment, peach fuzz removal, facial hair removal, skin smoothing, Queen Creek Arizona, instant results",
+  alternates: { canonical: "/spa-services/dermaplaning-treatment" },
   openGraph: {
     title: "Dermaplaning Facial | Rejuvenate Skin Spa | Queen Creek, AZ",
     description:

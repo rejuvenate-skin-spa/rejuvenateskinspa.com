@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "BioRePeelCl3® biphasic chemical peel treatment in Queen Creek, Arizona. Advanced TCA peel with amino acids, vitamins, and GABA. Minimal peeling, maximum results. Facial and body treatments available.",
   keywords:
     "BioRePeel, BioRePeelCl3, biphasic chemical peel, TCA peel, next generation peel, minimal downtime peel, Queen Creek Arizona, antioxidant peel, skin rejuvenation",
+  alternates: { canonical: "/chemical-peels/biorepeel-chemical-peels" },
 };
 
 export default function BioRePeelTreatmentPage() {

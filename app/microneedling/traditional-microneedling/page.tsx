@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     "Traditional Microneedling | Collagen Induction Therapy | Queen Creek, AZ",
   description:
     "Traditional microneedling (CIT) at Rejuvenate Skin Spa in Queen Creek, AZ. Improve fine lines, acne scars, pores, and skin texture. Book today!",
+  alternates: { canonical: "/microneedling/traditional-microneedling" },
   openGraph: {
     title: "Traditional Microneedling | Queen Creek, AZ",
     description:

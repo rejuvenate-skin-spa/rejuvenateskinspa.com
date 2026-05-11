@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Semi-ablative skin resurfacing treatment using Plexr plasma technology in Queen Creek, Arizona. Moderate depth treatment for wrinkles, scars, and skin texture improvement. Balanced results with manageable recovery.",
   keywords:
     "semi-ablative skin resurfacing, Plexr plasma, moderate depth treatment, skin resurfacing, wrinkle reduction, scar treatment, Queen Creek Arizona",
+  alternates: { canonical: "/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing" },
 };
 
 export default function SemiAblativeSkinResurfacingPage() {

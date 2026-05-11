@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Rejuvenate Skin Spa | Queen Creek, AZ",
   description:
     "Privacy Policy for Rejuvenate Skin Spa in Queen Creek, Arizona. Learn how we collect, use, and protect your personal information.",
+  alternates: { canonical: "/privacy-policy" },
 }
 
 export default function PrivacyPolicyPage() {

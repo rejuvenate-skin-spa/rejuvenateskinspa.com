@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "Plasma Microneedling in Queen Creek, AZ. Advanced resurfacing and tightening using Plexr Plasma technology combined with targeted skin renewal for smoother texture and refined tone.",
   keywords:
     "plasma microneedling, plexr plasma pen, plasma skin resurfacing, skin tightening, microneedling Queen Creek Arizona",
+  alternates: { canonical: "/microneedling/plasma-microneedling" },
   openGraph: {
     title: "Plasma Microneedling | Plexr Plasma | Queen Creek, AZ",
     description:

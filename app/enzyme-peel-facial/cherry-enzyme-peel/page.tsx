@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Luminous cherry enzyme peel with 5% lactic acid, arbutin, and kojic acid. Restorative exfoliation with antioxidant protection in Queen Creek, AZ. Book today!",
   keywords:
     "cherry enzyme peel, brightening facial, lactic acid peel, arbutin treatment, kojic acid, skin brightening, Queen Creek spa, level 3 peel",
+  alternates: { canonical: "/enzyme-peel-facial/cherry-enzyme-peel" },
 };
 
 export default function CherryEnzymePeelPage() {

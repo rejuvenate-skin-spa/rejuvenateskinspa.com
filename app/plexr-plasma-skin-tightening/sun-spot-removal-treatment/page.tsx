@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Professional sun spot and age spot removal using Plexr plasma technology at Rejuvenate Skin Spa in Queen Creek, AZ. Precise pigmentation removal.",
   keywords:
     "sun spot removal, age spot treatment, pigmentation removal, Plexr plasma, sun damage treatment, hyperpigmentation, Queen Creek Arizona, age spots",
+  alternates: { canonical: "/plexr-plasma-skin-tightening/sun-spot-removal-treatment" },
 };
 
 export default function SunSpotRemovalTreatmentPage() {

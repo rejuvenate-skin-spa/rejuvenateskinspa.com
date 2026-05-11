@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Premium spa services in Queen Creek, Arizona. Professional dermaplaning facials, microblading, eyebrow lamination, and red light therapy. Expert practitioners, medical-grade products. Book your appointment today.",
   keywords:
     "spa services Queen Creek, dermaplaning facial, microblading eyebrows, eyebrow lamination, red light therapy, facial treatments Arizona, med spa services, Queen Creek spa",
+  alternates: { canonical: "/spa-services" },
   openGraph: {
     title: "Spa Services | Rejuvenate Skin Spa | Queen Creek, AZ",
     description:

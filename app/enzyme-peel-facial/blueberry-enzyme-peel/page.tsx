@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Gentle Blueberry Enzyme Peel rich in antioxidants. Perfect for sensitive skin renewal at Rejuvenate Skin Spa in Queen Creek, AZ. Book today!",
   keywords: "blueberry enzyme peel, antioxidant facial, gentle treatment, sensitive skin, Queen Creek spa",
+  alternates: { canonical: "/enzyme-peel-facial/blueberry-enzyme-peel" },
 }
 
 export default function BlueberryEnzymePeelPage() {

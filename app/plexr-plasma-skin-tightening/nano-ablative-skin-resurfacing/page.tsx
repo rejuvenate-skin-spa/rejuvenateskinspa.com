@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Gentle nano-ablative skin resurfacing with Plexr plasma. Improve skin texture with zero downtime at Rejuvenate Skin Spa in Queen Creek, AZ.",
   keywords:
     "nano-ablative skin resurfacing, plexr plasma, skin texture, Queen Creek, Arizona, gentle resurfacing, no downtime",
+  alternates: { canonical: "/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing" },
 }
 
 export default function NanoAblativeSkinResurfacingPage() {

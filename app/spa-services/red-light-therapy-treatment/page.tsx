@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "Experience healing red light therapy at Rejuvenate Skin Spa in Queen Creek, AZ. FDA-approved LED treatment for anti-aging, acne, pain relief, and skin rejuvenation. Book today!",
   keywords:
     "red light therapy, LED therapy, photobiomodulation, anti-aging, acne treatment, Queen Creek spa, Rejuvenate Skin Spa",
+  alternates: { canonical: "/spa-services/red-light-therapy-treatment" },
   openGraph: {
     title: "Red Light Therapy | Rejuvenate Skin Spa | Queen Creek, AZ",
     description:

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Non-surgical skin tightening with Plexr Plasma technology at Rejuvenate Skin Spa in Queen Creek, AZ. Wrinkle reduction and rejuvenation. Book today!",
   keywords:
     "plexr plasma, skin tightening, non-surgical facelift, wrinkle reduction, plasma technology, Queen Creek, Arizona",
+  alternates: { canonical: "/plexr-plasma-skin-tightening" },
   openGraph: {
     title: "Plexr Plasma Skin Tightening | Queen Creek, AZ",
     description:
