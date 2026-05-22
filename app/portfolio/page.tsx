@@ -42,7 +42,7 @@ export default function PortfolioPage() {
               Follow on Instagram
             </a>
             <a
-              href="https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
+              href="https://www.facebook.com/rejuvenateskin"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all"

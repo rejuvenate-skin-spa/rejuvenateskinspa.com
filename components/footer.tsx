@@ -62,7 +62,7 @@ export function Footer() {
                 />
               </a>
               <a
-                href="https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/"
+                href="https://www.facebook.com/rejuvenateskin"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Rejuvenate Skin Spa on Facebook"

@@ -56,6 +56,6 @@ export const siteConfig = {
   closedDays: ["Sunday"] as string[],
   sameAs: [
     "https://www.instagram.com/rejuvenate_skin_spa",
-    "https://www.facebook.com/people/Rejuvenate-Skin-Spa/100086475380527/",
+    "https://www.facebook.com/rejuvenateskin",
   ],
 } as const;
