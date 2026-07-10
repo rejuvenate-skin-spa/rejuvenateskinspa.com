@@ -1,0 +1,35 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Rejuvenate Skin Spa",
+  "name_for_model": "rejuvenate_skin_spa",
+  "description_for_human": "Look up Rejuvenate Skin Spa's non-surgical skincare treatments, hours, location, and booking info.",
+  "description_for_model": "Provides information about Rejuvenate Skin Spa, a non-surgical skincare studio in Queen Creek, Arizona. Can answer questions about Plexr plasma treatments, microneedling, chemical peels, enzyme facials, spa services, hours, location, and how to book a consultation.",
+  "auth": {
+    "type": "none"
+  },
+  "logo_url": "https://www.rejuvenateskinspa.com/images/rejuvenate-logo.avif",
+  "contact_email": "info@rejuvenateskinspa.com",
+  "legal_info_url": "https://www.rejuvenateskinspa.com/privacy-policy",
+  "topics": [
+    "Plexr plasma skin tightening",
+    "microneedling",
+    "chemical peels",
+    "enzyme facials",
+    "dermaplaning",
+    "microblading",
+    "red light therapy",
+    "Queen Creek Arizona skincare"
+  ],
+  "key_urls": {
+    "homepage": "https://www.rejuvenateskinspa.com",
+    "plasma": "https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening",
+    "microneedling": "https://www.rejuvenateskinspa.com/microneedling",
+    "chemical_peels": "https://www.rejuvenateskinspa.com/chemical-peels",
+    "enzyme_peels": "https://www.rejuvenateskinspa.com/enzyme-peel-facial",
+    "spa_services": "https://www.rejuvenateskinspa.com/spa-services",
+    "about": "https://www.rejuvenateskinspa.com/about-us",
+    "contact": "https://www.rejuvenateskinspa.com/contact",
+    "book": "https://www.rejuvenateskinspa.com/book",
+    "portfolio": "https://www.rejuvenateskinspa.com/portfolio"
+  }
+}
