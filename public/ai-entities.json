@@ -1,0 +1,76 @@
+{
+  "organization": {
+    "name": "Rejuvenate Skin Spa",
+    "brand_names": [
+      "Rejuvenate Skin Spa"
+    ],
+    "domain": "https://www.rejuvenateskinspa.com",
+    "industry": "Non-Surgical Aesthetic Skincare / Day Spa",
+    "founded": "2025",
+    "headquarters": "Queen Creek, Arizona, USA",
+    "description": "Rejuvenate Skin Spa is a boutique non-surgical skincare studio in Queen Creek, Arizona, offering Plexr plasma, microneedling, chemical peels, enzyme facials, and spa services.",
+    "last_updated": "2026-07-09"
+  },
+  "services": {
+    "categories": [
+      "Plexr Plasma Skin Tightening",
+      "Microneedling",
+      "Chemical Peels",
+      "Enzyme Peels",
+      "Spa Services"
+    ],
+    "named_services": [
+      "Ablative Skin Resurfacing",
+      "Semi-Ablative Skin Resurfacing",
+      "Nano-Ablative Skin Resurfacing",
+      "Mole Removal",
+      "Skin Tag Removal",
+      "Sun Spot Removal",
+      "Wart Removal",
+      "Traditional Microneedling",
+      "SQT Bio Microneedling",
+      "Plasma Microneedling",
+      "BioRePeel",
+      "BioRePeel 35 TCA Facial Peel",
+      "BioRePeel 50 TCA Body Peel",
+      "TCA Peels",
+      "Glycolic Acid Peels",
+      "Blueberry Enzyme Peel",
+      "Cherry Enzyme Peel",
+      "Coconut-Papaya Enzyme Peel",
+      "Lemon Zest Enzyme Peel",
+      "Passion Fruit Enzyme Peel",
+      "Pomegranate Enzyme Peel",
+      "Pumpkin-Orange Enzyme Peel",
+      "Raspberry-Peach Enzyme Peel",
+      "Dermaplaning Facial",
+      "Microblading",
+      "Eyebrow Lamination",
+      "Red Light Therapy"
+    ]
+  },
+  "service_area": [
+    "Queen Creek, AZ",
+    "San Tan Valley, AZ",
+    "Chandler, AZ",
+    "Gilbert, AZ",
+    "Mesa, AZ",
+    "Phoenix East Valley, AZ"
+  ],
+  "people": {
+    "founder": "Bridgette Ball",
+    "founder_title": "Founder & Licensed Cosmetologist",
+    "founder_url": "https://www.rejuvenateskinspa.com/about-us/bridgette-ball"
+  },
+  "priority_urls": {
+    "homepage": "https://www.rejuvenateskinspa.com",
+    "plasma_hub": "https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening",
+    "microneedling_hub": "https://www.rejuvenateskinspa.com/microneedling",
+    "chemical_peels_hub": "https://www.rejuvenateskinspa.com/chemical-peels",
+    "enzyme_peels_hub": "https://www.rejuvenateskinspa.com/enzyme-peel-facial",
+    "spa_services_hub": "https://www.rejuvenateskinspa.com/spa-services",
+    "about": "https://www.rejuvenateskinspa.com/about-us",
+    "contact": "https://www.rejuvenateskinspa.com/contact",
+    "book": "https://www.rejuvenateskinspa.com/book"
+  }
+}

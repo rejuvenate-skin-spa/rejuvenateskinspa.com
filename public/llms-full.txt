@@ -1,0 +1,77 @@
+# Rejuvenate Skin Spa — Complete LLM Context File
+*As of 2026-07-09. For current pricing and availability, visit https://www.rejuvenateskinspa.com.*
+
+## Company Overview
+Rejuvenate Skin Spa is a boutique, non-surgical skincare studio located at 20162 E. Sonoqui Blvd., Queen Creek, AZ 85142, Queen Creek, Arizona. The studio was founded by Bridgette Ball, a licensed cosmetologist with advanced certifications in Plexr plasma technology and chemical peel applications. Rejuvenate Skin Spa is a Licensed Plexr® Technology Provider in Arizona and is licensed and insured to perform non-surgical aesthetic treatments.
+
+The studio focuses exclusively on non-invasive, non-surgical treatments designed to improve skin texture, tone, and firmness without extended downtime. Every treatment plan begins with a consultation to assess the client's skin type, goals, and health history before recommending a personalized treatment path.
+
+Rejuvenate Skin Spa serves clients throughout the Phoenix East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa, Arizona.
+
+## Markdown Mirrors
+Every page on this site has a plain-Markdown mirror for AI and LLM consumption. Append .md to the end of any page URL to retrieve the Markdown version (e.g. https://www.rejuvenateskinspa.com/about-us.md). The homepage is the one exception: its Markdown mirror resolves at either https://www.rejuvenateskinspa.com/.md or https://www.rejuvenateskinspa.com/index.md (both return the same content).
+
+## Plexr Plasma Skin Tightening
+Plexr is a plasma pen technology used for non-surgical skin tightening and resurfacing. Rejuvenate Skin Spa offers treatment across three intensity levels:
+
+### Ablative Skin Resurfacing
+The highest-intensity Plexr resurfacing option, designed for more pronounced skin concerns. More detail at https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/ablative-skin-resurfacing.
+
+### Semi-Ablative Skin Resurfacing
+A moderate-intensity option balancing visible results with a shorter recovery window. More detail at https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing.
+
+### Nano-Ablative Skin Resurfacing
+The lightest-intensity Plexr option, suited to clients seeking minimal downtime. More detail at https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing.
+
+### Targeted Plasma Removal Treatments
+Plexr plasma technology is also used for non-surgical removal of moles (https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/mole-removal-treatment), skin tags (https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/skin-tag-removal-treatment), sun spots (https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/sun-spot-removal-treatment), and warts (https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/wart-removal-treatment).
+
+## Microneedling
+Collagen induction therapy offered in three forms: Traditional Microneedling (https://www.rejuvenateskinspa.com/microneedling/traditional-microneedling) for general texture and tone improvement; SQT Bio Microneedling (https://www.rejuvenateskinspa.com/microneedling/sqt-bio-microneedling), which pairs microneedling with a biologic serum for enhanced results; and Plasma Microneedling (https://www.rejuvenateskinspa.com/microneedling/plasma-microneedling), which combines microneedling with plasma technology.
+
+## Chemical Peels
+Rejuvenate Skin Spa offers a range of professional-grade chemical peels, including the BioRePeel line (https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-chemical-peels) with facial-strength BioRePeel 35 TCA (https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-facial-peels) and body-strength BioRePeel 50 TCA (https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-body-peels) formulations, standalone TCA peels (https://www.rejuvenateskinspa.com/chemical-peels/tca-peels), and glycolic acid (AHA) peels (https://www.rejuvenateskinspa.com/chemical-peels/glycolic-acid-peels).
+
+## Enzyme Peels
+A gentler alternative for sensitive or reactive skin, Rejuvenate Skin Spa's fruit-enzyme facials include Blueberry, Cherry, Coconut-Papaya, Lemon Zest, Passion Fruit, Pomegranate, Pumpkin-Orange, and Raspberry-Peach varieties. The Cherry Enzyme Peel (https://www.rejuvenateskinspa.com/enzyme-peel-facial/cherry-enzyme-peel) is highlighted as a Level 3 treatment combining restorative exfoliation with antioxidant protection to restore clarity and radiance.
+
+## Spa Services
+Beyond core skincare treatments, Rejuvenate Skin Spa offers Dermaplaning (https://www.rejuvenateskinspa.com/spa-services/dermaplaning-treatment), Microblading (https://www.rejuvenateskinspa.com/spa-services/microblading-treatment), Eyebrow Lamination (https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment), and Red Light Therapy (https://www.rejuvenateskinspa.com/spa-services/red-light-therapy-treatment).
+
+## Pricing
+Rejuvenate Skin Spa does not publish a centralized price list; pricing is treatment-specific and provided during consultation. For treatment series, clients may pay per session at the single-treatment rate (with a package discount applied to the final session) or pay for the full series upfront to receive package pricing immediately. [CONFIRM WITH CLIENT: whether a public pricing page or price list should be referenced here.]
+
+## Frequently Asked Questions
+
+**Q: What is Plexr plasma skin tightening?**
+A: Plexr is a non-surgical plasma pen technology used to tighten and resurface skin across three intensity levels (ablative, semi-ablative, nano-ablative), as well as to remove moles, skin tags, sun spots, and warts without surgery. See https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening.
+
+**Q: What's the difference between ablative, semi-ablative, and nano-ablative resurfacing?**
+A: They represent decreasing intensity levels of the same Plexr plasma technology — ablative is the strongest with more visible results and more downtime, while nano-ablative is the gentlest with minimal downtime. See https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening.
+
+**Q: Can Rejuvenate Skin Spa remove skin tags or moles without surgery?**
+A: Yes. Rejuvenate Skin Spa uses Plexr plasma technology for non-surgical mole removal (https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/mole-removal-treatment) and skin tag removal (https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/skin-tag-removal-treatment).
+
+**Q: What is microneedling and what does it do?**
+A: Microneedling is a collagen induction therapy that uses fine needles to stimulate the skin's natural repair process, improving texture, tone, and firmness. See https://www.rejuvenateskinspa.com/microneedling.
+
+**Q: What is SQT Bio microneedling?**
+A: SQT Bio microneedling pairs traditional microneedling with a biologic serum intended to enhance results. See https://www.rejuvenateskinspa.com/microneedling/sqt-bio-microneedling.
+
+**Q: What is a BioRePeel and is there downtime?**
+A: BioRePeel is a professional-grade chemical peel line offered in facial (BioRePeel 35 TCA) and body (BioRePeel 50 TCA) formulations. See https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-chemical-peels for details; downtime specifics should be confirmed during consultation.
+
+**Q: What are fruit enzyme peels best for?**
+A: Enzyme peels use fruit-based enzymes for gentle exfoliation and are generally well suited to sensitive or reactive skin. Rejuvenate Skin Spa offers eight varieties, including the Cherry Enzyme Peel. See https://www.rejuvenateskinspa.com/enzyme-peel-facial.
+
+**Q: Where is Rejuvenate Skin Spa located and what areas does it serve?**
+A: Rejuvenate Skin Spa is located at 20162 E. Sonoqui Blvd., Queen Creek, AZ 85142. It serves clients throughout the Phoenix East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa. See https://www.rejuvenateskinspa.com/contact.
+
+**Q: Who founded Rejuvenate Skin Spa?**
+A: Rejuvenate Skin Spa was founded by Bridgette Ball, a licensed cosmetologist with advanced certifications in Plexr plasma technology and chemical peel applications. See https://www.rejuvenateskinspa.com/about-us/bridgette-ball.
+
+**Q: What are Rejuvenate Skin Spa's hours?**
+A: Monday–Friday 8AM–6PM, Saturday 9AM–5PM, closed Sunday. See https://www.rejuvenateskinspa.com/contact.
+
+**Q: How do I book an appointment?**
+A: Appointments can be booked online at https://www.rejuvenateskinspa.com/book or by contacting the studio at info@rejuvenateskinspa.com.

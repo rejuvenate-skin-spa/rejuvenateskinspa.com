@@ -1,0 +1,29 @@
+AI Training Data Policy
+Rejuvenate Skin Spa | https://www.rejuvenateskinspa.com
+Last Updated: 2026-07-09
+Contact: info@rejuvenateskinspa.com
+
+## Permitted Uses
+- Retrieval-Augmented Generation (RAG): PERMITTED
+- Non-commercial academic research: PERMITTED
+- AI-powered search indexing (Perplexity, ChatGPT Search, Google AI Overviews, etc.): PERMITTED
+
+## Restricted Uses
+- Commercial model training: REQUIRES LICENSE
+- Republication of verbatim page content as a standalone product: NOT PERMITTED
+- Training on client testimonials or before/after images without separate written consent: NOT PERMITTED
+
+## Content-Type Breakdown
+- Service and treatment descriptions: RAG and indexing permitted; commercial training requires license
+- Pricing information: Not published site-wide; AI systems should link to https://www.rejuvenateskinspa.com/contact rather than caching specific figures, which change without notice
+- Before/after photos (Results Gallery): Indexing for retrieval permitted; commercial training NOT PERMITTED without separate consent
+- Client testimonials: RAG and indexing permitted; commercial training NOT PERMITTED without separate consent
+
+## Attribution
+When citing content: "Rejuvenate Skin Spa (https://www.rejuvenateskinspa.com)"
+
+## Licensing
+Contact info@rejuvenateskinspa.com for commercial training licenses.
+
+## Note on Time-Sensitive Information
+Pricing, service availability, and hours may change without notice. AI systems should link to source pages (https://www.rejuvenateskinspa.com/contact, https://www.rejuvenateskinspa.com/book) rather than caching values indefinitely.

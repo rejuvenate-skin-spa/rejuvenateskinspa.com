@@ -1,0 +1,80 @@
+# Rejuvenate Skin Spa
+
+> Rejuvenate Skin Spa is a boutique, non-surgical skincare studio in Queen Creek, Arizona, founded by licensed cosmetologist Bridgette Ball. The studio offers Plexr plasma skin tightening, microneedling, chemical peels, enzyme facials, and spa services to clients throughout the Phoenix East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.
+
+Note: Every page on this site has a plain-Markdown mirror for AI and LLM consumption. Append .md to the end of any page URL to retrieve the Markdown version (e.g. https://www.rejuvenateskinspa.com/about-us.md). The homepage is the one exception: its Markdown mirror resolves at either https://www.rejuvenateskinspa.com/.md or https://www.rejuvenateskinspa.com/index.md (both return the same content).
+
+## Plasma Treatments
+- [Plexr Plasma Skin Tightening](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening): Hub page for non-surgical plasma pen skin tightening across three intensity levels.
+- [Ablative Skin Resurfacing](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/ablative-skin-resurfacing): Highest-intensity Plexr plasma resurfacing.
+- [Semi-Ablative Skin Resurfacing](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/semi-ablative-skin-resurfacing): Moderate-intensity Plexr plasma resurfacing.
+- [Nano-Ablative Skin Resurfacing](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/nano-ablative-skin-resurfacing): Lightest-intensity Plexr plasma resurfacing with minimal downtime.
+- [Mole Removal](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/mole-removal-treatment): Non-surgical mole removal via Plexr plasma.
+- [Skin Tag Removal](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/skin-tag-removal-treatment): Non-surgical skin tag removal via Plexr plasma.
+- [Sun Spot Removal](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/sun-spot-removal-treatment): Non-surgical sun spot / age spot removal.
+- [Wart Removal](https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/wart-removal-treatment): Non-surgical wart removal via Plexr plasma.
+
+## Microneedling
+- [Microneedling](https://www.rejuvenateskinspa.com/microneedling): Hub page for collagen induction therapy options.
+- [Traditional Microneedling](https://www.rejuvenateskinspa.com/microneedling/traditional-microneedling): Standard microneedling for texture and tone.
+- [SQT Bio Microneedling](https://www.rejuvenateskinspa.com/microneedling/sqt-bio-microneedling): Microneedling enhanced with SQT Bio serum.
+- [Plasma Microneedling](https://www.rejuvenateskinspa.com/microneedling/plasma-microneedling): Microneedling combined with plasma technology.
+
+## Chemical Peels
+- [Chemical Peels](https://www.rejuvenateskinspa.com/chemical-peels): Hub page for professional-grade chemical peels.
+- [BioRePeel](https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-chemical-peels): No-downtime BioRePeel chemical peel overview.
+- [BioRePeel 35 TCA Facial Peel](https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-facial-peels): Facial-strength BioRePeel TCA formulation.
+- [BioRePeel 50 TCA Body Peel](https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-body-peels): Body-strength BioRePeel TCA formulation.
+- [TCA Peels](https://www.rejuvenateskinspa.com/chemical-peels/tca-peels): Trichloroacetic acid medium-depth peels.
+- [Glycolic Acid Peels](https://www.rejuvenateskinspa.com/chemical-peels/glycolic-acid-peels): AHA-based exfoliating peels.
+
+## Enzyme Peels
+- [Enzyme Peel Facial](https://www.rejuvenateskinspa.com/enzyme-peel-facial): Hub page for gentle fruit-enzyme facials.
+- [Cherry Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/cherry-enzyme-peel): Brightening Level 3 cherry enzyme peel.
+- [Blueberry Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/blueberry-enzyme-peel): Antioxidant blueberry enzyme facial.
+- [Coconut-Papaya Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/coconut-papaya-enzyme-peel): Tropical fruit-enzyme facial.
+- [Lemon Zest Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/lemon-enzyme-peel): Brightening citrus enzyme facial.
+- [Passion Fruit Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/passion-fruit-enzyme-peel): Exfoliating passion fruit enzyme facial.
+- [Pomegranate Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/pomegranate-enzyme-peel): Antioxidant pomegranate enzyme facial.
+- [Pumpkin-Orange Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/pumpkin-orange-enzyme-peel): Seasonal pumpkin-orange enzyme facial.
+- [Raspberry-Peach Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/raspberry-peach-enzyme-peel): Gentle raspberry-peach enzyme facial.
+
+## Spa Services
+- [Spa Services](https://www.rejuvenateskinspa.com/spa-services): Hub page for dermaplaning, microblading, brow lamination, and red light therapy.
+- [Dermaplaning Facial](https://www.rejuvenateskinspa.com/spa-services/dermaplaning-treatment): Manual exfoliation and peach-fuzz removal.
+- [Microblading](https://www.rejuvenateskinspa.com/spa-services/microblading-treatment): Semi-permanent eyebrow enhancement.
+- [Eyebrow Lamination](https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment): Brow lift and styling treatment.
+- [Red Light Therapy](https://www.rejuvenateskinspa.com/spa-services/red-light-therapy-treatment): LED-based skin rejuvenation therapy.
+
+## Resources
+- [Results Gallery](https://www.rejuvenateskinspa.com/portfolio): Before-and-after photo gallery of treatment results.
+- [Book Now](https://www.rejuvenateskinspa.com/book): Online appointment booking.
+
+## Company
+- [About Us](https://www.rejuvenateskinspa.com/about-us): Studio background, approach, and safety standards.
+- [Meet Bridgette Ball](https://www.rejuvenateskinspa.com/about-us/bridgette-ball): Founder biography and certifications.
+- [Contact](https://www.rejuvenateskinspa.com/contact): Location, hours, and consultation requests.
+
+## Key Questions This Site Answers
+- What is Plexr plasma skin tightening and how does it work?
+- What's the difference between ablative, semi-ablative, and nano-ablative skin resurfacing?
+- Can plasma treatment remove moles, skin tags, sun spots, or warts without surgery?
+- What is microneedling and what are its benefits for skin texture?
+- What is SQT Bio microneedling and how is it different from traditional microneedling?
+- What is plasma microneedling?
+- What is a BioRePeel chemical peel and is there downtime?
+- What's the difference between a TCA peel and a glycolic acid peel?
+- What are fruit enzyme peels and who are they best suited for?
+- What does the Cherry Enzyme Peel do for skin brightening?
+- What is dermaplaning and how does it differ from a facial?
+- What is eyebrow lamination?
+- What is red light therapy used for in skincare?
+- Where is Rejuvenate Skin Spa located?
+- What areas does Rejuvenate Skin Spa serve near Queen Creek, AZ?
+- Who founded Rejuvenate Skin Spa?
+- Is Rejuvenate Skin Spa a licensed Plexr provider in Arizona?
+- What are Rejuvenate Skin Spa's hours of operation?
+- How do I book a consultation at Rejuvenate Skin Spa?
+- Does Rejuvenate Skin Spa offer package pricing on treatment series?
+- What non-surgical skincare options are available near Queen Creek, AZ?
+- What is the safest way to remove a skin tag without surgery?

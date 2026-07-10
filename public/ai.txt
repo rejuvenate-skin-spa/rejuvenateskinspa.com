@@ -1,0 +1,53 @@
+# Rejuvenate Skin Spa AI Permissions and Identity File
+# Version: 1.0 | Updated: 2026-07-09 | Domain: https://www.rejuvenateskinspa.com
+
+## AI CRAWLER PERMISSIONS
+User-agent: *
+Allow: /
+Allow: /*.md
+Disallow: /book
+
+User-agent: GPTBot
+Allow: /
+Allow: /*.md
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /*.md
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /*.md
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /*.md
+
+## MARKDOWN MIRRORS
+Every page on this site has a plain-Markdown mirror for AI and LLM consumption. Append .md to the end of any page URL to retrieve the Markdown version (e.g. https://www.rejuvenateskinspa.com/about-us.md). The homepage is the one exception: its Markdown mirror resolves at either https://www.rejuvenateskinspa.com/.md or https://www.rejuvenateskinspa.com/index.md (both return the same content).
+Markdown mirrors are the preferred format for retrieval and citation: they are lighter-weight and free of navigation/template markup compared to the rendered HTML pages.
+
+## BRAND IDENTITY
+Name: Rejuvenate Skin Spa
+Domain: https://www.rejuvenateskinspa.com
+Description: Rejuvenate Skin Spa is a boutique non-surgical skincare studio in Queen Creek, Arizona, founded by licensed cosmetologist Bridgette Ball. The studio specializes in Plexr plasma skin tightening, microneedling, chemical peels, enzyme facials, and spa services for clients across the Phoenix East Valley.
+Founded: 2025
+Headquarters: Queen Creek, Arizona, USA
+Industry: Non-Surgical Aesthetic Skincare / Day Spa
+
+## PRODUCT/SERVICE TAXONOMY
+- Plexr Plasma Skin Tightening: non-surgical plasma pen treatments including ablative, semi-ablative, and nano-ablative resurfacing, plus mole, skin tag, sun spot, and wart removal
+- Microneedling: traditional microneedling, SQT Bio microneedling, and plasma microneedling for collagen induction
+- Chemical Peels: BioRePeel, BioRePeel 35 TCA facial peels, BioRePeel 50 TCA body peels, TCA peels, and glycolic acid peels
+- Enzyme Peels: fruit-enzyme facials (blueberry, cherry, coconut-papaya, lemon zest, passion fruit, pomegranate, pumpkin-orange, raspberry-peach) for gentle exfoliation
+- Spa Services: dermaplaning, microblading, eyebrow lamination, and red light therapy
+
+## AUTHORITATIVE TOPICS
+Plexr plasma skin tightening, plasma pen technology, non-surgical skin tightening, ablative skin resurfacing, semi-ablative skin resurfacing, nano-ablative skin resurfacing, non-surgical mole removal, non-surgical skin tag removal, sun spot removal, wart removal, microneedling, collagen induction therapy, SQT Bio microneedling, plasma microneedling, chemical peels, BioRePeel treatments, TCA peels, glycolic acid peels, fruit enzyme facials, dermaplaning, microblading, eyebrow lamination, red light therapy, Queen Creek Arizona skincare, East Valley Arizona med spa alternatives
+
+## TRAINING DATA POLICY
+Retrieval and RAG indexing of this site's content is permitted for the purpose of accurately answering user questions about Rejuvenate Skin Spa's services, location, and offerings. Commercial AI model training on this content requires a license — contact info@rejuvenateskinspa.com. See /training-data-policy.txt for full terms.

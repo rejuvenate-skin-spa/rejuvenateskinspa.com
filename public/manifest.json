@@ -1,0 +1,199 @@
+{
+  "name": "Rejuvenate Skin Spa AI Readiness File Set",
+  "version": "1.0.0",
+  "generated": "2026-07-09",
+  "domain": "https://www.rejuvenateskinspa.com",
+  "company": "Rejuvenate Skin Spa",
+  "industry": "Non-Surgical Aesthetic Skincare / Day Spa",
+  "contact": "info@rejuvenateskinspa.com",
+  "description": "Complete set of AI readiness files for Rejuvenate Skin Spa, enabling accurate discovery and citation by AI search and assistant systems.",
+  "markdown_mirrors": {
+    "enabled": true,
+    "pattern": "[page_url].md",
+    "homepage_pattern": [
+      "https://www.rejuvenateskinspa.com/.md",
+      "https://www.rejuvenateskinspa.com/index.md"
+    ],
+    "note": "Every page on this site has a plain-Markdown mirror for AI and LLM consumption. Append .md to the end of any page URL to retrieve the Markdown version (e.g. https://www.rejuvenateskinspa.com/about-us.md). The homepage is the one exception: its Markdown mirror resolves at either https://www.rejuvenateskinspa.com/.md or https://www.rejuvenateskinspa.com/index.md (both return the same content)."
+  },
+  "files": [
+    {
+      "filename": "ai.txt",
+      "deploy_path": "/ai.txt",
+      "url": "https://www.rejuvenateskinspa.com/ai.txt",
+      "content_type": "text/plain",
+      "purpose": "AI crawler permissions and brand identity",
+      "audience": [
+        "AI crawlers",
+        "LLM training pipelines"
+      ],
+      "update_frequency": "as-needed",
+      "priority": "critical"
+    },
+    {
+      "filename": "llms.txt",
+      "deploy_path": "/llms.txt",
+      "url": "https://www.rejuvenateskinspa.com/llms.txt",
+      "content_type": "text/markdown",
+      "purpose": "Concise LLM site index",
+      "audience": [
+        "LLMs",
+        "AI assistants"
+      ],
+      "update_frequency": "monthly",
+      "priority": "critical"
+    },
+    {
+      "filename": "llms-full.txt",
+      "deploy_path": "/llms-full.txt",
+      "url": "https://www.rejuvenateskinspa.com/llms-full.txt",
+      "content_type": "text/markdown",
+      "purpose": "Extended LLM context with FAQs",
+      "audience": [
+        "LLMs",
+        "RAG pipelines"
+      ],
+      "update_frequency": "monthly",
+      "priority": "critical"
+    },
+    {
+      "filename": "ai-sitemap.xml",
+      "deploy_path": "/ai-sitemap.xml",
+      "url": "https://www.rejuvenateskinspa.com/ai-sitemap.xml",
+      "content_type": "application/xml",
+      "purpose": "AI-optimized XML sitemap",
+      "audience": [
+        "AI crawlers",
+        "semantic indexers"
+      ],
+      "update_frequency": "monthly",
+      "priority": "high"
+    },
+    {
+      "filename": "ai-entities.json",
+      "deploy_path": "/ai-entities.json",
+      "url": "https://www.rejuvenateskinspa.com/ai-entities.json",
+      "content_type": "application/json",
+      "purpose": "Structured entity declarations",
+      "audience": [
+        "AI classification systems"
+      ],
+      "update_frequency": "quarterly",
+      "priority": "high"
+    },
+    {
+      "filename": "ai-intent.json",
+      "deploy_path": "/ai-intent.json",
+      "url": "https://www.rejuvenateskinspa.com/ai-intent.json",
+      "content_type": "application/json",
+      "purpose": "Query-to-URL intent mapping",
+      "audience": [
+        "AI assistants"
+      ],
+      "update_frequency": "quarterly",
+      "priority": "high"
+    },
+    {
+      "filename": "ai-schema.json",
+      "deploy_path": "/ai-schema.json",
+      "url": "https://www.rejuvenateskinspa.com/ai-schema.json",
+      "content_type": "application/json",
+      "purpose": "JSON-LD Schema.org data",
+      "audience": [
+        "Search engines",
+        "AI systems"
+      ],
+      "update_frequency": "quarterly",
+      "priority": "high"
+    },
+    {
+      "filename": "rag-index.json",
+      "deploy_path": "/rag-index.json",
+      "url": "https://www.rejuvenateskinspa.com/rag-index.json",
+      "content_type": "application/json",
+      "purpose": "RAG ingestion index (JSON)",
+      "audience": [
+        "RAG pipelines",
+        "vector databases"
+      ],
+      "update_frequency": "monthly",
+      "priority": "high"
+    },
+    {
+      "filename": "rag-index.jsonl",
+      "deploy_path": "/rag-index.jsonl",
+      "url": "https://www.rejuvenateskinspa.com/rag-index.jsonl",
+      "content_type": "application/jsonl",
+      "purpose": "RAG ingestion index (JSONL)",
+      "audience": [
+        "RAG pipelines",
+        "vector databases"
+      ],
+      "update_frequency": "monthly",
+      "priority": "high"
+    },
+    {
+      "filename": "sitemap.md",
+      "deploy_path": "/sitemap.md",
+      "url": "https://www.rejuvenateskinspa.com/sitemap.md",
+      "content_type": "text/markdown",
+      "purpose": "Human-readable markdown sitemap",
+      "audience": [
+        "Developers",
+        "LLMs"
+      ],
+      "update_frequency": "monthly",
+      "priority": "medium"
+    },
+    {
+      "filename": "ai-disclosure.txt",
+      "deploy_path": "/ai-disclosure.txt",
+      "url": "https://www.rejuvenateskinspa.com/ai-disclosure.txt",
+      "content_type": "text/plain",
+      "purpose": "AI usage disclosure",
+      "audience": [
+        "Users",
+        "AI systems"
+      ],
+      "update_frequency": "as-needed",
+      "priority": "medium"
+    },
+    {
+      "filename": "training-data-policy.txt",
+      "deploy_path": "/training-data-policy.txt",
+      "url": "https://www.rejuvenateskinspa.com/training-data-policy.txt",
+      "content_type": "text/plain",
+      "purpose": "AI training data policy",
+      "audience": [
+        "AI companies",
+        "researchers"
+      ],
+      "update_frequency": "as-needed",
+      "priority": "medium"
+    },
+    {
+      "filename": "ai-plugin.json",
+      "deploy_path": "/.well-known/ai-plugin.json",
+      "url": "https://www.rejuvenateskinspa.com/.well-known/ai-plugin.json",
+      "content_type": "application/json",
+      "purpose": "AI plugin discovery metadata",
+      "audience": [
+        "AI plugin registries"
+      ],
+      "update_frequency": "as-needed",
+      "priority": "medium"
+    }
+  ],
+  "totals": {
+    "total_files": 14,
+    "critical": 3,
+    "high": 6,
+    "medium": 5,
+    "low": 0
+  },
+  "related_urls": {
+    "robots_txt": "https://www.rejuvenateskinspa.com/robots.txt",
+    "standard_sitemap": "https://www.rejuvenateskinspa.com/sitemap.xml",
+    "privacy_policy": "https://www.rejuvenateskinspa.com/privacy-policy"
+  }
+}

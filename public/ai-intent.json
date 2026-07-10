@@ -1,0 +1,277 @@
+{
+  "intents": [
+    {
+      "query": "what is rejuvenate skin spa",
+      "intent": "informational",
+      "preferred_url": "homepage",
+      "confidence": "high"
+    },
+    {
+      "query": "what does rejuvenate skin spa do",
+      "intent": "informational",
+      "preferred_url": "homepage",
+      "confidence": "high"
+    },
+    {
+      "query": "skin spa near queen creek az",
+      "intent": "navigational",
+      "preferred_url": "homepage",
+      "confidence": "high"
+    },
+    {
+      "query": "med spa alternative queen creek",
+      "intent": "navigational",
+      "preferred_url": "homepage",
+      "confidence": "medium"
+    },
+    {
+      "query": "what is plexr plasma skin tightening",
+      "intent": "informational",
+      "preferred_url": "plasma_hub",
+      "confidence": "high"
+    },
+    {
+      "query": "non surgical skin tightening queen creek",
+      "intent": "transactional",
+      "preferred_url": "plasma_hub",
+      "confidence": "high"
+    },
+    {
+      "query": "ablative vs semi-ablative vs nano-ablative resurfacing",
+      "intent": "informational",
+      "preferred_url": "plasma_hub",
+      "confidence": "high"
+    },
+    {
+      "query": "plasma pen mole removal",
+      "intent": "informational",
+      "preferred_url": "mole_removal",
+      "confidence": "high"
+    },
+    {
+      "query": "non surgical skin tag removal near me",
+      "intent": "transactional",
+      "preferred_url": "skin_tag_removal",
+      "confidence": "high"
+    },
+    {
+      "query": "sun spot removal treatment",
+      "intent": "transactional",
+      "preferred_url": "sun_spot_removal",
+      "confidence": "medium"
+    },
+    {
+      "query": "wart removal without surgery",
+      "intent": "transactional",
+      "preferred_url": "wart_removal",
+      "confidence": "medium"
+    },
+    {
+      "query": "what is microneedling",
+      "intent": "informational",
+      "preferred_url": "microneedling_hub",
+      "confidence": "high"
+    },
+    {
+      "query": "collagen induction therapy near me",
+      "intent": "transactional",
+      "preferred_url": "microneedling_hub",
+      "confidence": "medium"
+    },
+    {
+      "query": "what is sqt bio microneedling",
+      "intent": "informational",
+      "preferred_url": "sqt_bio_microneedling",
+      "confidence": "high"
+    },
+    {
+      "query": "what is plasma microneedling",
+      "intent": "informational",
+      "preferred_url": "plasma_microneedling",
+      "confidence": "high"
+    },
+    {
+      "query": "traditional microneedling vs sqt bio microneedling",
+      "intent": "informational",
+      "preferred_url": "microneedling_hub",
+      "confidence": "medium"
+    },
+    {
+      "query": "chemical peel queen creek az",
+      "intent": "transactional",
+      "preferred_url": "chemical_peels_hub",
+      "confidence": "high"
+    },
+    {
+      "query": "what is a biorepeel",
+      "intent": "informational",
+      "preferred_url": "biorepeel",
+      "confidence": "high"
+    },
+    {
+      "query": "biorepeel vs tca peel",
+      "intent": "informational",
+      "preferred_url": "chemical_peels_hub",
+      "confidence": "medium"
+    },
+    {
+      "query": "tca peel downtime",
+      "intent": "informational",
+      "preferred_url": "tca_peels",
+      "confidence": "medium"
+    },
+    {
+      "query": "glycolic acid peel benefits",
+      "intent": "informational",
+      "preferred_url": "glycolic_peels",
+      "confidence": "medium"
+    },
+    {
+      "query": "best chemical peel for brightening skin",
+      "intent": "informational",
+      "preferred_url": "chemical_peels_hub",
+      "confidence": "medium"
+    },
+    {
+      "query": "fruit enzyme facial for sensitive skin",
+      "intent": "informational",
+      "preferred_url": "enzyme_peels_hub",
+      "confidence": "high"
+    },
+    {
+      "query": "cherry enzyme peel benefits",
+      "intent": "informational",
+      "preferred_url": "cherry_enzyme_peel",
+      "confidence": "medium"
+    },
+    {
+      "query": "gentle facial for sensitive skin queen creek",
+      "intent": "transactional",
+      "preferred_url": "enzyme_peels_hub",
+      "confidence": "medium"
+    },
+    {
+      "query": "dermaplaning facial near me",
+      "intent": "transactional",
+      "preferred_url": "dermaplaning",
+      "confidence": "high"
+    },
+    {
+      "query": "microblading queen creek az",
+      "intent": "transactional",
+      "preferred_url": "microblading",
+      "confidence": "high"
+    },
+    {
+      "query": "eyebrow lamination treatment",
+      "intent": "transactional",
+      "preferred_url": "eyebrow_lamination",
+      "confidence": "medium"
+    },
+    {
+      "query": "what is red light therapy for skin",
+      "intent": "informational",
+      "preferred_url": "red_light_therapy",
+      "confidence": "medium"
+    },
+    {
+      "query": "who founded rejuvenate skin spa",
+      "intent": "informational",
+      "preferred_url": "founder_bio",
+      "confidence": "high"
+    },
+    {
+      "query": "is rejuvenate skin spa licensed",
+      "intent": "informational",
+      "preferred_url": "about",
+      "confidence": "medium"
+    },
+    {
+      "query": "rejuvenate skin spa hours",
+      "intent": "navigational",
+      "preferred_url": "contact",
+      "confidence": "high"
+    },
+    {
+      "query": "rejuvenate skin spa address",
+      "intent": "navigational",
+      "preferred_url": "contact",
+      "confidence": "high"
+    },
+    {
+      "query": "book appointment rejuvenate skin spa",
+      "intent": "transactional",
+      "preferred_url": "book",
+      "confidence": "high"
+    },
+    {
+      "query": "rejuvenate skin spa before and after photos",
+      "intent": "informational",
+      "preferred_url": "portfolio",
+      "confidence": "medium"
+    },
+    {
+      "query": "licensed plexr provider arizona",
+      "intent": "informational",
+      "preferred_url": "about",
+      "confidence": "medium"
+    },
+    {
+      "query": "skincare studio san tan valley",
+      "intent": "navigational",
+      "preferred_url": "homepage",
+      "confidence": "medium"
+    },
+    {
+      "query": "skincare studio chandler gilbert mesa",
+      "intent": "navigational",
+      "preferred_url": "homepage",
+      "confidence": "medium"
+    },
+    {
+      "query": "non-invasive skin tightening no downtime",
+      "intent": "informational",
+      "preferred_url": "plasma_hub",
+      "confidence": "medium"
+    },
+    {
+      "query": "best microneedling for collagen production",
+      "intent": "informational",
+      "preferred_url": "microneedling_hub",
+      "confidence": "medium"
+    },
+    {
+      "query": "spa services queen creek az",
+      "intent": "navigational",
+      "preferred_url": "spa_services_hub",
+      "confidence": "high"
+    }
+  ],
+  "preferred_urls": {
+    "homepage": "https://www.rejuvenateskinspa.com",
+    "plasma_hub": "https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening",
+    "mole_removal": "https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/mole-removal-treatment",
+    "skin_tag_removal": "https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/skin-tag-removal-treatment",
+    "sun_spot_removal": "https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/sun-spot-removal-treatment",
+    "wart_removal": "https://www.rejuvenateskinspa.com/plexr-plasma-skin-tightening/wart-removal-treatment",
+    "microneedling_hub": "https://www.rejuvenateskinspa.com/microneedling",
+    "sqt_bio_microneedling": "https://www.rejuvenateskinspa.com/microneedling/sqt-bio-microneedling",
+    "plasma_microneedling": "https://www.rejuvenateskinspa.com/microneedling/plasma-microneedling",
+    "chemical_peels_hub": "https://www.rejuvenateskinspa.com/chemical-peels",
+    "biorepeel": "https://www.rejuvenateskinspa.com/chemical-peels/biorepeel-chemical-peels",
+    "tca_peels": "https://www.rejuvenateskinspa.com/chemical-peels/tca-peels",
+    "glycolic_peels": "https://www.rejuvenateskinspa.com/chemical-peels/glycolic-acid-peels",
+    "enzyme_peels_hub": "https://www.rejuvenateskinspa.com/enzyme-peel-facial",
+    "cherry_enzyme_peel": "https://www.rejuvenateskinspa.com/enzyme-peel-facial/cherry-enzyme-peel",
+    "dermaplaning": "https://www.rejuvenateskinspa.com/spa-services/dermaplaning-treatment",
+    "microblading": "https://www.rejuvenateskinspa.com/spa-services/microblading-treatment",
+    "eyebrow_lamination": "https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment",
+    "red_light_therapy": "https://www.rejuvenateskinspa.com/spa-services/red-light-therapy-treatment",
+    "spa_services_hub": "https://www.rejuvenateskinspa.com/spa-services",
+    "about": "https://www.rejuvenateskinspa.com/about-us",
+    "founder_bio": "https://www.rejuvenateskinspa.com/about-us/bridgette-ball",
+    "contact": "https://www.rejuvenateskinspa.com/contact",
+    "book": "https://www.rejuvenateskinspa.com/book",
+    "portfolio": "https://www.rejuvenateskinspa.com/portfolio"
+  }
+}

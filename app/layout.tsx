@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
+import { headers } from "next/headers"
 import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
@@ -12,6 +13,8 @@ import {
   buildOrganization,
   buildWebSite,
 } from "@/lib/schema"
+import { isPublicMarkdownPath } from "@/lib/markdown/registry"
+import { markdownUrl, normalizeHtmlPath } from "@/lib/markdown/urls"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const playfair = Playfair_Display({
@@ -81,7 +84,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
@@ -92,11 +95,31 @@ export default function RootLayout({
   const organizationJsonLd = buildOrganization()
   const webSiteJsonLd = buildWebSite()
 
+  const headerList = await headers()
+  const pathname = headerList.get("x-pathname") || "/"
+  let markdownAlternateHref: string | null = null
+  try {
+    const htmlPath = normalizeHtmlPath(pathname)
+    if (isPublicMarkdownPath(htmlPath)) {
+      markdownAlternateHref = markdownUrl(htmlPath)
+    }
+  } catch {
+    markdownAlternateHref = null
+  }
+
   return (
     <html lang="en">
       <head>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs Index" />
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI Discovery" />
+        {markdownAlternateHref ? (
+          <link
+            rel="alternate"
+            type="text/markdown"
+            href={markdownAlternateHref}
+            title="Markdown version"
+          />
+        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
