@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
-  generateMarkdownForPath,
+  generateMarkdownForPathAsync,
   resolveMarkdownRequest,
 } from "@/lib/markdown/generate";
 import { buildMarkdownResponseHeaders } from "@/lib/markdown/headers";
@@ -38,7 +38,6 @@ export async function GET(request: NextRequest) {
   }
 
   if (resolved.status === "redirect") {
-    // Prefer request origin so local/preview redirects stay on the same host.
     const absolute = markdownUrl(resolved.toHtmlPath);
     const destination = new URL(
       new URL(absolute).pathname,
@@ -47,7 +46,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(destination, resolved.permanent ? 308 : 307);
   }
 
-  const markdown = generateMarkdownForPath(resolved.path, variant);
+  const markdown = await generateMarkdownForPathAsync(resolved.path, {
+    origin: request.nextUrl.origin,
+    markdownVariant: variant,
+  });
+
   if (!markdown) {
     return notFoundMarkdown();
   }

@@ -21,12 +21,22 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Real static Markdown files in /public (not page mirrors)
+  if (pathname === "/sitemap.md") {
+    return NextResponse.next();
+  }
+
   const isMarkdownRequest =
     pathname === "/.md" ||
     pathname === "/index.md" ||
     (pathname.endsWith(".md") && pathname.length > 3);
 
   if (isMarkdownRequest) {
+    // Skip recursive HTML fetches used to build Markdown mirrors
+    if (request.headers.get("x-markdown-mirror-fetch") === "1") {
+      return NextResponse.next();
+    }
+
     let htmlPath: string;
     try {
       htmlPath = markdownPathToHtmlPath(pathname);

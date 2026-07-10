@@ -1,7 +1,9 @@
 export {
   generateMarkdownForPath,
+  generateMarkdownForPathAsync,
   resolveMarkdownRequest,
 } from "./generate";
+export { htmlPageToMarkdown } from "./from-html";
 export { buildMarkdownResponseHeaders } from "./headers";
 export {
   getMarkdownPage,

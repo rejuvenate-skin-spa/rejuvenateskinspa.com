@@ -1,7 +1,8 @@
 import { siteConfig } from "@/lib/site-config";
 import { assembleMarkdownDocument } from "./front-matter";
 import { generateMarkdownBody } from "./content";
-import { getMarkdownPage } from "./registry";
+import { htmlPageToMarkdown, fetchPageHtml } from "./from-html";
+import { getMarkdownPage, htmlRedirects, isPublicMarkdownPath } from "./registry";
 import {
   canonicalHtmlUrl,
   getSiteDomain,
@@ -9,7 +10,6 @@ import {
   normalizeHtmlPath,
 } from "./urls";
 import type { ResolveResult } from "./types";
-import { htmlRedirects, isPublicMarkdownPath } from "./registry";
 
 export function resolveMarkdownRequest(rawPath: string): ResolveResult {
   let htmlPath: string;
@@ -31,19 +31,15 @@ export function resolveMarkdownRequest(rawPath: string): ResolveResult {
   return { status: "ok", path: htmlPath };
 }
 
-/**
- * Generate a full Markdown document (front matter + body) for a public HTML path.
- * Returns null if the path is not a public page.
- */
-export function generateMarkdownForPath(
+function buildDocument(
   htmlPath: string,
-  markdownVariant: "default" | "index" = "default",
+  body: string,
+  markdownVariant: "default" | "index",
 ): string | null {
   const normalized = normalizeHtmlPath(htmlPath);
   const page = getMarkdownPage(normalized);
   if (!page) return null;
 
-  const body = generateMarkdownBody(page);
   return assembleMarkdownDocument(
     {
       title: page.title,
@@ -56,4 +52,46 @@ export function generateMarkdownForPath(
     },
     body,
   );
+}
+
+/**
+ * Sync generator using registry/content templates (fallback + unit tests).
+ */
+export function generateMarkdownForPath(
+  htmlPath: string,
+  markdownVariant: "default" | "index" = "default",
+): string | null {
+  const normalized = normalizeHtmlPath(htmlPath);
+  const page = getMarkdownPage(normalized);
+  if (!page) return null;
+  return buildDocument(normalized, generateMarkdownBody(page), markdownVariant);
+}
+
+/**
+ * Prefer full page content extracted from the rendered HTML <main>.
+ * Falls back to registry templates if HTML cannot be fetched/converted.
+ */
+export async function generateMarkdownForPathAsync(
+  htmlPath: string,
+  options: {
+    origin: string;
+    markdownVariant?: "default" | "index";
+  },
+): Promise<string | null> {
+  const normalized = normalizeHtmlPath(htmlPath);
+  const page = getMarkdownPage(normalized);
+  if (!page) return null;
+
+  const variant = options.markdownVariant ?? "default";
+  const html = await fetchPageHtml(options.origin, normalized);
+
+  if (html) {
+    const fromHtml = htmlPageToMarkdown(html);
+    // Require a real heading + substantial body so we don't ship empty shells
+    if (fromHtml.includes("#") && fromHtml.length > 200) {
+      return buildDocument(normalized, fromHtml, variant);
+    }
+  }
+
+  return buildDocument(normalized, generateMarkdownBody(page), variant);
 }

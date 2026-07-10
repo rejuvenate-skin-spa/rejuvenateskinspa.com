@@ -72,7 +72,11 @@ markdown: "https://www.rejuvenateskinspa.com/about-us.md"
 
 ## Content generation
 
-Bodies are generated in `lib/markdown/content.ts` from the same registries that power HTML pages (service pricing, provider bio, location, category child links, homepage treatment summaries). Navigation, footer chrome, scripts, and tracking are excluded.
+Markdown bodies are generated from the **rendered HTML `<main>`** of each page (same SSR content users see), then cleaned of navigation chrome, scripts, and decorative UI. Front matter still comes from `lib/markdown/registry.ts`.
+
+If HTML conversion fails, the mirror falls back to registry templates in `lib/markdown/content.ts`.
+
+Static `/sitemap.md` in `public/` is served as a real file and is not treated as a page mirror.
 
 ## Caching
 
