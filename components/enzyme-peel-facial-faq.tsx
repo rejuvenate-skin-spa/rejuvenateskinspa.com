@@ -39,6 +39,11 @@ const faqData: FAQSection[] = [
           "While they exfoliate the skin like a chemical peel, enzyme peels are more natural and work only on the outermost layers of skin. They are often referred to as 'organic' or 'natural' peels.",
       },
       {
+        question: "How do enzyme peels differ from other skin treatments?",
+        answer:
+          "Enzyme peels use fruit-derived enzymes for gentle surface exfoliation, while chemical peels use acids that can reach deeper layers depending on strength. Microneedling stimulates collagen through micro-channels rather than dissolving dead cells, and plasma treatments use ionized gas for tightening and resurfacing. Enzyme peels are typically the mildest option, with little to no downtime.",
+      },
+      {
         question: "What enzymes are used in Rejuvenate's enzyme peels?",
         answer:
           "We use professional-grade enzyme blends featuring papain (derived from papaya), bromelain (derived from pineapple), and pumpkin enzymes to resurface and brighten the skin gently.",
@@ -67,6 +72,11 @@ const faqData: FAQSection[] = [
         question: "Can enzyme peels be used on darker skin tones?",
         answer:
           "Absolutely. Enzyme peels do not penetrate deeply enough to trigger pigment changes, making them safe and effective for all skin tones.",
+      },
+      {
+        question: "Is an in-person consultation required for enzyme peels?",
+        answer:
+          "Yes. An in-person consultation is required before an enzyme peel. During this visit, we review your skin concerns, confirm there are no contraindications, and determine the best enzyme formula and treatment frequency for your goals.",
       },
       {
         question: "Can enzyme peels be combined with other treatments?",
@@ -102,6 +112,11 @@ const faqData: FAQSection[] = [
   {
     section: "Recovery & Results",
     items: [
+      {
+        question: "Is there downtime after an enzyme peel?",
+        answer:
+          "No. Enzyme peels typically involve little to no downtime. Most clients return to normal activities right away, with a healthy glow and smoother feel rather than visible peeling or flaking.",
+      },
       {
         question: "Will my skin peel after an enzyme treatment?",
         answer:

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SmartContactCTA } from "@/components/SmartContactCTA";
 import { Shield, Zap, Sparkles, Leaf, Heart, Scissors } from "lucide-react";
-import { buildPerson } from "@/lib/schema";
+import { buildPerson, buildProfilePage } from "@/lib/schema";
 import { breadcrumbJsonLd } from "@/lib/breadcrumbs";
 import { bridgetteBall } from "@/lib/providers";
 
@@ -61,7 +61,7 @@ const specialties = [
 ];
 
 export default function BridgetteBallPage() {
-  const personJsonLd = buildPerson({
+  const personInput = {
     name: bridgetteBall.name,
     jobTitle: bridgetteBall.jobTitle,
     description: bridgetteBall.description,
@@ -69,7 +69,12 @@ export default function BridgetteBallPage() {
     image: bridgetteBall.image,
     sameAs: bridgetteBall.sameAs,
     knowsAbout: bridgetteBall.knowsAbout,
-  });
+    hasCredential: bridgetteBall.credentials
+      ? [...bridgetteBall.credentials]
+      : undefined,
+  };
+  const personJsonLd = buildPerson(personInput);
+  const profilePageJsonLd = buildProfilePage(personInput);
 
   return (
     <>
@@ -82,6 +87,10 @@ export default function BridgetteBallPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd) }}
       />
       <div className="min-h-screen">
         {/* Hero */}

@@ -24,6 +24,11 @@ const faqData: FAQSection[] = [
           "Microneedling is a skin rejuvenation treatment that creates tiny channels in the skin to stimulate the body's natural collagen production. This process helps improve skin texture, tone, and overall appearance over time.",
       },
       {
+        question: "How does microneedling differ from other skin treatments?",
+        answer:
+          "Unlike chemical peels, which exfoliate with acids, or enzyme peels, which gently dissolve dead skin cells, microneedling works by creating controlled micro-channels that trigger collagen remodeling from within. Compared with laser resurfacing, microneedling typically involves less heat-related risk and can be customized across Traditional, SQT Bio, and Plasma options based on your goals and downtime tolerance.",
+      },
+      {
         question: "What types of microneedling do you offer?",
         answer:
           "We offer three microneedling options at Rejuvenate Skin Spa:\n\n• Traditional Microneedling – Classic collagen induction therapy using ultra-fine needles\n• SQT Bio-Microneedling – Needle-free treatment using natural marine sponge spicules\n• Plasma Microneedling – Advanced treatment combining plasma technology with microneedling for enhanced results",
@@ -44,9 +49,19 @@ const faqData: FAQSection[] = [
           "Yes, when performed by a trained professional, microneedling is safe and effective. We use medical-grade equipment and customize the treatment to your skin type and concerns. We'll review your medical history and skin condition before recommending a treatment.",
       },
       {
+        question: "Who is a good candidate for microneedling?",
+        answer:
+          "Microneedling is best for clients looking to improve texture, fine lines, enlarged pores, uneven tone, or the appearance of acne scarring. It suits a wide range of skin types when the protocol is customized. Your provider will confirm candidacy based on your skin condition, goals, and medical history.",
+      },
+      {
         question: "Who should avoid microneedling?",
         answer:
           "Microneedling may not be suitable for those with active skin infections, certain skin conditions, or who are pregnant. Those with a history of keloid scarring or blood clotting disorders should also consult with their provider. Your provider will review your history during a consultation to determine if the treatment is appropriate for you.",
+      },
+      {
+        question: "Is an in-person consultation required for microneedling?",
+        answer:
+          "Yes. An in-person consultation is required before microneedling. During this visit, we evaluate your skin, review your history, and determine the most appropriate option—Traditional, SQT Bio, or Plasma Microneedling—based on safety, candidacy, and expected outcomes.",
       },
       {
         question: "Can microneedling help with texture and acne scarring?",

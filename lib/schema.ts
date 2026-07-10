@@ -120,6 +120,15 @@ export function buildLocalBusiness() {
 // Person (provider / practitioner)
 // ---------------------------------------------------------------------------
 
+export interface PersonCredentialInput {
+  name: string;
+  credentialCategory: string;
+  recognizedBy?: string;
+  credentialId?: string;
+  dateIssued?: string;
+  expires?: string;
+}
+
 export interface PersonInput {
   name: string;
   jobTitle: string;
@@ -128,9 +137,11 @@ export interface PersonInput {
   image?: string;
   sameAs?: string[];
   knowsAbout?: string[];
+  hasCredential?: PersonCredentialInput[];
 }
 
 export function buildPerson(input: PersonInput) {
+  const personUrl = absoluteUrl(input.path);
   const person: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -138,8 +149,22 @@ export function buildPerson(input: PersonInput) {
     name: input.name,
     jobTitle: input.jobTitle,
     description: input.description,
-    url: absoluteUrl(input.path),
-    worksFor: { "@id": schemaIds.localBusiness },
+    url: personUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": personUrl,
+    },
+    worksFor: {
+      "@id": schemaIds.localBusiness,
+      "@type": "HealthAndBeautyBusiness",
+      name: siteConfig.name,
+      url: SITE_URL,
+    },
+    workLocation: {
+      "@type": "Place",
+      name: siteConfig.name,
+      address: buildPostalAddress(),
+    },
   };
   if (input.image) {
     person.image = absoluteUrl(input.image);
@@ -150,7 +175,47 @@ export function buildPerson(input: PersonInput) {
   if (input.knowsAbout && input.knowsAbout.length > 0) {
     person.knowsAbout = input.knowsAbout;
   }
+  if (input.hasCredential && input.hasCredential.length > 0) {
+    person.hasCredential = input.hasCredential.map((credential) => {
+      const entry: Record<string, unknown> = {
+        "@type": "EducationalOccupationalCredential",
+        name: credential.name,
+        credentialCategory: credential.credentialCategory,
+      };
+      if (credential.recognizedBy) {
+        entry.recognizedBy = {
+          "@type": "Organization",
+          name: credential.recognizedBy,
+        };
+      }
+      if (credential.credentialId) {
+        entry.credentialId = credential.credentialId;
+      }
+      if (credential.dateIssued) {
+        entry.dateCreated = credential.dateIssued;
+      }
+      if (credential.expires) {
+        entry.expires = credential.expires;
+      }
+      return entry;
+    });
+  }
   return person;
+}
+
+/** ProfilePage wrapper for practitioner/about pages (Google profile rich results). */
+export function buildProfilePage(input: PersonInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${absoluteUrl(input.path)}#profilepage`,
+    url: absoluteUrl(input.path),
+    name: `${input.name} — ${input.jobTitle}`,
+    description: input.description,
+    mainEntity: { "@id": schemaIds.founderPerson },
+    isPartOf: { "@id": schemaIds.website },
+    about: { "@id": schemaIds.founderPerson },
+  };
 }
 
 // ---------------------------------------------------------------------------

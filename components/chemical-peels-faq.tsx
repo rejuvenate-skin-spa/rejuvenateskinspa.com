@@ -24,6 +24,11 @@ const faqData: FAQSection[] = [
           "A chemical peel is a skin resurfacing treatment that uses a chemical solution to exfoliate the outer layers of the skin. This process removes dead skin cells, stimulates cell turnover, and reveals smoother, more radiant skin underneath. Chemical peels can address various skin concerns including fine lines, uneven tone, acne, and sun damage.",
       },
       {
+        question: "How do chemical peels differ from other skin treatments?",
+        answer:
+          "Chemical peels use acid-based solutions to exfoliate and resurface the skin, while enzyme peels rely on fruit enzymes for a gentler, more superficial refresh. Microneedling stimulates collagen through controlled micro-channels rather than chemical exfoliation, and plasma treatments use ionized gas for targeted tightening and resurfacing. Peel depth and formula determine intensity, downtime, and which concerns respond best.",
+      },
+      {
         question: "What types of chemical peels do you offer?",
         answer:
           "We offer three main types of chemical peels:\n\n• TCA 25% Peel – A deep penetrating peel for significant skin rejuvenation and resurfacing\n• Glycolic 20-40% Peel – A medium-depth peel for improving skin clarity and reducing signs of aging\n• BioRePeel – An advanced bio-stimulating peel with TCA and amino acids that offers rejuvenation with minimal recovery",
@@ -52,6 +57,11 @@ const faqData: FAQSection[] = [
         question: "Can chemical peels be done on all skin types?",
         answer:
           "Most chemical peels can be safely performed on various skin types, though the type and strength of peel may vary. Some peels, like BioRePeel, are specifically formulated to be safe for all skin tones including darker complexions. During your consultation, we'll recommend the best option for your specific skin type.",
+      },
+      {
+        question: "Is an in-person consultation required for chemical peels?",
+        answer:
+          "Yes. An in-person consultation is required before a chemical peel. During this visit, we evaluate your skin type, concerns, and medical history, then determine the most appropriate peel strength and formula based on safety, candidacy, and expected downtime.",
       },
     ],
   },

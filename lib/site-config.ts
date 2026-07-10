@@ -57,5 +57,6 @@ export const siteConfig = {
   sameAs: [
     "https://www.instagram.com/rejuvenate_skin_spa",
     "https://www.facebook.com/rejuvenateskin",
+    "https://share.google/Dcputn5cVYrcgv5sy",
   ],
 } as const;
