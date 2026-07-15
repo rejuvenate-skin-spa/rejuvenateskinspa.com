@@ -307,7 +307,7 @@ export default function RedLightTherapyClientPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
-                    <span>Full-body LED panel</span>
+                    <span>Therapeutic LED lamp</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-sage-600 mr-2" />
@@ -401,7 +401,7 @@ export default function RedLightTherapyClientPage() {
             Why Choose Rejuvenate Skin Spa
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Rejuvenate Skin Spa in Queen Creek, Arizona offers red light therapy as a standalone wellness service and as a complement to other treatments. Our full-body LED panel delivers therapeutic wavelengths (660–850nm) in a relaxing environment with flexible scheduling. At {formatPrice(pricing[0].price)} per session, it is one of the most accessible treatments we offer.
+            Rejuvenate Skin Spa in Queen Creek, Arizona offers red light therapy as a standalone wellness service and as a complement to other treatments. Our therapeutic LED lamp delivers targeted wavelengths (660–850nm) in a relaxing environment with flexible scheduling. At {formatPrice(pricing[0].price)} per session, it is one of the most accessible treatments we offer.
           </p>
           <Link
             href="/about-us/bridgette-ball"

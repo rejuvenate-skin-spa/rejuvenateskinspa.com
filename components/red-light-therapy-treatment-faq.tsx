@@ -41,7 +41,7 @@ const faqSections = [
       {
         question: "What should I expect during a red light therapy session?",
         answer:
-          "You'll relax under a panel or dome of red LED lights for 10–30 minutes. The treatment is completely painless, and many clients find it calming and meditative.",
+          "You'll relax while a therapeutic LED lamp delivers red light to the treatment area for 10–30 minutes. The treatment is completely painless, and many clients find it calming and meditative.",
       },
       {
         question: "Does red light therapy hurt?",
