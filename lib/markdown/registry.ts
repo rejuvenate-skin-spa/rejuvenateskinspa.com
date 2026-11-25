@@ -1,5 +1,5 @@
 import { serviceRegistry } from "@/lib/services";
-import { bridgetteBall } from "@/lib/providers";
+import { amyBall, bridgetteBall } from "@/lib/providers";
 import type { MarkdownPageDefinition } from "./types";
 
 /**
@@ -59,6 +59,13 @@ const staticPages: readonly MarkdownPageDefinition[] = [
     heading: "Bridgette Ball",
   },
   {
+    path: "/about-us/amy-ball",
+    title: "Amy Ball, PA-C | Rejuvenate Skin Spa",
+    description: amyBall.description,
+    type: "author",
+    heading: "Amy Ball",
+  },
+  {
     path: "/book",
     title: "Book an Appointment | Rejuvenate Skin Spa | Queen Creek, AZ",
     description:
@@ -110,7 +117,7 @@ const staticPages: readonly MarkdownPageDefinition[] = [
     path: "/spa-services",
     title: "Spa Services | Dermaplaning, Microblading & More | Queen Creek, AZ",
     description:
-      "Premium spa services in Queen Creek, Arizona. Professional dermaplaning facials, microblading, eyebrow lamination, and red light therapy. Expert practitioners, medical-grade products. Book your appointment today.",
+      "Premium spa services in Queen Creek, Arizona. Professional dermaplaning facials, microblading, eyebrow lamination, red light therapy, and Botox. Expert practitioners, medical-grade products. Book your appointment today.",
     type: "category",
     heading: "Spa Services",
   },
@@ -157,6 +164,8 @@ const serviceTitles: Record<string, string> = {
     "Eyebrow Lamination Treatment | Queen Creek, AZ",
   "/spa-services/microblading-treatment":
     "Microblading Treatment | Natural Eyebrow Enhancement | Queen Creek, AZ",
+  "/spa-services/botox-treatment":
+    "Botox Treatment | Wrinkle Relaxation | Queen Creek, AZ",
   "/spa-services/red-light-therapy-treatment":
     "Red Light Therapy Treatment | Queen Creek, AZ",
   "/microneedling/traditional-microneedling":

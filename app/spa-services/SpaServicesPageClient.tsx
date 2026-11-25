@@ -15,6 +15,7 @@ export default function SpaServicesPageClient() {
   const dermaplaningPrice = getStartingPrice(getService("/spa-services/dermaplaning-treatment")!)!;
   const microbladingPrice = getStartingPrice(getService("/spa-services/microblading-treatment")!)!;
   const redLightPrice = getStartingPrice(getService("/spa-services/red-light-therapy-treatment")!)!;
+  const botoxPrice = getStartingPrice(getService("/spa-services/botox-treatment")!)!;
 
   return (
     <div className="min-h-screen">
@@ -28,7 +29,7 @@ export default function SpaServicesPageClient() {
             What Are Spa Services?
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Spa services are professional beauty and skincare treatments designed to enhance your natural appearance and promote relaxation. At Rejuvenate Skin Spa in Queen Creek, Arizona, our spa services include dermaplaning facials for instant smoothness, microblading for perfectly defined brows, eyebrow lamination for fuller-looking brows, and red light therapy for cellular rejuvenation. Each treatment is performed by licensed professionals using premium products tailored to your skin type and goals.
+            Spa services are professional beauty and skincare treatments designed to enhance your natural appearance and promote relaxation. At Rejuvenate Skin Spa in Queen Creek, Arizona, our spa services include dermaplaning facials for instant smoothness, microblading for perfectly defined brows, eyebrow lamination for fuller-looking brows, red light therapy for cellular rejuvenation, and Botox. Each treatment is performed by licensed professionals using premium products tailored to your skin type and goals.
           </p>
         </div>
       </section>
@@ -36,8 +37,8 @@ export default function SpaServicesPageClient() {
       {/* Services Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            {[
+          {(() => {
+            const services = [
               {
                 title: "Eyebrow Lamination",
                 description:
@@ -87,10 +88,79 @@ export default function SpaServicesPageClient() {
                 href: "/spa-services/red-light-therapy-treatment",
                 image: "/images/red-lamp-only.avif",
               },
-            ].map((service, index) => (
+              {
+                title: "Botox",
+                description:
+                  "Cosmetic Botox to soften forehead lines, frown lines, and crow's feet. Every visit starts with a consultation.",
+                benefits: [
+                  "Softens forehead lines, frown lines, and crow's feet",
+                  "Treatment mapped to your facial movement",
+                  "Non-surgical, with little downtime for most clients",
+                  "Offered at the Queen Creek studio",
+                  `Starts at ${formatPrice(botoxPrice.price)} per unit`,
+                ],
+                duration: "30–45 minutes",
+                price: `From ${formatPrice(botoxPrice.price)}/unit`,
+                href: "/spa-services/botox-treatment",
+                image: "/images/botox-injection-treatment.jpg",
+              },
+            ];
+            const featured = services.find((service) => service.title === "Botox")!;
+            const rest = services.filter((service) => service.title !== "Botox");
+            return (
+          <>
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 mb-10">
+            <div className="grid md:grid-cols-2">
+              <div className="relative h-72 md:h-full min-h-72 bg-gray-100">
+                <Image
+                  src={featured.image}
+                  alt="Close-up of a cosmetic Botox injection on the forehead"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardContent className="p-8 flex flex-col">
+                <p className="text-sm font-medium text-sage-700 mb-2">Featured service</p>
+                <h3 className="text-3xl font-playfair font-bold text-gray-900 mb-3">{featured.title}</h3>
+                <p className="text-gray-600 mb-4">{featured.description}</p>
+                <ul className="space-y-1 mb-6">
+                  {featured.benefits.map((benefit) => (
+                    <li key={benefit} className="text-sm text-gray-600 flex items-center">
+                      <CheckCircle className="h-4 w-4 text-sage-600 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex justify-between items-center text-sm mb-6">
+                  <div className="flex items-center text-gray-600">
+                    <Clock className="h-4 w-4 mr-2 text-sage-600" />
+                    {featured.duration}
+                  </div>
+                  <div className="flex items-center text-sage-600 font-semibold">
+                    <Star className="h-4 w-4 mr-1" />
+                    {featured.price}
+                  </div>
+                </div>
+                <Link href={featured.href} className="mt-auto">
+                  <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">Learn about {featured.title}</Button>
+                </Link>
+              </CardContent>
+            </div>
+          </Card>
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {rest.map((service, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
                 <div className="relative h-64 bg-gray-100 flex items-center justify-center">
-                  <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className={service.title === "Red Light Therapy" ? "object-contain" : "object-cover"} />
+                  <Image
+                    src={service.image || "/placeholder.svg"}
+                    alt={service.title === "Botox" ? "Close-up of a cosmetic Botox injection on the forehead" : service.title}
+                    fill
+                    className={
+                      service.title === "Red Light Therapy"
+                        ? "object-contain"
+                        : "object-cover"
+                    }
+                  />
                 </div>
                 <CardContent className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{service.title}</h3>
@@ -128,6 +198,9 @@ export default function SpaServicesPageClient() {
               </Card>
             ))}
           </div>
+          </>
+            );
+          })()}
         </div>
       </section>
 

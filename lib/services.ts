@@ -134,6 +134,17 @@ export const serviceRegistry: readonly ServiceEntry[] = [
       { label: "5-Session Package", price: 100, priceType: "fixed", sessions: 5 },
     ],
   },
+  {
+    path: "/spa-services/botox-treatment",
+    name: "Botox",
+    category: "Spa Services",
+    description:
+      "Botox treatments in Queen Creek, Arizona. Soften forehead lines, frown lines, and crow's feet. Starts at $13 per unit.",
+    image: "/images/botox-injection-treatment.jpg",
+    pricing: [
+      { label: "Per Unit", price: 13, priceType: "starting_at" },
+    ],
+  },
 
   // ── Microneedling ───────────────────────────────────────────────
   {

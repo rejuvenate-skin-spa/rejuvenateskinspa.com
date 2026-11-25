@@ -429,6 +429,9 @@ export default function RedLightTherapyClientPage() {
             <Link href="/microneedling" className="text-sage-600 hover:text-sage-700 font-medium underline">
               Microneedling →
             </Link>
+            <Link href="/spa-services/botox-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Botox →
+            </Link>
           </div>
         </div>
       </section>

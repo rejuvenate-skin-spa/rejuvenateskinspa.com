@@ -25,12 +25,19 @@ export default function AboutUsPageClient() {
           <p className="text-lg text-gray-700 leading-relaxed">
             Founded and operated by Bridgette Ball, a licensed cosmetologist with advanced certifications in Plexr plasma technology and chemical peel applications, Rejuvenate Skin Spa serves clients throughout Queen Creek, San Tan Valley, Gilbert, Mesa, and the greater Phoenix East Valley.
           </p>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col sm:flex-row gap-4">
             <Link
               href="/about-us/bridgette-ball"
               className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
             >
               Meet Bridgette Ball
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+            <Link
+              href="/about-us/amy-ball"
+              className="inline-flex items-center text-sage-600 hover:text-sage-700 font-medium transition-colors"
+            >
+              Meet Amy Ball
               <ArrowRight className="h-4 w-4 ml-2" />
             </Link>
           </div>

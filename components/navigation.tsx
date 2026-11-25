@@ -64,9 +64,10 @@ const navigationItems = [
     ],
   },
   {
-    title: "Chemical Peels",
+    title: "Chemical and Enzyme Peels",
     href: "/chemical-peels",
     submenu: [
+      { title: "Chemical Peels", href: "/chemical-peels" },
       { title: "BioRePeel", href: "/chemical-peels/biorepeel-chemical-peels" },
       {
         title: "BioRePeel 35 TCA Facial Peel",
@@ -81,12 +82,7 @@ const navigationItems = [
         title: "Glycolic Acid Peels",
         href: "/chemical-peels/glycolic-acid-peels",
       },
-    ],
-  },
-  {
-    title: "Enzyme Peels",
-    href: "/enzyme-peel-facial",
-    submenu: [
+      { title: "Enzyme Peel Facials", href: "/enzyme-peel-facial" },
       {
         title: "Blueberry Enzyme Peel",
         href: "/enzyme-peel-facial/blueberry-enzyme-peel",
@@ -138,6 +134,20 @@ const navigationItems = [
         title: "Red Light Therapy",
         href: "/spa-services/red-light-therapy-treatment",
       },
+    ],
+  },
+  {
+    title: "Botox",
+    href: "/spa-services/botox-treatment",
+    submenu: [],
+  },
+  {
+    title: "About",
+    href: "/about-us",
+    submenu: [
+      { title: "About Us", href: "/about-us" },
+      { title: "Meet Bridgette Ball", href: "/about-us/bridgette-ball" },
+      { title: "Meet Amy Ball", href: "/about-us/amy-ball" },
     ],
   },
   {
@@ -201,12 +211,12 @@ export function Navigation() {
               alt="Rejuvenate Skin Spa"
               width={200}
               height={60}
-              className="h-12 w-auto"
+              className="h-10 xl:h-12 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden min-[1120px]:flex items-center space-x-3 xl:space-x-5">
             {navigationItems.map((item) => (
               <div
                 key={item.title}
@@ -216,7 +226,7 @@ export function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center text-gray-700 hover:text-sage-600 transition-colors duration-200 font-medium py-2"
+                  className="flex items-center text-sm xl:text-base text-gray-700 hover:text-sage-600 transition-colors duration-200 font-medium py-2 whitespace-nowrap"
                 >
                   {item.title}
                   {item.submenu.length > 0 && (
@@ -251,7 +261,7 @@ export function Navigation() {
           </div>
 
           {/* Mobile menu button - min 44px tap target */}
-          <div className="lg:hidden">
+          <div className="min-[1120px]:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -272,12 +282,12 @@ export function Navigation() {
           <>
             {/* Backdrop - starts below the header */}
             <div
-              className="fixed top-20 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40 lg:hidden"
+              className="fixed top-20 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40 min-[1120px]:hidden"
               onClick={closeMobileMenu}
             />
 
             {/* Mobile Menu */}
-            <div className="fixed top-20 left-0 right-0 bottom-0 bg-white z-50 lg:hidden overflow-y-auto">
+            <div className="fixed top-20 left-0 right-0 bottom-0 bg-white z-50 min-[1120px]:hidden overflow-y-auto">
               <div className="px-5 py-6 space-y-1">
                 {navigationItems.map((item) => (
                   <div
@@ -316,7 +326,7 @@ export function Navigation() {
                       <div
                         className={`overflow-hidden transition-all duration-300 ease-in-out ${
                           activeMobileDropdown === item.title
-                            ? "max-h-[500px] opacity-100 mt-1"
+                            ? "max-h-[800px] opacity-100 mt-1"
                             : "max-h-0 opacity-0"
                         }`}
                       >

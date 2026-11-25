@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Top-level pages
     { path: "/about-us", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/about-us/bridgette-ball", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/about-us/amy-ball", priority: 0.6, changeFrequency: "monthly" },
     { path: "/about-us/portfolio", priority: 0.6, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
     { path: "/portfolio", priority: 0.6, changeFrequency: "monthly" },
@@ -34,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/spa-services/eyebrow-lamination-treatment", priority: 0.7, changeFrequency: "monthly" },
     { path: "/spa-services/microblading-treatment", priority: 0.7, changeFrequency: "monthly" },
     { path: "/spa-services/red-light-therapy-treatment", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/spa-services/botox-treatment", priority: 0.7, changeFrequency: "monthly" },
 
     // Microneedling hub + detail pages
     { path: "/microneedling", priority: 0.8, changeFrequency: "monthly" },

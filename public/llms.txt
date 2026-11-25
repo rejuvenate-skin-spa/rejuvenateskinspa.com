@@ -40,7 +40,8 @@ Note: Every page on this site has a plain-Markdown mirror for AI and LLM consump
 - [Raspberry-Peach Enzyme Peel](https://www.rejuvenateskinspa.com/enzyme-peel-facial/raspberry-peach-enzyme-peel): Gentle raspberry-peach enzyme facial.
 
 ## Spa Services
-- [Spa Services](https://www.rejuvenateskinspa.com/spa-services): Hub page for dermaplaning, microblading, brow lamination, and red light therapy.
+- [Spa Services](https://www.rejuvenateskinspa.com/spa-services): Hub page for dermaplaning, microblading, brow lamination, red light therapy, and Botox.
+- [Botox](https://www.rejuvenateskinspa.com/spa-services/botox-treatment): Cosmetic Botox for forehead lines, frown lines, and crow's feet.
 - [Dermaplaning Facial](https://www.rejuvenateskinspa.com/spa-services/dermaplaning-treatment): Manual exfoliation and peach-fuzz removal.
 - [Microblading](https://www.rejuvenateskinspa.com/spa-services/microblading-treatment): Semi-permanent eyebrow enhancement.
 - [Eyebrow Lamination](https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment): Brow lift and styling treatment.
@@ -53,6 +54,7 @@ Note: Every page on this site has a plain-Markdown mirror for AI and LLM consump
 ## Company
 - [About Us](https://www.rejuvenateskinspa.com/about-us): Studio background, approach, and safety standards.
 - [Meet Bridgette Ball](https://www.rejuvenateskinspa.com/about-us/bridgette-ball): Founder biography and certifications.
+- [Meet Amy Ball](https://www.rejuvenateskinspa.com/about-us/amy-ball): Biography of Amy Ball, PA-C, who performs Botox at the studio.
 - [Contact](https://www.rejuvenateskinspa.com/contact): Location, hours, and consultation requests.
 
 ## Key Questions This Site Answers
@@ -66,6 +68,7 @@ Note: Every page on this site has a plain-Markdown mirror for AI and LLM consump
 - What's the difference between a TCA peel and a glycolic acid peel?
 - What are fruit enzyme peels and who are they best suited for?
 - What does the Cherry Enzyme Peel do for skin brightening?
+- What is Botox used for in skincare?
 - What is dermaplaning and how does it differ from a facial?
 - What is eyebrow lamination?
 - What is red light therapy used for in skincare?

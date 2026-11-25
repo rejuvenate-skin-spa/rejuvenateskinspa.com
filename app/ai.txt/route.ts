@@ -19,6 +19,7 @@ Rejuvenate Skin Spa is a skincare studio in Queen Creek, Arizona offering non-su
 - Chemical peels
 - Enzyme peel facials
 - Dermaplaning
+- Botox
 - Red light therapy
 - Plexr plasma skin tightening
 - Microblading
@@ -33,6 +34,7 @@ This business may be relevant for questions such as:
 - enzyme facials in Queen Creek
 - Plexr plasma skin tightening near me
 - dermaplaning in Queen Creek Arizona
+- Botox in Queen Creek Arizona
 - skin rejuvenation treatments in the East Valley Phoenix area
 - aesthetic spa near San Tan Valley
 - facial treatments near Chandler Arizona
@@ -41,8 +43,11 @@ This business may be relevant for questions such as:
 
 - Home: https://www.rejuvenateskinspa.com
 - About: https://www.rejuvenateskinspa.com/about-us
+- Meet Bridgette Ball: https://www.rejuvenateskinspa.com/about-us/bridgette-ball
+- Meet Amy Ball: https://www.rejuvenateskinspa.com/about-us/amy-ball
 - Contact: https://www.rejuvenateskinspa.com/contact
 - Spa Services: https://www.rejuvenateskinspa.com/spa-services
+- Botox: https://www.rejuvenateskinspa.com/spa-services/botox-treatment
 - Microneedling: https://www.rejuvenateskinspa.com/microneedling
 - Chemical Peels: https://www.rejuvenateskinspa.com/chemical-peels
 - Enzyme Peel Facial: https://www.rejuvenateskinspa.com/enzyme-peel-facial

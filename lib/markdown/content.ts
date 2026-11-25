@@ -6,7 +6,7 @@ import {
   serviceRegistry,
   type ServiceEntry,
 } from "@/lib/services";
-import { bridgetteBall } from "@/lib/providers";
+import { amyBall, bridgetteBall } from "@/lib/providers";
 import { canonicalHtmlUrl, toAbsoluteUrl } from "./urls";
 import type { MarkdownPageDefinition } from "./types";
 
@@ -115,11 +115,20 @@ function serviceBody(page: MarkdownPageDefinition): string {
   ];
 
   if (service.image) {
+    const imageAlt =
+      service.path === "/spa-services/botox-treatment"
+        ? "Close-up of a cosmetic Botox injection on the forehead"
+        : `${service.name} at ${siteConfig.name} in Queen Creek, Arizona`;
+    sections.push(image(imageAlt, service.image), "");
+  }
+
+  if (service.path === "/spa-services/botox-treatment") {
     sections.push(
-      image(
-        `${service.name} at ${siteConfig.name} in Queen Creek, Arizona`,
-        service.image,
-      ),
+      "## Your Botox Specialist",
+      "",
+      `${amyBall.name}, ${amyBall.jobTitle} at ${siteConfig.name}, performs Botox in Queen Creek. Each visit starts with a consultation to review expression lines and map a treatment plan before any injections.`,
+      "",
+      amyBall.description,
       "",
     );
   }
@@ -166,7 +175,7 @@ function homepageBody(): string {
     "",
     "## Welcome to Rejuvenate Skin Spa",
     "",
-    `Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by Bridgette Ball, a licensed cosmetologist with advanced training in skin aesthetics, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.`,
+    `Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by Bridgette Ball, a licensed cosmetologist with advanced training in skin aesthetics, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, Botox, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.`,
     "",
     "## Signature Treatments",
     "",
@@ -216,6 +225,7 @@ function homepageBody(): string {
     `- ${link("Contact us", "/contact")}`,
     `- ${link("About the spa", "/about-us")}`,
     `- ${link("Meet Bridgette Ball", "/about-us/bridgette-ball")}`,
+    `- ${link("Meet Amy Ball", "/about-us/amy-ball")}`,
     `- ${link("View results gallery", "/portfolio")}`,
     "",
     locationBlock(),
@@ -235,6 +245,8 @@ function aboutBody(): string {
     "## Leadership",
     "",
     `${link(bridgetteBall.name, bridgetteBall.path)} is the ${bridgetteBall.jobTitle.toLowerCase()} at ${siteConfig.name}. ${bridgetteBall.description}`,
+    "",
+    `${link(amyBall.name, amyBall.path)}, ${amyBall.jobTitle}, performs Botox at the studio. ${amyBall.description}`,
     "",
     "## Treatment Categories",
     "",
@@ -269,6 +281,34 @@ function authorBody(): string {
     `- ${link("About Rejuvenate Skin Spa", "/about-us")}`,
     `- ${link("Book an appointment", "/book")}`,
     `- ${link("Contact the spa", "/contact")}`,
+    "",
+    locationBlock(),
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function amyBody(): string {
+  return [
+    `# ${amyBall.name}`,
+    "",
+    `**${amyBall.jobTitle}**`,
+    "",
+    amyBall.description,
+    "",
+    amyBall.image
+      ? image(`${amyBall.name}, ${amyBall.jobTitle}`, amyBall.image)
+      : "",
+    "",
+    "## Specialties",
+    "",
+    ...amyBall.knowsAbout.map((topic) => `- ${topic}`),
+    "",
+    "## Learn More",
+    "",
+    `- ${link("Botox treatment", "/spa-services/botox-treatment")}`,
+    `- ${link("About Rejuvenate Skin Spa", "/about-us")}`,
+    `- ${link("Book an appointment", "/book")}`,
     "",
     locationBlock(),
   ]
@@ -421,7 +461,7 @@ function categoryBody(page: MarkdownPageDefinition): string {
 
   const extras: Record<string, string> = {
     "/spa-services": [
-      "Spa services at Rejuvenate Skin Spa focus on exfoliation, brow enhancement, and restorative LED therapy.",
+      "Spa services at Rejuvenate Skin Spa focus on exfoliation, brow enhancement, restorative LED therapy, and Botox.",
       "",
       categoryChildren("/spa-services", "Spa Services"),
     ].join("\n"),
@@ -480,6 +520,8 @@ export function generateMarkdownBody(page: MarkdownPageDefinition): string {
       return aboutBody();
     case "/about-us/bridgette-ball":
       return authorBody();
+    case "/about-us/amy-ball":
+      return amyBody();
     case "/contact":
       return contactBody();
     case "/book":

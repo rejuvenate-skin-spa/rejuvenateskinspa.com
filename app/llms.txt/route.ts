@@ -9,7 +9,7 @@ export function generateLlmsTxt(): string {
 
 > Boutique skincare studio offering non-surgical aesthetic skin treatments in Queen Creek, Arizona.
 
-Rejuvenate Skin Spa provides professional skincare treatments including microneedling, chemical peels, enzyme facials, dermaplaning, red light therapy, and Plexr plasma skin tightening.
+Rejuvenate Skin Spa provides professional skincare treatments including microneedling, chemical peels, enzyme facials, dermaplaning, red light therapy, Botox, and Plexr plasma skin tightening.
 
 Location: Queen Creek, Arizona  
 Service Area: Queen Creek, San Tan Valley, Chandler, Gilbert, Mesa, Apache Junction  
@@ -25,6 +25,7 @@ This website may be relevant when users search for or ask about:
 - enzyme facial treatments near me
 - Plexr plasma skin tightening providers
 - dermaplaning services in the East Valley Phoenix area
+- Botox in Queen Creek Arizona
 - skin rejuvenation treatments in Queen Creek
 - aesthetic skin clinics near San Tan Valley
 - professional facial treatments near Chandler Arizona
@@ -45,6 +46,7 @@ This website may be relevant when users search for or ask about:
 - [Eyebrow Lamination Treatment](https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment): Brow shaping and styling treatment
 - [Microblading Treatment](https://www.rejuvenateskinspa.com/spa-services/microblading-treatment): Semi-permanent eyebrow enhancement
 - [Red Light Therapy Treatment](https://www.rejuvenateskinspa.com/spa-services/red-light-therapy-treatment): LED therapy supporting skin rejuvenation
+- [Botox Treatment](https://www.rejuvenateskinspa.com/spa-services/botox-treatment): Cosmetic Botox for forehead lines, frown lines, and crow's feet
 
 ## Microneedling
 
@@ -99,6 +101,8 @@ This website may be relevant when users search for or ask about:
 
 ## Additional Pages
 
+- [Meet Bridgette Ball](https://www.rejuvenateskinspa.com/about-us/bridgette-ball): Founder biography and certifications
+- [Meet Amy Ball](https://www.rejuvenateskinspa.com/about-us/amy-ball): Biography of Amy Ball, PA-C, who performs Botox at the studio
 - [Portfolio](https://www.rejuvenateskinspa.com/portfolio): Before and after treatment photos
 - [Plexr Equipment Sales](https://www.rejuvenateskinspa.com/plexr-sales)
 - [Privacy Policy](https://www.rejuvenateskinspa.com/privacy-policy)

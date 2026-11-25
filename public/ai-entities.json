@@ -46,7 +46,8 @@
       "Dermaplaning Facial",
       "Microblading",
       "Eyebrow Lamination",
-      "Red Light Therapy"
+      "Red Light Therapy",
+      "Botox"
     ]
   },
   "service_area": [
@@ -60,7 +61,10 @@
   "people": {
     "founder": "Bridgette Ball",
     "founder_title": "Founder & Licensed Cosmetologist",
-    "founder_url": "https://www.rejuvenateskinspa.com/about-us/bridgette-ball"
+    "founder_url": "https://www.rejuvenateskinspa.com/about-us/bridgette-ball",
+    "botox_provider": "Amy Ball",
+    "botox_provider_title": "PA-C",
+    "botox_provider_url": "https://www.rejuvenateskinspa.com/about-us/amy-ball"
   },
   "priority_urls": {
     "homepage": "https://www.rejuvenateskinspa.com",

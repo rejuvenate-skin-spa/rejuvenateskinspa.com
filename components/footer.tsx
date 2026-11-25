@@ -2,11 +2,14 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, MapPin, Clock } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { Mail, MapPin, Clock, MessageCircle, Phone } from "lucide-react"
 import { siteConfig } from "@/lib/site-config"
 import { SmartContactCTA } from "@/components/SmartContactCTA"
 
 export function Footer() {
+  const isBotoxPage = usePathname() === "/spa-services/botox-treatment"
+
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10 sm:py-12">
@@ -28,12 +31,25 @@ export function Footer() {
               Licensed Plexr® Technology Provider in Arizona
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              {isBotoxPage ? (
+                <div className="flex flex-col gap-1 text-sm text-gray-600">
+                  <a href="sms:+14804599613" className="flex items-center hover:text-sage-600 py-1 min-h-[44px] sm:min-h-0">
+                    <MessageCircle className="h-4 w-4 mr-2 flex-shrink-0" />
+                    Text 480-459-9613
+                  </a>
+                  <a href="tel:+14804599613" className="flex items-center hover:text-sage-600 py-1 min-h-[44px] sm:min-h-0">
+                    <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
+                    Call 480-459-9613
+                  </a>
+                </div>
+              ) : (
               <SmartContactCTA
                 variant="ghost"
                 size="default"
                 showPhoneWhenOpen
                 className="flex items-center justify-start text-sm text-gray-600 hover:text-sage-600 hover:bg-transparent py-2 sm:py-0 min-h-[44px] sm:min-h-0 w-full sm:w-auto shadow-none"
               />
+              )}
               <a
                 href={`mailto:${siteConfig.email}`}
                 aria-label="Email Rejuvenate Skin Spa"
@@ -101,6 +117,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/about-us/amy-ball"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
+                >
+                  Meet Amy Ball
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/portfolio"
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
@@ -137,6 +161,14 @@ export function Footer() {
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   Spa Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/spa-services/botox-treatment"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
+                >
+                  Botox
                 </Link>
               </li>
               <li>

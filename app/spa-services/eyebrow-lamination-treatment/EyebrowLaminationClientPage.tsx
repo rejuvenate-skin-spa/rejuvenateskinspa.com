@@ -356,6 +356,9 @@ export default function EyebrowLaminationClientPage() {
             <Link href="/spa-services/dermaplaning-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
               Dermaplaning →
             </Link>
+            <Link href="/spa-services/botox-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Botox →
+            </Link>
           </div>
         </div>
       </section>

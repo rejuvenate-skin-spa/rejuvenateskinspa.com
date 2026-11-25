@@ -109,7 +109,24 @@ export const bridgetteBall: ProviderEntry = {
   ],
 };
 
-export const providers = [bridgetteBall] as const;
+export const amyBall: ProviderEntry = {
+  slug: "amy-ball",
+  name: "Amy Ball",
+  jobTitle: "PA-C",
+  path: "/about-us/amy-ball",
+  description:
+    "Amy Ball, PA-C, performs Botox at Rejuvenate Skin Spa in Queen Creek, Arizona. She has been working in dermatology for several years and provides cosmetic Botox to soften forehead lines, frown lines, and crow's feet, with a consultation before every visit.",
+  image: "/images/amy_headshot.jpg",
+  knowsAbout: [
+    "Botox",
+    "Wrinkle relaxation",
+    "Forehead lines",
+    "Frown lines",
+    "Crow's feet",
+  ],
+};
+
+export const providers = [bridgetteBall, amyBall] as const;
 
 export function getProvider(slug: string): ProviderEntry | undefined {
   return providers.find((p) => p.slug === slug);
