@@ -21,7 +21,7 @@ export default function HomePageClient() {
             Welcome to Rejuvenate Skin Spa
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by Bridgette Ball, a licensed cosmetologist with advanced training in skin aesthetics, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.
+            Rejuvenate Skin Spa is a boutique skincare studio located in Queen Creek, Arizona, specializing in non-surgical aesthetic treatments. Founded by Bridgette Ball, a licensed cosmetologist with advanced training in skin aesthetics, the spa offers advanced services including Plexr plasma skin tightening, microneedling (traditional, SQT Bio, and plasma), chemical peels, enzyme facials, Botox, and spa treatments like dermaplaning and microblading. The studio serves clients throughout the East Valley, including Queen Creek, San Tan Valley, Chandler, Gilbert, and Mesa.
           </p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function HomePageClient() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 title: "Plexr Plasma Skin Tightening",
@@ -82,10 +82,24 @@ export default function HomePageClient() {
                   "Supports clearer-looking skin",
                 ],
               },
+              {
+                title: "Botox",
+                description:
+                  "Cosmetic Botox to soften forehead lines, frown lines, and crow's feet",
+                image: "/images/botox-injection-treatment.jpg",
+                href: "/spa-services/botox-treatment",
+                linkText: "View Botox Treatment",
+                features: [
+                  "Softens forehead lines",
+                  "Softens frown lines and crow's feet",
+                  "Mapped to your facial movement",
+                  "Little downtime for most clients",
+                ],
+              },
             ].map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-shadow duration-300 rounded-lg overflow-hidden"
+                className="group hover:shadow-lg transition-shadow duration-300 rounded-lg overflow-hidden lg:flex lg:h-full lg:flex-col"
               >
                 <div className="relative overflow-hidden">
                   <Image
@@ -96,8 +110,8 @@ export default function HomePageClient() {
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <CardContent className="p-6 lg:flex lg:flex-1 lg:flex-col">
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -112,7 +126,7 @@ export default function HomePageClient() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={service.href}>
+                  <Link href={service.href} className="lg:mt-auto">
                     <Button
                       variant="outline"
                       className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 rounded-md bg-transparent"

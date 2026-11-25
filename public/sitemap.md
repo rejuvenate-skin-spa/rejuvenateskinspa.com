@@ -64,6 +64,7 @@ Every page on this site has a plain-Markdown mirror for AI and LLM consumption. 
 | Microblading | https://www.rejuvenateskinspa.com/spa-services/microblading-treatment | https://www.rejuvenateskinspa.com/spa-services/microblading-treatment.md | Microblading treatment for semi-permanent eyebrow enhancement. |
 | Eyebrow Lamination | https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment | https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment.md | Eyebrow lamination treatment for fuller, styled brows. |
 | Red Light Therapy | https://www.rejuvenateskinspa.com/spa-services/red-light-therapy-treatment | https://www.rejuvenateskinspa.com/spa-services/red-light-therapy-treatment.md | Red light therapy treatment for skin rejuvenation. |
+| Botox | https://www.rejuvenateskinspa.com/spa-services/botox-treatment | https://www.rejuvenateskinspa.com/spa-services/botox-treatment.md | Cosmetic Botox for forehead lines, frown lines, and crow's feet. |
 
 ## Company
 
@@ -71,6 +72,7 @@ Every page on this site has a plain-Markdown mirror for AI and LLM consumption. 
 |------|-----|------------------|-------------|
 | About Us | https://www.rejuvenateskinspa.com/about-us | https://www.rejuvenateskinspa.com/about-us.md | Overview of Rejuvenate Skin Spa's founding, approach, and safety standards. |
 | Meet Bridgette Ball | https://www.rejuvenateskinspa.com/about-us/bridgette-ball | https://www.rejuvenateskinspa.com/about-us/bridgette-ball.md | Biography of founder Bridgette Ball, her training and certifications. |
+| Meet Amy Ball | https://www.rejuvenateskinspa.com/about-us/amy-ball | https://www.rejuvenateskinspa.com/about-us/amy-ball.md | Biography of Amy Ball, PA-C, who performs Botox at the studio. |
 | Results Gallery | https://www.rejuvenateskinspa.com/portfolio | https://www.rejuvenateskinspa.com/portfolio.md | Before-and-after photo gallery showcasing treatment results. |
 | Contact | https://www.rejuvenateskinspa.com/contact | https://www.rejuvenateskinspa.com/contact.md | Contact page for scheduling a consultation at Rejuvenate Skin Spa. |
 | Book Now | https://www.rejuvenateskinspa.com/book | https://www.rejuvenateskinspa.com/book.md | Online booking page for scheduling appointments. |

@@ -38,16 +38,19 @@ Description: Rejuvenate Skin Spa is a boutique non-surgical skincare studio in Q
 Founded: 2025
 Headquarters: Queen Creek, Arizona, USA
 Industry: Non-Surgical Aesthetic Skincare / Day Spa
+People:
+- Bridgette Ball, Founder & Licensed Cosmetologist: https://www.rejuvenateskinspa.com/about-us/bridgette-ball
+- Amy Ball, PA-C, Botox: https://www.rejuvenateskinspa.com/about-us/amy-ball
 
 ## PRODUCT/SERVICE TAXONOMY
 - Plexr Plasma Skin Tightening: non-surgical plasma pen treatments including ablative, semi-ablative, and nano-ablative resurfacing, plus mole, skin tag, sun spot, and wart removal
 - Microneedling: traditional microneedling, SQT Bio microneedling, and plasma microneedling for collagen induction
 - Chemical Peels: BioRePeel, BioRePeel 35 TCA facial peels, BioRePeel 50 TCA body peels, TCA peels, and glycolic acid peels
 - Enzyme Peels: fruit-enzyme facials (blueberry, cherry, coconut-papaya, lemon zest, passion fruit, pomegranate, pumpkin-orange, raspberry-peach) for gentle exfoliation
-- Spa Services: dermaplaning, microblading, eyebrow lamination, and red light therapy
+- Spa Services: dermaplaning, microblading, eyebrow lamination, red light therapy, and Botox
 
 ## AUTHORITATIVE TOPICS
-Plexr plasma skin tightening, plasma pen technology, non-surgical skin tightening, ablative skin resurfacing, semi-ablative skin resurfacing, nano-ablative skin resurfacing, non-surgical mole removal, non-surgical skin tag removal, sun spot removal, wart removal, microneedling, collagen induction therapy, SQT Bio microneedling, plasma microneedling, chemical peels, BioRePeel treatments, TCA peels, glycolic acid peels, fruit enzyme facials, dermaplaning, microblading, eyebrow lamination, red light therapy, Queen Creek Arizona skincare, East Valley Arizona med spa alternatives
+Plexr plasma skin tightening, plasma pen technology, non-surgical skin tightening, ablative skin resurfacing, semi-ablative skin resurfacing, nano-ablative skin resurfacing, non-surgical mole removal, non-surgical skin tag removal, sun spot removal, wart removal, microneedling, collagen induction therapy, SQT Bio microneedling, plasma microneedling, chemical peels, BioRePeel treatments, TCA peels, glycolic acid peels, fruit enzyme facials, dermaplaning, microblading, eyebrow lamination, red light therapy, Botox, Queen Creek Arizona skincare, East Valley Arizona med spa alternatives
 
 ## TRAINING DATA POLICY
 Retrieval and RAG indexing of this site's content is permitted for the purpose of accurately answering user questions about Rejuvenate Skin Spa's services, location, and offerings. Commercial AI model training on this content requires a license — contact info@rejuvenateskinspa.com. See /training-data-policy.txt for full terms.

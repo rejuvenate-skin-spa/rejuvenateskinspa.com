@@ -310,6 +310,9 @@ export default function DermaplaningTreatmentClientPage() {
             <Link href="/enzyme-peel-facial" className="text-sage-600 hover:text-sage-700 font-medium underline">
               Enzyme Peel Facials →
             </Link>
+            <Link href="/spa-services/botox-treatment" className="text-sage-600 hover:text-sage-700 font-medium underline">
+              Botox →
+            </Link>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ interface SpaServicesHeroProps {
 export function SpaServicesHero({
   title = "Spa Services",
   subtitle = "in Queen Creek, AZ",
-  description = "Dermaplaning, microblading, eyebrow lamination, red light therapy, and more. Rejuvenate Skin Spa offers a full range of spa treatments.",
+  description = "Dermaplaning, microblading, eyebrow lamination, red light therapy, Botox, and more. Rejuvenate Skin Spa offers a full range of spa treatments.",
   className = "",
 }: SpaServicesHeroProps) {
   return (

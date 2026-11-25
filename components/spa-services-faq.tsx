@@ -21,7 +21,7 @@ const faqData: FAQSection[] = [
       {
         question: "Other than plasma and peels, what other services does Rejuvenate offer?",
         answer:
-          "Rejuvenate offers a range of advanced aesthetic treatments that complement our core services. These services include dermaplaning, microblading, eyebrow lamination, microneedling, bio microneedling, plasma microneedling, and red light therapy.",
+          "Rejuvenate offers a range of advanced aesthetic treatments that complement our core services. These services include dermaplaning, microblading, eyebrow lamination, microneedling, bio microneedling, plasma microneedling, red light therapy, and Botox.",
       },
       {
         question: "How do I choose the right service for my skin goals?",
@@ -67,6 +67,11 @@ const faqData: FAQSection[] = [
         question: "How does eyebrow lamination work?",
         answer:
           "Eyebrow lamination restructures brow hairs to keep them in a fuller, lifted position. It's a needle-free way to create a bold, polished brow shape.",
+      },
+      {
+        question: "What is Botox?",
+        answer:
+          "Botox is a cosmetic neuromodulator used to soften forehead lines, frown lines, and crow's feet. Every visit at the Queen Creek studio starts with a consultation.",
       },
       {
         question: "What are the benefits of red light therapy?",

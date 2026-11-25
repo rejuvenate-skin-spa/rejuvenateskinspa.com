@@ -9,6 +9,7 @@ const breadcrumbLabels: Record<string, string> = {
   // About
   "/about-us": "About Us",
   "/about-us/bridgette-ball": "Bridgette Ball",
+  "/about-us/amy-ball": "Amy Ball",
 
   // Category hubs
   "/spa-services": "Spa Services",
@@ -21,6 +22,7 @@ const breadcrumbLabels: Record<string, string> = {
   "/spa-services/dermaplaning-treatment": "Dermaplaning",
   "/spa-services/eyebrow-lamination-treatment": "Eyebrow Lamination",
   "/spa-services/microblading-treatment": "Microblading",
+  "/spa-services/botox-treatment": "Botox",
   "/spa-services/red-light-therapy-treatment": "Red Light Therapy",
 
   // Microneedling

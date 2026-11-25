@@ -151,6 +151,18 @@
       "confidence": "medium"
     },
     {
+      "query": "botox queen creek az",
+      "intent": "transactional",
+      "preferred_url": "botox",
+      "confidence": "high"
+    },
+    {
+      "query": "botox near me queen creek",
+      "intent": "transactional",
+      "preferred_url": "botox",
+      "confidence": "high"
+    },
+    {
       "query": "dermaplaning facial near me",
       "intent": "transactional",
       "preferred_url": "dermaplaning",
@@ -263,6 +275,7 @@
     "glycolic_peels": "https://www.rejuvenateskinspa.com/chemical-peels/glycolic-acid-peels",
     "enzyme_peels_hub": "https://www.rejuvenateskinspa.com/enzyme-peel-facial",
     "cherry_enzyme_peel": "https://www.rejuvenateskinspa.com/enzyme-peel-facial/cherry-enzyme-peel",
+    "botox": "https://www.rejuvenateskinspa.com/spa-services/botox-treatment",
     "dermaplaning": "https://www.rejuvenateskinspa.com/spa-services/dermaplaning-treatment",
     "microblading": "https://www.rejuvenateskinspa.com/spa-services/microblading-treatment",
     "eyebrow_lamination": "https://www.rejuvenateskinspa.com/spa-services/eyebrow-lamination-treatment",
@@ -270,6 +283,7 @@
     "spa_services_hub": "https://www.rejuvenateskinspa.com/spa-services",
     "about": "https://www.rejuvenateskinspa.com/about-us",
     "founder_bio": "https://www.rejuvenateskinspa.com/about-us/bridgette-ball",
+    "amy_ball_bio": "https://www.rejuvenateskinspa.com/about-us/amy-ball",
     "contact": "https://www.rejuvenateskinspa.com/contact",
     "book": "https://www.rejuvenateskinspa.com/book",
     "portfolio": "https://www.rejuvenateskinspa.com/portfolio"

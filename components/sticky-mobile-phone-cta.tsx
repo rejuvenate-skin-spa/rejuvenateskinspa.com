@@ -1,7 +1,8 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { usePhoenixBusinessHours } from "@/lib/usePhoenixBusinessHours";
 
@@ -14,13 +15,25 @@ import { usePhoenixBusinessHours } from "@/lib/usePhoenixBusinessHours";
  */
 export function StickyMobilePhoneCta() {
   const { isOpen } = usePhoenixBusinessHours();
+  const pathname = usePathname();
+  const isBotoxPage = pathname === "/spa-services/botox-treatment";
 
-  const href = isOpen ? `tel:${siteConfig.phoneTel}` : "/contact";
-  const ariaLabel = isOpen
-    ? `Call Rejuvenate Skin Spa at ${siteConfig.phoneDisplay}`
-    : "Contact Rejuvenate Skin Spa";
-  const label = isOpen ? siteConfig.phoneDisplay : "Contact Us";
-  const Icon = isOpen ? Phone : Mail;
+  const href = isBotoxPage
+    ? "sms:+14804599613"
+    : isOpen
+      ? `tel:${siteConfig.phoneTel}`
+      : "/contact";
+  const ariaLabel = isBotoxPage
+    ? "Text Rejuvenate Skin Spa at 480-459-9613"
+    : isOpen
+      ? `Call Rejuvenate Skin Spa at ${siteConfig.phoneDisplay}`
+      : "Contact Rejuvenate Skin Spa";
+  const label = isBotoxPage
+    ? "Text 480-459-9613"
+    : isOpen
+      ? siteConfig.phoneDisplay
+      : "Contact Us";
+  const Icon = isBotoxPage ? MessageCircle : isOpen ? Phone : Mail;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
