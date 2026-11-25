@@ -46,6 +46,11 @@ const navigationItems = [
     ],
   },
   {
+    title: "Botox",
+    href: "/spa-services/botox-treatment",
+    submenu: [],
+  },
+  {
     title: "Microneedling",
     href: "/microneedling",
     submenu: [
@@ -135,11 +140,6 @@ const navigationItems = [
         href: "/spa-services/red-light-therapy-treatment",
       },
     ],
-  },
-  {
-    title: "Botox",
-    href: "/spa-services/botox-treatment",
-    submenu: [],
   },
   {
     title: "About",

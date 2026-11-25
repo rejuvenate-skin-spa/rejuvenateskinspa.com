@@ -141,6 +141,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/spa-services/botox-treatment"
+                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
+                >
+                  Botox
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/chemical-peels/biorepeel-chemical-peels"
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
@@ -161,14 +169,6 @@ export function Footer() {
                   className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
                 >
                   Spa Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/spa-services/botox-treatment"
-                  className="text-gray-600 hover:text-sage-600 block py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center"
-                >
-                  Botox
                 </Link>
               </li>
               <li>
